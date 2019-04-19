@@ -1,0 +1,30 @@
+{
+    "name": "joaomfrebelo/date",
+    "description": "A library that relays on the PHP DateTime class, but differs in the return types and add useful functions",
+    "keywords": [
+        "PHP",
+        "DateTime"
+    ],
+    "authors": [
+        {
+            "name": "João M F Rebelo",
+            "email": "joaomfrebelo@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Rebelo\\Date\\": "src/Rebelo/Date/"
+        }
+    },
+    "license": "MIT",
+    "prefer-stable": true,
+    "require": {
+        "php": "^7.2"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^7.0.0"
+    },
+    "homepage": "https://github.com/joaomfrebelo/Date",
+    "version": "1.0.0",
+    "type": "library"
+}
