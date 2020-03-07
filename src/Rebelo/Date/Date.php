@@ -16,6 +16,7 @@ namespace Rebelo\Date;
  * Methods like add and sub return a new Object instead of change the instance it self
  *
  * @author João Rebelo
+ * @since 1.0.0
  */
 class Date
 {
@@ -23,12 +24,14 @@ class Date
     /**
      * @var string Atom (example: 2005-08-15T15:52:01+00:00)
      * @link http://php.net/manual/en/class.datetimeinterface.php
+     * @since 1.0.0
      */
     const ATOM = "Y-m-d\TH:i:sP";
 
     /**
      * @var string HTTP Cookies (example: Monday, 15-Aug-2005 15:52:01 UTC)
      * @link http://php.net/manual/en/class.datetimeinterface.php
+     * @since 1.0.0
      */
     const COOKIE = "l, d-M-Y H:i:s T";
 
@@ -38,70 +41,82 @@ class Date
      * Use <b><code>DateTime::ATOM</code></b> or <b><code>DATE_ATOM</code></b>
      * for compatibility with ISO-8601 instead. </p>
      * @link http://php.net/manual/en/class.datetimeinterface.php
+     * @since 1.0.0
      */
     const ISO8601 = "Y-m-d\TH:i:sO";
 
     /**
      * @var string RFC 822 (example: Mon, 15 Aug 05 15:52:01 +0000)
      * @link http://php.net/manual/en/class.datetimeinterface.php
+     * @since 1.0.0
      */
     const RFC822 = "D, d M y H:i:s O";
 
     /**
      * @var string RFC 850 (example: Monday, 15-Aug-05 15:52:01 UTC)
      * @link http://php.net/manual/en/class.datetimeinterface.php
+     * @since 1.0.0
      */
     const RFC850 = "l, d-M-y H:i:s T";
 
     /**
      * @var string RFC 1036 (example: Mon, 15 Aug 05 15:52:01 +0000)
      * @link http://php.net/manual/en/class.datetimeinterface.php
+     * @since 1.0.0
      */
     const RFC1036 = "D, d M y H:i:s O";
 
     /**
      * @var string RFC 1123 (example: Mon, 15 Aug 2005 15:52:01 +0000)
      * @link http://php.net/manual/en/class.datetimeinterface.php
+     * @since 1.0.0
      */
     const RFC1123 = "D, d M Y H:i:s O";
 
     /**
      * @var string RFC 2822 (example: Mon, 15 Aug 2005 15:52:01 +0000)
      * @link http://php.net/manual/en/class.datetimeinterface.php
+     * @since 1.0.0
      */
     const RFC2822 = "D, d M Y H:i:s O";
 
     /**
      * @var string Same as <b><code>DATE_ATOM</code></b> (since PHP 5.1.3)
      * @link http://php.net/manual/en/class.datetimeinterface.php
+     * @since 1.0.0
      */
     const RFC3339 = "Y-m-d\TH:i:sP";
 
     /**
      * @var string RFC 3339 EXTENDED format (since PHP 7.0.0) (example: 2005-08-15T15:52:01.000+00:00)
      * @link http://php.net/manual/en/class.datetimeinterface.php
+     * @since 1.0.0
      */
     const RFC3339_EXTENDED = "Y-m-d\TH:i:s.vP";
 
     /**
      * @var string RSS (example: Mon, 15 Aug 2005 15:52:01 +0000)
      * @link http://php.net/manual/en/class.datetimeinterface.php
+     * @since 1.0.0
      */
     const RSS = "D, d M Y H:i:s O";
 
     /**
      * @var string World Wide Web Consortium (example: 2005-08-15T15:52:01+00:00)
      * @link http://php.net/manual/en/class.datetimeinterface.php
+     * @since 1.0.0
      */
     const W3C = "Y-m-d\TH:i:sP";
 
     /**
      * @var string SQL Date (Example: 1969-10-05)
+     * @since 1.0.0
      */
     const SQL_DATE = "Y-m-d";
 
     /**
      * @var string SQL DateTime (Example: 1969-10-05 09:00:00)
+     * @since 1.0.0
      */
     const SQL_DATETIME = "Y-m-d H:i:s";
 
@@ -110,6 +125,7 @@ class Date
      * Exmaple 01 or 31
      *
      * @var string
+     * @since 1.0.0
      */
     const DAY = "d";
 
@@ -118,6 +134,7 @@ class Date
      * Exmaple 1 or 31
      *
      * @var string
+     * @since 1.0.0
      */
     const DAY_LESS = "d";
 
@@ -126,6 +143,7 @@ class Date
      * Mon through Sun
      *
      * @var string
+     * @since 1.0.0
      */
     const DAY_TEXT_SHORT = "D";
 
@@ -133,6 +151,7 @@ class Date
      * A textual representation of a day
      * Sunday through Saturday
      * @var string
+     * @since 1.0.0
      */
     const DAY_TEXT = "l";
 
@@ -142,6 +161,7 @@ class Date
      * Example: st, nd, rd or th.
      *
      * @var string
+     * @since 1.0.0
      */
     const ENGLISH_SUFIX = "S";
 
@@ -150,6 +170,7 @@ class Date
      * 0 through 365
      *
      * @var string
+     * @since 1.0.0
      */
     const DAY_OF_YAER = "z";
 
@@ -157,6 +178,7 @@ class Date
      * A textual representation of a month, such as January
      * January through December
      * @var string
+     * @since 1.0.0
      */
     const MONTH_TEXT = "F";
 
@@ -164,6 +186,7 @@ class Date
      * A textual representation of a month, such as Sept
      * Jan through Dec
      * @var string
+     * @since 1.0.0
      */
     const MONTH_TEXT_SHORT = "M";
 
@@ -171,6 +194,7 @@ class Date
      * Numeric representation of a month, with leading zeros
      * 01 through 12
      * @var string
+     * @since 1.0.0
      */
     const MONTH = "m";
 
@@ -178,6 +202,7 @@ class Date
      * Numeric representation of a month, without leading zeros
      * 1 through 12
      * @var string
+     * @since 1.0.0
      */
     const MONTH_SHORT = "n";
 
@@ -186,6 +211,7 @@ class Date
      * Examples: 1999 or 2003
      *
      * @var string
+     * @since 1.0.0
      */
     const YAER = "Y";
 
@@ -196,6 +222,7 @@ class Date
      * Examples: 99 or 03 (which will be interpreted as 1999 and 2003, respectively)
      *
      * @var string
+     * @since 1.0.0
      */
     const YEAR_SHORT = "y";
 
@@ -203,6 +230,7 @@ class Date
      * Ante meridiem
      * time am (before 12:00)
      * @var string
+     * @since 1.0.0
      */
     const ANTE_MERIDIEM = "a";
 
@@ -210,6 +238,7 @@ class Date
      * Post meridiem
      * time pm (after 12:00)
      * @var string
+     * @since 1.0.0
      */
     const POST_MERIDIEM = "A";
 
@@ -217,6 +246,7 @@ class Date
      * 12-hour format of an hour with leading zero
      *
      * @var string
+     * @since 1.0.0
      */
     const HOUR_12 = "h";
 
@@ -224,6 +254,7 @@ class Date
      * 12-hour format of an hour without leading zero
      *
      * @var string
+     * @since 1.0.0
      */
     const HOUR_12_SHORT = "g";
 
@@ -231,6 +262,7 @@ class Date
      * 24-hour format of an hour with leading zero
      *
      * @var string
+     * @since 1.0.0
      */
     const HOUR_24 = "H";
 
@@ -238,6 +270,7 @@ class Date
      * 24-hour format of an hour without leading zero
      *
      * @var string
+     * @since 1.0.0
      */
     const HOUR_24_SHORT = "G";
 
@@ -246,6 +279,7 @@ class Date
      * 00 to 59
      *
      * @var string
+     * @since 1.0.0
      */
     const MINUTES = "i";
 
@@ -254,6 +288,7 @@ class Date
      * 00 to 59
      *
      * @var string
+     * @since 1.0.0
      */
     const SECONDS = "s";
 
@@ -261,6 +296,7 @@ class Date
      * Microseconds up to six digits
      *
      * @var string
+     * @since 1.0.0
      */
     const MICRO_SECONDS = "u";
 
@@ -268,6 +304,7 @@ class Date
      * Microseconds up to 3 digits
      *
      * @var string
+     * @since 1.0.0
      */
     const MICRO_SEC_SHORT = "v";
 
@@ -276,6 +313,7 @@ class Date
      * Seconds since the Unix Epoch (January 1 1970 00:00:00 GMT)
      *
      * @var string
+     * @since 1.0.0
      */
     const UNIX_TIMESTAMP = "U";
 
@@ -283,6 +321,7 @@ class Date
      * Time Ex: 09:59:29
      *
      * @var string
+     * @since 1.0.0
      */
     const TIME = "H:i:s";
 
@@ -290,6 +329,7 @@ class Date
      * Time with up 3 digits in microseconds Ex: 09:59:29.999
      *
      * @var string
+     * @since 1.0.0
      */
     const TIME_MICRO_SECONDS = "H:i:s.v";
 
@@ -297,14 +337,16 @@ class Date
      * Time with up 6 digits in microseconds Ex: 09:59:29.000999
      *
      * @var string
+     * @since 1.0.0
      */
     const TIME_MICRO_L_SECONDS = "H:i:s.u";
 
     /**
      * The base object
      * @var \DateTime
+     * @since 1.0.0
      */
-    protected $date;
+    protected \DateTime $date;
 
     public function __construct(string $time = "now",
                                 \DateTimeZone $timezone = NULL)
@@ -321,12 +363,13 @@ class Date
      *
      * @param string $format
      * @param string $time
-     * @param \DateTimeZone $timezone
+     * @param \DateTimeZone|null $timezone
      * @return \Rebelo\Date\Date
      * @throws DateParseException
+     * @since 1.0.0
      */
     public static function parse(string $format, string $time,
-                                 \DateTimeZone $timezone = NULL): \Rebelo\Date\Date
+                                 ?\DateTimeZone $timezone = null): \Rebelo\Date\Date
     {
         $dateTime = \DateTime::createFromFormat($format, $time, $timezone);
         $errors   = \DateTime::getLastErrors();
@@ -354,11 +397,12 @@ class Date
      *
      * @param string $format
      * @param string $time
-     * @param \DateTimeZone $timezone
+     * @param \DateTimeZone|null $timezone
      * @return \Rebelo\Date\Date
+     * @since 1.0.0
      */
     public static function createFromFormat(string $format, string $time,
-                                            \DateTimeZone $timezone = NULL): \Rebelo\Date\Date
+                                            ?\DateTimeZone $timezone = null): \Rebelo\Date\Date
     {
         return static::parse($format, $time, $timezone);
     }
@@ -370,6 +414,7 @@ class Date
      * @param string $format <p>Format accepted by <code>date()</code>.</p>
      * @return string
      * @throws DateFormatException
+     * @since 1.0.0
      */
     public function format(string $format): string
     {
@@ -388,6 +433,7 @@ class Date
      *
      * @param \Rebelo\Date\DateInterval $interval
      * @return \Rebelo\Date\Date
+     * @since 1.0.0
      */
     public function add(\Rebelo\Date\DateInterval $interval): \Rebelo\Date\Date
     {
@@ -408,6 +454,7 @@ class Date
      * @param \Rebelo\Date\DateInterval $interval
      * @return \Rebelo\Date\Date
      * @throws DateException
+     * @since 1.0.0
      */
     public function sub(\Rebelo\Date\DateInterval $interval): \Rebelo\Date\Date
     {
@@ -426,11 +473,12 @@ class Date
      *
      * Returns the difference between two DateTime objects
      *
-     * @param \Date $datetime2
+     * @param \Rebelo\Date\Date $datetime2
      * @param bool $absolute <p>Should the interval be forced to be positive&#63;</p>
      * @return \DateInterval
+     * @since 1.0.0
      */
-    public function diff(Date $datetime2, bool $absolute = false): \DateInterval
+    public function diff(\Rebelo\Date\Date $datetime2, bool $absolute = false): \DateInterval
     {
         return $this->date->diff($datetime2->date, $absolute);
     }
@@ -438,6 +486,7 @@ class Date
     /**
      * Returns the timezone offset
      * @return int
+     * @since 1.0.0
      */
     public function getOffset(): int
     {
@@ -448,6 +497,7 @@ class Date
      * Gets the Unix timestamp
      *
      * @return int
+     * @since 1.0.0
      */
     public function getTimestamp(): int
     {
@@ -457,6 +507,7 @@ class Date
     /**
      * Return time zone relative
      * @return \DateTimeZone
+     * @since 1.0.0
      */
     public function getTimezone(): \DateTimeZone
     {
@@ -469,6 +520,7 @@ class Date
      * @link  http://php.net/manual/en/datetime.modify.php Accept formats
      * @param string $modify
      * @return \Rebelo\Date\Date
+     * @since 1.0.0
      */
     public function modify(string $modify): \Rebelo\Date\Date
     {
@@ -488,6 +540,7 @@ class Date
      * @param int $month
      * @param int $day
      * @return \Rebelo\Date\Date
+     * @since 1.0.0
      */
     public function setDate(int $year, int $month, int $day): \Rebelo\Date\Date
     {
@@ -505,9 +558,10 @@ class Date
     /**
      * Set the year of this date object
      * @param int $year
-     * @return $this
+     * @return \Rebelo\Date\Date $this
+     * @since 1.0.0
      */
-    public function setYaer(int $year)
+    public function setYaer(int $year): \Rebelo\Date\Date
     {
         $month = intval($this->format(static::MONTH));
         $day   = intval($this->format(static::DAY_LESS));
@@ -518,9 +572,10 @@ class Date
     /**
      * Set the month of this date object
      * @param int $month
-     * @return $this
+     * @return \Rebelo\Date\Date $this
+     * @since 1.0.0
      */
-    public function setMonth(int $month)
+    public function setMonth(int $month): \Rebelo\Date\Date
     {
         $year = intval($this->format(static::YAER));
         $day  = intval($this->format(static::DAY_LESS));
@@ -531,9 +586,10 @@ class Date
     /**
      * Set the day of month of this date object
      * @param int $day
-     * @return $this
+     * @return \Rebelo\Date\Date $this
+     * @since 1.0.0
      */
-    public function setDay(int $day)
+    public function setDay(int $day): \Rebelo\Date\Date
     {
         $year  = intval($this->format(static::YAER));
         $month = intval($this->format(static::MONTH_SHORT));
@@ -550,6 +606,7 @@ class Date
      * @param int $week
      * @param int $day
      * @return \Rebelo\Date\Date
+     * @since 1.0.0
      */
     public function setISODate(int $year, int $week, int $day = 1): \Rebelo\Date\Date
     {
@@ -565,6 +622,7 @@ class Date
      * @param int $second
      * @param int $microseconds
      * @return \Rebelo\Date\Date
+     * @since 1.0.0
      */
     public function setTime(int $hour, int $minute, int $second = 0,
                             int $microseconds = 0): \Rebelo\Date\Date
@@ -598,9 +656,10 @@ class Date
      * Set the hour of this Date object
      *
      * @param int $hour
-     * @return $this
+     * @return \Rebelo\Date\Date $this
+     * @since 1.0.0
      */
-    public function setHour(int $hour)
+    public function setHour(int $hour): \Rebelo\Date\Date
     {
         $minute  = intval($this->format(static::MINUTES));
         $seconds = intval($this->format(static::SECONDS));
@@ -614,9 +673,10 @@ class Date
      * Set the minutes of this Date object
      *
      * @param int $minute
-     * @return $this
+     * @return \Rebelo\Date\Date $this
+     * @since 1.0.0
      */
-    public function setMinutes(int $minute)
+    public function setMinutes(int $minute): \Rebelo\Date\Date
     {
         $hour    = intval($this->format(static::HOUR_24_SHORT));
         $seconds = intval($this->format(static::SECONDS));
@@ -630,9 +690,10 @@ class Date
      * Set the seconds of this Date object
      *
      * @param int $seconds
-     * @return $this
+     * @return \Rebelo\Date\Date $this
+     * @since 1.0.0
      */
-    public function setSeconds(int $seconds)
+    public function setSeconds(int $seconds): \Rebelo\Date\Date
     {
         $hour   = intval($this->format(static::HOUR_24_SHORT));
         $minute = intval($this->format(static::MINUTES));
@@ -646,9 +707,10 @@ class Date
      * Set the microseconds of this Date object
      *
      * @param int $microseconds
-     * @return $this
+     * @return \Rebelo\Date\Date $this
+     * @since 1.0.0
      */
-    public function setMicroseconds(int $microseconds)
+    public function setMicroseconds(int $microseconds): \Rebelo\Date\Date
     {
         $hour    = intval($this->format(static::HOUR_24_SHORT));
         $minute  = intval($this->format(static::MINUTES));
@@ -661,6 +723,7 @@ class Date
      * Set the Timestamp of this date
      * @param int $unixtimestamp
      * @return \Rebelo\Date\Date
+     * @since 1.0.0
      */
     public function setTimestamp(int $unixtimestamp): \Rebelo\Date\Date
     {
@@ -674,6 +737,7 @@ class Date
      *
      * @param \DateTimeZone $timezone
      * @return \Rebelo\Date\Date
+     * @since 1.0.0
      */
     public function setTimezone(\DateTimeZone $timezone): \Rebelo\Date\Date
     {
@@ -688,6 +752,7 @@ class Date
      * @param int $years Number of years to add or negative integer to subtract
      * @return \Rebelo\Date\Date
      * @throws DateException
+     * @since 1.0.0
      */
     public function addYears(int $years): \Rebelo\Date\Date
     {
@@ -704,6 +769,7 @@ class Date
      *
      * @param int $months Number of months to add or negative integer to subtract
      * @return \Rebelo\Date\Date
+     * @since 1.0.0
      */
     public function addMonths(int $months): \Rebelo\Date\Date
     {
@@ -720,6 +786,7 @@ class Date
      *
      * @param int $days Number of days to add or negative integer to subtract
      * @return \Rebelo\Date\Date
+     * @since 1.0.0
      */
     public function addDays(int $days): \Rebelo\Date\Date
     {
@@ -736,6 +803,7 @@ class Date
      *
      * @param int $hours Number of hours to add or negative integer to subtract
      * @return \Rebelo\Date\Date
+     * @since 1.0.0
      */
     public function addHours(int $hours): \Rebelo\Date\Date
     {
@@ -752,6 +820,7 @@ class Date
      *
      * @param int $minutes Number of minutes to add or negative integer to subtract
      * @return \Rebelo\Date\Date
+     * @since 1.0.0
      */
     public function addMinutes(int $minutes): \Rebelo\Date\Date
     {
@@ -768,6 +837,7 @@ class Date
      *
      * @param int $seconds
      * @return \Rebelo\Date\Date
+     * @since 1.0.0
      */
     public function addSeconds(int $seconds): \Rebelo\Date\Date
     {
@@ -783,10 +853,20 @@ class Date
      * Returne the native PHP DateTime class
      *
      * @return \DateTime
+     * @since 1.0.0
      */
     public function toDateTime(): \DateTime
     {
         return $this->date;
+    }
+
+    /**
+     * @return
+     * @since 2.0.0
+     */
+    public function __clone()
+    {
+        $this->date = clone $this->date;
     }
 
 }

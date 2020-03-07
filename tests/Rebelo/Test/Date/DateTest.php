@@ -9,6 +9,8 @@ declare(strict_types=1);
 
 namespace Rebelo\Test\Date;
 
+require_once __DIR__ . '/CommnunTest.php';
+
 use Rebelo\Date\Date;
 
 /**
@@ -19,6 +21,11 @@ use Rebelo\Date\Date;
 class DateTest
     extends \PHPUnit\Framework\TestCase
 {
+
+    public function testReflection()
+    {
+        (new \Rebelo\Test\CommnunTest())->testReflection(\Rebelo\Date\Date::class);
+    }
 
     /**
      *
@@ -556,6 +563,19 @@ class DateTest
     public function testToDateTime()
     {
         $this->assertInstanceOf(\DateTime::class, static::$d4ope->toDateTime());
+    }
+
+    /**
+     *
+     */
+    public function testClone()
+    {
+        $now   = new \Rebelo\Date\Date();
+        $older = clone $now;
+        $older->setYaer(1999);
+        $this->assertEquals((new \Rebelo\Date\Date())->format("Y"),
+                                                              $now->format("Y"));
+        $this->assertEquals("1999", $older->format("Y"));
     }
 
 }
