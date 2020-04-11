@@ -115,6 +115,26 @@ class Date
     const SQL_DATE = "Y-m-d";
 
     /**
+     *
+     * Date time combined with thw T char
+     *
+     * Ex: 1969-10-05T09:29:39
+     *
+     * @var string
+     * @since 2.1.0
+     */
+    const DATE_T_TIME = "Y-m-d\TH:i:s";
+
+    /**
+     * Date and time
+     * Ex: 1969-10-05 09:29:39
+     *
+     * @var string
+     * @since 2.1.0
+     */
+    const DATE_TIME = "Y-m-d H:i:s";
+
+    /**
      * @var string SQL DateTime (Example: 1969-10-05 09:00:00)
      * @since 1.0.0
      */
