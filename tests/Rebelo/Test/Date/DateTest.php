@@ -578,4 +578,20 @@ class DateTest
         $this->assertEquals("1999", $older->format("Y"));
     }
 
+    /**
+     *
+     */
+    public function testParseDateNoTime()
+    {
+        $string = "2020-10-05";
+        $date = \Rebelo\Date\Date::parse(
+                \Rebelo\Date\Date::SQL_DATE, $string
+        );
+
+        $this->assertSame($string, $date->format(\Rebelo\Date\Date::SQL_DATE));
+        $this->assertSame(
+            $string." 00:00:00.000000",
+            $date->format(\Rebelo\Date\Date::SQL_DATETIME.".".\Rebelo\Date\Date::MICRO_SECONDS)
+        );
+    }
 }

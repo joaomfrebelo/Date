@@ -116,7 +116,7 @@ class Date
 
     /**
      *
-     * Date time combined with thw T char
+     * Date time combined with the T char
      *
      * Ex: 1969-10-05T09:29:39
      *
@@ -368,6 +368,11 @@ class Date
      */
     protected \DateTime $date;
 
+    /**
+     *
+     * @param string $time <p>A date/time string. Valid formats are same as fo rnative PHP \DateTime.</p> <p>Enter <i>"now"</i> here to obtain the current time when using the <code>$timezone</code> parameter.</p>
+     * @param \DateTimeZone $timezone $timezone <p>A DateTimeZone object representing the timezone of <code>$time</code>.</p> <p>If <code>$timezone</code> is omitted, the current timezone will be used.</p> <p><b>Note</b>:</p><p>The <code>$timezone</code> parameter and the current timezone are ignored when the <code>$time</code> parameter either is a UNIX timestamp (e.g. <i>@946684800</i>) or specifies a timezone (e.g. <i>2010-01-28T15:00:00+02:00</i>).</p>
+     */
     public function __construct(string $time = "now",
                                 \DateTimeZone $timezone = NULL)
     {
@@ -409,6 +414,20 @@ class Date
         }
         $date       = new Date();
         $date->date = $dateTime;
+        // Set Hour to zero 00:00:00.000 whne no time is defined,
+        // to be possible compare two instance that only have date
+        // and was instantiated in different instants
+
+        $test4time = \preg_match("/(H|h|g|G|i|s|v|u|U)/", $format);
+
+        if ($test4time === false) {
+            throw new DateParseException("While test format string for time");
+        }
+
+        if ($test4time === 0) {
+            $date->setTime(0, 0, 0, 0);
+        }
+
         return $date;
     }
 
