@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1599312188">
+  <project timestamp="1599312188">
+    <package name="Rebelo\Date">
+      <file name="D:\NetBeansProjects\PHP\Date\src\Rebelo\Date\Date.php">
+        <class name="Rebelo\Date\Date" namespace="Rebelo\Date">
+          <metrics complexity="66" methods="36" coveredmethods="30" conditionals="0" coveredconditionals="0" statements="154" coveredstatements="145" elements="190" coveredelements="175"/>
+        </class>
+        <line num="382" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="41"/>
+        <line num="387" type="stmt" count="41"/>
+        <line num="388" type="stmt" count="41"/>
+        <line num="404" type="method" name="parse" visibility="public" complexity="11" crap="11.21" count="27"/>
+        <line num="410" type="stmt" count="27"/>
+        <line num="411" type="stmt" count="27"/>
+        <line num="412" type="stmt" count="27"/>
+        <line num="413" type="stmt" count="4"/>
+        <line num="414" type="stmt" count="4"/>
+        <line num="415" type="stmt" count="4"/>
+        <line num="417" type="stmt" count="4"/>
+        <line num="418" type="stmt" count="4"/>
+        <line num="420" type="stmt" count="4"/>
+        <line num="422" type="stmt" count="4"/>
+        <line num="425" type="stmt" count="23"/>
+        <line num="426" type="stmt" count="0"/>
+        <line num="428" type="stmt" count="23"/>
+        <line num="429" type="stmt" count="23"/>
+        <line num="434" type="stmt" count="23"/>
+        <line num="436" type="stmt" count="23"/>
+        <line num="437" type="stmt" count="0"/>
+        <line num="440" type="stmt" count="23"/>
+        <line num="441" type="stmt" count="12"/>
+        <line num="444" type="stmt" count="13"/>
+        <line num="446" type="stmt" count="13"/>
+        <line num="447" type="stmt" count="0"/>
+        <line num="450" type="stmt" count="13"/>
+        <line num="451" type="stmt" count="5"/>
+        <line num="455" type="stmt" count="23"/>
+        <line num="467" type="method" name="createFromFormat" visibility="public" complexity="2" crap="2" count="13"/>
+        <line num="473" type="stmt" count="13"/>
+        <line num="485" type="method" name="format" visibility="public" complexity="2" crap="2.06" count="26"/>
+        <line num="487" type="stmt" count="26"/>
+        <line num="488" type="stmt" count="26"/>
+        <line num="489" type="stmt" count="0"/>
+        <line num="491" type="stmt" count="26"/>
+        <line num="503" type="method" name="add" visibility="public" complexity="2" crap="2.01" count="7"/>
+        <line num="505" type="stmt" count="7"/>
+        <line num="506" type="stmt" count="7"/>
+        <line num="508" type="stmt" count="7"/>
+        <line num="509" type="stmt" count="0"/>
+        <line num="512" type="stmt" count="7"/>
+        <line num="513" type="stmt" count="7"/>
+        <line num="514" type="stmt" count="7"/>
+        <line num="515" type="stmt" count="7"/>
+        <line num="527" type="method" name="sub" visibility="public" complexity="2" crap="2.01" count="7"/>
+        <line num="529" type="stmt" count="7"/>
+        <line num="530" type="stmt" count="7"/>
+        <line num="531" type="stmt" count="7"/>
+        <line num="532" type="stmt" count="0"/>
+        <line num="534" type="stmt" count="7"/>
+        <line num="535" type="stmt" count="7"/>
+        <line num="536" type="stmt" count="7"/>
+        <line num="537" type="stmt" count="7"/>
+        <line num="550" type="method" name="diff" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="552" type="stmt" count="1"/>
+        <line num="560" type="method" name="getOffset" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="562" type="stmt" count="1"/>
+        <line num="571" type="method" name="getTimestamp" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="573" type="stmt" count="1"/>
+        <line num="581" type="method" name="getTimezone" visibility="public" complexity="1" crap="1" count="2"/>
+        <line num="583" type="stmt" count="2"/>
+        <line num="594" type="method" name="modify" visibility="public" complexity="2" crap="2.50" count="1"/>
+        <line num="597" type="stmt" count="1"/>
+        <line num="598" type="stmt" count="0"/>
+        <line num="600" type="stmt" count="0"/>
+        <line num="603" type="stmt" count="1"/>
+        <line num="615" type="method" name="setDate" visibility="public" complexity="2" crap="2.02" count="7"/>
+        <line num="617" type="stmt" count="7"/>
+        <line num="618" type="stmt" count="7"/>
+        <line num="619" type="stmt" count="7"/>
+        <line num="621" type="stmt" count="5"/>
+        <line num="622" type="stmt" count="0"/>
+        <line num="624" type="stmt" count="5"/>
+        <line num="633" type="method" name="setYaer" visibility="public" complexity="1" crap="1" count="2"/>
+        <line num="635" type="stmt" count="2"/>
+        <line num="636" type="stmt" count="2"/>
+        <line num="637" type="stmt" count="2"/>
+        <line num="638" type="stmt" count="2"/>
+        <line num="647" type="method" name="setMonth" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="649" type="stmt" count="1"/>
+        <line num="650" type="stmt" count="1"/>
+        <line num="651" type="stmt" count="1"/>
+        <line num="652" type="stmt" count="1"/>
+        <line num="661" type="method" name="setDay" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="663" type="stmt" count="1"/>
+        <line num="664" type="stmt" count="1"/>
+        <line num="665" type="stmt" count="1"/>
+        <line num="666" type="stmt" count="1"/>
+        <line num="680" type="method" name="setISODate" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="682" type="stmt" count="1"/>
+        <line num="683" type="stmt" count="1"/>
+        <line num="696" type="method" name="setTime" visibility="public" complexity="9" crap="9" count="30"/>
+        <line num="703" type="stmt" count="30"/>
+        <line num="704" type="stmt" count="2"/>
+        <line num="707" type="stmt" count="28"/>
+        <line num="708" type="stmt" count="2"/>
+        <line num="711" type="stmt" count="26"/>
+        <line num="712" type="stmt" count="2"/>
+        <line num="715" type="stmt" count="24"/>
+        <line num="716" type="stmt" count="2"/>
+        <line num="719" type="stmt" count="22"/>
+        <line num="720" type="stmt" count="22"/>
+        <line num="731" type="method" name="setHour" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="733" type="stmt" count="1"/>
+        <line num="734" type="stmt" count="1"/>
+        <line num="735" type="stmt" count="1"/>
+        <line num="736" type="stmt" count="1"/>
+        <line num="737" type="stmt" count="1"/>
+        <line num="748" type="method" name="setMinutes" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="750" type="stmt" count="1"/>
+        <line num="751" type="stmt" count="1"/>
+        <line num="752" type="stmt" count="1"/>
+        <line num="753" type="stmt" count="1"/>
+        <line num="754" type="stmt" count="1"/>
+        <line num="765" type="method" name="setSeconds" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="767" type="stmt" count="1"/>
+        <line num="768" type="stmt" count="1"/>
+        <line num="769" type="stmt" count="1"/>
+        <line num="770" type="stmt" count="1"/>
+        <line num="771" type="stmt" count="1"/>
+        <line num="782" type="method" name="setMicroseconds" visibility="public" complexity="1" crap="1" count="6"/>
+        <line num="784" type="stmt" count="6"/>
+        <line num="785" type="stmt" count="6"/>
+        <line num="786" type="stmt" count="6"/>
+        <line num="787" type="stmt" count="6"/>
+        <line num="788" type="stmt" count="6"/>
+        <line num="797" type="method" name="setTimestamp" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="799" type="stmt" count="1"/>
+        <line num="800" type="stmt" count="1"/>
+        <line num="811" type="method" name="setTimezone" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="813" type="stmt" count="1"/>
+        <line num="814" type="stmt" count="1"/>
+        <line num="826" type="method" name="addYears" visibility="public" complexity="2" crap="2" count="1"/>
+        <line num="828" type="stmt" count="1"/>
+        <line num="829" type="stmt" count="1"/>
+        <line num="830" type="stmt" count="1"/>
+        <line num="831" type="stmt" count="1"/>
+        <line num="835" type="stmt" count="1"/>
+        <line num="836" type="stmt" count="1"/>
+        <line num="848" type="method" name="addMonths" visibility="public" complexity="2" crap="2" count="1"/>
+        <line num="850" type="stmt" count="1"/>
+        <line num="851" type="stmt" count="1"/>
+        <line num="852" type="stmt" count="1"/>
+        <line num="853" type="stmt" count="1"/>
+        <line num="857" type="stmt" count="1"/>
+        <line num="858" type="stmt" count="1"/>
+        <line num="870" type="method" name="addDays" visibility="public" complexity="2" crap="2" count="1"/>
+        <line num="872" type="stmt" count="1"/>
+        <line num="873" type="stmt" count="1"/>
+        <line num="874" type="stmt" count="1"/>
+        <line num="875" type="stmt" count="1"/>
+        <line num="879" type="stmt" count="1"/>
+        <line num="880" type="stmt" count="1"/>
+        <line num="892" type="method" name="addHours" visibility="public" complexity="2" crap="2" count="1"/>
+        <line num="894" type="stmt" count="1"/>
+        <line num="895" type="stmt" count="1"/>
+        <line num="896" type="stmt" count="1"/>
+        <line num="897" type="stmt" count="1"/>
+        <line num="901" type="stmt" count="1"/>
+        <line num="902" type="stmt" count="1"/>
+        <line num="914" type="method" name="addMinutes" visibility="public" complexity="2" crap="2" count="1"/>
+        <line num="916" type="stmt" count="1"/>
+        <line num="917" type="stmt" count="1"/>
+        <line num="918" type="stmt" count="1"/>
+        <line num="919" type="stmt" count="1"/>
+        <line num="923" type="stmt" count="1"/>
+        <line num="924" type="stmt" count="1"/>
+        <line num="936" type="method" name="addSeconds" visibility="public" complexity="2" crap="2" count="1"/>
+        <line num="938" type="stmt" count="1"/>
+        <line num="939" type="stmt" count="1"/>
+        <line num="940" type="stmt" count="1"/>
+        <line num="941" type="stmt" count="1"/>
+        <line num="945" type="stmt" count="1"/>
+        <line num="946" type="stmt" count="1"/>
+        <line num="957" type="method" name="toDateTime" visibility="public" complexity="1" crap="1" count="21"/>
+        <line num="959" type="stmt" count="21"/>
+        <line num="966" type="method" name="__clone" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="968" type="stmt" count="1"/>
+        <line num="969" type="stmt" count="1"/>
+        <line num="977" type="method" name="isEarlier" visibility="public" complexity="1" crap="1" count="4"/>
+        <line num="979" type="stmt" count="4"/>
+        <line num="988" type="method" name="isLater" visibility="public" complexity="1" crap="1" count="4"/>
+        <line num="990" type="stmt" count="4"/>
+        <line num="999" type="method" name="isEqual" visibility="public" complexity="1" crap="1" count="4"/>
+        <line num="1001" type="stmt" count="4"/>
+        <line num="1010" type="method" name="isEarlierOrEqual" visibility="public" complexity="1" crap="1" count="4"/>
+        <line num="1012" type="stmt" count="4"/>
+        <line num="1021" type="method" name="isLaterOrEqual" visibility="public" complexity="1" crap="1" count="4"/>
+        <line num="1023" type="stmt" count="4"/>
+        <metrics loc="1025" ncloc="458" classes="1" methods="36" coveredmethods="30" conditionals="0" coveredconditionals="0" statements="154" coveredstatements="145" elements="190" coveredelements="175"/>
+      </file>
+      <file name="D:\NetBeansProjects\PHP\Date\src\Rebelo\Date\DateException.php">
+        <class name="Rebelo\Date\DateException" namespace="Rebelo\Date">
+          <metrics complexity="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="2" coveredstatements="2" elements="3" coveredelements="3"/>
+        </class>
+        <line num="27" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="8"/>
+        <line num="33" type="stmt" count="8"/>
+        <line num="34" type="stmt" count="8"/>
+        <metrics loc="35" ncloc="19" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="2" coveredstatements="2" elements="3" coveredelements="3"/>
+      </file>
+      <file name="D:\NetBeansProjects\PHP\Date\src\Rebelo\Date\DateFormatException.php">
+        <class name="Rebelo\Date\DateFormatException" namespace="Rebelo\Date">
+          <metrics complexity="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="2" coveredstatements="0" elements="3" coveredelements="0"/>
+        </class>
+        <line num="27" type="method" name="__construct" visibility="public" complexity="1" crap="2.00" count="0"/>
+        <line num="33" type="stmt" count="0"/>
+        <line num="34" type="stmt" count="0"/>
+        <metrics loc="35" ncloc="19" classes="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="2" coveredstatements="0" elements="3" coveredelements="0"/>
+      </file>
+      <file name="D:\NetBeansProjects\PHP\Date\src\Rebelo\Date\DateInterval.php">
+        <class name="Rebelo\Date\DateInterval" namespace="Rebelo\Date">
+          <metrics complexity="2" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="7" coveredstatements="2" elements="8" coveredelements="2"/>
+        </class>
+        <line num="32" type="method" name="__construct" visibility="public" complexity="2" crap="3.46" count="8"/>
+        <line num="35" type="stmt" count="8"/>
+        <line num="36" type="stmt" count="0"/>
+        <line num="37" type="stmt" count="0"/>
+        <line num="38" type="stmt" count="0"/>
+        <line num="39" type="stmt" count="0"/>
+        <line num="40" type="stmt" count="0"/>
+        <line num="43" type="stmt" count="8"/>
+        <metrics loc="44" ncloc="23" classes="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="7" coveredstatements="2" elements="8" coveredelements="2"/>
+      </file>
+      <file name="D:\NetBeansProjects\PHP\Date\src\Rebelo\Date\DateIntervalException.php">
+        <class name="Rebelo\Date\DateIntervalException" namespace="Rebelo\Date">
+          <metrics complexity="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="2" coveredstatements="0" elements="3" coveredelements="0"/>
+        </class>
+        <line num="27" type="method" name="__construct" visibility="public" complexity="1" crap="2.00" count="0"/>
+        <line num="33" type="stmt" count="0"/>
+        <line num="34" type="stmt" count="0"/>
+        <metrics loc="35" ncloc="19" classes="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="2" coveredstatements="0" elements="3" coveredelements="0"/>
+      </file>
+      <file name="D:\NetBeansProjects\PHP\Date\src\Rebelo\Date\DateParseException.php">
+        <class name="Rebelo\Date\DateParseException" namespace="Rebelo\Date">
+          <metrics complexity="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="2" coveredstatements="2" elements="3" coveredelements="3"/>
+        </class>
+        <line num="27" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="4"/>
+        <line num="33" type="stmt" count="4"/>
+        <line num="34" type="stmt" count="4"/>
+        <metrics loc="35" ncloc="19" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="2" coveredstatements="2" elements="3" coveredelements="3"/>
+      </file>
+    </package>
+    <metrics files="6" loc="1209" ncloc="557" classes="6" methods="41" coveredmethods="32" conditionals="0" coveredconditionals="0" statements="169" coveredstatements="151" elements="210" coveredelements="183"/>
+  </project>
+</coverage>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - Rebelo\Date\DateInterval::__construct</title>
+    <link rel="stylesheet" type="text/css" href="../../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../../classes.xhtml">Classes</a>
+        </li>
+        <li class="separator">
+          <a href="../../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">
+            <a href="../../classes.xhtml#Rebelo_Date">Rebelo\Date</a>
+          </li>
+          <li class="separator">
+            <a title="Rebelo\Date\DateInterval" href="../../classes/Rebelo_Date_DateInterval.xhtml">DateInterval</a>
+          </li>
+          <li class="separator">__construct</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#parameter">Parameter</a>
+          </li>
+          <li>
+            <a href="#return">Return</a>
+          </li>
+          <li>
+            <a href="../../source/Rebelo/Date/DateInterval.php.xhtml#line32">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1><small>Rebelo\Date\DateInterval::</small>__construct</h1>
+        <h4>Creates a new DateInterval object &lt;p&gt;Creates a new DateInterval object.&lt;/p&gt;</h4>
+        <p/>
+        <ul/>
+        <h2 id="signature">Signature</h2>
+        <div class="styled synopsis">
+          <code>public function __construct(string
+        $intervalSpec )
+            </code>
+        </div>
+        <h2 id="parameterlist">Parameters</h2>
+        <dl class="styled">
+          <dt><code>$intervalSpec</code>
+                —
+                string</dt>
+          <dd>&lt;p&gt;An interval specification.&lt;/p&gt; &lt;p&gt;The format starts with the letter &lt;i&gt;P&lt;/i&gt;, for "period." Each duration period is represented by an integer value followed by a period designator. If the duration contains time elements, that portion of the specification is preceded by the letter &lt;i&gt;T&lt;/i&gt;.&lt;/p&gt; &lt;p&gt;&lt;/p&gt; &lt;b&gt; &lt;code&gt;interval_spec&lt;/code&gt; Period Designators &lt;/b&gt;   Period Designator Description     &lt;i&gt;Y&lt;/i&gt; years   &lt;i&gt;M&lt;/i&gt; months   &lt;i&gt;D&lt;/i&gt; days   &lt;i&gt;W&lt;/i&gt;  weeks. These get converted into days, so can not be combined with &lt;i&gt;D&lt;/i&gt;.    &lt;i&gt;H&lt;/i&gt; hours   &lt;i&gt;M&lt;/i&gt; minutes   &lt;i&gt;S&lt;/i&gt; seconds    &lt;p&gt;Here are some simple examples. Two days is &lt;i&gt;P2D&lt;/i&gt;. Two seconds is &lt;i&gt;PT2S&lt;/i&gt;. Six years and five minutes is &lt;i&gt;P6YT5M&lt;/i&gt;.&lt;/p&gt; &lt;p&gt;&lt;b&gt;Note&lt;/b&gt;:&lt;/p&gt;&lt;p&gt;The unit types must be entered from the largest scale unit on the left to the smallest scale unit on the right. So years before months, months before days, days before minutes, etc. Thus one year and four days must be represented as &lt;i&gt;P1Y4D&lt;/i&gt;, not &lt;i&gt;P4D1Y&lt;/i&gt;.&lt;/p&gt;  &lt;p&gt;The specification can also be represented as a date time. A sample of one year and four days would be &lt;i&gt;P0001-00-04T00:00:00&lt;/i&gt;. But the values in this format can not exceed a given period's roll-over-point (e.g. &lt;i&gt;25&lt;/i&gt; hours is invalid).&lt;/p&gt; &lt;p&gt;These formats are based on the ISO 8601 duration specification.&lt;/p&gt;</dd>
+        </dl>
+        <h2 id="return">Returns</h2>
+        <dl class="styled">
+          <dt>DateInterval</dt>
+          <dd><br/>
+        </dd>
+        </dl>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.12.0 - Copyright (C) 2010 - 2020 by Arne Blankerts and Contributors</span>
+    </footer>
+  </body>
+</html>

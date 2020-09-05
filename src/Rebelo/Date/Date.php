@@ -5,6 +5,7 @@
  *
  * Copyright (c) 2019 João M F Rebelo
  */
+
 declare(strict_types=1);
 
 namespace Rebelo\Date;
@@ -13,14 +14,14 @@ namespace Rebelo\Date;
  * Date class
  * This class relays on the DateTime class of php but change the return type
  * for some methods and have more methods.
- * Methods like add and sub return a new Object instead of change the instance it self
+ * Methods like add and sub return a new Object instead of change
+ * the instance it self
  *
  * @author João Rebelo
  * @since 1.0.0
  */
 class Date
 {
-
     /**
      * @var string Atom (example: 2005-08-15T15:52:01+00:00)
      * @link http://php.net/manual/en/class.datetimeinterface.php
@@ -37,7 +38,8 @@ class Date
 
     /**
      * @var string ISO-8601 (example: 2005-08-15T15:52:01+0000)  <p><b>Note</b>:
-     * This format is not compatible with ISO-8601, but is left this way for backward compatibility reasons.
+     * This format is not compatible with ISO-8601, but is left this way
+     * for backward compatibility reasons.
      * Use <b><code>DateTime::ATOM</code></b> or <b><code>DATE_ATOM</code></b>
      * for compatibility with ISO-8601 instead. </p>
      * @link http://php.net/manual/en/class.datetimeinterface.php
@@ -88,7 +90,8 @@ class Date
     const RFC3339 = "Y-m-d\TH:i:sP";
 
     /**
-     * @var string RFC 3339 EXTENDED format (since PHP 7.0.0) (example: 2005-08-15T15:52:01.000+00:00)
+     * @var string RFC 3339 EXTENDED format (since PHP 7.0.0)
+     * (example: 2005-08-15T15:52:01.000+00:00)
      * @link http://php.net/manual/en/class.datetimeinterface.php
      * @since 1.0.0
      */
@@ -102,7 +105,8 @@ class Date
     const RSS = "D, d M Y H:i:s O";
 
     /**
-     * @var string World Wide Web Consortium (example: 2005-08-15T15:52:01+00:00)
+     * @var string World Wide Web Consortium
+     * (example: 2005-08-15T15:52:01+00:00)
      * @link http://php.net/manual/en/class.datetimeinterface.php
      * @since 1.0.0
      */
@@ -239,7 +243,8 @@ class Date
      * A two digit representation of a year
      * (which is assumed to be in the range 1970-2069, inclusive)
      *
-     * Examples: 99 or 03 (which will be interpreted as 1999 and 2003, respectively)
+     * Examples: 99 or 03
+     * (which will be interpreted as 1999 and 2003, respectively)
      *
      * @var string
      * @since 1.0.0
@@ -363,18 +368,21 @@ class Date
 
     /**
      * The base object
-     * @var \DateTime
+     * @var \DateTime The PHP native \DateTime
      * @since 1.0.0
      */
     protected \DateTime $date;
 
     /**
-     *
+     * DateTime
      * @param string $time <p>A date/time string. Valid formats are same as fo rnative PHP \DateTime.</p> <p>Enter <i>"now"</i> here to obtain the current time when using the <code>$timezone</code> parameter.</p>
-     * @param \DateTimeZone $timezone $timezone <p>A DateTimeZone object representing the timezone of <code>$time</code>.</p> <p>If <code>$timezone</code> is omitted, the current timezone will be used.</p> <p><b>Note</b>:</p><p>The <code>$timezone</code> parameter and the current timezone are ignored when the <code>$time</code> parameter either is a UNIX timestamp (e.g. <i>@946684800</i>) or specifies a timezone (e.g. <i>2010-01-28T15:00:00+02:00</i>).</p>
+     * @param \DateTimeZone $timezone $timezone <p>A DateTimeZone object representing the timezone of <code>$time</code>.</p><p>If <code>$timezone</code> is omitted, the current timezone will be used.</p> <p><b>Note</b>:</p><p>The <code>$timezone</code> parameter and the current timezone are ignored when the <code>$time</code> parameter either is a UNIX timestamp (e.g. <i>@946684800</i>) or specifies a timezone
+     * (e.g. <i>2010-01-28T15:00:00+02:00</i>).</p>
      */
-    public function __construct(string $time = "now",
-                                \DateTimeZone $timezone = NULL)
+    public function __construct(
+        string $time = "now",
+        \DateTimeZone $timezone = null
+    )
     {
         $this->date = new \DateTime($time, $timezone);
     }
@@ -393,24 +401,29 @@ class Date
      * @throws DateParseException
      * @since 1.0.0
      */
-    public static function parse(string $format, string $time,
-                                 ?\DateTimeZone $timezone = null): \Rebelo\Date\Date
+    public static function parse(
+        string $format,
+        string $time,
+        ?\DateTimeZone $timezone = null
+    ): \Rebelo\Date\Date
     {
         $dateTime = \DateTime::createFromFormat($format, $time, $timezone);
         $errors   = \DateTime::getLastErrors();
-        if ($errors['warning_count'] !== 0 || $errors['error_count'] !== 0)
-        {
+        if ($errors['warning_count'] !== 0 || $errors['error_count'] !== 0) {
             $array = array();
-            if (array_key_exists("warnings", $errors))
-            {
+            if (array_key_exists("warnings", $errors)) {
                 $array = array_merge($array, $errors["warnings"]);
             }
-            if (array_key_exists("errors", $errors))
-            {
+            if (array_key_exists("errors", $errors)) {
                 $array = array_merge($array, $errors["errors"]);
             }
-            throw new DateParseException("While parsing date: "
-                . join("; ", $array));
+            throw new DateParseException(
+                "While parsing date: "
+                . join("; ", $array)
+            );
+        }
+        if ($dateTime === false) {
+            throw new DateParseException("Error initilaizing DateTime");
         }
         $date       = new Date();
         $date->date = $dateTime;
@@ -418,14 +431,25 @@ class Date
         // to be possible compare two instance that only have date
         // and was instantiated in different instants
 
-        $test4time = \preg_match("/(H|h|g|G|i|s|v|u|U)/", $format);
+        $testTime = \preg_match("/(H|h|g|G|i|s|v|u|U)/", $format);
 
-        if ($test4time === false) {
+        if ($testTime === false) {
             throw new DateParseException("While test format string for time");
         }
 
-        if ($test4time === 0) {
+        if ($testTime === 0) {
             $date->setTime(0, 0, 0, 0);
+        } else {
+            // Test if time has microseconds
+            $testMicro = \preg_match("/(v|u)/", $format);
+
+            if ($testMicro === false) {
+                throw new DateParseException("While test format string for time");
+            }
+
+            if ($testMicro === 0) {
+                $date->setMicroseconds(0);
+            }
         }
 
         return $date;
@@ -440,8 +464,11 @@ class Date
      * @return \Rebelo\Date\Date
      * @since 1.0.0
      */
-    public static function createFromFormat(string $format, string $time,
-                                            ?\DateTimeZone $timezone = null): \Rebelo\Date\Date
+    public static function createFromFormat(
+        string $format,
+        string $time,
+        ?\DateTimeZone $timezone = null
+    ): \Rebelo\Date\Date
     {
         return static::parse($format, $time, $timezone);
     }
@@ -458,8 +485,7 @@ class Date
     public function format(string $format): string
     {
         $str = $this->date->format($format);
-        if ($str === false)
-        {
+        if ($str === false) { /* @phpstan-ignore-line */
             throw new DateFormatException("Error formating date");
         }
         return $str;
@@ -478,13 +504,16 @@ class Date
     {
         $addDate = clone $this->date;
         $res     = $addDate->add($interval);
-        if ($res === false)
-        {
+
+        if ($res === false) { /* @phpstan-ignore-line */
             throw new DateException("Error on adding the interval");
         }
-        return Date::createFromFormat("Y-m-d\TH:i:s.u",
-                                      $res->format("Y-m-d\TH:i:s.u"),
-                                                   $res->getTimezone());
+
+        return Date::createFromFormat(
+            "Y-m-d\TH:i:s.u",
+            $res->format("Y-m-d\TH:i:s.u"),
+            $res->getTimezone()
+        );
     }
 
     /**
@@ -499,13 +528,14 @@ class Date
     {
         $subDate = clone $this->date;
         $res     = $subDate->sub($interval);
-        if ($res === false)
-        {
+        if ($res === false) { /* @phpstan-ignore-line */
             throw new DateException("Erros subtrating interval");
         }
-        return Date::createFromFormat("Y-m-d\TH:i:s.u",
-                                      $res->format("Y-m-d\TH:i:s.u"),
-                                                   $res->getTimezone());
+        return Date::createFromFormat(
+            "Y-m-d\TH:i:s.u",
+            $res->format("Y-m-d\TH:i:s.u"),
+            $res->getTimezone()
+        );
     }
 
     /**
@@ -564,10 +594,11 @@ class Date
     public function modify(string $modify): \Rebelo\Date\Date
     {
 
-        if ($this->date->modify($modify) === false)
-        {
-            throw new DateException("Filed to modify timestamp in " . __METHOD__ .
-                " for string '$modify'");
+        if ($this->date->modify($modify) === false) { /* @phpstan-ignore-line */
+            throw new DateException(
+                "Filed to modify timestamp in " . __METHOD__ .
+                " for string '$modify'"
+            );
         }
         return $this;
     }
@@ -587,8 +618,7 @@ class Date
         $date   = ((string) $year) . "-" . ((string) $month) . "-" . ((string) $day);
         static::parse($format, $date); // To test if the date is valide, other wise throws exception
 
-        if ($this->date->setDate($year, $month, $day) === false)
-        {
+        if ($this->date->setDate($year, $month, $day) === false) { /* @phpstan-ignore-line */
             throw new DateException("Wrong date to set");
         }
         return $this;
@@ -663,26 +693,26 @@ class Date
      * @return \Rebelo\Date\Date
      * @since 1.0.0
      */
-    public function setTime(int $hour, int $minute, int $second = 0,
-                            int $microseconds = 0): \Rebelo\Date\Date
+    public function setTime(
+        int $hour,
+        int $minute,
+        int $second = 0,
+        int $microseconds = 0
+    ): \Rebelo\Date\Date
     {
-        if ($hour < 0 || $hour > 23)
-        {
+        if ($hour < 0 || $hour > 23) {
             throw new DateException("Worng hour '$hour'");
         }
 
-        if ($minute < 0 || $minute > 59)
-        {
+        if ($minute < 0 || $minute > 59) {
             throw new DateException("Worng minutes '$minute'");
         }
 
-        if ($second < 0 || $second > 59)
-        {
+        if ($second < 0 || $second > 59) {
             throw new DateException("Worng minutes '$minute'");
         }
 
-        if ($microseconds < 0 || $microseconds > 999999)
-        {
+        if ($microseconds < 0 || $microseconds > 999999) {
             throw new DateException("Worng microseconds '$microseconds'");
         }
 
@@ -795,11 +825,16 @@ class Date
      */
     public function addYears(int $years): \Rebelo\Date\Date
     {
-        if ($years < 0)
-        {
-            return $this->sub(new \Rebelo\Date\DateInterval("P" . ((string) \abs($years)) . "Y"));
+        if ($years < 0) {
+            return $this->sub(
+                new \Rebelo\Date\DateInterval(
+                    "P".((string) \abs($years))."Y"
+                )
+            );
         }
-        return $this->add(new \Rebelo\Date\DateInterval("P" . ((string) $years) . "Y"));
+        return $this->add(
+            new \Rebelo\Date\DateInterval("P".((string) $years)."Y")
+        );
     }
 
     /**
@@ -812,11 +847,16 @@ class Date
      */
     public function addMonths(int $months): \Rebelo\Date\Date
     {
-        if ($months < 0)
-        {
-            return $this->sub(new \Rebelo\Date\DateInterval("P" . ((string) \abs($months)) . "M"));
+        if ($months < 0) {
+            return $this->sub(
+                new \Rebelo\Date\DateInterval(
+                    "P".((string) \abs($months))."M"
+                )
+            );
         }
-        return $this->add(new \Rebelo\Date\DateInterval("P" . ((string) $months) . "M"));
+        return $this->add(
+            new \Rebelo\Date\DateInterval("P".((string) $months)."M")
+        );
     }
 
     /**
@@ -829,11 +869,16 @@ class Date
      */
     public function addDays(int $days): \Rebelo\Date\Date
     {
-        if ($days < 0)
-        {
-            return $this->sub(new \Rebelo\Date\DateInterval("P" . ((string) \abs($days)) . "D"));
+        if ($days < 0) {
+            return $this->sub(
+                new \Rebelo\Date\DateInterval(
+                    "P".((string) \abs($days))."D"
+                )
+            );
         }
-        return $this->add(new \Rebelo\Date\DateInterval("P" . ((string) $days) . "D"));
+        return $this->add(
+            new \Rebelo\Date\DateInterval("P".((string) $days)."D")
+        );
     }
 
     /**
@@ -846,11 +891,16 @@ class Date
      */
     public function addHours(int $hours): \Rebelo\Date\Date
     {
-        if ($hours < 0)
-        {
-            return $this->sub(new \Rebelo\Date\DateInterval("PT" . ((string) \abs($hours)) . "H"));
+        if ($hours < 0) {
+            return $this->sub(
+                new \Rebelo\Date\DateInterval(
+                    "PT".((string) \abs($hours))."H"
+                )
+            );
         }
-        return $this->add(new \Rebelo\Date\DateInterval("PT" . ((string) $hours) . "H"));
+        return $this->add(
+            new \Rebelo\Date\DateInterval("PT".((string) $hours)."H")
+        );
     }
 
     /**
@@ -863,11 +913,16 @@ class Date
      */
     public function addMinutes(int $minutes): \Rebelo\Date\Date
     {
-        if ($minutes < 0)
-        {
-            return $this->sub(new \Rebelo\Date\DateInterval("PT" . ((string) \abs($minutes)) . "M"));
+        if ($minutes < 0) {
+            return $this->sub(
+                new \Rebelo\Date\DateInterval(
+                    "PT".((string) \abs($minutes))."M"
+                )
+            );
         }
-        return $this->add(new \Rebelo\Date\DateInterval("PT" . ((string) $minutes) . "M"));
+        return $this->add(
+            new \Rebelo\Date\DateInterval("PT".((string) $minutes)."M")
+        );
     }
 
     /**
@@ -880,11 +935,16 @@ class Date
      */
     public function addSeconds(int $seconds): \Rebelo\Date\Date
     {
-        if ($seconds < 0)
-        {
-            return $this->sub(new \Rebelo\Date\DateInterval("PT" . ((string) \abs($seconds)) . "S"));
+        if ($seconds < 0) {
+            return $this->sub(
+                new \Rebelo\Date\DateInterval(
+                    "PT".((string) \abs($seconds))."S"
+                )
+            );
         }
-        return $this->add(new \Rebelo\Date\DateInterval("PT" . ((string) $seconds) . "S"));
+        return $this->add(
+            new \Rebelo\Date\DateInterval("PT".((string) $seconds)."S")
+        );
     }
 
     /**
@@ -900,7 +960,7 @@ class Date
     }
 
     /**
-     * @return
+     *
      * @since 2.0.0
      */
     public function __clone()
@@ -908,4 +968,58 @@ class Date
         $this->date = clone $this->date;
     }
 
+    /**
+     * Test if this date is earlier than
+     * @param \Rebelo\Date\Date $date
+     * @return bool
+     * @since 2.2.0
+     */
+    public function isEarlier(\Rebelo\Date\Date $date): bool
+    {
+        return $this->date < $date->toDateTime();
+    }
+
+    /**
+     * Test if this date is later than
+     * @param \Rebelo\Date\Date $date
+     * @return bool
+     * @since 2.2.0
+     */
+    public function isLater(\Rebelo\Date\Date $date): bool
+    {
+        return $this->date > $date->toDateTime();
+    }
+
+    /**
+     * Test if this date is equal than
+     * @param \Rebelo\Date\Date $date
+     * @return bool
+     * @since 2.2.0
+     */
+    public function isEqual(\Rebelo\Date\Date $date): bool
+    {
+        return $this->date == $date->toDateTime();
+    }
+
+    /**
+     * Test if this date is earlier or equal than
+     * @param \Rebelo\Date\Date $date
+     * @return bool
+     * @since 2.2.0
+     */
+    public function isEarlierOrEqual(\Rebelo\Date\Date $date): bool
+    {
+        return $this->date <= $date->toDateTime();
+    }
+
+    /**
+     * Test if this date is later or equal than
+     * @param \Rebelo\Date\Date $date
+     * @return bool
+     * @since 2.2.0
+     */
+    public function isLaterOrEqual(\Rebelo\Date\Date $date): bool
+    {
+        return $this->date >= $date->toDateTime();
+    }
 }

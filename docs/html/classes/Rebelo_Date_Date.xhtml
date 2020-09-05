@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - Rebelo\Date\Date</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml#Rebelo_Date">Rebelo\Date</a>
+          </li>
+          <li class="separator">Date</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#constants">Constants</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="../source/Rebelo/Date/Date.php.xhtml#line23">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>Rebelo\Date\</small>Date</h1>
+        <h4>Date class This class relays on the DateTime class of php but change the return type for some methods and have more methods.</h4>
+        <p>Methods like add and sub return a new Object instead of change<br/>the instance it self</p>
+        <ul>
+          <li>Author: João Rebelo</li>
+        </ul>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class Date
+            {<br/><ul class="none"><li>// constants</li><li>const ATOM = "Y-m-d\TH:i:sP";</li><li>const COOKIE = "l, d-M-Y H:i:s T";</li><li>const ISO8601 = "Y-m-d\TH:i:sO";</li><li>const RFC822 = "D, d M y H:i:s O";</li><li>const RFC850 = "l, d-M-y H:i:s T";</li><li>const RFC1036 = "D, d M y H:i:s O";</li><li>const RFC1123 = "D, d M Y H:i:s O";</li><li>const RFC2822 = "D, d M Y H:i:s O";</li><li>const RFC3339 = "Y-m-d\TH:i:sP";</li><li>const RFC3339_EXTENDED = "Y-m-d\TH:i:s.vP";</li><li>const RSS = "D, d M Y H:i:s O";</li><li>const W3C = "Y-m-d\TH:i:sP";</li><li>const SQL_DATE = "Y-m-d";</li><li>const DATE_T_TIME = "Y-m-d\TH:i:s";</li><li>const DATE_TIME = "Y-m-d H:i:s";</li><li>const SQL_DATETIME = "Y-m-d H:i:s";</li><li>const DAY = "d";</li><li>const DAY_LESS = "d";</li><li>const DAY_TEXT_SHORT = "D";</li><li>const DAY_TEXT = "l";</li><li>const ENGLISH_SUFIX = "S";</li><li>const DAY_OF_YAER = "z";</li><li>const MONTH_TEXT = "F";</li><li>const MONTH_TEXT_SHORT = "M";</li><li>const MONTH = "m";</li><li>const MONTH_SHORT = "n";</li><li>const YAER = "Y";</li><li>const YEAR_SHORT = "y";</li><li>const ANTE_MERIDIEM = "a";</li><li>const POST_MERIDIEM = "A";</li><li>const HOUR_12 = "h";</li><li>const HOUR_12_SHORT = "g";</li><li>const HOUR_24 = "H";</li><li>const HOUR_24_SHORT = "G";</li><li>const MINUTES = "i";</li><li>const SECONDS = "s";</li><li>const MICRO_SECONDS = "u";</li><li>const MICRO_SEC_SHORT = "v";</li><li>const UNIX_TIMESTAMP = "U";</li><li>const TIME = "H:i:s";</li><li>const TIME_MICRO_SECONDS = "H:i:s.v";</li><li>const TIME_MICRO_L_SECONDS = "H:i:s.u";</li></ul><ul class="none"><li>// members</li><li>protected <span title="\DateTime">DateTime</span> <a href="#members">$date</a>;
+                    </li></ul><ul class="none"><li>// methods</li><li>public void <a title="Rebelo\Date\Date" href="../classes/Rebelo_Date_Date/__construct.xhtml">__construct</a>()
+                    </li><li>public static <span title="Date">Date</span> <a title="Rebelo\Date\Date" href="../classes/Rebelo_Date_Date/parse.xhtml">parse</a>()
+                    </li><li>public static <span title="Date">Date</span> <a title="Rebelo\Date\Date" href="../classes/Rebelo_Date_Date/createFromFormat.xhtml">createFromFormat</a>()
+                    </li><li>public string <a title="Rebelo\Date\Date" href="../classes/Rebelo_Date_Date/format.xhtml">format</a>()
+                    </li><li>public <span title="Date">Date</span> <a title="Rebelo\Date\Date" href="../classes/Rebelo_Date_Date/add.xhtml">add</a>()
+                    </li><li>public <span title="Date">Date</span> <a title="Rebelo\Date\Date" href="../classes/Rebelo_Date_Date/sub.xhtml">sub</a>()
+                    </li><li>public <span title="DateInterval">DateInterval</span> <a title="Rebelo\Date\Date" href="../classes/Rebelo_Date_Date/diff.xhtml">diff</a>()
+                    </li><li>public int <a title="Rebelo\Date\Date" href="../classes/Rebelo_Date_Date/getOffset.xhtml">getOffset</a>()
+                    </li><li>public int <a title="Rebelo\Date\Date" href="../classes/Rebelo_Date_Date/getTimestamp.xhtml">getTimestamp</a>()
+                    </li><li>public <span title="DateTimeZone">DateTimeZone</span> <a title="Rebelo\Date\Date" href="../classes/Rebelo_Date_Date/getTimezone.xhtml">getTimezone</a>()
+                    </li><li>public <span title="Date">Date</span> <a title="Rebelo\Date\Date" href="../classes/Rebelo_Date_Date/modify.xhtml">modify</a>()
+                    </li><li>public <span title="Date">Date</span> <a title="Rebelo\Date\Date" href="../classes/Rebelo_Date_Date/setDate.xhtml">setDate</a>()
+                    </li><li>public <span title="Date">Date</span> <a title="Rebelo\Date\Date" href="../classes/Rebelo_Date_Date/setYaer.xhtml">setYaer</a>()
+                    </li><li>public <span title="Date">Date</span> <a title="Rebelo\Date\Date" href="../classes/Rebelo_Date_Date/setMonth.xhtml">setMonth</a>()
+                    </li><li>public <span title="Date">Date</span> <a title="Rebelo\Date\Date" href="../classes/Rebelo_Date_Date/setDay.xhtml">setDay</a>()
+                    </li><li>public <span title="Date">Date</span> <a title="Rebelo\Date\Date" href="../classes/Rebelo_Date_Date/setISODate.xhtml">setISODate</a>()
+                    </li><li>public <span title="Date">Date</span> <a title="Rebelo\Date\Date" href="../classes/Rebelo_Date_Date/setTime.xhtml">setTime</a>()
+                    </li><li>public <span title="Date">Date</span> <a title="Rebelo\Date\Date" href="../classes/Rebelo_Date_Date/setHour.xhtml">setHour</a>()
+                    </li><li>public <span title="Date">Date</span> <a title="Rebelo\Date\Date" href="../classes/Rebelo_Date_Date/setMinutes.xhtml">setMinutes</a>()
+                    </li><li>public <span title="Date">Date</span> <a title="Rebelo\Date\Date" href="../classes/Rebelo_Date_Date/setSeconds.xhtml">setSeconds</a>()
+                    </li><li>public <span title="Date">Date</span> <a title="Rebelo\Date\Date" href="../classes/Rebelo_Date_Date/setMicroseconds.xhtml">setMicroseconds</a>()
+                    </li><li>public <span title="Date">Date</span> <a title="Rebelo\Date\Date" href="../classes/Rebelo_Date_Date/setTimestamp.xhtml">setTimestamp</a>()
+                    </li><li>public <span title="Date">Date</span> <a title="Rebelo\Date\Date" href="../classes/Rebelo_Date_Date/setTimezone.xhtml">setTimezone</a>()
+                    </li><li>public <span title="Date">Date</span> <a title="Rebelo\Date\Date" href="../classes/Rebelo_Date_Date/addYears.xhtml">addYears</a>()
+                    </li><li>public <span title="Date">Date</span> <a title="Rebelo\Date\Date" href="../classes/Rebelo_Date_Date/addMonths.xhtml">addMonths</a>()
+                    </li><li>public <span title="Date">Date</span> <a title="Rebelo\Date\Date" href="../classes/Rebelo_Date_Date/addDays.xhtml">addDays</a>()
+                    </li><li>public <span title="Date">Date</span> <a title="Rebelo\Date\Date" href="../classes/Rebelo_Date_Date/addHours.xhtml">addHours</a>()
+                    </li><li>public <span title="Date">Date</span> <a title="Rebelo\Date\Date" href="../classes/Rebelo_Date_Date/addMinutes.xhtml">addMinutes</a>()
+                    </li><li>public <span title="Date">Date</span> <a title="Rebelo\Date\Date" href="../classes/Rebelo_Date_Date/addSeconds.xhtml">addSeconds</a>()
+                    </li><li>public <span title="DateTime">DateTime</span> <a title="Rebelo\Date\Date" href="../classes/Rebelo_Date_Date/toDateTime.xhtml">toDateTime</a>()
+                    </li><li>public void <a title="Rebelo\Date\Date" href="../classes/Rebelo_Date_Date/__clone.xhtml">__clone</a>()
+                    </li><li>public bool <a title="Rebelo\Date\Date" href="../classes/Rebelo_Date_Date/isEarlier.xhtml">isEarlier</a>()
+                    </li><li>public bool <a title="Rebelo\Date\Date" href="../classes/Rebelo_Date_Date/isLater.xhtml">isLater</a>()
+                    </li><li>public bool <a title="Rebelo\Date\Date" href="../classes/Rebelo_Date_Date/isEqual.xhtml">isEqual</a>()
+                    </li><li>public bool <a title="Rebelo\Date\Date" href="../classes/Rebelo_Date_Date/isEarlierOrEqual.xhtml">isEarlierOrEqual</a>()
+                    </li><li>public bool <a title="Rebelo\Date\Date" href="../classes/Rebelo_Date_Date/isLaterOrEqual.xhtml">isLaterOrEqual</a>()
+                    </li></ul>
+
+            }<br/></div>
+        <h2 id="constants">Constants</h2>
+        <table class="styled">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Value</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td id="ATOM">ATOM</td>
+              <td>"Y-m-d\TH:i:sP"</td>
+            </tr>
+            <tr>
+              <td id="COOKIE">COOKIE</td>
+              <td>"l, d-M-Y H:i:s T"</td>
+            </tr>
+            <tr>
+              <td id="ISO8601">ISO8601</td>
+              <td>"Y-m-d\TH:i:sO"</td>
+            </tr>
+            <tr>
+              <td id="RFC822">RFC822</td>
+              <td>"D, d M y H:i:s O"</td>
+            </tr>
+            <tr>
+              <td id="RFC850">RFC850</td>
+              <td>"l, d-M-y H:i:s T"</td>
+            </tr>
+            <tr>
+              <td id="RFC1036">RFC1036</td>
+              <td>"D, d M y H:i:s O"</td>
+            </tr>
+            <tr>
+              <td id="RFC1123">RFC1123</td>
+              <td>"D, d M Y H:i:s O"</td>
+            </tr>
+            <tr>
+              <td id="RFC2822">RFC2822</td>
+              <td>"D, d M Y H:i:s O"</td>
+            </tr>
+            <tr>
+              <td id="RFC3339">RFC3339</td>
+              <td>"Y-m-d\TH:i:sP"</td>
+            </tr>
+            <tr>
+              <td id="RFC3339_EXTENDED">RFC3339_EXTENDED</td>
+              <td>"Y-m-d\TH:i:s.vP"</td>
+            </tr>
+            <tr>
+              <td id="RSS">RSS</td>
+              <td>"D, d M Y H:i:s O"</td>
+            </tr>
+            <tr>
+              <td id="W3C">W3C</td>
+              <td>"Y-m-d\TH:i:sP"</td>
+            </tr>
+            <tr>
+              <td id="SQL_DATE">SQL_DATE</td>
+              <td>"Y-m-d"</td>
+            </tr>
+            <tr>
+              <td id="DATE_T_TIME">DATE_T_TIME</td>
+              <td>"Y-m-d\TH:i:s"</td>
+            </tr>
+            <tr>
+              <td id="DATE_TIME">DATE_TIME</td>
+              <td>"Y-m-d H:i:s"</td>
+            </tr>
+            <tr>
+              <td id="SQL_DATETIME">SQL_DATETIME</td>
+              <td>"Y-m-d H:i:s"</td>
+            </tr>
+            <tr>
+              <td id="DAY">DAY</td>
+              <td>"d"</td>
+            </tr>
+            <tr>
+              <td id="DAY_LESS">DAY_LESS</td>
+              <td>"d"</td>
+            </tr>
+            <tr>
+              <td id="DAY_TEXT_SHORT">DAY_TEXT_SHORT</td>
+              <td>"D"</td>
+            </tr>
+            <tr>
+              <td id="DAY_TEXT">DAY_TEXT</td>
+              <td>"l"</td>
+            </tr>
+            <tr>
+              <td id="ENGLISH_SUFIX">ENGLISH_SUFIX</td>
+              <td>"S"</td>
+            </tr>
+            <tr>
+              <td id="DAY_OF_YAER">DAY_OF_YAER</td>
+              <td>"z"</td>
+            </tr>
+            <tr>
+              <td id="MONTH_TEXT">MONTH_TEXT</td>
+              <td>"F"</td>
+            </tr>
+            <tr>
+              <td id="MONTH_TEXT_SHORT">MONTH_TEXT_SHORT</td>
+              <td>"M"</td>
+            </tr>
+            <tr>
+              <td id="MONTH">MONTH</td>
+              <td>"m"</td>
+            </tr>
+            <tr>
+              <td id="MONTH_SHORT">MONTH_SHORT</td>
+              <td>"n"</td>
+            </tr>
+            <tr>
+              <td id="YAER">YAER</td>
+              <td>"Y"</td>
+            </tr>
+            <tr>
+              <td id="YEAR_SHORT">YEAR_SHORT</td>
+              <td>"y"</td>
+            </tr>
+            <tr>
+              <td id="ANTE_MERIDIEM">ANTE_MERIDIEM</td>
+              <td>"a"</td>
+            </tr>
+            <tr>
+              <td id="POST_MERIDIEM">POST_MERIDIEM</td>
+              <td>"A"</td>
+            </tr>
+            <tr>
+              <td id="HOUR_12">HOUR_12</td>
+              <td>"h"</td>
+            </tr>
+            <tr>
+              <td id="HOUR_12_SHORT">HOUR_12_SHORT</td>
+              <td>"g"</td>
+            </tr>
+            <tr>
+              <td id="HOUR_24">HOUR_24</td>
+              <td>"H"</td>
+            </tr>
+            <tr>
+              <td id="HOUR_24_SHORT">HOUR_24_SHORT</td>
+              <td>"G"</td>
+            </tr>
+            <tr>
+              <td id="MINUTES">MINUTES</td>
+              <td>"i"</td>
+            </tr>
+            <tr>
+              <td id="SECONDS">SECONDS</td>
+              <td>"s"</td>
+            </tr>
+            <tr>
+              <td id="MICRO_SECONDS">MICRO_SECONDS</td>
+              <td>"u"</td>
+            </tr>
+            <tr>
+              <td id="MICRO_SEC_SHORT">MICRO_SEC_SHORT</td>
+              <td>"v"</td>
+            </tr>
+            <tr>
+              <td id="UNIX_TIMESTAMP">UNIX_TIMESTAMP</td>
+              <td>"U"</td>
+            </tr>
+            <tr>
+              <td id="TIME">TIME</td>
+              <td>"H:i:s"</td>
+            </tr>
+            <tr>
+              <td id="TIME_MICRO_SECONDS">TIME_MICRO_SECONDS</td>
+              <td>"H:i:s.v"</td>
+            </tr>
+            <tr>
+              <td id="TIME_MICRO_L_SECONDS">TIME_MICRO_L_SECONDS</td>
+              <td>"H:i:s.u"</td>
+            </tr>
+          </tbody>
+        </table>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>protected</h4>
+          <ul class="members">
+            <li id="date"><strong>$date</strong>
+                —
+                <a title="\DateTime" href="../classes/_DateTime.xhtml">\DateTime</a><br/><span class="indent">The base object</span></li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>public</h4>
+          <ul>
+            <li id="__construct"><a title="Rebelo\Date\Date" href="../classes/Rebelo_Date_Date/__construct.xhtml">__construct()</a>
+                — DateTime</li>
+            <li id="__clone">
+              <a title="Rebelo\Date\Date" href="../classes/Rebelo_Date_Date/__clone.xhtml">__clone()</a>
+            </li>
+            <li id="add"><a title="Rebelo\Date\Date" href="../classes/Rebelo_Date_Date/add.xhtml">add()</a>
+                — Return a new DateTime that is this DateTime plus the DateInterval.</li>
+            <li id="addDays"><a title="Rebelo\Date\Date" href="../classes/Rebelo_Date_Date/addDays.xhtml">addDays()</a>
+                — Return a new Date object that is this Date add with the number of days To subtract the $days must be negative integer</li>
+            <li id="addHours"><a title="Rebelo\Date\Date" href="../classes/Rebelo_Date_Date/addHours.xhtml">addHours()</a>
+                — Return a new Date object that is this add with the number of hours To subtract the $hours must be negative integer</li>
+            <li id="addMinutes"><a title="Rebelo\Date\Date" href="../classes/Rebelo_Date_Date/addMinutes.xhtml">addMinutes()</a>
+                — Return a new Date object that is this add with the number of minutes To subtract the $minutes must be negative integer</li>
+            <li id="addMonths"><a title="Rebelo\Date\Date" href="../classes/Rebelo_Date_Date/addMonths.xhtml">addMonths()</a>
+                — Return a new Date object that is this add with the number of months To subtract the $months must be negative</li>
+            <li id="addSeconds"><a title="Rebelo\Date\Date" href="../classes/Rebelo_Date_Date/addSeconds.xhtml">addSeconds()</a>
+                — Return a new Date object that is this add with the number of seconds To subtract the $seconds must be negative integer</li>
+            <li id="addYears"><a title="Rebelo\Date\Date" href="../classes/Rebelo_Date_Date/addYears.xhtml">addYears()</a>
+                — Return a new Date object that is this add with the number of years To subtract the $years must be negative</li>
+            <li id="createFromFormat"><a title="Rebelo\Date\Date" href="../classes/Rebelo_Date_Date/createFromFormat.xhtml">createFromFormat()</a>
+                — Alias of Date::parse</li>
+            <li id="diff"><a title="Rebelo\Date\Date" href="../classes/Rebelo_Date_Date/diff.xhtml">diff()</a>
+                — Returns the difference between two DateTime objects</li>
+            <li id="format"><a title="Rebelo\Date\Date" href="../classes/Rebelo_Date_Date/format.xhtml">format()</a>
+                — Returns date formatted according to given format &lt;p&gt;Returns date formatted according to given format.&lt;/p&gt;</li>
+            <li id="getOffset"><a title="Rebelo\Date\Date" href="../classes/Rebelo_Date_Date/getOffset.xhtml">getOffset()</a>
+                — Returns the timezone offset</li>
+            <li id="getTimestamp"><a title="Rebelo\Date\Date" href="../classes/Rebelo_Date_Date/getTimestamp.xhtml">getTimestamp()</a>
+                — Gets the Unix timestamp</li>
+            <li id="getTimezone"><a title="Rebelo\Date\Date" href="../classes/Rebelo_Date_Date/getTimezone.xhtml">getTimezone()</a>
+                — Return time zone relative</li>
+            <li id="isEarlier"><a title="Rebelo\Date\Date" href="../classes/Rebelo_Date_Date/isEarlier.xhtml">isEarlier()</a>
+                — Test if this date is earlier than</li>
+            <li id="isEarlierOrEqual"><a title="Rebelo\Date\Date" href="../classes/Rebelo_Date_Date/isEarlierOrEqual.xhtml">isEarlierOrEqual()</a>
+                — Test if this date is earlier or equal than</li>
+            <li id="isEqual"><a title="Rebelo\Date\Date" href="../classes/Rebelo_Date_Date/isEqual.xhtml">isEqual()</a>
+                — Test if this date is equal than</li>
+            <li id="isLater"><a title="Rebelo\Date\Date" href="../classes/Rebelo_Date_Date/isLater.xhtml">isLater()</a>
+                — Test if this date is later than</li>
+            <li id="isLaterOrEqual"><a title="Rebelo\Date\Date" href="../classes/Rebelo_Date_Date/isLaterOrEqual.xhtml">isLaterOrEqual()</a>
+                — Test if this date is later or equal than</li>
+            <li id="modify"><a title="Rebelo\Date\Date" href="../classes/Rebelo_Date_Date/modify.xhtml">modify()</a>
+                — Alters the timestamp of this Date</li>
+            <li id="parse"><a title="Rebelo\Date\Date" href="../classes/Rebelo_Date_Date/parse.xhtml">parse()</a>
+                — Create a Date object from a string</li>
+            <li id="setDate"><a title="Rebelo\Date\Date" href="../classes/Rebelo_Date_Date/setDate.xhtml">setDate()</a>
+                — Sets the date &lt;p&gt;Resets the current date of the DateTime object to a different date.&lt;/p&gt;</li>
+            <li id="setDay"><a title="Rebelo\Date\Date" href="../classes/Rebelo_Date_Date/setDay.xhtml">setDay()</a>
+                — Set the day of month of this date object</li>
+            <li id="setHour"><a title="Rebelo\Date\Date" href="../classes/Rebelo_Date_Date/setHour.xhtml">setHour()</a>
+                — Set the hour of this Date object</li>
+            <li id="setISODate"><a title="Rebelo\Date\Date" href="../classes/Rebelo_Date_Date/setISODate.xhtml">setISODate()</a>
+                — Sets the ISO date &lt;p&gt;Set a date according to the ISO 8601 standard - using weeks and day offsets rather than specific dates.&lt;/p&gt;</li>
+            <li id="setMicroseconds"><a title="Rebelo\Date\Date" href="../classes/Rebelo_Date_Date/setMicroseconds.xhtml">setMicroseconds()</a>
+                — Set the microseconds of this Date object</li>
+            <li id="setMinutes"><a title="Rebelo\Date\Date" href="../classes/Rebelo_Date_Date/setMinutes.xhtml">setMinutes()</a>
+                — Set the minutes of this Date object</li>
+            <li id="setMonth"><a title="Rebelo\Date\Date" href="../classes/Rebelo_Date_Date/setMonth.xhtml">setMonth()</a>
+                — Set the month of this date object</li>
+            <li id="setSeconds"><a title="Rebelo\Date\Date" href="../classes/Rebelo_Date_Date/setSeconds.xhtml">setSeconds()</a>
+                — Set the seconds of this Date object</li>
+            <li id="setTime"><a title="Rebelo\Date\Date" href="../classes/Rebelo_Date_Date/setTime.xhtml">setTime()</a>
+                — Sets the time &lt;p&gt;Resets the current time of the DateTime object to a different time.&lt;/p&gt;</li>
+            <li id="setTimestamp"><a title="Rebelo\Date\Date" href="../classes/Rebelo_Date_Date/setTimestamp.xhtml">setTimestamp()</a>
+                — Set the Timestamp of this date</li>
+            <li id="setTimezone"><a title="Rebelo\Date\Date" href="../classes/Rebelo_Date_Date/setTimezone.xhtml">setTimezone()</a>
+                — Set the time zone of this date</li>
+            <li id="setYaer"><a title="Rebelo\Date\Date" href="../classes/Rebelo_Date_Date/setYaer.xhtml">setYaer()</a>
+                — Set the year of this date object</li>
+            <li id="sub"><a title="Rebelo\Date\Date" href="../classes/Rebelo_Date_Date/sub.xhtml">sub()</a>
+                — Retrun a new Date that as the result of subtract to this the interval This Date value is not chenged, the result is a new instance</li>
+            <li id="toDateTime"><a title="Rebelo\Date\Date" href="../classes/Rebelo_Date_Date/toDateTime.xhtml">toDateTime()</a>
+                — Returne the native PHP DateTime class</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.12.0 - Copyright (C) 2010 - 2020 by Arne Blankerts and Contributors</span>
+    </footer>
+  </body>
+</html>

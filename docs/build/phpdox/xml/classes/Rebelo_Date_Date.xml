@@ -1,0 +1,885 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="Rebelo\Date\Date" namespace="Rebelo\Date" name="Date" abstract="false" final="false" start="23" end="1025">
+  <file path="D:/NetBeansProjects/PHP/Date/src/Rebelo/Date" file="Date.php" realpath="D:/NetBeansProjects/PHP/Date/src/Rebelo/Date/Date.php" size="27113" time="2020-09-05T11:01:12+01:00" unixtime="1599300072" sha1="c3c71b49dabda7452c20ec158c12f47e812437be" relative="Rebelo/Date/Date.php"/>
+  <docblock>
+    <description compact="Date class This class relays on the DateTime class of php but change the return type for some methods and have more methods.">Methods like add and sub return a new Object instead of change
+the instance it self</description>
+    <author value="João Rebelo"/>
+    <since value="1.0.0"/>
+  </docblock>
+  <constant type="string" name="ATOM" value="&quot;Y-m-d\TH:i:sP&quot;">
+    <docblock>
+      <description/>
+      <var description="Atom (example: 2005-08-15T15:52:01+00:00)" type="string"/>
+      <link value="http://php.net/manual/en/class.datetimeinterface.php"/>
+      <since value="1.0.0"/>
+    </docblock>
+  </constant>
+  <constant type="string" name="COOKIE" value="&quot;l, d-M-Y H:i:s T&quot;">
+    <docblock>
+      <description/>
+      <var description="HTTP Cookies (example: Monday, 15-Aug-2005 15:52:01 UTC)" type="string"/>
+      <link value="http://php.net/manual/en/class.datetimeinterface.php"/>
+      <since value="1.0.0"/>
+    </docblock>
+  </constant>
+  <constant type="string" name="ISO8601" value="&quot;Y-m-d\TH:i:sO&quot;">
+    <docblock>
+      <description/>
+      <var description="ISO-8601 (example: 2005-08-15T15:52:01+0000)  &lt;p&gt;&lt;b&gt;Note&lt;/b&gt;:" type="string">This format is not compatible with ISO-8601, but is left this way
+for backward compatibility reasons.
+Use &lt;b&gt;&lt;code&gt;DateTime::ATOM&lt;/code&gt;&lt;/b&gt; or &lt;b&gt;&lt;code&gt;DATE_ATOM&lt;/code&gt;&lt;/b&gt;
+for compatibility with ISO-8601 instead. &lt;/p&gt;</var>
+      <link value="http://php.net/manual/en/class.datetimeinterface.php"/>
+      <since value="1.0.0"/>
+    </docblock>
+  </constant>
+  <constant type="string" name="RFC822" value="&quot;D, d M y H:i:s O&quot;">
+    <docblock>
+      <description/>
+      <var description="RFC 822 (example: Mon, 15 Aug 05 15:52:01 +0000)" type="string"/>
+      <link value="http://php.net/manual/en/class.datetimeinterface.php"/>
+      <since value="1.0.0"/>
+    </docblock>
+  </constant>
+  <constant type="string" name="RFC850" value="&quot;l, d-M-y H:i:s T&quot;">
+    <docblock>
+      <description/>
+      <var description="RFC 850 (example: Monday, 15-Aug-05 15:52:01 UTC)" type="string"/>
+      <link value="http://php.net/manual/en/class.datetimeinterface.php"/>
+      <since value="1.0.0"/>
+    </docblock>
+  </constant>
+  <constant type="string" name="RFC1036" value="&quot;D, d M y H:i:s O&quot;">
+    <docblock>
+      <description/>
+      <var description="RFC 1036 (example: Mon, 15 Aug 05 15:52:01 +0000)" type="string"/>
+      <link value="http://php.net/manual/en/class.datetimeinterface.php"/>
+      <since value="1.0.0"/>
+    </docblock>
+  </constant>
+  <constant type="string" name="RFC1123" value="&quot;D, d M Y H:i:s O&quot;">
+    <docblock>
+      <description/>
+      <var description="RFC 1123 (example: Mon, 15 Aug 2005 15:52:01 +0000)" type="string"/>
+      <link value="http://php.net/manual/en/class.datetimeinterface.php"/>
+      <since value="1.0.0"/>
+    </docblock>
+  </constant>
+  <constant type="string" name="RFC2822" value="&quot;D, d M Y H:i:s O&quot;">
+    <docblock>
+      <description/>
+      <var description="RFC 2822 (example: Mon, 15 Aug 2005 15:52:01 +0000)" type="string"/>
+      <link value="http://php.net/manual/en/class.datetimeinterface.php"/>
+      <since value="1.0.0"/>
+    </docblock>
+  </constant>
+  <constant type="string" name="RFC3339" value="&quot;Y-m-d\TH:i:sP&quot;">
+    <docblock>
+      <description/>
+      <var description="Same as &lt;b&gt;&lt;code&gt;DATE_ATOM&lt;/code&gt;&lt;/b&gt; (since PHP 5.1.3)" type="string"/>
+      <link value="http://php.net/manual/en/class.datetimeinterface.php"/>
+      <since value="1.0.0"/>
+    </docblock>
+  </constant>
+  <constant type="string" name="RFC3339_EXTENDED" value="&quot;Y-m-d\TH:i:s.vP&quot;">
+    <docblock>
+      <description/>
+      <var description="RFC 3339 EXTENDED format (since PHP 7.0.0)" type="string">(example: 2005-08-15T15:52:01.000+00:00)</var>
+      <link value="http://php.net/manual/en/class.datetimeinterface.php"/>
+      <since value="1.0.0"/>
+    </docblock>
+  </constant>
+  <constant type="string" name="RSS" value="&quot;D, d M Y H:i:s O&quot;">
+    <docblock>
+      <description/>
+      <var description="RSS (example: Mon, 15 Aug 2005 15:52:01 +0000)" type="string"/>
+      <link value="http://php.net/manual/en/class.datetimeinterface.php"/>
+      <since value="1.0.0"/>
+    </docblock>
+  </constant>
+  <constant type="string" name="W3C" value="&quot;Y-m-d\TH:i:sP&quot;">
+    <docblock>
+      <description/>
+      <var description="World Wide Web Consortium" type="string">(example: 2005-08-15T15:52:01+00:00)</var>
+      <link value="http://php.net/manual/en/class.datetimeinterface.php"/>
+      <since value="1.0.0"/>
+    </docblock>
+  </constant>
+  <constant type="string" name="SQL_DATE" value="&quot;Y-m-d&quot;">
+    <docblock>
+      <description/>
+      <var description="SQL Date (Example: 1969-10-05)" type="string"/>
+      <since value="1.0.0"/>
+    </docblock>
+  </constant>
+  <constant type="string" name="DATE_T_TIME" value="&quot;Y-m-d\TH:i:s&quot;">
+    <docblock>
+      <description compact="Date time combined with the T char">Ex: 1969-10-05T09:29:39</description>
+      <var type="string"/>
+      <since value="2.1.0"/>
+    </docblock>
+  </constant>
+  <constant type="string" name="DATE_TIME" value="&quot;Y-m-d H:i:s&quot;">
+    <docblock>
+      <description compact="Date and time Ex: 1969-10-05 09:29:39"/>
+      <var type="string"/>
+      <since value="2.1.0"/>
+    </docblock>
+  </constant>
+  <constant type="string" name="SQL_DATETIME" value="&quot;Y-m-d H:i:s&quot;">
+    <docblock>
+      <description/>
+      <var description="SQL DateTime (Example: 1969-10-05 09:00:00)" type="string"/>
+      <since value="1.0.0"/>
+    </docblock>
+  </constant>
+  <constant type="string" name="DAY" value="&quot;d&quot;">
+    <docblock>
+      <description compact="Day of the month, 2 digits with leading zeros Exmaple 01 or 31"/>
+      <var type="string"/>
+      <since value="1.0.0"/>
+    </docblock>
+  </constant>
+  <constant type="string" name="DAY_LESS" value="&quot;d&quot;">
+    <docblock>
+      <description compact="Day of the month, 1 or 2 digits without leading zeros Exmaple 1 or 31"/>
+      <var type="string"/>
+      <since value="1.0.0"/>
+    </docblock>
+  </constant>
+  <constant type="string" name="DAY_TEXT_SHORT" value="&quot;D&quot;">
+    <docblock>
+      <description compact="A textual representation of a day Mon through Sun"/>
+      <var type="string"/>
+      <since value="1.0.0"/>
+    </docblock>
+  </constant>
+  <constant type="string" name="DAY_TEXT" value="&quot;l&quot;">
+    <docblock>
+      <description compact="A textual representation of a day Sunday through Saturday"/>
+      <var type="string"/>
+      <since value="1.0.0"/>
+    </docblock>
+  </constant>
+  <constant type="string" name="ENGLISH_SUFIX" value="&quot;S&quot;">
+    <docblock>
+      <description compact="English ordinal suffix for the day of the month, 2 characters.">It's ignored while processing.
+Example: st, nd, rd or th.</description>
+      <var type="string"/>
+      <since value="1.0.0"/>
+    </docblock>
+  </constant>
+  <constant type="string" name="DAY_OF_YAER" value="&quot;z&quot;">
+    <docblock>
+      <description compact="The day of the year (starting from 0) 0 through 365"/>
+      <var type="string"/>
+      <since value="1.0.0"/>
+    </docblock>
+  </constant>
+  <constant type="string" name="MONTH_TEXT" value="&quot;F&quot;">
+    <docblock>
+      <description compact="A textual representation of a month, such as January January through December"/>
+      <var type="string"/>
+      <since value="1.0.0"/>
+    </docblock>
+  </constant>
+  <constant type="string" name="MONTH_TEXT_SHORT" value="&quot;M&quot;">
+    <docblock>
+      <description compact="A textual representation of a month, such as Sept Jan through Dec"/>
+      <var type="string"/>
+      <since value="1.0.0"/>
+    </docblock>
+  </constant>
+  <constant type="string" name="MONTH" value="&quot;m&quot;">
+    <docblock>
+      <description compact="Numeric representation of a month, with leading zeros 01 through 12"/>
+      <var type="string"/>
+      <since value="1.0.0"/>
+    </docblock>
+  </constant>
+  <constant type="string" name="MONTH_SHORT" value="&quot;n&quot;">
+    <docblock>
+      <description compact="Numeric representation of a month, without leading zeros 1 through 12"/>
+      <var type="string"/>
+      <since value="1.0.0"/>
+    </docblock>
+  </constant>
+  <constant type="string" name="YAER" value="&quot;Y&quot;">
+    <docblock>
+      <description compact="A full numeric representation of a year, 4 digits Examples: 1999 or 2003"/>
+      <var type="string"/>
+      <since value="1.0.0"/>
+    </docblock>
+  </constant>
+  <constant type="string" name="YEAR_SHORT" value="&quot;y&quot;">
+    <docblock>
+      <description compact="A two digit representation of a year (which is assumed to be in the range 1970-2069, inclusive)">Examples: 99 or 03
+(which will be interpreted as 1999 and 2003, respectively)</description>
+      <var type="string"/>
+      <since value="1.0.0"/>
+    </docblock>
+  </constant>
+  <constant type="string" name="ANTE_MERIDIEM" value="&quot;a&quot;">
+    <docblock>
+      <description compact="Ante meridiem time am (before 12:00)"/>
+      <var type="string"/>
+      <since value="1.0.0"/>
+    </docblock>
+  </constant>
+  <constant type="string" name="POST_MERIDIEM" value="&quot;A&quot;">
+    <docblock>
+      <description compact="Post meridiem time pm (after 12:00)"/>
+      <var type="string"/>
+      <since value="1.0.0"/>
+    </docblock>
+  </constant>
+  <constant type="string" name="HOUR_12" value="&quot;h&quot;">
+    <docblock>
+      <description compact="12-hour format of an hour with leading zero"/>
+      <var type="string"/>
+      <since value="1.0.0"/>
+    </docblock>
+  </constant>
+  <constant type="string" name="HOUR_12_SHORT" value="&quot;g&quot;">
+    <docblock>
+      <description compact="12-hour format of an hour without leading zero"/>
+      <var type="string"/>
+      <since value="1.0.0"/>
+    </docblock>
+  </constant>
+  <constant type="string" name="HOUR_24" value="&quot;H&quot;">
+    <docblock>
+      <description compact="24-hour format of an hour with leading zero"/>
+      <var type="string"/>
+      <since value="1.0.0"/>
+    </docblock>
+  </constant>
+  <constant type="string" name="HOUR_24_SHORT" value="&quot;G&quot;">
+    <docblock>
+      <description compact="24-hour format of an hour without leading zero"/>
+      <var type="string"/>
+      <since value="1.0.0"/>
+    </docblock>
+  </constant>
+  <constant type="string" name="MINUTES" value="&quot;i&quot;">
+    <docblock>
+      <description compact="Minutes with leading zeros 00 to 59"/>
+      <var type="string"/>
+      <since value="1.0.0"/>
+    </docblock>
+  </constant>
+  <constant type="string" name="SECONDS" value="&quot;s&quot;">
+    <docblock>
+      <description compact="Seconds with leading zeros 00 to 59"/>
+      <var type="string"/>
+      <since value="1.0.0"/>
+    </docblock>
+  </constant>
+  <constant type="string" name="MICRO_SECONDS" value="&quot;u&quot;">
+    <docblock>
+      <description compact="Microseconds up to six digits"/>
+      <var type="string"/>
+      <since value="1.0.0"/>
+    </docblock>
+  </constant>
+  <constant type="string" name="MICRO_SEC_SHORT" value="&quot;v&quot;">
+    <docblock>
+      <description compact="Microseconds up to 3 digits"/>
+      <var type="string"/>
+      <since value="1.0.0"/>
+    </docblock>
+  </constant>
+  <constant type="string" name="UNIX_TIMESTAMP" value="&quot;U&quot;">
+    <docblock>
+      <description compact="Seconds since the Unix Epoch (January 1 1970 00:00:00 GMT)"/>
+      <var type="string"/>
+      <since value="1.0.0"/>
+    </docblock>
+  </constant>
+  <constant type="string" name="TIME" value="&quot;H:i:s&quot;">
+    <docblock>
+      <description compact="Time Ex: 09:59:29"/>
+      <var type="string"/>
+      <since value="1.0.0"/>
+    </docblock>
+  </constant>
+  <constant type="string" name="TIME_MICRO_SECONDS" value="&quot;H:i:s.v&quot;">
+    <docblock>
+      <description compact="Time with up 3 digits in microseconds Ex: 09:59:29.999"/>
+      <var type="string"/>
+      <since value="1.0.0"/>
+    </docblock>
+  </constant>
+  <constant type="string" name="TIME_MICRO_L_SECONDS" value="&quot;H:i:s.u&quot;">
+    <docblock>
+      <description compact="Time with up 6 digits in microseconds Ex: 09:59:29.000999"/>
+      <var type="string"/>
+      <since value="1.0.0"/>
+    </docblock>
+  </constant>
+  <member name="date" visibility="protected" static="false" line="374">
+    <docblock>
+      <description compact="The base object"/>
+      <var description="The PHP native \DateTime" type="object">
+        <type full="\DateTime" namespace="" name="DateTime"/>
+      </var>
+      <since value="1.0.0"/>
+    </docblock>
+  </member>
+  <constructor name="__construct" start="382" end="388" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="DateTime"/>
+      <param description="&lt;p&gt;A date/time string. Valid formats are same as fo rnative PHP \DateTime.&lt;/p&gt; &lt;p&gt;Enter &lt;i&gt;&quot;now&quot;&lt;/i&gt; here to obtain the current time when using the &lt;code&gt;$timezone&lt;/code&gt; parameter.&lt;/p&gt;" type="string" variable="$time"/>
+      <param description="$timezone &lt;p&gt;A DateTimeZone object representing the timezone of &lt;code&gt;$time&lt;/code&gt;.&lt;/p&gt;&lt;p&gt;If &lt;code&gt;$timezone&lt;/code&gt; is omitted, the current timezone will be used.&lt;/p&gt; &lt;p&gt;&lt;b&gt;Note&lt;/b&gt;:&lt;/p&gt;&lt;p&gt;The &lt;code&gt;$timezone&lt;/code&gt; parameter and the current timezone are ignored when the &lt;code&gt;$time&lt;/code&gt; parameter either is a UNIX timestamp (e.g. &lt;i&gt;@946684800&lt;/i&gt;) or specifies a timezone" type="object" variable="$timezone">(e.g. &lt;i&gt;2010-01-28T15:00:00+02:00&lt;/i&gt;).&lt;/p&gt;<type full="\DateTimeZone" namespace="" name="DateTimeZone"/></param>
+    </docblock>
+    <parameter name="time" byreference="false" type="string" default="&quot;now&quot;"/>
+    <parameter name="timezone" byreference="false" type="object" default="NULL">
+      <type full="DateTimeZone" namespace="" name="DateTimeZone"/>
+    </parameter>
+  </constructor>
+  <method name="parse" start="404" end="456" abstract="false" final="false" static="true" visibility="public">
+    <docblock>
+      <description compact="Create a Date object from a string">The format is one of the use in PHP \DateTime
+If the Date is not valide it will throws \Rebelo\Date\DateParseException</description>
+      <param type="string" variable="$format"/>
+      <param type="string" variable="$time"/>
+      <param type="object" variable="$timezone">
+        <type full="\DateTimeZone|null" namespace="" name="DateTimeZone|null"/>
+      </param>
+      <return type="object">
+        <type full="\Rebelo\Date\Date" namespace="\Rebelo\Date" name="Date"/>
+      </return>
+      <throws type="object">
+        <type full="Rebelo\Date\DateParseException" namespace="Rebelo\Date" name="DateParseException"/>
+      </throws>
+      <since value="1.0.0"/>
+    </docblock>
+    <return type="object" nullable="false">
+      <type full="Rebelo\Date\Date" namespace="Rebelo\Date" name="Date"/>
+    </return>
+    <parameter name="format" byreference="false" type="string"/>
+    <parameter name="time" byreference="false" type="string"/>
+    <parameter name="timezone" byreference="false" nullable="true" type="object" default="NULL">
+      <type full="DateTimeZone" namespace="" name="DateTimeZone"/>
+    </parameter>
+    <inline>
+      <comment value="Set Hour to zero 00:00:00.000 whne no time is defined," line="430"/>
+      <comment value="to be possible compare two instance that only have date" line="431"/>
+      <comment value="and was instantiated in different instants" line="432"/>
+    </inline>
+  </method>
+  <method name="createFromFormat" start="467" end="474" abstract="false" final="false" static="true" visibility="public">
+    <docblock>
+      <description compact="Alias of Date::parse"/>
+      <param type="string" variable="$format"/>
+      <param type="string" variable="$time"/>
+      <param type="object" variable="$timezone">
+        <type full="\DateTimeZone|null" namespace="" name="DateTimeZone|null"/>
+      </param>
+      <return type="object">
+        <type full="\Rebelo\Date\Date" namespace="\Rebelo\Date" name="Date"/>
+      </return>
+      <since value="1.0.0"/>
+    </docblock>
+    <return type="object" nullable="false">
+      <type full="Rebelo\Date\Date" namespace="Rebelo\Date" name="Date"/>
+    </return>
+    <parameter name="format" byreference="false" type="string"/>
+    <parameter name="time" byreference="false" type="string"/>
+    <parameter name="timezone" byreference="false" nullable="true" type="object" default="NULL">
+      <type full="DateTimeZone" namespace="" name="DateTimeZone"/>
+    </parameter>
+  </method>
+  <method name="format" start="485" end="492" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Returns date formatted according to given format &lt;p&gt;Returns date formatted according to given format.&lt;/p&gt;"/>
+      <param description="&lt;p&gt;Format accepted by &lt;code&gt;date()&lt;/code&gt;.&lt;/p&gt;" type="string" variable="$format"/>
+      <return type="string"/>
+      <throws type="object">
+        <type full="Rebelo\Date\DateFormatException" namespace="Rebelo\Date" name="DateFormatException"/>
+      </throws>
+      <since value="1.0.0"/>
+    </docblock>
+    <return type="string" nullable="false"/>
+    <parameter name="format" byreference="false" type="string"/>
+  </method>
+  <method name="add" start="503" end="517" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Return a new DateTime that is this DateTime plus the DateInterval.">This date value is not changed, the result is a new instance</description>
+      <param type="object" variable="$interval">
+        <type full="\Rebelo\Date\DateInterval" namespace="\Rebelo\Date" name="DateInterval"/>
+      </param>
+      <return type="object">
+        <type full="\Rebelo\Date\Date" namespace="\Rebelo\Date" name="Date"/>
+      </return>
+      <since value="1.0.0"/>
+    </docblock>
+    <return type="object" nullable="false">
+      <type full="Rebelo\Date\Date" namespace="Rebelo\Date" name="Date"/>
+    </return>
+    <parameter name="interval" byreference="false" type="object">
+      <type full="Rebelo\Date\DateInterval" namespace="Rebelo\Date" name="DateInterval"/>
+    </parameter>
+  </method>
+  <method name="sub" start="527" end="539" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Retrun a new Date that as the result of subtract to this the interval This Date value is not chenged, the result is a new instance"/>
+      <param type="object" variable="$interval">
+        <type full="\Rebelo\Date\DateInterval" namespace="\Rebelo\Date" name="DateInterval"/>
+      </param>
+      <return type="object">
+        <type full="\Rebelo\Date\Date" namespace="\Rebelo\Date" name="Date"/>
+      </return>
+      <throws type="object">
+        <type full="Rebelo\Date\DateException" namespace="Rebelo\Date" name="DateException"/>
+      </throws>
+      <since value="1.0.0"/>
+    </docblock>
+    <return type="object" nullable="false">
+      <type full="Rebelo\Date\Date" namespace="Rebelo\Date" name="Date"/>
+    </return>
+    <parameter name="interval" byreference="false" type="object">
+      <type full="Rebelo\Date\DateInterval" namespace="Rebelo\Date" name="DateInterval"/>
+    </parameter>
+  </method>
+  <method name="diff" start="550" end="553" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Returns the difference between two DateTime objects"/>
+      <param type="object" variable="$datetime2">
+        <type full="\Rebelo\Date\Date" namespace="\Rebelo\Date" name="Date"/>
+      </param>
+      <param description="&lt;p&gt;Should the interval be forced to be positive&amp;#63;&lt;/p&gt;" type="object" variable="$absolute">
+        <type full="Rebelo\Date\bool" namespace="Rebelo\Date" name="bool"/>
+      </param>
+      <return type="object">
+        <type full="\DateInterval" namespace="" name="DateInterval"/>
+      </return>
+      <since value="1.0.0"/>
+    </docblock>
+    <return type="object" nullable="false">
+      <type full="DateInterval" namespace="" name="DateInterval"/>
+    </return>
+    <parameter name="datetime2" byreference="false" type="object">
+      <type full="Rebelo\Date\Date" namespace="Rebelo\Date" name="Date"/>
+    </parameter>
+    <parameter name="absolute" byreference="false" type="boolean" default="false"/>
+  </method>
+  <method name="getOffset" start="560" end="563" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Returns the timezone offset"/>
+      <return type="int"/>
+      <since value="1.0.0"/>
+    </docblock>
+    <return type="int" nullable="false"/>
+  </method>
+  <method name="getTimestamp" start="571" end="574" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Gets the Unix timestamp"/>
+      <return type="int"/>
+      <since value="1.0.0"/>
+    </docblock>
+    <return type="int" nullable="false"/>
+  </method>
+  <method name="getTimezone" start="581" end="584" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Return time zone relative"/>
+      <return type="object">
+        <type full="\DateTimeZone" namespace="" name="DateTimeZone"/>
+      </return>
+      <since value="1.0.0"/>
+    </docblock>
+    <return type="object" nullable="false">
+      <type full="DateTimeZone" namespace="" name="DateTimeZone"/>
+    </return>
+  </method>
+  <method name="modify" start="594" end="604" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Alters the timestamp of this Date"/>
+      <link value="http://php.net/manual/en/datetime.modify.php Accept formats"/>
+      <param type="string" variable="$modify"/>
+      <return type="object">
+        <type full="\Rebelo\Date\Date" namespace="\Rebelo\Date" name="Date"/>
+      </return>
+      <since value="1.0.0"/>
+    </docblock>
+    <return type="object" nullable="false">
+      <type full="Rebelo\Date\Date" namespace="Rebelo\Date" name="Date"/>
+    </return>
+    <parameter name="modify" byreference="false" type="string"/>
+  </method>
+  <method name="setDate" start="615" end="625" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Sets the date &lt;p&gt;Resets the current date of the DateTime object to a different date.&lt;/p&gt;"/>
+      <param type="int" variable="$year"/>
+      <param type="int" variable="$month"/>
+      <param type="int" variable="$day"/>
+      <return type="object">
+        <type full="\Rebelo\Date\Date" namespace="\Rebelo\Date" name="Date"/>
+      </return>
+      <since value="1.0.0"/>
+    </docblock>
+    <return type="object" nullable="false">
+      <type full="Rebelo\Date\Date" namespace="Rebelo\Date" name="Date"/>
+    </return>
+    <parameter name="year" byreference="false" type="int"/>
+    <parameter name="month" byreference="false" type="int"/>
+    <parameter name="day" byreference="false" type="int"/>
+    <inline>
+      <comment value="To test if the date is valide, other wise throws exception" line="619"/>
+    </inline>
+  </method>
+  <method name="setYaer" start="633" end="639" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Set the year of this date object"/>
+      <param type="int" variable="$year"/>
+      <return description="$this" type="object">
+        <type full="\Rebelo\Date\Date" namespace="\Rebelo\Date" name="Date"/>
+      </return>
+      <since value="1.0.0"/>
+    </docblock>
+    <return type="object" nullable="false">
+      <type full="Rebelo\Date\Date" namespace="Rebelo\Date" name="Date"/>
+    </return>
+    <parameter name="year" byreference="false" type="int"/>
+  </method>
+  <method name="setMonth" start="647" end="653" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Set the month of this date object"/>
+      <param type="int" variable="$month"/>
+      <return description="$this" type="object">
+        <type full="\Rebelo\Date\Date" namespace="\Rebelo\Date" name="Date"/>
+      </return>
+      <since value="1.0.0"/>
+    </docblock>
+    <return type="object" nullable="false">
+      <type full="Rebelo\Date\Date" namespace="Rebelo\Date" name="Date"/>
+    </return>
+    <parameter name="month" byreference="false" type="int"/>
+  </method>
+  <method name="setDay" start="661" end="667" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Set the day of month of this date object"/>
+      <param type="int" variable="$day"/>
+      <return description="$this" type="object">
+        <type full="\Rebelo\Date\Date" namespace="\Rebelo\Date" name="Date"/>
+      </return>
+      <since value="1.0.0"/>
+    </docblock>
+    <return type="object" nullable="false">
+      <type full="Rebelo\Date\Date" namespace="Rebelo\Date" name="Date"/>
+    </return>
+    <parameter name="day" byreference="false" type="int"/>
+  </method>
+  <method name="setISODate" start="680" end="684" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Sets the ISO date &lt;p&gt;Set a date according to the ISO 8601 standard - using weeks and day offsets rather than specific dates.&lt;/p&gt;"/>
+      <param type="int" variable="$year"/>
+      <param type="int" variable="$week"/>
+      <param type="int" variable="$day"/>
+      <return type="object">
+        <type full="\Rebelo\Date\Date" namespace="\Rebelo\Date" name="Date"/>
+      </return>
+      <since value="1.0.0"/>
+    </docblock>
+    <return type="object" nullable="false">
+      <type full="Rebelo\Date\Date" namespace="Rebelo\Date" name="Date"/>
+    </return>
+    <parameter name="year" byreference="false" type="int"/>
+    <parameter name="week" byreference="false" type="int"/>
+    <parameter name="day" byreference="false" type="integer" default="1"/>
+  </method>
+  <method name="setTime" start="696" end="721" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Sets the time &lt;p&gt;Resets the current time of the DateTime object to a different time.&lt;/p&gt;"/>
+      <param type="int" variable="$hour"/>
+      <param type="int" variable="$minute"/>
+      <param type="int" variable="$second"/>
+      <param type="int" variable="$microseconds"/>
+      <return type="object">
+        <type full="\Rebelo\Date\Date" namespace="\Rebelo\Date" name="Date"/>
+      </return>
+      <since value="1.0.0"/>
+    </docblock>
+    <return type="object" nullable="false">
+      <type full="Rebelo\Date\Date" namespace="Rebelo\Date" name="Date"/>
+    </return>
+    <parameter name="hour" byreference="false" type="int"/>
+    <parameter name="minute" byreference="false" type="int"/>
+    <parameter name="second" byreference="false" type="integer" default="0"/>
+    <parameter name="microseconds" byreference="false" type="integer" default="0"/>
+  </method>
+  <method name="setHour" start="731" end="738" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Set the hour of this Date object"/>
+      <param type="int" variable="$hour"/>
+      <return description="$this" type="object">
+        <type full="\Rebelo\Date\Date" namespace="\Rebelo\Date" name="Date"/>
+      </return>
+      <since value="1.0.0"/>
+    </docblock>
+    <return type="object" nullable="false">
+      <type full="Rebelo\Date\Date" namespace="Rebelo\Date" name="Date"/>
+    </return>
+    <parameter name="hour" byreference="false" type="int"/>
+  </method>
+  <method name="setMinutes" start="748" end="755" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Set the minutes of this Date object"/>
+      <param type="int" variable="$minute"/>
+      <return description="$this" type="object">
+        <type full="\Rebelo\Date\Date" namespace="\Rebelo\Date" name="Date"/>
+      </return>
+      <since value="1.0.0"/>
+    </docblock>
+    <return type="object" nullable="false">
+      <type full="Rebelo\Date\Date" namespace="Rebelo\Date" name="Date"/>
+    </return>
+    <parameter name="minute" byreference="false" type="int"/>
+  </method>
+  <method name="setSeconds" start="765" end="772" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Set the seconds of this Date object"/>
+      <param type="int" variable="$seconds"/>
+      <return description="$this" type="object">
+        <type full="\Rebelo\Date\Date" namespace="\Rebelo\Date" name="Date"/>
+      </return>
+      <since value="1.0.0"/>
+    </docblock>
+    <return type="object" nullable="false">
+      <type full="Rebelo\Date\Date" namespace="Rebelo\Date" name="Date"/>
+    </return>
+    <parameter name="seconds" byreference="false" type="int"/>
+  </method>
+  <method name="setMicroseconds" start="782" end="789" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Set the microseconds of this Date object"/>
+      <param type="int" variable="$microseconds"/>
+      <return description="$this" type="object">
+        <type full="\Rebelo\Date\Date" namespace="\Rebelo\Date" name="Date"/>
+      </return>
+      <since value="1.0.0"/>
+    </docblock>
+    <return type="object" nullable="false">
+      <type full="Rebelo\Date\Date" namespace="Rebelo\Date" name="Date"/>
+    </return>
+    <parameter name="microseconds" byreference="false" type="int"/>
+  </method>
+  <method name="setTimestamp" start="797" end="801" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Set the Timestamp of this date"/>
+      <param type="int" variable="$unixtimestamp"/>
+      <return type="object">
+        <type full="\Rebelo\Date\Date" namespace="\Rebelo\Date" name="Date"/>
+      </return>
+      <since value="1.0.0"/>
+    </docblock>
+    <return type="object" nullable="false">
+      <type full="Rebelo\Date\Date" namespace="Rebelo\Date" name="Date"/>
+    </return>
+    <parameter name="unixtimestamp" byreference="false" type="int"/>
+  </method>
+  <method name="setTimezone" start="811" end="815" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Set the time zone of this date"/>
+      <param type="object" variable="$timezone">
+        <type full="\DateTimeZone" namespace="" name="DateTimeZone"/>
+      </param>
+      <return type="object">
+        <type full="\Rebelo\Date\Date" namespace="\Rebelo\Date" name="Date"/>
+      </return>
+      <since value="1.0.0"/>
+    </docblock>
+    <return type="object" nullable="false">
+      <type full="Rebelo\Date\Date" namespace="Rebelo\Date" name="Date"/>
+    </return>
+    <parameter name="timezone" byreference="false" type="object">
+      <type full="DateTimeZone" namespace="" name="DateTimeZone"/>
+    </parameter>
+  </method>
+  <method name="addYears" start="826" end="838" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Return a new Date object that is this add with the number of years To subtract the $years must be negative"/>
+      <param description="Number of years to add or negative integer to subtract" type="int" variable="$years"/>
+      <return type="object">
+        <type full="\Rebelo\Date\Date" namespace="\Rebelo\Date" name="Date"/>
+      </return>
+      <throws type="object">
+        <type full="Rebelo\Date\DateException" namespace="Rebelo\Date" name="DateException"/>
+      </throws>
+      <since value="1.0.0"/>
+    </docblock>
+    <return type="object" nullable="false">
+      <type full="Rebelo\Date\Date" namespace="Rebelo\Date" name="Date"/>
+    </return>
+    <parameter name="years" byreference="false" type="int"/>
+  </method>
+  <method name="addMonths" start="848" end="860" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Return a new Date object that is this add with the number of months To subtract the $months must be negative"/>
+      <param description="Number of months to add or negative integer to subtract" type="int" variable="$months"/>
+      <return type="object">
+        <type full="\Rebelo\Date\Date" namespace="\Rebelo\Date" name="Date"/>
+      </return>
+      <since value="1.0.0"/>
+    </docblock>
+    <return type="object" nullable="false">
+      <type full="Rebelo\Date\Date" namespace="Rebelo\Date" name="Date"/>
+    </return>
+    <parameter name="months" byreference="false" type="int"/>
+  </method>
+  <method name="addDays" start="870" end="882" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Return a new Date object that is this Date add with the number of days To subtract the $days must be negative integer"/>
+      <param description="Number of days to add or negative integer to subtract" type="int" variable="$days"/>
+      <return type="object">
+        <type full="\Rebelo\Date\Date" namespace="\Rebelo\Date" name="Date"/>
+      </return>
+      <since value="1.0.0"/>
+    </docblock>
+    <return type="object" nullable="false">
+      <type full="Rebelo\Date\Date" namespace="Rebelo\Date" name="Date"/>
+    </return>
+    <parameter name="days" byreference="false" type="int"/>
+  </method>
+  <method name="addHours" start="892" end="904" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Return a new Date object that is this add with the number of hours To subtract the $hours must be negative integer"/>
+      <param description="Number of hours to add or negative integer to subtract" type="int" variable="$hours"/>
+      <return type="object">
+        <type full="\Rebelo\Date\Date" namespace="\Rebelo\Date" name="Date"/>
+      </return>
+      <since value="1.0.0"/>
+    </docblock>
+    <return type="object" nullable="false">
+      <type full="Rebelo\Date\Date" namespace="Rebelo\Date" name="Date"/>
+    </return>
+    <parameter name="hours" byreference="false" type="int"/>
+  </method>
+  <method name="addMinutes" start="914" end="926" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Return a new Date object that is this add with the number of minutes To subtract the $minutes must be negative integer"/>
+      <param description="Number of minutes to add or negative integer to subtract" type="int" variable="$minutes"/>
+      <return type="object">
+        <type full="\Rebelo\Date\Date" namespace="\Rebelo\Date" name="Date"/>
+      </return>
+      <since value="1.0.0"/>
+    </docblock>
+    <return type="object" nullable="false">
+      <type full="Rebelo\Date\Date" namespace="Rebelo\Date" name="Date"/>
+    </return>
+    <parameter name="minutes" byreference="false" type="int"/>
+  </method>
+  <method name="addSeconds" start="936" end="948" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Return a new Date object that is this add with the number of seconds To subtract the $seconds must be negative integer"/>
+      <param type="int" variable="$seconds"/>
+      <return type="object">
+        <type full="\Rebelo\Date\Date" namespace="\Rebelo\Date" name="Date"/>
+      </return>
+      <since value="1.0.0"/>
+    </docblock>
+    <return type="object" nullable="false">
+      <type full="Rebelo\Date\Date" namespace="Rebelo\Date" name="Date"/>
+    </return>
+    <parameter name="seconds" byreference="false" type="int"/>
+  </method>
+  <method name="toDateTime" start="957" end="960" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Returne the native PHP DateTime class"/>
+      <return type="object">
+        <type full="\DateTime" namespace="" name="DateTime"/>
+      </return>
+      <since value="1.0.0"/>
+    </docblock>
+    <return type="object" nullable="false">
+      <type full="DateTime" namespace="" name="DateTime"/>
+    </return>
+  </method>
+  <method name="__clone" start="966" end="969" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <since value="2.0.0"/>
+    </docblock>
+  </method>
+  <method name="isEarlier" start="977" end="980" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Test if this date is earlier than"/>
+      <param type="object" variable="$date">
+        <type full="\Rebelo\Date\Date" namespace="\Rebelo\Date" name="Date"/>
+      </param>
+      <return type="object">
+        <type full="Rebelo\Date\bool" namespace="Rebelo\Date" name="bool"/>
+      </return>
+      <since value="2.2.0"/>
+    </docblock>
+    <return type="bool" nullable="false"/>
+    <parameter name="date" byreference="false" type="object">
+      <type full="Rebelo\Date\Date" namespace="Rebelo\Date" name="Date"/>
+    </parameter>
+  </method>
+  <method name="isLater" start="988" end="991" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Test if this date is later than"/>
+      <param type="object" variable="$date">
+        <type full="\Rebelo\Date\Date" namespace="\Rebelo\Date" name="Date"/>
+      </param>
+      <return type="object">
+        <type full="Rebelo\Date\bool" namespace="Rebelo\Date" name="bool"/>
+      </return>
+      <since value="2.2.0"/>
+    </docblock>
+    <return type="bool" nullable="false"/>
+    <parameter name="date" byreference="false" type="object">
+      <type full="Rebelo\Date\Date" namespace="Rebelo\Date" name="Date"/>
+    </parameter>
+  </method>
+  <method name="isEqual" start="999" end="1002" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Test if this date is equal than"/>
+      <param type="object" variable="$date">
+        <type full="\Rebelo\Date\Date" namespace="\Rebelo\Date" name="Date"/>
+      </param>
+      <return type="object">
+        <type full="Rebelo\Date\bool" namespace="Rebelo\Date" name="bool"/>
+      </return>
+      <since value="2.2.0"/>
+    </docblock>
+    <return type="bool" nullable="false"/>
+    <parameter name="date" byreference="false" type="object">
+      <type full="Rebelo\Date\Date" namespace="Rebelo\Date" name="Date"/>
+    </parameter>
+  </method>
+  <method name="isEarlierOrEqual" start="1010" end="1013" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Test if this date is earlier or equal than"/>
+      <param type="object" variable="$date">
+        <type full="\Rebelo\Date\Date" namespace="\Rebelo\Date" name="Date"/>
+      </param>
+      <return type="object">
+        <type full="Rebelo\Date\bool" namespace="Rebelo\Date" name="bool"/>
+      </return>
+      <since value="2.2.0"/>
+    </docblock>
+    <return type="bool" nullable="false"/>
+    <parameter name="date" byreference="false" type="object">
+      <type full="Rebelo\Date\Date" namespace="Rebelo\Date" name="Date"/>
+    </parameter>
+  </method>
+  <method name="isLaterOrEqual" start="1021" end="1024" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Test if this date is later or equal than"/>
+      <param type="object" variable="$date">
+        <type full="\Rebelo\Date\Date" namespace="\Rebelo\Date" name="Date"/>
+      </param>
+      <return type="object">
+        <type full="Rebelo\Date\bool" namespace="Rebelo\Date" name="bool"/>
+      </return>
+      <since value="2.2.0"/>
+    </docblock>
+    <return type="bool" nullable="false"/>
+    <parameter name="date" byreference="false" type="object">
+      <type full="Rebelo\Date\Date" namespace="Rebelo\Date" name="Date"/>
+    </parameter>
+  </method>
+</class>

@@ -38,102 +38,172 @@ class CommnunTest
     extends TestCase
 {
 
-    public function testReflection(string $class)
+    /**
+     *
+     * @param class-string $class
+     * @return void
+     */
+    public function testReflection(string $class): void
     {
         $refClas  = new \ReflectionClass($class);
         $classDoc = $refClas->getDocComment();
 
-        $this->assertEquals(1, \preg_match("/@since(.*)/", $classDoc),
-                                           sprintf("Class '%s' doesn't have the @since tag",
-                                                   $refClas->getName()));
+        if ($classDoc === false) {
+            $this->fail(
+                \sprintf(
+                    "Class '%s' does not have Documentation",
+                    $refClas->getName()
+                )
+            );
+        } else {
+            $this->assertEquals(
+                1, \preg_match("/@since(.*)/", $classDoc),
+                \sprintf(
+                    "Class '%s' doesn't have the @since tag",
+                    $refClas->getName()
+                )
+            );
+        }
 
-        foreach ($refClas->getConstants() as $constName => $constValue)
-        {
+        foreach ($refClas->getConstants() as $constName => $constValue) {
             $refConst = new \ReflectionClassConstant($class, $constName);
             $consDoc  = $refConst->getDocComment();
-            if ($consDoc == false)
-            {
-                $this->fail(sprintf("Constant '%s' of class '%s' doen't have doc comment"),
-                                    $constName, $class);
+            if ($consDoc == false) {
+                $this->fail(
+                    sprintf(
+                        "Constant '%s' of class '%s' doen't have doc comment",
+                        $constName, $class
+                    )
+                );
             }
-            $this->assertEquals(1, \preg_match("/@since(.*)/", $consDoc),
-                                               sprintf("Constant '%s' with value '%s' doesn't have the @since tag",
-                                                       $constName, $constValue));
+
+            if ($consDoc === false) {
+                $this->fail(
+                    \sprintf(
+                        "Constant '%s' doesn't have documntation", $constName
+                    )
+                );
+            } else {
+                $this->assertEquals(
+                    1, \preg_match("/@since(.*)/", $consDoc),
+                    \sprintf(
+                        "Constant '%s' with value '%s' doesn't have the @since tag",
+                        $constName, $constValue
+                    )
+                );
+            }
         }
 
 
         /* @var $prop \ReflectionProperty */
-        foreach ($refClas->getProperties() as $prop)
-        {
-
-            $this->assertTrue($prop->hasType(),
-                              sprintf("propertie '%s' doesn't have a type defined",
-                                      $prop->getName()));
+        foreach ($refClas->getProperties() as $prop) {
+            $this->assertTrue(
+                $prop->hasType(),
+                sprintf(
+                    "propertie '%s' doesn't have a type defined",
+                    $prop->getName()
+                )
+            );
         }
 
         /* @var $meth \ReflectionMethod */
-        foreach ($refClas->getMethods() as $meth)
-        {
+        foreach ($refClas->getMethods() as $meth) {
             $continue = [
                 "__construct",
                 "__clone"];
-            if (\in_array($meth->getName(), $continue))
-            {
+            if (\in_array($meth->getName(), $continue)) {
                 continue;
             }
 
             $doc = $meth->getDocComment();
 
+            if ($doc === false) {
+                $this->fail(
+                    \sprintf(
+                        "method '%s' doesn't have documentation",
+                        $meth->getName()
+                    )
+                );
+                continue;
+            }
+
             // Verify if has return type
-            $this->assertTrue($meth->hasReturnType(),
-                              sprintf("method '%s' doesn't have a return type defined",
-                                      $meth->getName()));
+            $this->assertTrue(
+                $meth->hasReturnType(),
+                \sprintf(
+                    "method '%s' doesn't have a return type defined",
+                    $meth->getName()
+                )
+            );
 
             //verify return type
             $returnMatch     = null;
-            $this->assertEquals(1,
-                                \preg_match("/@return(.*)/", $doc, $returnMatch),
-                                            sprintf("Method '%s' doesn't have return type documentation",
-                                                    $meth->getName()));
+            $this->assertEquals(
+                1,
+                \preg_match("/@return(.*)/", $doc, $returnMatch),
+                \sprintf(
+                    "Method '%s' doesn't have return type documentation",
+                    $meth->getName()
+                )
+            );
             $returnMatchPart = \explode(" ", $returnMatch[0]);
 
             $returnType = $meth->getReturnType()->getName() . ( $meth->getReturnType()->allowsNull()
                 ? "|null"
                 : "");
 
-            $this->assertTrue($returnMatchPart[1] === $returnType || $returnMatchPart[1] === "\\" . $returnType,
-                              sprintf("Method '%s' return type doesn't have same type in documentation",
-                                      $meth->getName()));
+            $this->assertTrue(
+                $returnMatchPart[1] === $returnType || $returnMatchPart[1] === "\\" . $returnType,
+                sprintf(
+                    "Method '%s' return type doesn't have same type in documentation",
+                    $meth->getName()
+                )
+            );
 
             //Verify if has the @since tag
-            $this->assertEquals(1, \preg_match("/@since(.*)/", $doc),
-                                               sprintf("Method '%s' doesn't have the @since tag",
-                                                       $meth->getName()));
+            $this->assertEquals(
+                1, \preg_match("/@since(.*)/", $doc),
+                sprintf(
+                    "Method '%s' doesn't have the @since tag",
+                    $meth->getName()
+                )
+            );
 
             /* @var $param \ReflectionParameter */
-            foreach ($meth->getParameters() as $param)
-            {
+            foreach ($meth->getParameters() as $param) {
                 //Verify if parameters have type
-                $this->assertTrue($param->hasType(),
-                                  sprintf("parameter '%s' of method '%s' doesn't have a type defined",
-                                          $param->getName(), $meth->getName()));
+                $this->assertTrue(
+                    $param->hasType(),
+                    sprintf(
+                        "parameter '%s' of method '%s' doesn't have a type defined",
+                        $param->getName(), $meth->getName()
+                    )
+                );
 
                 $paramMatch     = null;
                 $paramPattern   = "/@param(.*)\\$" . $param->getName() . "/";
-                $this->assertEquals(1,
-                                    \preg_match($paramPattern, $doc, $paramMatch),
-                                                sprintf("parameter '%s' of method '%s' doesn't have documentation",
-                                                        $param->getName(),
-                                                        $meth->getName()));
+                $this->assertEquals(
+                    1,
+                    \preg_match($paramPattern, $doc, $paramMatch),
+                    sprintf(
+                        "parameter '%s' of method '%s' doesn't have documentation",
+                        $param->getName(),
+                        $meth->getName()
+                    )
+                );
                 $paramMatchPart = \explode(" ", $paramMatch[0]);
 
                 $parmType = $param->getType()->getName() . ( $param->allowsNull()
                     ? "|null"
                     : "");
 
-                $this->assertTrue($paramMatchPart[1] === $parmType || $paramMatchPart[1] === "\\" . $parmType,
-                                  sprintf("parameter '%s' of method '%s' doesn't have same type in documentation",
-                                          $param->getName(), $meth->getName()));
+                $this->assertTrue(
+                    $paramMatchPart[1] === $parmType || $paramMatchPart[1] === "\\" . $parmType,
+                    sprintf(
+                        "parameter '%s' of method '%s' doesn't have same type in documentation",
+                        $param->getName(), $meth->getName()
+                    )
+                );
             }
         }
     }

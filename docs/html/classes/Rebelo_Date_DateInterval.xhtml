@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - Rebelo\Date\DateInterval</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml#Rebelo_Date">Rebelo\Date</a>
+          </li>
+          <li class="separator">DateInterval</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#hierarchy">Hierarchy</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="../source/Rebelo/Date/DateInterval.php.xhtml#line20">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>Rebelo\Date\</small>DateInterval</h1>
+        <h4>The class is the same the the PHP native DateInterval but the contructor  in case of excetpion will throws the \Rebelo\Date\DateIntervalException</h4>
+        <p/>
+        <ul>
+          <li>Author: João Rebelo</li>
+        </ul>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class DateInterval
+                extends <a title="DateInterval" href="../classes/DateInterval.xhtml">DateInterval</a>
+            {<br/><ul class="none"><li>// Inherited members from <span title="DateInterval">DateInterval</span></li><li>public  <a href="#members">$y</a>;
+                        </li><li>public  <a href="#members">$m</a>;
+                        </li><li>public  <a href="#members">$d</a>;
+                        </li><li>public  <a href="#members">$h</a>;
+                        </li><li>public  <a href="#members">$i</a>;
+                        </li><li>public  <a href="#members">$s</a>;
+                        </li><li>public  <a href="#members">$f</a>;
+                        </li><li>public  <a href="#members">$invert</a>;
+                        </li><li>public  <a href="#members">$days</a>;
+                        </li></ul><ul class="none"><li>// methods</li><li>public DateInterval <a title="Rebelo\Date\DateInterval" href="../classes/Rebelo_Date_DateInterval/__construct.xhtml">__construct</a>()
+                    </li></ul><ul class="none"><li>// Inherited methods from <span title="DateInterval">DateInterval</span></li><li>public void <a title="DateInterval" href="../classes/DateInterval/__construct.xhtml">__construct</a>()
+                        </li><li>public DateInterval <a title="DateInterval" href="../classes/DateInterval/createFromDateString.xhtml">createFromDateString</a>()
+                        </li><li>public string <a title="DateInterval" href="../classes/DateInterval/format.xhtml">format</a>()
+                        </li></ul>
+
+            }<br/></div>
+        <h2 id="hierarchy">Hierarchy</h2>
+        <div class="styled">
+          <h4>Extends</h4>
+          <ul>
+            <li>
+              <a title="DateInterval" href="../classes/DateInterval.xhtml">DateInterval</a>
+            </li>
+          </ul>
+        </div>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>public</h4>
+          <ul class="members">
+            <li id="d"><strong>$d</strong>
+                —
+                integer<br/><span class="indent">Number of days.</span></li>
+            <li id="days"><strong>$days</strong>
+                —
+                mixed<br/><span class="indent">If the DateInterval object was created by DateTime::diff, then this is the total number of days between the start and end dates. Otherwise, days will be FALSE.</span></li>
+            <li id="f"><strong>$f</strong>
+                —
+                float<br/><span class="indent">Number of microseconds, as a fraction of a second.</span></li>
+            <li id="h"><strong>$h</strong>
+                —
+                integer<br/><span class="indent">Number of hours.</span></li>
+            <li id="i"><strong>$i</strong>
+                —
+                integer<br/><span class="indent">Number of minutes.</span></li>
+            <li id="invert"><strong>$invert</strong>
+                —
+                integer<br/><span class="indent">Is 1 if the interval represents a negative time period and 0 otherwise. See DateInterval::format.</span></li>
+            <li id="m"><strong>$m</strong>
+                —
+                integer<br/><span class="indent">Number of months.</span></li>
+            <li id="s"><strong>$s</strong>
+                —
+                integer<br/><span class="indent">Number of seconds.</span></li>
+            <li id="y"><strong>$y</strong>
+                —
+                integer<br/><span class="indent">Number of years.</span></li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h3>Inherited from <a title="DateInterval" href="../classes/DateInterval.xhtml">DateInterval</a></h3>
+          <h4>public</h4>
+          <ul>
+            <li id="createFromDateString"><a title="DateInterval" href="../classes/DateInterval/createFromDateString.xhtml">createFromDateString()</a>
+                — Sets up a DateInterval from the relative parts of the string</li>
+            <li id="format"><a title="DateInterval" href="../classes/DateInterval/format.xhtml">format()</a>
+                — Formats the interval</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.12.0 - Copyright (C) 2010 - 2020 by Arne Blankerts and Contributors</span>
+    </footer>
+  </body>
+</html>

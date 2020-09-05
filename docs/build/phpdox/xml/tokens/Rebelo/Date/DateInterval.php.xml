@@ -1,0 +1,206 @@
+<?xml version="1.0"?>
+<source xmlns="http://xml.phpdox.net/token">
+  <file xmlns="http://xml.phpdox.net/src" path="D:/NetBeansProjects/PHP/Date/src/Rebelo/Date" file="DateInterval.php" realpath="D:/NetBeansProjects/PHP/Date/src/Rebelo/Date/DateInterval.php" size="2381" time="2020-09-03T20:42:43+01:00" unixtime="1599162163" sha1="bcca7940fadf0333289df423f31929738ad4c1dc" relative="Rebelo/Date/DateInterval.php"/>
+  <line no="1">
+    <token name="T_OPEN_TAG">&lt;?php</token>
+  </line>
+  <line no="2"/>
+  <line no="3">
+    <token name="T_DOC_COMMENT">/**</token>
+  </line>
+  <line no="4">
+    <token name="T_DOC_COMMENT"> * MIT License</token>
+  </line>
+  <line no="5">
+    <token name="T_DOC_COMMENT"> *</token>
+  </line>
+  <line no="6">
+    <token name="T_DOC_COMMENT"> * Copyright (c) 2019 Jo&#xE3;o M F Rebelo</token>
+  </line>
+  <line no="7">
+    <token name="T_DOC_COMMENT"> */</token>
+  </line>
+  <line no="8"/>
+  <line no="9">
+    <token name="T_DECLARE">declare</token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_STRING">strict_types</token>
+    <token name="T_PHPDOX_EQUAL">=</token>
+    <token name="T_LNUMBER">1</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="10"/>
+  <line no="11">
+    <token name="T_NAMESPACE">namespace</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_STRING">Rebelo</token>
+    <token name="T_NS_SEPARATOR">\</token>
+    <token name="T_STRING">Date</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="12"/>
+  <line no="13">
+    <token name="T_DOC_COMMENT">/**</token>
+  </line>
+  <line no="14">
+    <token name="T_DOC_COMMENT"> * The class is the same the the PHP native DateInterval</token>
+  </line>
+  <line no="15">
+    <token name="T_DOC_COMMENT"> * but the contructor</token>
+  </line>
+  <line no="16">
+    <token name="T_DOC_COMMENT"> *  in case of excetpion will throws the \Rebelo\Date\DateIntervalException</token>
+  </line>
+  <line no="17">
+    <token name="T_DOC_COMMENT"> *</token>
+  </line>
+  <line no="18">
+    <token name="T_DOC_COMMENT"> * @author Jo&#xE3;o Rebelo</token>
+  </line>
+  <line no="19">
+    <token name="T_DOC_COMMENT"> */</token>
+  </line>
+  <line no="20">
+    <token name="T_CLASS">class</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_STRING">DateInterval</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_EXTENDS">extends</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_NS_SEPARATOR">\</token>
+    <token name="T_STRING">DateInterval</token>
+  </line>
+  <line no="21">
+    <token name="T_PHPDOX_OPEN_CURLY">{</token>
+  </line>
+  <line no="22"/>
+  <line no="23">
+    <token name="T_WHITESPACE">    </token>
+    <token name="T_DOC_COMMENT">/**</token>
+  </line>
+  <line no="24">
+    <token name="T_DOC_COMMENT">     * Creates a new DateInterval object</token>
+  </line>
+  <line no="25">
+    <token name="T_DOC_COMMENT">     * &lt;p&gt;Creates a new DateInterval object.&lt;/p&gt;</token>
+  </line>
+  <line no="26">
+    <token name="T_DOC_COMMENT">     * @param string $intervalSpec &lt;p&gt;An interval specification.&lt;/p&gt; &lt;p&gt;The format starts with the letter &lt;i&gt;P&lt;/i&gt;, for "period." Each duration period is represented by an integer value followed by a period designator. If the duration contains time elements, that portion of the specification is preceded by the letter &lt;i&gt;T&lt;/i&gt;.&lt;/p&gt; &lt;p&gt;&lt;/p&gt; &lt;b&gt; &lt;code&gt;interval_spec&lt;/code&gt; Period Designators &lt;/b&gt;   Period Designator Description     &lt;i&gt;Y&lt;/i&gt; years   &lt;i&gt;M&lt;/i&gt; months   &lt;i&gt;D&lt;/i&gt; days   &lt;i&gt;W&lt;/i&gt;  weeks. These get converted into days, so can not be combined with &lt;i&gt;D&lt;/i&gt;.    &lt;i&gt;H&lt;/i&gt; hours   &lt;i&gt;M&lt;/i&gt; minutes   &lt;i&gt;S&lt;/i&gt; seconds    &lt;p&gt;Here are some simple examples. Two days is &lt;i&gt;P2D&lt;/i&gt;. Two seconds is &lt;i&gt;PT2S&lt;/i&gt;. Six years and five minutes is &lt;i&gt;P6YT5M&lt;/i&gt;.&lt;/p&gt; &lt;p&gt;&lt;b&gt;Note&lt;/b&gt;:&lt;/p&gt;&lt;p&gt;The unit types must be entered from the largest scale unit on the left to the smallest scale unit on the right. So years before months, months before days, days before minutes, etc. Thus one year and four days must be represented as &lt;i&gt;P1Y4D&lt;/i&gt;, not &lt;i&gt;P4D1Y&lt;/i&gt;.&lt;/p&gt;  &lt;p&gt;The specification can also be represented as a date time. A sample of one year and four days would be &lt;i&gt;P0001-00-04T00:00:00&lt;/i&gt;. But the values in this format can not exceed a given period's roll-over-point (e.g. &lt;i&gt;25&lt;/i&gt; hours is invalid).&lt;/p&gt; &lt;p&gt;These formats are based on the ISO 8601 duration specification.&lt;/p&gt;</token>
+  </line>
+  <line no="27">
+    <token name="T_DOC_COMMENT">     * @return self</token>
+  </line>
+  <line no="28">
+    <token name="T_DOC_COMMENT">     * @link http://php.net/manual/en/dateinterval.construct.php</token>
+  </line>
+  <line no="29">
+    <token name="T_DOC_COMMENT">     * @see DateInterval::format(), DateTime::add(), DateTime::sub(), DateTime::diff()</token>
+  </line>
+  <line no="30">
+    <token name="T_DOC_COMMENT">     * @since PHP 5 &gt;= 5.3.0, PHP 7</token>
+  </line>
+  <line no="31">
+    <token name="T_DOC_COMMENT">     */</token>
+  </line>
+  <line no="32">
+    <token name="T_WHITESPACE">    </token>
+    <token name="T_PUBLIC">public</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_FUNCTION">function</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_STRING">__construct</token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_STRING">string</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$intervalSpec</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+  </line>
+  <line no="33">
+    <token name="T_WHITESPACE">    </token>
+    <token name="T_PHPDOX_OPEN_CURLY">{</token>
+  </line>
+  <line no="34">
+    <token name="T_WHITESPACE">        </token>
+    <token name="T_TRY">try</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_OPEN_CURLY">{</token>
+  </line>
+  <line no="35">
+    <token name="T_WHITESPACE">            </token>
+    <token name="T_STRING">parent</token>
+    <token name="T_DOUBLE_COLON">::</token>
+    <token name="T_STRING">__construct</token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_VARIABLE">$intervalSpec</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="36">
+    <token name="T_WHITESPACE">        </token>
+    <token name="T_PHPDOX_CLOSE_CURLY">}</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_CATCH">catch</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_NS_SEPARATOR">\</token>
+    <token name="T_STRING">Exception</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$e</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_OPEN_CURLY">{</token>
+  </line>
+  <line no="37">
+    <token name="T_WHITESPACE">            </token>
+    <token name="T_THROW">throw</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_NEW">new</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_STRING">DateIntervalException</token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+  </line>
+  <line no="38">
+    <token name="T_WHITESPACE">                </token>
+    <token name="T_VARIABLE">$e</token>
+    <token name="T_OBJECT_OPERATOR">-&gt;</token>
+    <token name="T_STRING">getMessage</token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_PHPDOX_COMMA">,</token>
+  </line>
+  <line no="39">
+    <token name="T_WHITESPACE">                </token>
+    <token name="T_VARIABLE">$e</token>
+    <token name="T_OBJECT_OPERATOR">-&gt;</token>
+    <token name="T_STRING">getCode</token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_PHPDOX_COMMA">,</token>
+  </line>
+  <line no="40">
+    <token name="T_WHITESPACE">                </token>
+    <token name="T_VARIABLE">$e</token>
+    <token name="T_OBJECT_OPERATOR">-&gt;</token>
+    <token name="T_STRING">getPrevious</token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+  </line>
+  <line no="41">
+    <token name="T_WHITESPACE">            </token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="42">
+    <token name="T_WHITESPACE">        </token>
+    <token name="T_PHPDOX_CLOSE_CURLY">}</token>
+  </line>
+  <line no="43">
+    <token name="T_WHITESPACE">    </token>
+    <token name="T_PHPDOX_CLOSE_CURLY">}</token>
+  </line>
+  <line no="44">
+    <token name="T_PHPDOX_CLOSE_CURLY">}</token>
+  </line>
+  <line no="45"/>
+</source>

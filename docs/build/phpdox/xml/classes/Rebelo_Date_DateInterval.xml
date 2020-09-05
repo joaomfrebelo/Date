@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="Rebelo\Date\DateInterval" namespace="Rebelo\Date" name="DateInterval" abstract="false" final="false" start="20" end="44">
+  <file path="D:/NetBeansProjects/PHP/Date/src/Rebelo/Date" file="DateInterval.php" realpath="D:/NetBeansProjects/PHP/Date/src/Rebelo/Date/DateInterval.php" size="2381" time="2020-09-03T20:42:43+01:00" unixtime="1599162163" sha1="bcca7940fadf0333289df423f31929738ad4c1dc" relative="Rebelo/Date/DateInterval.php"/>
+  <docblock>
+    <description compact="The class is the same the the PHP native DateInterval but the contructor  in case of excetpion will throws the \Rebelo\Date\DateIntervalException"/>
+    <author value="João Rebelo"/>
+  </docblock>
+  <extends full="DateInterval" namespace="" name="DateInterval"/>
+  <constructor name="__construct" start="32" end="43" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Creates a new DateInterval object &lt;p&gt;Creates a new DateInterval object.&lt;/p&gt;"/>
+      <param description="&lt;p&gt;An interval specification.&lt;/p&gt; &lt;p&gt;The format starts with the letter &lt;i&gt;P&lt;/i&gt;, for &quot;period.&quot; Each duration period is represented by an integer value followed by a period designator. If the duration contains time elements, that portion of the specification is preceded by the letter &lt;i&gt;T&lt;/i&gt;.&lt;/p&gt; &lt;p&gt;&lt;/p&gt; &lt;b&gt; &lt;code&gt;interval_spec&lt;/code&gt; Period Designators &lt;/b&gt;   Period Designator Description     &lt;i&gt;Y&lt;/i&gt; years   &lt;i&gt;M&lt;/i&gt; months   &lt;i&gt;D&lt;/i&gt; days   &lt;i&gt;W&lt;/i&gt;  weeks. These get converted into days, so can not be combined with &lt;i&gt;D&lt;/i&gt;.    &lt;i&gt;H&lt;/i&gt; hours   &lt;i&gt;M&lt;/i&gt; minutes   &lt;i&gt;S&lt;/i&gt; seconds    &lt;p&gt;Here are some simple examples. Two days is &lt;i&gt;P2D&lt;/i&gt;. Two seconds is &lt;i&gt;PT2S&lt;/i&gt;. Six years and five minutes is &lt;i&gt;P6YT5M&lt;/i&gt;.&lt;/p&gt; &lt;p&gt;&lt;b&gt;Note&lt;/b&gt;:&lt;/p&gt;&lt;p&gt;The unit types must be entered from the largest scale unit on the left to the smallest scale unit on the right. So years before months, months before days, days before minutes, etc. Thus one year and four days must be represented as &lt;i&gt;P1Y4D&lt;/i&gt;, not &lt;i&gt;P4D1Y&lt;/i&gt;.&lt;/p&gt;  &lt;p&gt;The specification can also be represented as a date time. A sample of one year and four days would be &lt;i&gt;P0001-00-04T00:00:00&lt;/i&gt;. But the values in this format can not exceed a given period's roll-over-point (e.g. &lt;i&gt;25&lt;/i&gt; hours is invalid).&lt;/p&gt; &lt;p&gt;These formats are based on the ISO 8601 duration specification.&lt;/p&gt;" type="string" variable="$intervalSpec"/>
+      <return resolution="self" type="object">
+        <type full="Rebelo\Date\DateInterval" namespace="Rebelo\Date" name="DateInterval"/>
+      </return>
+      <link value="http://php.net/manual/en/dateinterval.construct.php"/>
+      <see value="DateInterval::format(), DateTime::add(), DateTime::sub(), DateTime::diff()"/>
+      <since value="PHP 5 &gt;= 5.3.0, PHP 7"/>
+    </docblock>
+    <parameter name="intervalSpec" byreference="false" type="string"/>
+  </constructor>
+  <parent full="DateInterval" namespace="" name="DateInterval">
+    <member name="y" static="false" visibility="public">
+    <default>null</default>
+    <docblock>
+      <description compact="Number of years."/>
+      <var type="integer"/>
+    </docblock>
+  </member>
+    <member name="m" static="false" visibility="public">
+    <default>null</default>
+    <docblock>
+      <description compact="Number of months."/>
+      <var type="integer"/>
+    </docblock>
+  </member>
+    <member name="d" static="false" visibility="public">
+    <default>null</default>
+    <docblock>
+      <description compact="Number of days."/>
+      <var type="integer"/>
+    </docblock>
+  </member>
+    <member name="h" static="false" visibility="public">
+    <default>null</default>
+    <docblock>
+      <description compact="Number of hours."/>
+      <var type="integer"/>
+    </docblock>
+  </member>
+    <member name="i" static="false" visibility="public">
+    <default>null</default>
+    <docblock>
+      <description compact="Number of minutes."/>
+      <var type="integer"/>
+    </docblock>
+  </member>
+    <member name="s" static="false" visibility="public">
+    <default>null</default>
+    <docblock>
+      <description compact="Number of seconds."/>
+      <var type="integer"/>
+    </docblock>
+  </member>
+    <member name="f" static="false" visibility="public">
+    <default>null</default>
+    <docblock>
+      <description compact="Number of microseconds, as a fraction of a second."/>
+      <var type="float"/>
+    </docblock>
+  </member>
+    <member name="invert" static="false" visibility="public">
+    <default>null</default>
+    <docblock>
+      <description compact="Is 1 if the interval represents a negative time period and 0 otherwise. See DateInterval::format."/>
+      <var type="integer"/>
+    </docblock>
+  </member>
+    <member name="days" static="false" visibility="public">
+    <default>null</default>
+    <docblock>
+      <description compact="If the DateInterval object was created by DateTime::diff, then this is the total number of days between the start and end dates. Otherwise, days will be FALSE.">If the DateInterval object was created by DateTime::diff, then this is the total number of days between the start and end dates. Otherwise, days will be FALSE.</description>
+      <var type="mixed"/>
+    </docblock>
+  </member>
+    <constructor name="__construct" abstract="false" static="false" visibility="public" final="false">
+    <docblock>
+      <description compact="Creates a new DateInterval object"/>
+      <return type="void"/>
+    </docblock>
+    <parameter name="interval_spec" optional="false" byreference="false" type="string"/>
+  </constructor>
+    <method name="createFromDateString" abstract="false" static="false" visibility="public" final="false">
+    <docblock>
+      <description compact="Sets up a DateInterval from the relative parts of the string"/>
+      <return type="DateInterval"/>
+    </docblock>
+    <parameter name="time" optional="false" byreference="false" type="string"/>
+  </method>
+    <method name="format" abstract="false" static="false" visibility="public" final="false">
+    <docblock>
+      <description compact="Formats the interval"/>
+      <return type="string"/>
+    </docblock>
+    <parameter name="format" optional="false" byreference="false" type="string"/>
+  </method>
+  </parent>
+</class>
