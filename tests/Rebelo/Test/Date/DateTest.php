@@ -1,5 +1,4 @@
 <?php
-
 /**
  * MIT License
  *
@@ -9,7 +8,7 @@ declare(strict_types=1);
 
 namespace Rebelo\Test\Date;
 
-require_once __DIR__ . '/CommnunTest.php';
+require_once __DIR__.'/CommnunTest.php';
 
 use Rebelo\Date\Date;
 
@@ -18,15 +17,16 @@ use Rebelo\Date\Date;
  *
  * @author João Rebelo
  */
-class DateTest
-    extends \PHPUnit\Framework\TestCase
+class DateTest extends \PHPUnit\Framework\TestCase
 {
 
     public function testReflection(): void
     {
         (new \Rebelo\Test\CommnunTest())->testReflection(\Rebelo\Date\Date::class);
+        //(new \Rebelo\Test\CommnunTest())->testReflection(\Rebelo\Date\Socket::class);
+        //(new \Rebelo\Test\CommnunTest())->testReflection(\Rebelo\Date\Client::class);
     }
-
+    
     /**
      *
      * @var \Rebelo\Date\Date
@@ -45,8 +45,7 @@ class DateTest
     public function testParse(): void
     {
         $date = \Rebelo\Date\Date::createFromFormat(
-            Date::SQL_DATETIME,
-            "1969-10-05 09:00:00",
+            Date::SQL_DATETIME, "1969-10-05 09:00:00",
             new \DateTimeZone("Europe/Lisbon")
         );
         $this->assertInstanceOf(\Rebelo\Date\Date::class, $date);
@@ -133,8 +132,7 @@ class DateTest
     public function testOffset(): void
     {
         $date = \Rebelo\Date\Date::parse(
-            Date::SQL_DATE, "1969-10-05",
-            new \DateTimeZone("Europe/Lisbon")
+            Date::SQL_DATE, "1969-10-05", new \DateTimeZone("Europe/Lisbon")
         );
         $this->assertEquals(3600, $date->getOffset());
     }
@@ -145,8 +143,8 @@ class DateTest
     public function testTimestamp(): void
     {
         $date = \Rebelo\Date\Date::parse(
-            Date::SQL_DATETIME,
-            "2019-10-05 09:00:00", new \DateTimeZone("Europe/Lisbon")
+            Date::SQL_DATETIME, "2019-10-05 09:00:00",
+            new \DateTimeZone("Europe/Lisbon")
         );
         $this->assertEquals(1570262400, $date->getTimestamp());
     }
@@ -157,8 +155,8 @@ class DateTest
     public function testTimeszone(): void
     {
         $date = \Rebelo\Date\Date::parse(
-            Date::SQL_DATETIME,
-            "2019-10-05 09:00:00", new \DateTimeZone("Europe/Lisbon")
+            Date::SQL_DATETIME, "2019-10-05 09:00:00",
+            new \DateTimeZone("Europe/Lisbon")
         );
         $this->assertEquals("Europe/Lisbon", $date->getTimezone()->getName());
     }
@@ -169,20 +167,17 @@ class DateTest
     public function testModify(): void
     {
         $date = \Rebelo\Date\Date::parse(
-            Date::SQL_DATETIME,
-            "1969-10-05 09:00:00", new \DateTimeZone("Europe/Lisbon")
+            Date::SQL_DATETIME, "1969-10-05 09:00:00",
+            new \DateTimeZone("Europe/Lisbon")
         );
         $this->assertEquals(
-            "1969-10-05 09:00:00",
-            $date->format(Date::SQL_DATETIME)
+            "1969-10-05 09:00:00", $date->format(Date::SQL_DATETIME)
         );
         $date->modify("+50 year");
         $this->assertEquals(
-            "2019-10-05 09:00:00",
-            $date->format(Date::SQL_DATETIME)
+            "2019-10-05 09:00:00", $date->format(Date::SQL_DATETIME)
         );
     }
-
 // Bug on PHP DateTime modify method does not return false
 //    /**
 //     * @depends testParse
@@ -204,12 +199,10 @@ class DateTest
         $date = new \Rebelo\Date\Date();
         //Set the date and return the self instance
         $this->assertInstanceOf(
-            \Rebelo\Date\Date::class,
-            $date->setDate(1969, 10, 5)
+            \Rebelo\Date\Date::class, $date->setDate(1969, 10, 5)
         );
         $this->assertEquals(
-            "1969-10-05",
-            $date->format(\Rebelo\Date\Date::SQL_DATE)
+            "1969-10-05", $date->format(\Rebelo\Date\Date::SQL_DATE)
         );
     }
 
@@ -235,8 +228,7 @@ class DateTest
     public function testSetMonth(): void
     {
         $date = \Rebelo\Date\Date::parse(
-            \Rebelo\Date\Date::SQL_DATE,
-            "1969-10-05"
+            \Rebelo\Date\Date::SQL_DATE, "1969-10-05"
         );
         //Set the month and return the self instance
         $this->assertInstanceOf(\Rebelo\Date\Date::class, $date->setMonth(9));
@@ -252,8 +244,7 @@ class DateTest
     public function testSetDay(): void
     {
         $date = \Rebelo\Date\Date::parse(
-            \Rebelo\Date\Date::SQL_DATE,
-            "1969-10-05"
+            \Rebelo\Date\Date::SQL_DATE, "1969-10-05"
         );
         //Set the month and return the self instance
         $this->assertInstanceOf(\Rebelo\Date\Date::class, $date->setDay(9));
@@ -291,8 +282,7 @@ class DateTest
         $date = new \Rebelo\Date\Date();
         $date->setISODate(2008, 2, 7);
         $this->assertEquals(
-            "2008-01-13",
-            $date->format(\Rebelo\Date\Date::SQL_DATE)
+            "2008-01-13", $date->format(\Rebelo\Date\Date::SQL_DATE)
         );
     }
 
@@ -305,13 +295,11 @@ class DateTest
         $date = new \Rebelo\Date\Date();
         //Set the time and return the self instance
         $this->assertInstanceOf(
-            \Rebelo\Date\Date::class,
-            $date->setTime(9, 29, 59, 102999)
+            \Rebelo\Date\Date::class, $date->setTime(9, 29, 59, 102999)
         );
         $this->assertEquals("09:29:59", $date->format(\Rebelo\Date\Date::TIME));
         $this->assertEquals(
-            "09:29:59.102",
-            $date->format(\Rebelo\Date\Date::TIME_MICRO_SECONDS)
+            "09:29:59.102", $date->format(\Rebelo\Date\Date::TIME_MICRO_SECONDS)
         );
         $this->assertEquals(
             "09:29:59.102999",
@@ -448,13 +436,11 @@ class DateTest
         $date = new \Rebelo\Date\Date();
         //Set microseconds and return the self instance
         $this->assertInstanceOf(
-            \Rebelo\Date\Date::class,
-            $date->setTime(9, 29, 59, 102999)
+            \Rebelo\Date\Date::class, $date->setTime(9, 29, 59, 102999)
         );
         $date->setMicroseconds(999425);
         $this->assertEquals(
-            999425,
-            $date->format(\Rebelo\Date\Date::MICRO_SECONDS)
+            999425, $date->format(\Rebelo\Date\Date::MICRO_SECONDS)
         );
     }
 
@@ -476,13 +462,12 @@ class DateTest
     public function testSetTimeStamp(): void
     {
         $date = \Rebelo\Date\Date::parse(
-            Date::SQL_DATETIME,
-            "2000-10-05 09:09:59", new \DateTimeZone("Europe/Lisbon")
+            Date::SQL_DATETIME, "2000-10-05 09:09:59",
+            new \DateTimeZone("Europe/Lisbon")
         );
         $date->setTimestamp(1570262400);
         $this->assertEquals(
-            "2019-10-05 09:00:00",
-            $date->format(Date::SQL_DATETIME)
+            "2019-10-05 09:00:00", $date->format(Date::SQL_DATETIME)
         );
     }
 
@@ -507,14 +492,12 @@ class DateTest
     {
         $date = static::$d4ope->addYears(50);
         $this->assertEquals(
-            "2019-10-05",
-            $date->format(\Rebelo\Date\Date::SQL_DATE)
+            "2019-10-05", $date->format(\Rebelo\Date\Date::SQL_DATE)
         );
 
         $date2 = static::$d4ope->addYears(-9);
         $this->assertEquals(
-            "1960-10-05",
-            $date2->format(\Rebelo\Date\Date::SQL_DATE)
+            "1960-10-05", $date2->format(\Rebelo\Date\Date::SQL_DATE)
         );
     }
 
@@ -527,14 +510,12 @@ class DateTest
     {
         $date = static::$d4ope->addMonths(12);
         $this->assertEquals(
-            "1970-10-05",
-            $date->format(\Rebelo\Date\Date::SQL_DATE)
+            "1970-10-05", $date->format(\Rebelo\Date\Date::SQL_DATE)
         );
 
         $date2 = static::$d4ope->addMonths(-9);
         $this->assertEquals(
-            "1969-01-05",
-            $date2->format(\Rebelo\Date\Date::SQL_DATE)
+            "1969-01-05", $date2->format(\Rebelo\Date\Date::SQL_DATE)
         );
     }
 
@@ -547,14 +528,12 @@ class DateTest
     {
         $date = static::$d4ope->addDays(2);
         $this->assertEquals(
-            "1969-10-07",
-            $date->format(\Rebelo\Date\Date::SQL_DATE)
+            "1969-10-07", $date->format(\Rebelo\Date\Date::SQL_DATE)
         );
 
         $date2 = static::$d4ope->addDays(-4);
         $this->assertEquals(
-            "1969-10-01",
-            $date2->format(\Rebelo\Date\Date::SQL_DATE)
+            "1969-10-01", $date2->format(\Rebelo\Date\Date::SQL_DATE)
         );
     }
 
@@ -635,8 +614,7 @@ class DateTest
         $older = clone $now;
         $older->setYaer(1999);
         $this->assertEquals(
-            (new \Rebelo\Date\Date())->format("Y"),
-            $now->format("Y")
+            (new \Rebelo\Date\Date())->format("Y"), $now->format("Y")
         );
         $this->assertEquals("1999", $older->format("Y"));
     }
@@ -647,7 +625,7 @@ class DateTest
     public function testParseDateNoTime(): void
     {
         $string = "2020-10-05";
-        $date = \Rebelo\Date\Date::parse(
+        $date   = \Rebelo\Date\Date::parse(
             \Rebelo\Date\Date::SQL_DATE, $string
         );
 
@@ -664,8 +642,8 @@ class DateTest
      */
     public function dateProvider(): array
     {
-        $stack = [];
-        $day   = \Rebelo\Date\Date::parse(
+        $stack   = [];
+        $day     = \Rebelo\Date\Date::parse(
             \Rebelo\Date\Date::SQL_DATE, "2020-10-05"
         );
         $dayTime = \Rebelo\Date\Date::parse(
@@ -767,5 +745,79 @@ class DateTest
         $this->assertTrue($day->isLaterOrEqual($earlier));
         $this->assertFalse($day->isLaterOrEqual($later));
         $this->assertTrue($day->isLaterOrEqual($equal));
+    }
+
+    /**
+     * 
+     * @return void
+     */
+    public function testNtp(): void
+    {
+        $message = "Please verify if is error or is your computer clock that as "
+            ."a wrong time up to seconds, the difference is %s seconds to server %s ";
+
+        $delta = 10;
+
+        $dateNoArg = \Rebelo\Date\Date::ntp();
+        $this->assertInstanceOf(\Rebelo\Date\Date::class, $dateNoArg);
+        $diffArg   = \abs(
+            ((int) (new \Rebelo\Date\Date())->format(\Rebelo\Date\Date::UNIX_TIMESTAMP))
+            -
+            ((int) $dateNoArg->format(\Rebelo\Date\Date::UNIX_TIMESTAMP))
+        );
+
+        $this->assertTrue($diffArg < $delta, \sprintf($message, $diffArg, "not set"));
+
+        $dateServer = \Rebelo\Date\Date::ntp("0.pool.ntp.org");
+        $this->assertInstanceOf(\Rebelo\Date\Date::class, $dateServer);
+
+
+        foreach (\Rebelo\Date\Date::$ntpPoll as $server) {
+            $dateServer = \Rebelo\Date\Date::ntp($server);
+            $this->assertInstanceOf(\Rebelo\Date\Date::class, $dateServer);
+
+            $diffServer = \abs(
+                ((int) (new \Rebelo\Date\Date())->format(\Rebelo\Date\Date::UNIX_TIMESTAMP))
+                -
+                ((int) $dateServer->format(\Rebelo\Date\Date::UNIX_TIMESTAMP))
+            );
+
+            $this->assertTrue(
+                $diffServer < $delta,
+                \sprintf($message, $diffServer, $server)
+            );
+        }
+    }
+
+    /**
+     * 
+     */
+    public function testDateTimeZone(): void
+    {
+        $lisbon     = new \DateTimeZone("Europe/Lisbon");
+        $madrid     = new \DateTimeZone("Europe/Madrid");
+        $date       = new \Rebelo\Date\Date(null, $lisbon);
+        $this->assertSame(
+            $lisbon->getName(), $date->getTimezone()->getName()
+        );
+        $lisbonHour = (int) $date->format(\Rebelo\Date\Date::HOUR_24_SHORT);
+        $date->setTimezone($madrid);
+        $madridHour = (int) $date->format(\Rebelo\Date\Date::HOUR_24_SHORT);
+        $this->assertSame($lisbonHour + 1, $madridHour);
+    }
+
+    /**
+     * 
+     * @return void
+     */
+    public function testNtpDateTimeZone(): void
+    {
+        $lisbon     = new \DateTimeZone("Europe/Lisbon");
+        $madrid     = new \DateTimeZone("Europe/Madrid");
+        $ntpLisbon  = \Rebelo\Date\Date::ntp(null, $lisbon);
+        $ntpMadrid  = \Rebelo\Date\Date::ntp(null, $madrid);
+        $lisbonHour = (int) $ntpLisbon->format(\Rebelo\Date\Date::HOUR_24_SHORT);
+        $madridHour = (int) $ntpMadrid->format(\Rebelo\Date\Date::HOUR_24_SHORT);
+        $this->assertSame($lisbonHour + 1, $madridHour);
     }
 }

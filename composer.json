@@ -27,6 +27,6 @@
         "phpunit/phpunit": "^9.3"
     },
     "homepage": "https://github.com/joaomfrebelo/Date",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "type": "library"
 }

@@ -68,15 +68,7 @@ class CommnunTest
         foreach ($refClas->getConstants() as $constName => $constValue) {
             $refConst = new \ReflectionClassConstant($class, $constName);
             $consDoc  = $refConst->getDocComment();
-            if ($consDoc == false) {
-                $this->fail(
-                    sprintf(
-                        "Constant '%s' of class '%s' doen't have doc comment",
-                        $constName, $class
-                    )
-                );
-            }
-
+            
             if ($consDoc === false) {
                 $this->fail(
                     \sprintf(
@@ -124,7 +116,6 @@ class CommnunTest
                         $meth->getName()
                     )
                 );
-                continue;
             }
 
             // Verify if has return type

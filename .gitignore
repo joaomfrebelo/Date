@@ -11,3 +11,4 @@ tools
 .phive
 ./logs/
 composer.lock
+tests/.phpunit.result.cache

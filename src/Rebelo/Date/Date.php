@@ -1,11 +1,9 @@
 <?php
-
 /**
  * MIT License
  *
  * Copyright (c) 2019 João M F Rebelo
  */
-
 declare(strict_types=1);
 
 namespace Rebelo\Date;
@@ -22,6 +20,20 @@ namespace Rebelo\Date;
  */
 class Date
 {
+    /**
+     * The Default \DateTimeZone
+     * @var \DateTimeZone|null
+     */
+    public static ?\DateTimeZone $defaultTimeZone = null;
+
+    /**
+     * Default pool of ntp servers
+     * @var string[]
+     */
+    public static array $ntpPoll = [
+        "ntp02.oal.ul.pt", "ntp04.oal.ul.pt"
+    ];
+
     /**
      * @var string Atom (example: 2005-08-15T15:52:01+00:00)
      * @link http://php.net/manual/en/class.datetimeinterface.php
@@ -375,16 +387,17 @@ class Date
 
     /**
      * DateTime
-     * @param string $time <p>A date/time string. Valid formats are same as fo rnative PHP \DateTime.</p> <p>Enter <i>"now"</i> here to obtain the current time when using the <code>$timezone</code> parameter.</p>
+     * @param string|null $time <p>A date/time string. Valid formats are same as fo rnative PHP \DateTime.</p> <p>Enter <i>"now"</i> here to obtain the current time when using the <code>$timezone</code> parameter.</p>
      * @param \DateTimeZone $timezone $timezone <p>A DateTimeZone object representing the timezone of <code>$time</code>.</p><p>If <code>$timezone</code> is omitted, the current timezone will be used.</p> <p><b>Note</b>:</p><p>The <code>$timezone</code> parameter and the current timezone are ignored when the <code>$time</code> parameter either is a UNIX timestamp (e.g. <i>@946684800</i>) or specifies a timezone
      * (e.g. <i>2010-01-28T15:00:00+02:00</i>).</p>
      */
     public function __construct(
-        string $time = "now",
-        \DateTimeZone $timezone = null
+        ?string $time = "now", \DateTimeZone $timezone = null
     )
     {
-        $this->date = new \DateTime($time, $timezone);
+        $this->date = new \DateTime(
+            $time ?? "now", $timezone ?? static::$defaultTimeZone
+        );
     }
 
     /**
@@ -402,29 +415,35 @@ class Date
      * @since 1.0.0
      */
     public static function parse(
-        string $format,
-        string $time,
-        ?\DateTimeZone $timezone = null
+        string $format, string $time, ?\DateTimeZone $timezone = null
     ): \Rebelo\Date\Date
     {
-        $dateTime = \DateTime::createFromFormat($format, $time, $timezone);
+        $dateTime = \DateTime::createFromFormat(
+            $format, $time,
+            $timezone ?? static::$defaultTimeZone
+        );
         $errors   = \DateTime::getLastErrors();
-        if ($errors['warning_count'] !== 0 || $errors['error_count'] !== 0) {
+
+        if ($errors !== false &&
+            ($errors['warning_count'] !== 0 || $errors['error_count'] !== 0)) {
+
             $array = array();
-            if (array_key_exists("warnings", $errors)) {
-                $array = array_merge($array, $errors["warnings"]);
+            if (\array_key_exists("warnings", $errors)) {
+                $array = \array_merge($array, $errors["warnings"]);
             }
-            if (array_key_exists("errors", $errors)) {
-                $array = array_merge($array, $errors["errors"]);
+            if (\array_key_exists("errors", $errors)) {
+                $array = \array_merge($array, $errors["errors"]);
             }
             throw new DateParseException(
                 "While parsing date: "
-                . join("; ", $array)
+                .join("; ", $array)
             );
         }
+
         if ($dateTime === false) {
             throw new DateParseException("Error initilaizing DateTime");
         }
+
         $date       = new Date();
         $date->date = $dateTime;
         // Set Hour to zero 00:00:00.000 whne no time is defined,
@@ -465,9 +484,7 @@ class Date
      * @since 1.0.0
      */
     public static function createFromFormat(
-        string $format,
-        string $time,
-        ?\DateTimeZone $timezone = null
+        string $format, string $time, ?\DateTimeZone $timezone = null
     ): \Rebelo\Date\Date
     {
         return static::parse($format, $time, $timezone);
@@ -510,8 +527,7 @@ class Date
         }
 
         return Date::createFromFormat(
-            "Y-m-d\TH:i:s.u",
-            $res->format("Y-m-d\TH:i:s.u"),
+            "Y-m-d\TH:i:s.u", $res->format("Y-m-d\TH:i:s.u"),
             $res->getTimezone()
         );
     }
@@ -532,8 +548,7 @@ class Date
             throw new DateException("Erros subtrating interval");
         }
         return Date::createFromFormat(
-            "Y-m-d\TH:i:s.u",
-            $res->format("Y-m-d\TH:i:s.u"),
+            "Y-m-d\TH:i:s.u", $res->format("Y-m-d\TH:i:s.u"),
             $res->getTimezone()
         );
     }
@@ -596,7 +611,7 @@ class Date
 
         if ($this->date->modify($modify) === false) { /* @phpstan-ignore-line */
             throw new DateException(
-                "Filed to modify timestamp in " . __METHOD__ .
+                "Filed to modify timestamp in ".__METHOD__.
                 " for string '$modify'"
             );
         }
@@ -614,8 +629,8 @@ class Date
      */
     public function setDate(int $year, int $month, int $day): \Rebelo\Date\Date
     {
-        $format = static::YAER . "-" . static::MONTH_SHORT . "-" . static::DAY_LESS;
-        $date   = ((string) $year) . "-" . ((string) $month) . "-" . ((string) $day);
+        $format = static::YAER."-".static::MONTH_SHORT."-".static::DAY_LESS;
+        $date   = ((string) $year)."-".((string) $month)."-".((string) $day);
         static::parse($format, $date); // To test if the date is valide, other wise throws exception
 
         if ($this->date->setDate($year, $month, $day) === false) { /* @phpstan-ignore-line */
@@ -694,10 +709,7 @@ class Date
      * @since 1.0.0
      */
     public function setTime(
-        int $hour,
-        int $minute,
-        int $second = 0,
-        int $microseconds = 0
+        int $hour, int $minute, int $second = 0, int $microseconds = 0
     ): \Rebelo\Date\Date
     {
         if ($hour < 0 || $hour > 23) {
@@ -1021,5 +1033,37 @@ class Date
     public function isLaterOrEqual(\Rebelo\Date\Date $date): bool
     {
         return $this->date >= $date->toDateTime();
+    }
+
+    /**
+     * 
+     * Get Date from NTP server
+     * 
+     * @param string|null $server
+     * @param \DateTimeZone|null $timezone
+     * @return \Rebelo\Date\Date
+     * @throws \Rebelo\Date\DateNtpException
+     * @since 2.2.1
+     */
+    public static function ntp(?string $server = null,
+                               ?\DateTimeZone $timezone = null): \Rebelo\Date\Date
+    {
+
+        if ($server === null) {
+            $pool = static::$ntpPoll;
+        } else {
+            $pool = [$server];
+        }
+
+        foreach ($pool as $ntp) {
+            try {
+                $socket = new Socket($ntp, 123);
+                $ntp    = new Client($socket);
+                return $ntp->getTime($timezone);
+            } catch (\Rebelo\Date\DateNtpException $e) {
+                
+            }
+        }
+        throw new \Rebelo\Date\DateNtpException("Failling get data from ntp pool");
     }
 }

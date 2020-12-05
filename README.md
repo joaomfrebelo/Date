@@ -8,12 +8,25 @@ This class have methods like addDays, addMonths, addYears, addHours, etc
 ## Example
 Initiate an instance of \Rebelo\Date\Date
 ```php
-    $date = \Rebelo\Date\Date::parse(Date::SQL_DATETIME,
-                                                    "1969-10-05 09:00:00");
-    OR                                                    
-    $date = \Rebelo\Date\Date::createFromFormat(Date::SQL_DATETIME,
-                                                    "1969-10-05 09:00:00",
-                                                    new \DateTimeZone("Europe/Lisbon")
+    $date = \Rebelo\Date\Date::parse(
+        \Rebelo\Date\Date::SQL_DATETIME, "1969-10-05 09:00:00"
+    );
+
+    OR                                              
+
+    $date = \Rebelo\Date\Date::createFromFormat(
+        \Rebelo\Date\Date::SQL_DATETIME, 
+        "1969-10-05 09:00:00",  
+        new \DateTimeZone("Europe/Lisbon")
+    );
+
+    OR for Date now                                                    
+    
+    $date = new \Rebelo\Date\Date();
+    
+    OR get Date from NTP server  
+
+    $date = \Rebelo\Date\Date::ntp();
 ```
 
 Get a formated string
