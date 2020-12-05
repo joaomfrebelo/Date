@@ -1,27 +1,25 @@
 <?xml version="1.0"?>
 <source xmlns="http://xml.phpdox.net/token">
-  <file xmlns="http://xml.phpdox.net/src" path="D:/NetBeansProjects/PHP/Date/src/Rebelo/Date" file="Date.php" realpath="D:/NetBeansProjects/PHP/Date/src/Rebelo/Date/Date.php" size="27113" time="2020-09-05T11:01:12+01:00" unixtime="1599300072" sha1="c3c71b49dabda7452c20ec158c12f47e812437be" relative="Rebelo/Date/Date.php"/>
+  <file xmlns="http://xml.phpdox.net/src" path="D:/NetBeansProjects/PHP/Date/src/Rebelo/Date" file="Date.php" realpath="D:/NetBeansProjects/PHP/Date/src/Rebelo/Date/Date.php" size="28372" time="2020-12-05T18:41:22+00:00" unixtime="1607193682" sha1="3ad89c1944a9b0bd5280b28a86318f7e4fc2ad3e" relative="Rebelo/Date/Date.php"/>
   <line no="1">
     <token name="T_OPEN_TAG">&lt;?php</token>
   </line>
-  <line no="2"/>
-  <line no="3">
+  <line no="2">
     <token name="T_DOC_COMMENT">/**</token>
   </line>
-  <line no="4">
+  <line no="3">
     <token name="T_DOC_COMMENT"> * MIT License</token>
   </line>
-  <line no="5">
+  <line no="4">
     <token name="T_DOC_COMMENT"> *</token>
   </line>
-  <line no="6">
+  <line no="5">
     <token name="T_DOC_COMMENT"> * Copyright (c) 2019 Jo&#xE3;o M F Rebelo</token>
   </line>
-  <line no="7">
+  <line no="6">
     <token name="T_DOC_COMMENT"> */</token>
   </line>
-  <line no="8"/>
-  <line no="9">
+  <line no="7">
     <token name="T_DECLARE">declare</token>
     <token name="T_PHPDOX_OPEN_BRACKET">(</token>
     <token name="T_STRING">strict_types</token>
@@ -30,8 +28,8 @@
     <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="10"/>
-  <line no="11">
+  <line no="8"/>
+  <line no="9">
     <token name="T_NAMESPACE">namespace</token>
     <token name="T_WHITESPACE"> </token>
     <token name="T_STRING">Rebelo</token>
@@ -39,62 +37,133 @@
     <token name="T_STRING">Date</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="12"/>
-  <line no="13">
+  <line no="10"/>
+  <line no="11">
     <token name="T_DOC_COMMENT">/**</token>
   </line>
-  <line no="14">
+  <line no="12">
     <token name="T_DOC_COMMENT"> * Date class</token>
   </line>
-  <line no="15">
+  <line no="13">
     <token name="T_DOC_COMMENT"> * This class relays on the DateTime class of php but change the return type</token>
   </line>
-  <line no="16">
+  <line no="14">
     <token name="T_DOC_COMMENT"> * for some methods and have more methods.</token>
   </line>
-  <line no="17">
+  <line no="15">
     <token name="T_DOC_COMMENT"> * Methods like add and sub return a new Object instead of change</token>
   </line>
-  <line no="18">
+  <line no="16">
     <token name="T_DOC_COMMENT"> * the instance it self</token>
   </line>
-  <line no="19">
+  <line no="17">
     <token name="T_DOC_COMMENT"> *</token>
   </line>
-  <line no="20">
+  <line no="18">
     <token name="T_DOC_COMMENT"> * @author Jo&#xE3;o Rebelo</token>
   </line>
-  <line no="21">
+  <line no="19">
     <token name="T_DOC_COMMENT"> * @since 1.0.0</token>
   </line>
-  <line no="22">
+  <line no="20">
     <token name="T_DOC_COMMENT"> */</token>
   </line>
-  <line no="23">
+  <line no="21">
     <token name="T_CLASS">class</token>
     <token name="T_WHITESPACE"> </token>
     <token name="T_STRING">Date</token>
   </line>
-  <line no="24">
+  <line no="22">
     <token name="T_PHPDOX_OPEN_CURLY">{</token>
   </line>
-  <line no="25">
+  <line no="23">
     <token name="T_WHITESPACE">    </token>
     <token name="T_DOC_COMMENT">/**</token>
   </line>
+  <line no="24">
+    <token name="T_DOC_COMMENT">     * The Default \DateTimeZone</token>
+  </line>
+  <line no="25">
+    <token name="T_DOC_COMMENT">     * @var \DateTimeZone|null</token>
+  </line>
   <line no="26">
-    <token name="T_DOC_COMMENT">     * @var string Atom (example: 2005-08-15T15:52:01+00:00)</token>
-  </line>
-  <line no="27">
-    <token name="T_DOC_COMMENT">     * @link http://php.net/manual/en/class.datetimeinterface.php</token>
-  </line>
-  <line no="28">
-    <token name="T_DOC_COMMENT">     * @since 1.0.0</token>
-  </line>
-  <line no="29">
     <token name="T_DOC_COMMENT">     */</token>
   </line>
+  <line no="27">
+    <token name="T_WHITESPACE">    </token>
+    <token name="T_PUBLIC">public</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_STATIC">static</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_QUESTION_MARK">?</token>
+    <token name="T_NS_SEPARATOR">\</token>
+    <token name="T_STRING">DateTimeZone</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$defaultTimeZone</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_EQUAL">=</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_STRING">null</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="28"/>
+  <line no="29">
+    <token name="T_WHITESPACE">    </token>
+    <token name="T_DOC_COMMENT">/**</token>
+  </line>
   <line no="30">
+    <token name="T_DOC_COMMENT">     * Default pool of ntp servers</token>
+  </line>
+  <line no="31">
+    <token name="T_DOC_COMMENT">     * @var string[]</token>
+  </line>
+  <line no="32">
+    <token name="T_DOC_COMMENT">     */</token>
+  </line>
+  <line no="33">
+    <token name="T_WHITESPACE">    </token>
+    <token name="T_PUBLIC">public</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_STATIC">static</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_ARRAY">array</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$ntpPoll</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_EQUAL">=</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_OPEN_SQUARE">[</token>
+  </line>
+  <line no="34">
+    <token name="T_WHITESPACE">        </token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"ntp02.oal.ul.pt"</token>
+    <token name="T_PHPDOX_COMMA">,</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"ntp04.oal.ul.pt"</token>
+  </line>
+  <line no="35">
+    <token name="T_WHITESPACE">    </token>
+    <token name="T_PHPDOX_CLOSE_SQUARE">]</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="36"/>
+  <line no="37">
+    <token name="T_WHITESPACE">    </token>
+    <token name="T_DOC_COMMENT">/**</token>
+  </line>
+  <line no="38">
+    <token name="T_DOC_COMMENT">     * @var string Atom (example: 2005-08-15T15:52:01+00:00)</token>
+  </line>
+  <line no="39">
+    <token name="T_DOC_COMMENT">     * @link http://php.net/manual/en/class.datetimeinterface.php</token>
+  </line>
+  <line no="40">
+    <token name="T_DOC_COMMENT">     * @since 1.0.0</token>
+  </line>
+  <line no="41">
+    <token name="T_DOC_COMMENT">     */</token>
+  </line>
+  <line no="42">
     <token name="T_WHITESPACE">    </token>
     <token name="T_CONST">const</token>
     <token name="T_WHITESPACE"> </token>
@@ -105,24 +174,24 @@
     <token name="T_CONSTANT_ENCAPSED_STRING">"Y-m-d\TH:i:sP"</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="31"/>
-  <line no="32">
+  <line no="43"/>
+  <line no="44">
     <token name="T_WHITESPACE">    </token>
     <token name="T_DOC_COMMENT">/**</token>
   </line>
-  <line no="33">
+  <line no="45">
     <token name="T_DOC_COMMENT">     * @var string HTTP Cookies (example: Monday, 15-Aug-2005 15:52:01 UTC)</token>
   </line>
-  <line no="34">
+  <line no="46">
     <token name="T_DOC_COMMENT">     * @link http://php.net/manual/en/class.datetimeinterface.php</token>
   </line>
-  <line no="35">
+  <line no="47">
     <token name="T_DOC_COMMENT">     * @since 1.0.0</token>
   </line>
-  <line no="36">
+  <line no="48">
     <token name="T_DOC_COMMENT">     */</token>
   </line>
-  <line no="37">
+  <line no="49">
     <token name="T_WHITESPACE">    </token>
     <token name="T_CONST">const</token>
     <token name="T_WHITESPACE"> </token>
@@ -133,36 +202,36 @@
     <token name="T_CONSTANT_ENCAPSED_STRING">"l, d-M-Y H:i:s T"</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="38"/>
-  <line no="39">
+  <line no="50"/>
+  <line no="51">
     <token name="T_WHITESPACE">    </token>
     <token name="T_DOC_COMMENT">/**</token>
   </line>
-  <line no="40">
+  <line no="52">
     <token name="T_DOC_COMMENT">     * @var string ISO-8601 (example: 2005-08-15T15:52:01+0000)  &lt;p&gt;&lt;b&gt;Note&lt;/b&gt;:</token>
   </line>
-  <line no="41">
+  <line no="53">
     <token name="T_DOC_COMMENT">     * This format is not compatible with ISO-8601, but is left this way</token>
   </line>
-  <line no="42">
+  <line no="54">
     <token name="T_DOC_COMMENT">     * for backward compatibility reasons.</token>
   </line>
-  <line no="43">
+  <line no="55">
     <token name="T_DOC_COMMENT">     * Use &lt;b&gt;&lt;code&gt;DateTime::ATOM&lt;/code&gt;&lt;/b&gt; or &lt;b&gt;&lt;code&gt;DATE_ATOM&lt;/code&gt;&lt;/b&gt;</token>
   </line>
-  <line no="44">
+  <line no="56">
     <token name="T_DOC_COMMENT">     * for compatibility with ISO-8601 instead. &lt;/p&gt;</token>
   </line>
-  <line no="45">
+  <line no="57">
     <token name="T_DOC_COMMENT">     * @link http://php.net/manual/en/class.datetimeinterface.php</token>
   </line>
-  <line no="46">
+  <line no="58">
     <token name="T_DOC_COMMENT">     * @since 1.0.0</token>
   </line>
-  <line no="47">
+  <line no="59">
     <token name="T_DOC_COMMENT">     */</token>
   </line>
-  <line no="48">
+  <line no="60">
     <token name="T_WHITESPACE">    </token>
     <token name="T_CONST">const</token>
     <token name="T_WHITESPACE"> </token>
@@ -173,24 +242,24 @@
     <token name="T_CONSTANT_ENCAPSED_STRING">"Y-m-d\TH:i:sO"</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="49"/>
-  <line no="50">
+  <line no="61"/>
+  <line no="62">
     <token name="T_WHITESPACE">    </token>
     <token name="T_DOC_COMMENT">/**</token>
   </line>
-  <line no="51">
+  <line no="63">
     <token name="T_DOC_COMMENT">     * @var string RFC 822 (example: Mon, 15 Aug 05 15:52:01 +0000)</token>
   </line>
-  <line no="52">
+  <line no="64">
     <token name="T_DOC_COMMENT">     * @link http://php.net/manual/en/class.datetimeinterface.php</token>
   </line>
-  <line no="53">
+  <line no="65">
     <token name="T_DOC_COMMENT">     * @since 1.0.0</token>
   </line>
-  <line no="54">
+  <line no="66">
     <token name="T_DOC_COMMENT">     */</token>
   </line>
-  <line no="55">
+  <line no="67">
     <token name="T_WHITESPACE">    </token>
     <token name="T_CONST">const</token>
     <token name="T_WHITESPACE"> </token>
@@ -201,24 +270,24 @@
     <token name="T_CONSTANT_ENCAPSED_STRING">"D, d M y H:i:s O"</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="56"/>
-  <line no="57">
+  <line no="68"/>
+  <line no="69">
     <token name="T_WHITESPACE">    </token>
     <token name="T_DOC_COMMENT">/**</token>
   </line>
-  <line no="58">
+  <line no="70">
     <token name="T_DOC_COMMENT">     * @var string RFC 850 (example: Monday, 15-Aug-05 15:52:01 UTC)</token>
   </line>
-  <line no="59">
+  <line no="71">
     <token name="T_DOC_COMMENT">     * @link http://php.net/manual/en/class.datetimeinterface.php</token>
   </line>
-  <line no="60">
+  <line no="72">
     <token name="T_DOC_COMMENT">     * @since 1.0.0</token>
   </line>
-  <line no="61">
+  <line no="73">
     <token name="T_DOC_COMMENT">     */</token>
   </line>
-  <line no="62">
+  <line no="74">
     <token name="T_WHITESPACE">    </token>
     <token name="T_CONST">const</token>
     <token name="T_WHITESPACE"> </token>
@@ -229,24 +298,24 @@
     <token name="T_CONSTANT_ENCAPSED_STRING">"l, d-M-y H:i:s T"</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="63"/>
-  <line no="64">
+  <line no="75"/>
+  <line no="76">
     <token name="T_WHITESPACE">    </token>
     <token name="T_DOC_COMMENT">/**</token>
   </line>
-  <line no="65">
+  <line no="77">
     <token name="T_DOC_COMMENT">     * @var string RFC 1036 (example: Mon, 15 Aug 05 15:52:01 +0000)</token>
   </line>
-  <line no="66">
+  <line no="78">
     <token name="T_DOC_COMMENT">     * @link http://php.net/manual/en/class.datetimeinterface.php</token>
   </line>
-  <line no="67">
+  <line no="79">
     <token name="T_DOC_COMMENT">     * @since 1.0.0</token>
   </line>
-  <line no="68">
+  <line no="80">
     <token name="T_DOC_COMMENT">     */</token>
   </line>
-  <line no="69">
+  <line no="81">
     <token name="T_WHITESPACE">    </token>
     <token name="T_CONST">const</token>
     <token name="T_WHITESPACE"> </token>
@@ -257,24 +326,24 @@
     <token name="T_CONSTANT_ENCAPSED_STRING">"D, d M y H:i:s O"</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="70"/>
-  <line no="71">
+  <line no="82"/>
+  <line no="83">
     <token name="T_WHITESPACE">    </token>
     <token name="T_DOC_COMMENT">/**</token>
   </line>
-  <line no="72">
+  <line no="84">
     <token name="T_DOC_COMMENT">     * @var string RFC 1123 (example: Mon, 15 Aug 2005 15:52:01 +0000)</token>
   </line>
-  <line no="73">
+  <line no="85">
     <token name="T_DOC_COMMENT">     * @link http://php.net/manual/en/class.datetimeinterface.php</token>
   </line>
-  <line no="74">
+  <line no="86">
     <token name="T_DOC_COMMENT">     * @since 1.0.0</token>
   </line>
-  <line no="75">
+  <line no="87">
     <token name="T_DOC_COMMENT">     */</token>
   </line>
-  <line no="76">
+  <line no="88">
     <token name="T_WHITESPACE">    </token>
     <token name="T_CONST">const</token>
     <token name="T_WHITESPACE"> </token>
@@ -285,24 +354,24 @@
     <token name="T_CONSTANT_ENCAPSED_STRING">"D, d M Y H:i:s O"</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="77"/>
-  <line no="78">
+  <line no="89"/>
+  <line no="90">
     <token name="T_WHITESPACE">    </token>
     <token name="T_DOC_COMMENT">/**</token>
   </line>
-  <line no="79">
+  <line no="91">
     <token name="T_DOC_COMMENT">     * @var string RFC 2822 (example: Mon, 15 Aug 2005 15:52:01 +0000)</token>
   </line>
-  <line no="80">
+  <line no="92">
     <token name="T_DOC_COMMENT">     * @link http://php.net/manual/en/class.datetimeinterface.php</token>
   </line>
-  <line no="81">
+  <line no="93">
     <token name="T_DOC_COMMENT">     * @since 1.0.0</token>
   </line>
-  <line no="82">
+  <line no="94">
     <token name="T_DOC_COMMENT">     */</token>
   </line>
-  <line no="83">
+  <line no="95">
     <token name="T_WHITESPACE">    </token>
     <token name="T_CONST">const</token>
     <token name="T_WHITESPACE"> </token>
@@ -313,24 +382,24 @@
     <token name="T_CONSTANT_ENCAPSED_STRING">"D, d M Y H:i:s O"</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="84"/>
-  <line no="85">
+  <line no="96"/>
+  <line no="97">
     <token name="T_WHITESPACE">    </token>
     <token name="T_DOC_COMMENT">/**</token>
   </line>
-  <line no="86">
+  <line no="98">
     <token name="T_DOC_COMMENT">     * @var string Same as &lt;b&gt;&lt;code&gt;DATE_ATOM&lt;/code&gt;&lt;/b&gt; (since PHP 5.1.3)</token>
   </line>
-  <line no="87">
+  <line no="99">
     <token name="T_DOC_COMMENT">     * @link http://php.net/manual/en/class.datetimeinterface.php</token>
   </line>
-  <line no="88">
+  <line no="100">
     <token name="T_DOC_COMMENT">     * @since 1.0.0</token>
   </line>
-  <line no="89">
+  <line no="101">
     <token name="T_DOC_COMMENT">     */</token>
   </line>
-  <line no="90">
+  <line no="102">
     <token name="T_WHITESPACE">    </token>
     <token name="T_CONST">const</token>
     <token name="T_WHITESPACE"> </token>
@@ -341,27 +410,27 @@
     <token name="T_CONSTANT_ENCAPSED_STRING">"Y-m-d\TH:i:sP"</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="91"/>
-  <line no="92">
+  <line no="103"/>
+  <line no="104">
     <token name="T_WHITESPACE">    </token>
     <token name="T_DOC_COMMENT">/**</token>
   </line>
-  <line no="93">
+  <line no="105">
     <token name="T_DOC_COMMENT">     * @var string RFC 3339 EXTENDED format (since PHP 7.0.0)</token>
   </line>
-  <line no="94">
+  <line no="106">
     <token name="T_DOC_COMMENT">     * (example: 2005-08-15T15:52:01.000+00:00)</token>
   </line>
-  <line no="95">
+  <line no="107">
     <token name="T_DOC_COMMENT">     * @link http://php.net/manual/en/class.datetimeinterface.php</token>
   </line>
-  <line no="96">
+  <line no="108">
     <token name="T_DOC_COMMENT">     * @since 1.0.0</token>
   </line>
-  <line no="97">
+  <line no="109">
     <token name="T_DOC_COMMENT">     */</token>
   </line>
-  <line no="98">
+  <line no="110">
     <token name="T_WHITESPACE">    </token>
     <token name="T_CONST">const</token>
     <token name="T_WHITESPACE"> </token>
@@ -372,24 +441,24 @@
     <token name="T_CONSTANT_ENCAPSED_STRING">"Y-m-d\TH:i:s.vP"</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="99"/>
-  <line no="100">
+  <line no="111"/>
+  <line no="112">
     <token name="T_WHITESPACE">    </token>
     <token name="T_DOC_COMMENT">/**</token>
   </line>
-  <line no="101">
+  <line no="113">
     <token name="T_DOC_COMMENT">     * @var string RSS (example: Mon, 15 Aug 2005 15:52:01 +0000)</token>
   </line>
-  <line no="102">
+  <line no="114">
     <token name="T_DOC_COMMENT">     * @link http://php.net/manual/en/class.datetimeinterface.php</token>
   </line>
-  <line no="103">
+  <line no="115">
     <token name="T_DOC_COMMENT">     * @since 1.0.0</token>
   </line>
-  <line no="104">
+  <line no="116">
     <token name="T_DOC_COMMENT">     */</token>
   </line>
-  <line no="105">
+  <line no="117">
     <token name="T_WHITESPACE">    </token>
     <token name="T_CONST">const</token>
     <token name="T_WHITESPACE"> </token>
@@ -400,27 +469,27 @@
     <token name="T_CONSTANT_ENCAPSED_STRING">"D, d M Y H:i:s O"</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="106"/>
-  <line no="107">
+  <line no="118"/>
+  <line no="119">
     <token name="T_WHITESPACE">    </token>
     <token name="T_DOC_COMMENT">/**</token>
   </line>
-  <line no="108">
+  <line no="120">
     <token name="T_DOC_COMMENT">     * @var string World Wide Web Consortium</token>
   </line>
-  <line no="109">
+  <line no="121">
     <token name="T_DOC_COMMENT">     * (example: 2005-08-15T15:52:01+00:00)</token>
   </line>
-  <line no="110">
+  <line no="122">
     <token name="T_DOC_COMMENT">     * @link http://php.net/manual/en/class.datetimeinterface.php</token>
   </line>
-  <line no="111">
+  <line no="123">
     <token name="T_DOC_COMMENT">     * @since 1.0.0</token>
   </line>
-  <line no="112">
+  <line no="124">
     <token name="T_DOC_COMMENT">     */</token>
   </line>
-  <line no="113">
+  <line no="125">
     <token name="T_WHITESPACE">    </token>
     <token name="T_CONST">const</token>
     <token name="T_WHITESPACE"> </token>
@@ -431,21 +500,21 @@
     <token name="T_CONSTANT_ENCAPSED_STRING">"Y-m-d\TH:i:sP"</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="114"/>
-  <line no="115">
+  <line no="126"/>
+  <line no="127">
     <token name="T_WHITESPACE">    </token>
     <token name="T_DOC_COMMENT">/**</token>
   </line>
-  <line no="116">
+  <line no="128">
     <token name="T_DOC_COMMENT">     * @var string SQL Date (Example: 1969-10-05)</token>
   </line>
-  <line no="117">
+  <line no="129">
     <token name="T_DOC_COMMENT">     * @since 1.0.0</token>
   </line>
-  <line no="118">
+  <line no="130">
     <token name="T_DOC_COMMENT">     */</token>
   </line>
-  <line no="119">
+  <line no="131">
     <token name="T_WHITESPACE">    </token>
     <token name="T_CONST">const</token>
     <token name="T_WHITESPACE"> </token>
@@ -456,36 +525,36 @@
     <token name="T_CONSTANT_ENCAPSED_STRING">"Y-m-d"</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="120"/>
-  <line no="121">
+  <line no="132"/>
+  <line no="133">
     <token name="T_WHITESPACE">    </token>
     <token name="T_DOC_COMMENT">/**</token>
   </line>
-  <line no="122">
+  <line no="134">
     <token name="T_DOC_COMMENT">     *</token>
   </line>
-  <line no="123">
+  <line no="135">
     <token name="T_DOC_COMMENT">     * Date time combined with the T char</token>
   </line>
-  <line no="124">
+  <line no="136">
     <token name="T_DOC_COMMENT">     *</token>
   </line>
-  <line no="125">
+  <line no="137">
     <token name="T_DOC_COMMENT">     * Ex: 1969-10-05T09:29:39</token>
   </line>
-  <line no="126">
+  <line no="138">
     <token name="T_DOC_COMMENT">     *</token>
   </line>
-  <line no="127">
+  <line no="139">
     <token name="T_DOC_COMMENT">     * @var string</token>
   </line>
-  <line no="128">
+  <line no="140">
     <token name="T_DOC_COMMENT">     * @since 2.1.0</token>
   </line>
-  <line no="129">
+  <line no="141">
     <token name="T_DOC_COMMENT">     */</token>
   </line>
-  <line no="130">
+  <line no="142">
     <token name="T_WHITESPACE">    </token>
     <token name="T_CONST">const</token>
     <token name="T_WHITESPACE"> </token>
@@ -496,30 +565,30 @@
     <token name="T_CONSTANT_ENCAPSED_STRING">"Y-m-d\TH:i:s"</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="131"/>
-  <line no="132">
+  <line no="143"/>
+  <line no="144">
     <token name="T_WHITESPACE">    </token>
     <token name="T_DOC_COMMENT">/**</token>
   </line>
-  <line no="133">
+  <line no="145">
     <token name="T_DOC_COMMENT">     * Date and time</token>
   </line>
-  <line no="134">
+  <line no="146">
     <token name="T_DOC_COMMENT">     * Ex: 1969-10-05 09:29:39</token>
   </line>
-  <line no="135">
+  <line no="147">
     <token name="T_DOC_COMMENT">     *</token>
   </line>
-  <line no="136">
+  <line no="148">
     <token name="T_DOC_COMMENT">     * @var string</token>
   </line>
-  <line no="137">
+  <line no="149">
     <token name="T_DOC_COMMENT">     * @since 2.1.0</token>
   </line>
-  <line no="138">
+  <line no="150">
     <token name="T_DOC_COMMENT">     */</token>
   </line>
-  <line no="139">
+  <line no="151">
     <token name="T_WHITESPACE">    </token>
     <token name="T_CONST">const</token>
     <token name="T_WHITESPACE"> </token>
@@ -530,21 +599,21 @@
     <token name="T_CONSTANT_ENCAPSED_STRING">"Y-m-d H:i:s"</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="140"/>
-  <line no="141">
+  <line no="152"/>
+  <line no="153">
     <token name="T_WHITESPACE">    </token>
     <token name="T_DOC_COMMENT">/**</token>
   </line>
-  <line no="142">
+  <line no="154">
     <token name="T_DOC_COMMENT">     * @var string SQL DateTime (Example: 1969-10-05 09:00:00)</token>
   </line>
-  <line no="143">
+  <line no="155">
     <token name="T_DOC_COMMENT">     * @since 1.0.0</token>
   </line>
-  <line no="144">
+  <line no="156">
     <token name="T_DOC_COMMENT">     */</token>
   </line>
-  <line no="145">
+  <line no="157">
     <token name="T_WHITESPACE">    </token>
     <token name="T_CONST">const</token>
     <token name="T_WHITESPACE"> </token>
@@ -555,30 +624,30 @@
     <token name="T_CONSTANT_ENCAPSED_STRING">"Y-m-d H:i:s"</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="146"/>
-  <line no="147">
+  <line no="158"/>
+  <line no="159">
     <token name="T_WHITESPACE">    </token>
     <token name="T_DOC_COMMENT">/**</token>
   </line>
-  <line no="148">
+  <line no="160">
     <token name="T_DOC_COMMENT">     * Day of the month, 2 digits with leading zeros</token>
   </line>
-  <line no="149">
+  <line no="161">
     <token name="T_DOC_COMMENT">     * Exmaple 01 or 31</token>
   </line>
-  <line no="150">
+  <line no="162">
     <token name="T_DOC_COMMENT">     *</token>
   </line>
-  <line no="151">
+  <line no="163">
     <token name="T_DOC_COMMENT">     * @var string</token>
   </line>
-  <line no="152">
+  <line no="164">
     <token name="T_DOC_COMMENT">     * @since 1.0.0</token>
   </line>
-  <line no="153">
+  <line no="165">
     <token name="T_DOC_COMMENT">     */</token>
   </line>
-  <line no="154">
+  <line no="166">
     <token name="T_WHITESPACE">    </token>
     <token name="T_CONST">const</token>
     <token name="T_WHITESPACE"> </token>
@@ -589,30 +658,30 @@
     <token name="T_CONSTANT_ENCAPSED_STRING">"d"</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="155"/>
-  <line no="156">
+  <line no="167"/>
+  <line no="168">
     <token name="T_WHITESPACE">    </token>
     <token name="T_DOC_COMMENT">/**</token>
   </line>
-  <line no="157">
+  <line no="169">
     <token name="T_DOC_COMMENT">     * Day of the month, 1 or 2 digits without leading zeros</token>
   </line>
-  <line no="158">
+  <line no="170">
     <token name="T_DOC_COMMENT">     * Exmaple 1 or 31</token>
   </line>
-  <line no="159">
+  <line no="171">
     <token name="T_DOC_COMMENT">     *</token>
   </line>
-  <line no="160">
+  <line no="172">
     <token name="T_DOC_COMMENT">     * @var string</token>
   </line>
-  <line no="161">
+  <line no="173">
     <token name="T_DOC_COMMENT">     * @since 1.0.0</token>
   </line>
-  <line no="162">
+  <line no="174">
     <token name="T_DOC_COMMENT">     */</token>
   </line>
-  <line no="163">
+  <line no="175">
     <token name="T_WHITESPACE">    </token>
     <token name="T_CONST">const</token>
     <token name="T_WHITESPACE"> </token>
@@ -623,30 +692,30 @@
     <token name="T_CONSTANT_ENCAPSED_STRING">"d"</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="164"/>
-  <line no="165">
+  <line no="176"/>
+  <line no="177">
     <token name="T_WHITESPACE">    </token>
     <token name="T_DOC_COMMENT">/**</token>
   </line>
-  <line no="166">
+  <line no="178">
     <token name="T_DOC_COMMENT">     * A textual representation of a day</token>
   </line>
-  <line no="167">
+  <line no="179">
     <token name="T_DOC_COMMENT">     * Mon through Sun</token>
   </line>
-  <line no="168">
+  <line no="180">
     <token name="T_DOC_COMMENT">     *</token>
   </line>
-  <line no="169">
+  <line no="181">
     <token name="T_DOC_COMMENT">     * @var string</token>
   </line>
-  <line no="170">
+  <line no="182">
     <token name="T_DOC_COMMENT">     * @since 1.0.0</token>
   </line>
-  <line no="171">
+  <line no="183">
     <token name="T_DOC_COMMENT">     */</token>
   </line>
-  <line no="172">
+  <line no="184">
     <token name="T_WHITESPACE">    </token>
     <token name="T_CONST">const</token>
     <token name="T_WHITESPACE"> </token>
@@ -657,27 +726,27 @@
     <token name="T_CONSTANT_ENCAPSED_STRING">"D"</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="173"/>
-  <line no="174">
+  <line no="185"/>
+  <line no="186">
     <token name="T_WHITESPACE">    </token>
     <token name="T_DOC_COMMENT">/**</token>
   </line>
-  <line no="175">
+  <line no="187">
     <token name="T_DOC_COMMENT">     * A textual representation of a day</token>
   </line>
-  <line no="176">
+  <line no="188">
     <token name="T_DOC_COMMENT">     * Sunday through Saturday</token>
   </line>
-  <line no="177">
+  <line no="189">
     <token name="T_DOC_COMMENT">     * @var string</token>
   </line>
-  <line no="178">
+  <line no="190">
     <token name="T_DOC_COMMENT">     * @since 1.0.0</token>
   </line>
-  <line no="179">
+  <line no="191">
     <token name="T_DOC_COMMENT">     */</token>
   </line>
-  <line no="180">
+  <line no="192">
     <token name="T_WHITESPACE">    </token>
     <token name="T_CONST">const</token>
     <token name="T_WHITESPACE"> </token>
@@ -688,33 +757,33 @@
     <token name="T_CONSTANT_ENCAPSED_STRING">"l"</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="181"/>
-  <line no="182">
+  <line no="193"/>
+  <line no="194">
     <token name="T_WHITESPACE">    </token>
     <token name="T_DOC_COMMENT">/**</token>
   </line>
-  <line no="183">
+  <line no="195">
     <token name="T_DOC_COMMENT">     * English ordinal suffix for the day of the month, 2 characters.</token>
   </line>
-  <line no="184">
+  <line no="196">
     <token name="T_DOC_COMMENT">     * It's ignored while processing.</token>
   </line>
-  <line no="185">
+  <line no="197">
     <token name="T_DOC_COMMENT">     * Example: st, nd, rd or th.</token>
   </line>
-  <line no="186">
+  <line no="198">
     <token name="T_DOC_COMMENT">     *</token>
   </line>
-  <line no="187">
+  <line no="199">
     <token name="T_DOC_COMMENT">     * @var string</token>
   </line>
-  <line no="188">
+  <line no="200">
     <token name="T_DOC_COMMENT">     * @since 1.0.0</token>
   </line>
-  <line no="189">
+  <line no="201">
     <token name="T_DOC_COMMENT">     */</token>
   </line>
-  <line no="190">
+  <line no="202">
     <token name="T_WHITESPACE">    </token>
     <token name="T_CONST">const</token>
     <token name="T_WHITESPACE"> </token>
@@ -725,30 +794,30 @@
     <token name="T_CONSTANT_ENCAPSED_STRING">"S"</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="191"/>
-  <line no="192">
+  <line no="203"/>
+  <line no="204">
     <token name="T_WHITESPACE">    </token>
     <token name="T_DOC_COMMENT">/**</token>
   </line>
-  <line no="193">
+  <line no="205">
     <token name="T_DOC_COMMENT">     * The day of the year (starting from 0)</token>
   </line>
-  <line no="194">
+  <line no="206">
     <token name="T_DOC_COMMENT">     * 0 through 365</token>
   </line>
-  <line no="195">
+  <line no="207">
     <token name="T_DOC_COMMENT">     *</token>
   </line>
-  <line no="196">
+  <line no="208">
     <token name="T_DOC_COMMENT">     * @var string</token>
   </line>
-  <line no="197">
+  <line no="209">
     <token name="T_DOC_COMMENT">     * @since 1.0.0</token>
   </line>
-  <line no="198">
+  <line no="210">
     <token name="T_DOC_COMMENT">     */</token>
   </line>
-  <line no="199">
+  <line no="211">
     <token name="T_WHITESPACE">    </token>
     <token name="T_CONST">const</token>
     <token name="T_WHITESPACE"> </token>
@@ -759,27 +828,27 @@
     <token name="T_CONSTANT_ENCAPSED_STRING">"z"</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="200"/>
-  <line no="201">
+  <line no="212"/>
+  <line no="213">
     <token name="T_WHITESPACE">    </token>
     <token name="T_DOC_COMMENT">/**</token>
   </line>
-  <line no="202">
+  <line no="214">
     <token name="T_DOC_COMMENT">     * A textual representation of a month, such as January</token>
   </line>
-  <line no="203">
+  <line no="215">
     <token name="T_DOC_COMMENT">     * January through December</token>
   </line>
-  <line no="204">
+  <line no="216">
     <token name="T_DOC_COMMENT">     * @var string</token>
   </line>
-  <line no="205">
+  <line no="217">
     <token name="T_DOC_COMMENT">     * @since 1.0.0</token>
   </line>
-  <line no="206">
+  <line no="218">
     <token name="T_DOC_COMMENT">     */</token>
   </line>
-  <line no="207">
+  <line no="219">
     <token name="T_WHITESPACE">    </token>
     <token name="T_CONST">const</token>
     <token name="T_WHITESPACE"> </token>
@@ -790,27 +859,27 @@
     <token name="T_CONSTANT_ENCAPSED_STRING">"F"</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="208"/>
-  <line no="209">
+  <line no="220"/>
+  <line no="221">
     <token name="T_WHITESPACE">    </token>
     <token name="T_DOC_COMMENT">/**</token>
   </line>
-  <line no="210">
+  <line no="222">
     <token name="T_DOC_COMMENT">     * A textual representation of a month, such as Sept</token>
   </line>
-  <line no="211">
+  <line no="223">
     <token name="T_DOC_COMMENT">     * Jan through Dec</token>
   </line>
-  <line no="212">
+  <line no="224">
     <token name="T_DOC_COMMENT">     * @var string</token>
   </line>
-  <line no="213">
+  <line no="225">
     <token name="T_DOC_COMMENT">     * @since 1.0.0</token>
   </line>
-  <line no="214">
+  <line no="226">
     <token name="T_DOC_COMMENT">     */</token>
   </line>
-  <line no="215">
+  <line no="227">
     <token name="T_WHITESPACE">    </token>
     <token name="T_CONST">const</token>
     <token name="T_WHITESPACE"> </token>
@@ -821,27 +890,27 @@
     <token name="T_CONSTANT_ENCAPSED_STRING">"M"</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="216"/>
-  <line no="217">
+  <line no="228"/>
+  <line no="229">
     <token name="T_WHITESPACE">    </token>
     <token name="T_DOC_COMMENT">/**</token>
   </line>
-  <line no="218">
+  <line no="230">
     <token name="T_DOC_COMMENT">     * Numeric representation of a month, with leading zeros</token>
   </line>
-  <line no="219">
+  <line no="231">
     <token name="T_DOC_COMMENT">     * 01 through 12</token>
   </line>
-  <line no="220">
+  <line no="232">
     <token name="T_DOC_COMMENT">     * @var string</token>
   </line>
-  <line no="221">
+  <line no="233">
     <token name="T_DOC_COMMENT">     * @since 1.0.0</token>
   </line>
-  <line no="222">
+  <line no="234">
     <token name="T_DOC_COMMENT">     */</token>
   </line>
-  <line no="223">
+  <line no="235">
     <token name="T_WHITESPACE">    </token>
     <token name="T_CONST">const</token>
     <token name="T_WHITESPACE"> </token>
@@ -852,27 +921,27 @@
     <token name="T_CONSTANT_ENCAPSED_STRING">"m"</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="224"/>
-  <line no="225">
+  <line no="236"/>
+  <line no="237">
     <token name="T_WHITESPACE">    </token>
     <token name="T_DOC_COMMENT">/**</token>
   </line>
-  <line no="226">
+  <line no="238">
     <token name="T_DOC_COMMENT">     * Numeric representation of a month, without leading zeros</token>
   </line>
-  <line no="227">
+  <line no="239">
     <token name="T_DOC_COMMENT">     * 1 through 12</token>
   </line>
-  <line no="228">
+  <line no="240">
     <token name="T_DOC_COMMENT">     * @var string</token>
   </line>
-  <line no="229">
+  <line no="241">
     <token name="T_DOC_COMMENT">     * @since 1.0.0</token>
   </line>
-  <line no="230">
+  <line no="242">
     <token name="T_DOC_COMMENT">     */</token>
   </line>
-  <line no="231">
+  <line no="243">
     <token name="T_WHITESPACE">    </token>
     <token name="T_CONST">const</token>
     <token name="T_WHITESPACE"> </token>
@@ -883,59 +952,16 @@
     <token name="T_CONSTANT_ENCAPSED_STRING">"n"</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="232"/>
-  <line no="233">
-    <token name="T_WHITESPACE">    </token>
-    <token name="T_DOC_COMMENT">/**</token>
-  </line>
-  <line no="234">
-    <token name="T_DOC_COMMENT">     * A full numeric representation of a year, 4 digits</token>
-  </line>
-  <line no="235">
-    <token name="T_DOC_COMMENT">     * Examples: 1999 or 2003</token>
-  </line>
-  <line no="236">
-    <token name="T_DOC_COMMENT">     *</token>
-  </line>
-  <line no="237">
-    <token name="T_DOC_COMMENT">     * @var string</token>
-  </line>
-  <line no="238">
-    <token name="T_DOC_COMMENT">     * @since 1.0.0</token>
-  </line>
-  <line no="239">
-    <token name="T_DOC_COMMENT">     */</token>
-  </line>
-  <line no="240">
-    <token name="T_WHITESPACE">    </token>
-    <token name="T_CONST">const</token>
-    <token name="T_WHITESPACE"> </token>
-    <token name="T_STRING">YAER</token>
-    <token name="T_WHITESPACE"> </token>
-    <token name="T_PHPDOX_EQUAL">=</token>
-    <token name="T_WHITESPACE"> </token>
-    <token name="T_CONSTANT_ENCAPSED_STRING">"Y"</token>
-    <token name="T_PHPDOX_SEMICOLON">;</token>
-  </line>
-  <line no="241"/>
-  <line no="242">
-    <token name="T_WHITESPACE">    </token>
-    <token name="T_DOC_COMMENT">/**</token>
-  </line>
-  <line no="243">
-    <token name="T_DOC_COMMENT">     * A two digit representation of a year</token>
-  </line>
-  <line no="244">
-    <token name="T_DOC_COMMENT">     * (which is assumed to be in the range 1970-2069, inclusive)</token>
-  </line>
+  <line no="244"/>
   <line no="245">
-    <token name="T_DOC_COMMENT">     *</token>
+    <token name="T_WHITESPACE">    </token>
+    <token name="T_DOC_COMMENT">/**</token>
   </line>
   <line no="246">
-    <token name="T_DOC_COMMENT">     * Examples: 99 or 03</token>
+    <token name="T_DOC_COMMENT">     * A full numeric representation of a year, 4 digits</token>
   </line>
   <line no="247">
-    <token name="T_DOC_COMMENT">     * (which will be interpreted as 1999 and 2003, respectively)</token>
+    <token name="T_DOC_COMMENT">     * Examples: 1999 or 2003</token>
   </line>
   <line no="248">
     <token name="T_DOC_COMMENT">     *</token>
@@ -953,11 +979,11 @@
     <token name="T_WHITESPACE">    </token>
     <token name="T_CONST">const</token>
     <token name="T_WHITESPACE"> </token>
-    <token name="T_STRING">YEAR_SHORT</token>
+    <token name="T_STRING">YAER</token>
     <token name="T_WHITESPACE"> </token>
     <token name="T_PHPDOX_EQUAL">=</token>
     <token name="T_WHITESPACE"> </token>
-    <token name="T_CONSTANT_ENCAPSED_STRING">"y"</token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"Y"</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
   <line no="253"/>
@@ -966,21 +992,64 @@
     <token name="T_DOC_COMMENT">/**</token>
   </line>
   <line no="255">
-    <token name="T_DOC_COMMENT">     * Ante meridiem</token>
+    <token name="T_DOC_COMMENT">     * A two digit representation of a year</token>
   </line>
   <line no="256">
-    <token name="T_DOC_COMMENT">     * time am (before 12:00)</token>
+    <token name="T_DOC_COMMENT">     * (which is assumed to be in the range 1970-2069, inclusive)</token>
   </line>
   <line no="257">
-    <token name="T_DOC_COMMENT">     * @var string</token>
+    <token name="T_DOC_COMMENT">     *</token>
   </line>
   <line no="258">
-    <token name="T_DOC_COMMENT">     * @since 1.0.0</token>
+    <token name="T_DOC_COMMENT">     * Examples: 99 or 03</token>
   </line>
   <line no="259">
-    <token name="T_DOC_COMMENT">     */</token>
+    <token name="T_DOC_COMMENT">     * (which will be interpreted as 1999 and 2003, respectively)</token>
   </line>
   <line no="260">
+    <token name="T_DOC_COMMENT">     *</token>
+  </line>
+  <line no="261">
+    <token name="T_DOC_COMMENT">     * @var string</token>
+  </line>
+  <line no="262">
+    <token name="T_DOC_COMMENT">     * @since 1.0.0</token>
+  </line>
+  <line no="263">
+    <token name="T_DOC_COMMENT">     */</token>
+  </line>
+  <line no="264">
+    <token name="T_WHITESPACE">    </token>
+    <token name="T_CONST">const</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_STRING">YEAR_SHORT</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_EQUAL">=</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"y"</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="265"/>
+  <line no="266">
+    <token name="T_WHITESPACE">    </token>
+    <token name="T_DOC_COMMENT">/**</token>
+  </line>
+  <line no="267">
+    <token name="T_DOC_COMMENT">     * Ante meridiem</token>
+  </line>
+  <line no="268">
+    <token name="T_DOC_COMMENT">     * time am (before 12:00)</token>
+  </line>
+  <line no="269">
+    <token name="T_DOC_COMMENT">     * @var string</token>
+  </line>
+  <line no="270">
+    <token name="T_DOC_COMMENT">     * @since 1.0.0</token>
+  </line>
+  <line no="271">
+    <token name="T_DOC_COMMENT">     */</token>
+  </line>
+  <line no="272">
     <token name="T_WHITESPACE">    </token>
     <token name="T_CONST">const</token>
     <token name="T_WHITESPACE"> </token>
@@ -991,27 +1060,27 @@
     <token name="T_CONSTANT_ENCAPSED_STRING">"a"</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="261"/>
-  <line no="262">
+  <line no="273"/>
+  <line no="274">
     <token name="T_WHITESPACE">    </token>
     <token name="T_DOC_COMMENT">/**</token>
   </line>
-  <line no="263">
+  <line no="275">
     <token name="T_DOC_COMMENT">     * Post meridiem</token>
   </line>
-  <line no="264">
+  <line no="276">
     <token name="T_DOC_COMMENT">     * time pm (after 12:00)</token>
   </line>
-  <line no="265">
+  <line no="277">
     <token name="T_DOC_COMMENT">     * @var string</token>
   </line>
-  <line no="266">
+  <line no="278">
     <token name="T_DOC_COMMENT">     * @since 1.0.0</token>
   </line>
-  <line no="267">
+  <line no="279">
     <token name="T_DOC_COMMENT">     */</token>
   </line>
-  <line no="268">
+  <line no="280">
     <token name="T_WHITESPACE">    </token>
     <token name="T_CONST">const</token>
     <token name="T_WHITESPACE"> </token>
@@ -1022,27 +1091,27 @@
     <token name="T_CONSTANT_ENCAPSED_STRING">"A"</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="269"/>
-  <line no="270">
+  <line no="281"/>
+  <line no="282">
     <token name="T_WHITESPACE">    </token>
     <token name="T_DOC_COMMENT">/**</token>
   </line>
-  <line no="271">
+  <line no="283">
     <token name="T_DOC_COMMENT">     * 12-hour format of an hour with leading zero</token>
   </line>
-  <line no="272">
+  <line no="284">
     <token name="T_DOC_COMMENT">     *</token>
   </line>
-  <line no="273">
+  <line no="285">
     <token name="T_DOC_COMMENT">     * @var string</token>
   </line>
-  <line no="274">
+  <line no="286">
     <token name="T_DOC_COMMENT">     * @since 1.0.0</token>
   </line>
-  <line no="275">
+  <line no="287">
     <token name="T_DOC_COMMENT">     */</token>
   </line>
-  <line no="276">
+  <line no="288">
     <token name="T_WHITESPACE">    </token>
     <token name="T_CONST">const</token>
     <token name="T_WHITESPACE"> </token>
@@ -1053,27 +1122,27 @@
     <token name="T_CONSTANT_ENCAPSED_STRING">"h"</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="277"/>
-  <line no="278">
+  <line no="289"/>
+  <line no="290">
     <token name="T_WHITESPACE">    </token>
     <token name="T_DOC_COMMENT">/**</token>
   </line>
-  <line no="279">
+  <line no="291">
     <token name="T_DOC_COMMENT">     * 12-hour format of an hour without leading zero</token>
   </line>
-  <line no="280">
+  <line no="292">
     <token name="T_DOC_COMMENT">     *</token>
   </line>
-  <line no="281">
+  <line no="293">
     <token name="T_DOC_COMMENT">     * @var string</token>
   </line>
-  <line no="282">
+  <line no="294">
     <token name="T_DOC_COMMENT">     * @since 1.0.0</token>
   </line>
-  <line no="283">
+  <line no="295">
     <token name="T_DOC_COMMENT">     */</token>
   </line>
-  <line no="284">
+  <line no="296">
     <token name="T_WHITESPACE">    </token>
     <token name="T_CONST">const</token>
     <token name="T_WHITESPACE"> </token>
@@ -1084,27 +1153,27 @@
     <token name="T_CONSTANT_ENCAPSED_STRING">"g"</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="285"/>
-  <line no="286">
+  <line no="297"/>
+  <line no="298">
     <token name="T_WHITESPACE">    </token>
     <token name="T_DOC_COMMENT">/**</token>
   </line>
-  <line no="287">
+  <line no="299">
     <token name="T_DOC_COMMENT">     * 24-hour format of an hour with leading zero</token>
   </line>
-  <line no="288">
+  <line no="300">
     <token name="T_DOC_COMMENT">     *</token>
   </line>
-  <line no="289">
+  <line no="301">
     <token name="T_DOC_COMMENT">     * @var string</token>
   </line>
-  <line no="290">
+  <line no="302">
     <token name="T_DOC_COMMENT">     * @since 1.0.0</token>
   </line>
-  <line no="291">
+  <line no="303">
     <token name="T_DOC_COMMENT">     */</token>
   </line>
-  <line no="292">
+  <line no="304">
     <token name="T_WHITESPACE">    </token>
     <token name="T_CONST">const</token>
     <token name="T_WHITESPACE"> </token>
@@ -1115,27 +1184,27 @@
     <token name="T_CONSTANT_ENCAPSED_STRING">"H"</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="293"/>
-  <line no="294">
+  <line no="305"/>
+  <line no="306">
     <token name="T_WHITESPACE">    </token>
     <token name="T_DOC_COMMENT">/**</token>
   </line>
-  <line no="295">
+  <line no="307">
     <token name="T_DOC_COMMENT">     * 24-hour format of an hour without leading zero</token>
   </line>
-  <line no="296">
+  <line no="308">
     <token name="T_DOC_COMMENT">     *</token>
   </line>
-  <line no="297">
+  <line no="309">
     <token name="T_DOC_COMMENT">     * @var string</token>
   </line>
-  <line no="298">
+  <line no="310">
     <token name="T_DOC_COMMENT">     * @since 1.0.0</token>
   </line>
-  <line no="299">
+  <line no="311">
     <token name="T_DOC_COMMENT">     */</token>
   </line>
-  <line no="300">
+  <line no="312">
     <token name="T_WHITESPACE">    </token>
     <token name="T_CONST">const</token>
     <token name="T_WHITESPACE"> </token>
@@ -1146,30 +1215,30 @@
     <token name="T_CONSTANT_ENCAPSED_STRING">"G"</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="301"/>
-  <line no="302">
+  <line no="313"/>
+  <line no="314">
     <token name="T_WHITESPACE">    </token>
     <token name="T_DOC_COMMENT">/**</token>
   </line>
-  <line no="303">
+  <line no="315">
     <token name="T_DOC_COMMENT">     * Minutes with leading zeros</token>
   </line>
-  <line no="304">
+  <line no="316">
     <token name="T_DOC_COMMENT">     * 00 to 59</token>
   </line>
-  <line no="305">
+  <line no="317">
     <token name="T_DOC_COMMENT">     *</token>
   </line>
-  <line no="306">
+  <line no="318">
     <token name="T_DOC_COMMENT">     * @var string</token>
   </line>
-  <line no="307">
+  <line no="319">
     <token name="T_DOC_COMMENT">     * @since 1.0.0</token>
   </line>
-  <line no="308">
+  <line no="320">
     <token name="T_DOC_COMMENT">     */</token>
   </line>
-  <line no="309">
+  <line no="321">
     <token name="T_WHITESPACE">    </token>
     <token name="T_CONST">const</token>
     <token name="T_WHITESPACE"> </token>
@@ -1180,30 +1249,30 @@
     <token name="T_CONSTANT_ENCAPSED_STRING">"i"</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="310"/>
-  <line no="311">
+  <line no="322"/>
+  <line no="323">
     <token name="T_WHITESPACE">    </token>
     <token name="T_DOC_COMMENT">/**</token>
   </line>
-  <line no="312">
+  <line no="324">
     <token name="T_DOC_COMMENT">     * Seconds with leading zeros</token>
   </line>
-  <line no="313">
+  <line no="325">
     <token name="T_DOC_COMMENT">     * 00 to 59</token>
   </line>
-  <line no="314">
+  <line no="326">
     <token name="T_DOC_COMMENT">     *</token>
   </line>
-  <line no="315">
+  <line no="327">
     <token name="T_DOC_COMMENT">     * @var string</token>
   </line>
-  <line no="316">
+  <line no="328">
     <token name="T_DOC_COMMENT">     * @since 1.0.0</token>
   </line>
-  <line no="317">
+  <line no="329">
     <token name="T_DOC_COMMENT">     */</token>
   </line>
-  <line no="318">
+  <line no="330">
     <token name="T_WHITESPACE">    </token>
     <token name="T_CONST">const</token>
     <token name="T_WHITESPACE"> </token>
@@ -1214,27 +1283,27 @@
     <token name="T_CONSTANT_ENCAPSED_STRING">"s"</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="319"/>
-  <line no="320">
+  <line no="331"/>
+  <line no="332">
     <token name="T_WHITESPACE">    </token>
     <token name="T_DOC_COMMENT">/**</token>
   </line>
-  <line no="321">
+  <line no="333">
     <token name="T_DOC_COMMENT">     * Microseconds up to six digits</token>
   </line>
-  <line no="322">
+  <line no="334">
     <token name="T_DOC_COMMENT">     *</token>
   </line>
-  <line no="323">
+  <line no="335">
     <token name="T_DOC_COMMENT">     * @var string</token>
   </line>
-  <line no="324">
+  <line no="336">
     <token name="T_DOC_COMMENT">     * @since 1.0.0</token>
   </line>
-  <line no="325">
+  <line no="337">
     <token name="T_DOC_COMMENT">     */</token>
   </line>
-  <line no="326">
+  <line no="338">
     <token name="T_WHITESPACE">    </token>
     <token name="T_CONST">const</token>
     <token name="T_WHITESPACE"> </token>
@@ -1245,27 +1314,27 @@
     <token name="T_CONSTANT_ENCAPSED_STRING">"u"</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="327"/>
-  <line no="328">
+  <line no="339"/>
+  <line no="340">
     <token name="T_WHITESPACE">    </token>
     <token name="T_DOC_COMMENT">/**</token>
   </line>
-  <line no="329">
+  <line no="341">
     <token name="T_DOC_COMMENT">     * Microseconds up to 3 digits</token>
   </line>
-  <line no="330">
+  <line no="342">
     <token name="T_DOC_COMMENT">     *</token>
   </line>
-  <line no="331">
+  <line no="343">
     <token name="T_DOC_COMMENT">     * @var string</token>
   </line>
-  <line no="332">
+  <line no="344">
     <token name="T_DOC_COMMENT">     * @since 1.0.0</token>
   </line>
-  <line no="333">
+  <line no="345">
     <token name="T_DOC_COMMENT">     */</token>
   </line>
-  <line no="334">
+  <line no="346">
     <token name="T_WHITESPACE">    </token>
     <token name="T_CONST">const</token>
     <token name="T_WHITESPACE"> </token>
@@ -1276,30 +1345,30 @@
     <token name="T_CONSTANT_ENCAPSED_STRING">"v"</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="335"/>
-  <line no="336">
+  <line no="347"/>
+  <line no="348">
     <token name="T_WHITESPACE">    </token>
     <token name="T_DOC_COMMENT">/**</token>
   </line>
-  <line no="337">
+  <line no="349">
     <token name="T_DOC_COMMENT">     *</token>
   </line>
-  <line no="338">
+  <line no="350">
     <token name="T_DOC_COMMENT">     * Seconds since the Unix Epoch (January 1 1970 00:00:00 GMT)</token>
   </line>
-  <line no="339">
+  <line no="351">
     <token name="T_DOC_COMMENT">     *</token>
   </line>
-  <line no="340">
+  <line no="352">
     <token name="T_DOC_COMMENT">     * @var string</token>
   </line>
-  <line no="341">
+  <line no="353">
     <token name="T_DOC_COMMENT">     * @since 1.0.0</token>
   </line>
-  <line no="342">
+  <line no="354">
     <token name="T_DOC_COMMENT">     */</token>
   </line>
-  <line no="343">
+  <line no="355">
     <token name="T_WHITESPACE">    </token>
     <token name="T_CONST">const</token>
     <token name="T_WHITESPACE"> </token>
@@ -1310,27 +1379,27 @@
     <token name="T_CONSTANT_ENCAPSED_STRING">"U"</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="344"/>
-  <line no="345">
+  <line no="356"/>
+  <line no="357">
     <token name="T_WHITESPACE">    </token>
     <token name="T_DOC_COMMENT">/**</token>
   </line>
-  <line no="346">
+  <line no="358">
     <token name="T_DOC_COMMENT">     * Time Ex: 09:59:29</token>
   </line>
-  <line no="347">
+  <line no="359">
     <token name="T_DOC_COMMENT">     *</token>
   </line>
-  <line no="348">
+  <line no="360">
     <token name="T_DOC_COMMENT">     * @var string</token>
   </line>
-  <line no="349">
+  <line no="361">
     <token name="T_DOC_COMMENT">     * @since 1.0.0</token>
   </line>
-  <line no="350">
+  <line no="362">
     <token name="T_DOC_COMMENT">     */</token>
   </line>
-  <line no="351">
+  <line no="363">
     <token name="T_WHITESPACE">    </token>
     <token name="T_CONST">const</token>
     <token name="T_WHITESPACE"> </token>
@@ -1341,27 +1410,27 @@
     <token name="T_CONSTANT_ENCAPSED_STRING">"H:i:s"</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="352"/>
-  <line no="353">
+  <line no="364"/>
+  <line no="365">
     <token name="T_WHITESPACE">    </token>
     <token name="T_DOC_COMMENT">/**</token>
   </line>
-  <line no="354">
+  <line no="366">
     <token name="T_DOC_COMMENT">     * Time with up 3 digits in microseconds Ex: 09:59:29.999</token>
   </line>
-  <line no="355">
+  <line no="367">
     <token name="T_DOC_COMMENT">     *</token>
   </line>
-  <line no="356">
+  <line no="368">
     <token name="T_DOC_COMMENT">     * @var string</token>
   </line>
-  <line no="357">
+  <line no="369">
     <token name="T_DOC_COMMENT">     * @since 1.0.0</token>
   </line>
-  <line no="358">
+  <line no="370">
     <token name="T_DOC_COMMENT">     */</token>
   </line>
-  <line no="359">
+  <line no="371">
     <token name="T_WHITESPACE">    </token>
     <token name="T_CONST">const</token>
     <token name="T_WHITESPACE"> </token>
@@ -1372,27 +1441,27 @@
     <token name="T_CONSTANT_ENCAPSED_STRING">"H:i:s.v"</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="360"/>
-  <line no="361">
+  <line no="372"/>
+  <line no="373">
     <token name="T_WHITESPACE">    </token>
     <token name="T_DOC_COMMENT">/**</token>
   </line>
-  <line no="362">
+  <line no="374">
     <token name="T_DOC_COMMENT">     * Time with up 6 digits in microseconds Ex: 09:59:29.000999</token>
   </line>
-  <line no="363">
+  <line no="375">
     <token name="T_DOC_COMMENT">     *</token>
   </line>
-  <line no="364">
+  <line no="376">
     <token name="T_DOC_COMMENT">     * @var string</token>
   </line>
-  <line no="365">
+  <line no="377">
     <token name="T_DOC_COMMENT">     * @since 1.0.0</token>
   </line>
-  <line no="366">
+  <line no="378">
     <token name="T_DOC_COMMENT">     */</token>
   </line>
-  <line no="367">
+  <line no="379">
     <token name="T_WHITESPACE">    </token>
     <token name="T_CONST">const</token>
     <token name="T_WHITESPACE"> </token>
@@ -1403,24 +1472,24 @@
     <token name="T_CONSTANT_ENCAPSED_STRING">"H:i:s.u"</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="368"/>
-  <line no="369">
+  <line no="380"/>
+  <line no="381">
     <token name="T_WHITESPACE">    </token>
     <token name="T_DOC_COMMENT">/**</token>
   </line>
-  <line no="370">
+  <line no="382">
     <token name="T_DOC_COMMENT">     * The base object</token>
   </line>
-  <line no="371">
+  <line no="383">
     <token name="T_DOC_COMMENT">     * @var \DateTime The PHP native \DateTime</token>
   </line>
-  <line no="372">
+  <line no="384">
     <token name="T_DOC_COMMENT">     * @since 1.0.0</token>
   </line>
-  <line no="373">
+  <line no="385">
     <token name="T_DOC_COMMENT">     */</token>
   </line>
-  <line no="374">
+  <line no="386">
     <token name="T_WHITESPACE">    </token>
     <token name="T_PROTECTED">protected</token>
     <token name="T_WHITESPACE"> </token>
@@ -1430,27 +1499,27 @@
     <token name="T_VARIABLE">$date</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="375"/>
-  <line no="376">
+  <line no="387"/>
+  <line no="388">
     <token name="T_WHITESPACE">    </token>
     <token name="T_DOC_COMMENT">/**</token>
   </line>
-  <line no="377">
+  <line no="389">
     <token name="T_DOC_COMMENT">     * DateTime</token>
   </line>
-  <line no="378">
-    <token name="T_DOC_COMMENT">     * @param string $time &lt;p&gt;A date/time string. Valid formats are same as fo rnative PHP \DateTime.&lt;/p&gt; &lt;p&gt;Enter &lt;i&gt;"now"&lt;/i&gt; here to obtain the current time when using the &lt;code&gt;$timezone&lt;/code&gt; parameter.&lt;/p&gt;</token>
+  <line no="390">
+    <token name="T_DOC_COMMENT">     * @param string|null $time &lt;p&gt;A date/time string. Valid formats are same as fo rnative PHP \DateTime.&lt;/p&gt; &lt;p&gt;Enter &lt;i&gt;"now"&lt;/i&gt; here to obtain the current time when using the &lt;code&gt;$timezone&lt;/code&gt; parameter.&lt;/p&gt;</token>
   </line>
-  <line no="379">
+  <line no="391">
     <token name="T_DOC_COMMENT">     * @param \DateTimeZone $timezone $timezone &lt;p&gt;A DateTimeZone object representing the timezone of &lt;code&gt;$time&lt;/code&gt;.&lt;/p&gt;&lt;p&gt;If &lt;code&gt;$timezone&lt;/code&gt; is omitted, the current timezone will be used.&lt;/p&gt; &lt;p&gt;&lt;b&gt;Note&lt;/b&gt;:&lt;/p&gt;&lt;p&gt;The &lt;code&gt;$timezone&lt;/code&gt; parameter and the current timezone are ignored when the &lt;code&gt;$time&lt;/code&gt; parameter either is a UNIX timestamp (e.g. &lt;i&gt;@946684800&lt;/i&gt;) or specifies a timezone</token>
   </line>
-  <line no="380">
+  <line no="392">
     <token name="T_DOC_COMMENT">     * (e.g. &lt;i&gt;2010-01-28T15:00:00+02:00&lt;/i&gt;).&lt;/p&gt;</token>
   </line>
-  <line no="381">
+  <line no="393">
     <token name="T_DOC_COMMENT">     */</token>
   </line>
-  <line no="382">
+  <line no="394">
     <token name="T_WHITESPACE">    </token>
     <token name="T_PUBLIC">public</token>
     <token name="T_WHITESPACE"> </token>
@@ -1459,8 +1528,9 @@
     <token name="T_STRING">__construct</token>
     <token name="T_PHPDOX_OPEN_BRACKET">(</token>
   </line>
-  <line no="383">
+  <line no="395">
     <token name="T_WHITESPACE">        </token>
+    <token name="T_PHPDOX_QUESTION_MARK">?</token>
     <token name="T_STRING">string</token>
     <token name="T_WHITESPACE"> </token>
     <token name="T_VARIABLE">$time</token>
@@ -1469,9 +1539,7 @@
     <token name="T_WHITESPACE"> </token>
     <token name="T_CONSTANT_ENCAPSED_STRING">"now"</token>
     <token name="T_PHPDOX_COMMA">,</token>
-  </line>
-  <line no="384">
-    <token name="T_WHITESPACE">        </token>
+    <token name="T_WHITESPACE"> </token>
     <token name="T_NS_SEPARATOR">\</token>
     <token name="T_STRING">DateTimeZone</token>
     <token name="T_WHITESPACE"> </token>
@@ -1481,15 +1549,15 @@
     <token name="T_WHITESPACE"> </token>
     <token name="T_STRING">null</token>
   </line>
-  <line no="385">
+  <line no="396">
     <token name="T_WHITESPACE">    </token>
     <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
   </line>
-  <line no="386">
+  <line no="397">
     <token name="T_WHITESPACE">    </token>
     <token name="T_PHPDOX_OPEN_CURLY">{</token>
   </line>
-  <line no="387">
+  <line no="398">
     <token name="T_WHITESPACE">        </token>
     <token name="T_VARIABLE">$this</token>
     <token name="T_OBJECT_OPERATOR">-&gt;</token>
@@ -1502,62 +1570,78 @@
     <token name="T_NS_SEPARATOR">\</token>
     <token name="T_STRING">DateTime</token>
     <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+  </line>
+  <line no="399">
+    <token name="T_WHITESPACE">            </token>
     <token name="T_VARIABLE">$time</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_COALESCE">??</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"now"</token>
     <token name="T_PHPDOX_COMMA">,</token>
     <token name="T_WHITESPACE"> </token>
     <token name="T_VARIABLE">$timezone</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_COALESCE">??</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_STATIC">static</token>
+    <token name="T_DOUBLE_COLON">::</token>
+    <token name="T_VARIABLE">$defaultTimeZone</token>
+  </line>
+  <line no="400">
+    <token name="T_WHITESPACE">        </token>
     <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="388">
+  <line no="401">
     <token name="T_WHITESPACE">    </token>
     <token name="T_PHPDOX_CLOSE_CURLY">}</token>
   </line>
-  <line no="389"/>
-  <line no="390">
+  <line no="402"/>
+  <line no="403">
     <token name="T_WHITESPACE">    </token>
     <token name="T_DOC_COMMENT">/**</token>
   </line>
-  <line no="391">
+  <line no="404">
     <token name="T_DOC_COMMENT">     *</token>
   </line>
-  <line no="392">
+  <line no="405">
     <token name="T_DOC_COMMENT">     * Create a Date object from a string</token>
   </line>
-  <line no="393">
+  <line no="406">
     <token name="T_DOC_COMMENT">     *</token>
   </line>
-  <line no="394">
+  <line no="407">
     <token name="T_DOC_COMMENT">     * The format is one of the use in PHP \DateTime</token>
   </line>
-  <line no="395">
+  <line no="408">
     <token name="T_DOC_COMMENT">     * If the Date is not valide it will throws \Rebelo\Date\DateParseException</token>
   </line>
-  <line no="396">
+  <line no="409">
     <token name="T_DOC_COMMENT">     *</token>
   </line>
-  <line no="397">
+  <line no="410">
     <token name="T_DOC_COMMENT">     * @param string $format</token>
   </line>
-  <line no="398">
+  <line no="411">
     <token name="T_DOC_COMMENT">     * @param string $time</token>
   </line>
-  <line no="399">
+  <line no="412">
     <token name="T_DOC_COMMENT">     * @param \DateTimeZone|null $timezone</token>
   </line>
-  <line no="400">
+  <line no="413">
     <token name="T_DOC_COMMENT">     * @return \Rebelo\Date\Date</token>
   </line>
-  <line no="401">
+  <line no="414">
     <token name="T_DOC_COMMENT">     * @throws DateParseException</token>
   </line>
-  <line no="402">
+  <line no="415">
     <token name="T_DOC_COMMENT">     * @since 1.0.0</token>
   </line>
-  <line no="403">
+  <line no="416">
     <token name="T_DOC_COMMENT">     */</token>
   </line>
-  <line no="404">
+  <line no="417">
     <token name="T_WHITESPACE">    </token>
     <token name="T_PUBLIC">public</token>
     <token name="T_WHITESPACE"> </token>
@@ -1568,22 +1652,18 @@
     <token name="T_STRING">parse</token>
     <token name="T_PHPDOX_OPEN_BRACKET">(</token>
   </line>
-  <line no="405">
+  <line no="418">
     <token name="T_WHITESPACE">        </token>
     <token name="T_STRING">string</token>
     <token name="T_WHITESPACE"> </token>
     <token name="T_VARIABLE">$format</token>
     <token name="T_PHPDOX_COMMA">,</token>
-  </line>
-  <line no="406">
-    <token name="T_WHITESPACE">        </token>
+    <token name="T_WHITESPACE"> </token>
     <token name="T_STRING">string</token>
     <token name="T_WHITESPACE"> </token>
     <token name="T_VARIABLE">$time</token>
     <token name="T_PHPDOX_COMMA">,</token>
-  </line>
-  <line no="407">
-    <token name="T_WHITESPACE">        </token>
+    <token name="T_WHITESPACE"> </token>
     <token name="T_PHPDOX_QUESTION_MARK">?</token>
     <token name="T_NS_SEPARATOR">\</token>
     <token name="T_STRING">DateTimeZone</token>
@@ -1594,7 +1674,7 @@
     <token name="T_WHITESPACE"> </token>
     <token name="T_STRING">null</token>
   </line>
-  <line no="408">
+  <line no="419">
     <token name="T_WHITESPACE">    </token>
     <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
     <token name="T_PHPDOX_COLON">:</token>
@@ -1606,11 +1686,11 @@
     <token name="T_NS_SEPARATOR">\</token>
     <token name="T_STRING">Date</token>
   </line>
-  <line no="409">
+  <line no="420">
     <token name="T_WHITESPACE">    </token>
     <token name="T_PHPDOX_OPEN_CURLY">{</token>
   </line>
-  <line no="410">
+  <line no="421">
     <token name="T_WHITESPACE">        </token>
     <token name="T_VARIABLE">$dateTime</token>
     <token name="T_WHITESPACE"> </token>
@@ -1621,17 +1701,31 @@
     <token name="T_DOUBLE_COLON">::</token>
     <token name="T_STRING">createFromFormat</token>
     <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+  </line>
+  <line no="422">
+    <token name="T_WHITESPACE">            </token>
     <token name="T_VARIABLE">$format</token>
     <token name="T_PHPDOX_COMMA">,</token>
     <token name="T_WHITESPACE"> </token>
     <token name="T_VARIABLE">$time</token>
     <token name="T_PHPDOX_COMMA">,</token>
-    <token name="T_WHITESPACE"> </token>
+  </line>
+  <line no="423">
+    <token name="T_WHITESPACE">            </token>
     <token name="T_VARIABLE">$timezone</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_COALESCE">??</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_STATIC">static</token>
+    <token name="T_DOUBLE_COLON">::</token>
+    <token name="T_VARIABLE">$defaultTimeZone</token>
+  </line>
+  <line no="424">
+    <token name="T_WHITESPACE">        </token>
     <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="411">
+  <line no="425">
     <token name="T_WHITESPACE">        </token>
     <token name="T_VARIABLE">$errors</token>
     <token name="T_WHITESPACE">   </token>
@@ -1645,10 +1739,22 @@
     <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="412">
+  <line no="426"/>
+  <line no="427">
     <token name="T_WHITESPACE">        </token>
     <token name="T_IF">if</token>
     <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_VARIABLE">$errors</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_IS_NOT_IDENTICAL">!==</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_STRING">false</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_BOOLEAN_AND">&amp;&amp;</token>
+  </line>
+  <line no="428">
+    <token name="T_WHITESPACE">            </token>
     <token name="T_PHPDOX_OPEN_BRACKET">(</token>
     <token name="T_VARIABLE">$errors</token>
     <token name="T_PHPDOX_OPEN_SQUARE">[</token>
@@ -1670,10 +1776,12 @@
     <token name="T_WHITESPACE"> </token>
     <token name="T_LNUMBER">0</token>
     <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
     <token name="T_WHITESPACE"> </token>
     <token name="T_PHPDOX_OPEN_CURLY">{</token>
   </line>
-  <line no="413">
+  <line no="429"/>
+  <line no="430">
     <token name="T_WHITESPACE">            </token>
     <token name="T_VARIABLE">$array</token>
     <token name="T_WHITESPACE"> </token>
@@ -1684,11 +1792,12 @@
     <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="414">
+  <line no="431">
     <token name="T_WHITESPACE">            </token>
     <token name="T_IF">if</token>
     <token name="T_WHITESPACE"> </token>
     <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_NS_SEPARATOR">\</token>
     <token name="T_STRING">array_key_exists</token>
     <token name="T_PHPDOX_OPEN_BRACKET">(</token>
     <token name="T_CONSTANT_ENCAPSED_STRING">"warnings"</token>
@@ -1700,12 +1809,13 @@
     <token name="T_WHITESPACE"> </token>
     <token name="T_PHPDOX_OPEN_CURLY">{</token>
   </line>
-  <line no="415">
+  <line no="432">
     <token name="T_WHITESPACE">                </token>
     <token name="T_VARIABLE">$array</token>
     <token name="T_WHITESPACE"> </token>
     <token name="T_PHPDOX_EQUAL">=</token>
     <token name="T_WHITESPACE"> </token>
+    <token name="T_NS_SEPARATOR">\</token>
     <token name="T_STRING">array_merge</token>
     <token name="T_PHPDOX_OPEN_BRACKET">(</token>
     <token name="T_VARIABLE">$array</token>
@@ -1718,15 +1828,16 @@
     <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="416">
+  <line no="433">
     <token name="T_WHITESPACE">            </token>
     <token name="T_PHPDOX_CLOSE_CURLY">}</token>
   </line>
-  <line no="417">
+  <line no="434">
     <token name="T_WHITESPACE">            </token>
     <token name="T_IF">if</token>
     <token name="T_WHITESPACE"> </token>
     <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_NS_SEPARATOR">\</token>
     <token name="T_STRING">array_key_exists</token>
     <token name="T_PHPDOX_OPEN_BRACKET">(</token>
     <token name="T_CONSTANT_ENCAPSED_STRING">"errors"</token>
@@ -1738,12 +1849,13 @@
     <token name="T_WHITESPACE"> </token>
     <token name="T_PHPDOX_OPEN_CURLY">{</token>
   </line>
-  <line no="418">
+  <line no="435">
     <token name="T_WHITESPACE">                </token>
     <token name="T_VARIABLE">$array</token>
     <token name="T_WHITESPACE"> </token>
     <token name="T_PHPDOX_EQUAL">=</token>
     <token name="T_WHITESPACE"> </token>
+    <token name="T_NS_SEPARATOR">\</token>
     <token name="T_STRING">array_merge</token>
     <token name="T_PHPDOX_OPEN_BRACKET">(</token>
     <token name="T_VARIABLE">$array</token>
@@ -1756,11 +1868,11 @@
     <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="419">
+  <line no="436">
     <token name="T_WHITESPACE">            </token>
     <token name="T_PHPDOX_CLOSE_CURLY">}</token>
   </line>
-  <line no="420">
+  <line no="437">
     <token name="T_WHITESPACE">            </token>
     <token name="T_THROW">throw</token>
     <token name="T_WHITESPACE"> </token>
@@ -1769,14 +1881,13 @@
     <token name="T_STRING">DateParseException</token>
     <token name="T_PHPDOX_OPEN_BRACKET">(</token>
   </line>
-  <line no="421">
+  <line no="438">
     <token name="T_WHITESPACE">                </token>
     <token name="T_CONSTANT_ENCAPSED_STRING">"While parsing date: "</token>
   </line>
-  <line no="422">
+  <line no="439">
     <token name="T_WHITESPACE">                </token>
     <token name="T_PHPDOX_DOT">.</token>
-    <token name="T_WHITESPACE"> </token>
     <token name="T_STRING">join</token>
     <token name="T_PHPDOX_OPEN_BRACKET">(</token>
     <token name="T_CONSTANT_ENCAPSED_STRING">"; "</token>
@@ -1785,16 +1896,17 @@
     <token name="T_VARIABLE">$array</token>
     <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
   </line>
-  <line no="423">
+  <line no="440">
     <token name="T_WHITESPACE">            </token>
     <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="424">
+  <line no="441">
     <token name="T_WHITESPACE">        </token>
     <token name="T_PHPDOX_CLOSE_CURLY">}</token>
   </line>
-  <line no="425">
+  <line no="442"/>
+  <line no="443">
     <token name="T_WHITESPACE">        </token>
     <token name="T_IF">if</token>
     <token name="T_WHITESPACE"> </token>
@@ -1808,7 +1920,7 @@
     <token name="T_WHITESPACE"> </token>
     <token name="T_PHPDOX_OPEN_CURLY">{</token>
   </line>
-  <line no="426">
+  <line no="444">
     <token name="T_WHITESPACE">            </token>
     <token name="T_THROW">throw</token>
     <token name="T_WHITESPACE"> </token>
@@ -1820,11 +1932,12 @@
     <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="427">
+  <line no="445">
     <token name="T_WHITESPACE">        </token>
     <token name="T_PHPDOX_CLOSE_CURLY">}</token>
   </line>
-  <line no="428">
+  <line no="446"/>
+  <line no="447">
     <token name="T_WHITESPACE">        </token>
     <token name="T_VARIABLE">$date</token>
     <token name="T_WHITESPACE">       </token>
@@ -1837,7 +1950,7 @@
     <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="429">
+  <line no="448">
     <token name="T_WHITESPACE">        </token>
     <token name="T_VARIABLE">$date</token>
     <token name="T_OBJECT_OPERATOR">-&gt;</token>
@@ -1848,20 +1961,20 @@
     <token name="T_VARIABLE">$dateTime</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="430">
+  <line no="449">
     <token name="T_WHITESPACE">        </token>
     <token name="T_COMMENT">// Set Hour to zero 00:00:00.000 whne no time is defined,</token>
   </line>
-  <line no="431">
+  <line no="450">
     <token name="T_WHITESPACE">        </token>
     <token name="T_COMMENT">// to be possible compare two instance that only have date</token>
   </line>
-  <line no="432">
+  <line no="451">
     <token name="T_WHITESPACE">        </token>
     <token name="T_COMMENT">// and was instantiated in different instants</token>
   </line>
-  <line no="433"/>
-  <line no="434">
+  <line no="452"/>
+  <line no="453">
     <token name="T_WHITESPACE">        </token>
     <token name="T_VARIABLE">$testTime</token>
     <token name="T_WHITESPACE"> </token>
@@ -1877,8 +1990,8 @@
     <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="435"/>
-  <line no="436">
+  <line no="454"/>
+  <line no="455">
     <token name="T_WHITESPACE">        </token>
     <token name="T_IF">if</token>
     <token name="T_WHITESPACE"> </token>
@@ -1892,7 +2005,7 @@
     <token name="T_WHITESPACE"> </token>
     <token name="T_PHPDOX_OPEN_CURLY">{</token>
   </line>
-  <line no="437">
+  <line no="456">
     <token name="T_WHITESPACE">            </token>
     <token name="T_THROW">throw</token>
     <token name="T_WHITESPACE"> </token>
@@ -1904,12 +2017,12 @@
     <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="438">
+  <line no="457">
     <token name="T_WHITESPACE">        </token>
     <token name="T_PHPDOX_CLOSE_CURLY">}</token>
   </line>
-  <line no="439"/>
-  <line no="440">
+  <line no="458"/>
+  <line no="459">
     <token name="T_WHITESPACE">        </token>
     <token name="T_IF">if</token>
     <token name="T_WHITESPACE"> </token>
@@ -1923,7 +2036,7 @@
     <token name="T_WHITESPACE"> </token>
     <token name="T_PHPDOX_OPEN_CURLY">{</token>
   </line>
-  <line no="441">
+  <line no="460">
     <token name="T_WHITESPACE">            </token>
     <token name="T_VARIABLE">$date</token>
     <token name="T_OBJECT_OPERATOR">-&gt;</token>
@@ -1942,7 +2055,7 @@
     <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="442">
+  <line no="461">
     <token name="T_WHITESPACE">        </token>
     <token name="T_PHPDOX_CLOSE_CURLY">}</token>
     <token name="T_WHITESPACE"> </token>
@@ -1950,11 +2063,11 @@
     <token name="T_WHITESPACE"> </token>
     <token name="T_PHPDOX_OPEN_CURLY">{</token>
   </line>
-  <line no="443">
+  <line no="462">
     <token name="T_WHITESPACE">            </token>
     <token name="T_COMMENT">// Test if time has microseconds</token>
   </line>
-  <line no="444">
+  <line no="463">
     <token name="T_WHITESPACE">            </token>
     <token name="T_VARIABLE">$testMicro</token>
     <token name="T_WHITESPACE"> </token>
@@ -1970,8 +2083,8 @@
     <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="445"/>
-  <line no="446">
+  <line no="464"/>
+  <line no="465">
     <token name="T_WHITESPACE">            </token>
     <token name="T_IF">if</token>
     <token name="T_WHITESPACE"> </token>
@@ -1985,7 +2098,7 @@
     <token name="T_WHITESPACE"> </token>
     <token name="T_PHPDOX_OPEN_CURLY">{</token>
   </line>
-  <line no="447">
+  <line no="466">
     <token name="T_WHITESPACE">                </token>
     <token name="T_THROW">throw</token>
     <token name="T_WHITESPACE"> </token>
@@ -1997,12 +2110,12 @@
     <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="448">
+  <line no="467">
     <token name="T_WHITESPACE">            </token>
     <token name="T_PHPDOX_CLOSE_CURLY">}</token>
   </line>
-  <line no="449"/>
-  <line no="450">
+  <line no="468"/>
+  <line no="469">
     <token name="T_WHITESPACE">            </token>
     <token name="T_IF">if</token>
     <token name="T_WHITESPACE"> </token>
@@ -2016,7 +2129,7 @@
     <token name="T_WHITESPACE"> </token>
     <token name="T_PHPDOX_OPEN_CURLY">{</token>
   </line>
-  <line no="451">
+  <line no="470">
     <token name="T_WHITESPACE">                </token>
     <token name="T_VARIABLE">$date</token>
     <token name="T_OBJECT_OPERATOR">-&gt;</token>
@@ -2026,56 +2139,56 @@
     <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="452">
+  <line no="471">
     <token name="T_WHITESPACE">            </token>
     <token name="T_PHPDOX_CLOSE_CURLY">}</token>
   </line>
-  <line no="453">
+  <line no="472">
     <token name="T_WHITESPACE">        </token>
     <token name="T_PHPDOX_CLOSE_CURLY">}</token>
   </line>
-  <line no="454"/>
-  <line no="455">
+  <line no="473"/>
+  <line no="474">
     <token name="T_WHITESPACE">        </token>
     <token name="T_RETURN">return</token>
     <token name="T_WHITESPACE"> </token>
     <token name="T_VARIABLE">$date</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="456">
+  <line no="475">
     <token name="T_WHITESPACE">    </token>
     <token name="T_PHPDOX_CLOSE_CURLY">}</token>
   </line>
-  <line no="457"/>
-  <line no="458">
+  <line no="476"/>
+  <line no="477">
     <token name="T_WHITESPACE">    </token>
     <token name="T_DOC_COMMENT">/**</token>
   </line>
-  <line no="459">
+  <line no="478">
     <token name="T_DOC_COMMENT">     * Alias of Date::parse</token>
   </line>
-  <line no="460">
+  <line no="479">
     <token name="T_DOC_COMMENT">     *</token>
   </line>
-  <line no="461">
+  <line no="480">
     <token name="T_DOC_COMMENT">     * @param string $format</token>
   </line>
-  <line no="462">
+  <line no="481">
     <token name="T_DOC_COMMENT">     * @param string $time</token>
   </line>
-  <line no="463">
+  <line no="482">
     <token name="T_DOC_COMMENT">     * @param \DateTimeZone|null $timezone</token>
   </line>
-  <line no="464">
+  <line no="483">
     <token name="T_DOC_COMMENT">     * @return \Rebelo\Date\Date</token>
   </line>
-  <line no="465">
+  <line no="484">
     <token name="T_DOC_COMMENT">     * @since 1.0.0</token>
   </line>
-  <line no="466">
+  <line no="485">
     <token name="T_DOC_COMMENT">     */</token>
   </line>
-  <line no="467">
+  <line no="486">
     <token name="T_WHITESPACE">    </token>
     <token name="T_PUBLIC">public</token>
     <token name="T_WHITESPACE"> </token>
@@ -2086,22 +2199,18 @@
     <token name="T_STRING">createFromFormat</token>
     <token name="T_PHPDOX_OPEN_BRACKET">(</token>
   </line>
-  <line no="468">
+  <line no="487">
     <token name="T_WHITESPACE">        </token>
     <token name="T_STRING">string</token>
     <token name="T_WHITESPACE"> </token>
     <token name="T_VARIABLE">$format</token>
     <token name="T_PHPDOX_COMMA">,</token>
-  </line>
-  <line no="469">
-    <token name="T_WHITESPACE">        </token>
+    <token name="T_WHITESPACE"> </token>
     <token name="T_STRING">string</token>
     <token name="T_WHITESPACE"> </token>
     <token name="T_VARIABLE">$time</token>
     <token name="T_PHPDOX_COMMA">,</token>
-  </line>
-  <line no="470">
-    <token name="T_WHITESPACE">        </token>
+    <token name="T_WHITESPACE"> </token>
     <token name="T_PHPDOX_QUESTION_MARK">?</token>
     <token name="T_NS_SEPARATOR">\</token>
     <token name="T_STRING">DateTimeZone</token>
@@ -2112,7 +2221,7 @@
     <token name="T_WHITESPACE"> </token>
     <token name="T_STRING">null</token>
   </line>
-  <line no="471">
+  <line no="488">
     <token name="T_WHITESPACE">    </token>
     <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
     <token name="T_PHPDOX_COLON">:</token>
@@ -2124,11 +2233,11 @@
     <token name="T_NS_SEPARATOR">\</token>
     <token name="T_STRING">Date</token>
   </line>
-  <line no="472">
+  <line no="489">
     <token name="T_WHITESPACE">    </token>
     <token name="T_PHPDOX_OPEN_CURLY">{</token>
   </line>
-  <line no="473">
+  <line no="490">
     <token name="T_WHITESPACE">        </token>
     <token name="T_RETURN">return</token>
     <token name="T_WHITESPACE"> </token>
@@ -2146,40 +2255,40 @@
     <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="474">
+  <line no="491">
     <token name="T_WHITESPACE">    </token>
     <token name="T_PHPDOX_CLOSE_CURLY">}</token>
   </line>
-  <line no="475"/>
-  <line no="476">
+  <line no="492"/>
+  <line no="493">
     <token name="T_WHITESPACE">    </token>
     <token name="T_DOC_COMMENT">/**</token>
   </line>
-  <line no="477">
+  <line no="494">
     <token name="T_DOC_COMMENT">     * Returns date formatted according to given format</token>
   </line>
-  <line no="478">
+  <line no="495">
     <token name="T_DOC_COMMENT">     * &lt;p&gt;Returns date formatted according to given format.&lt;/p&gt;</token>
   </line>
-  <line no="479">
+  <line no="496">
     <token name="T_DOC_COMMENT">     *</token>
   </line>
-  <line no="480">
+  <line no="497">
     <token name="T_DOC_COMMENT">     * @param string $format &lt;p&gt;Format accepted by &lt;code&gt;date()&lt;/code&gt;.&lt;/p&gt;</token>
   </line>
-  <line no="481">
+  <line no="498">
     <token name="T_DOC_COMMENT">     * @return string</token>
   </line>
-  <line no="482">
+  <line no="499">
     <token name="T_DOC_COMMENT">     * @throws DateFormatException</token>
   </line>
-  <line no="483">
+  <line no="500">
     <token name="T_DOC_COMMENT">     * @since 1.0.0</token>
   </line>
-  <line no="484">
+  <line no="501">
     <token name="T_DOC_COMMENT">     */</token>
   </line>
-  <line no="485">
+  <line no="502">
     <token name="T_WHITESPACE">    </token>
     <token name="T_PUBLIC">public</token>
     <token name="T_WHITESPACE"> </token>
@@ -2195,11 +2304,11 @@
     <token name="T_WHITESPACE"> </token>
     <token name="T_STRING">string</token>
   </line>
-  <line no="486">
+  <line no="503">
     <token name="T_WHITESPACE">    </token>
     <token name="T_PHPDOX_OPEN_CURLY">{</token>
   </line>
-  <line no="487">
+  <line no="504">
     <token name="T_WHITESPACE">        </token>
     <token name="T_VARIABLE">$str</token>
     <token name="T_WHITESPACE"> </token>
@@ -2215,7 +2324,7 @@
     <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="488">
+  <line no="505">
     <token name="T_WHITESPACE">        </token>
     <token name="T_IF">if</token>
     <token name="T_WHITESPACE"> </token>
@@ -2231,7 +2340,7 @@
     <token name="T_WHITESPACE"> </token>
     <token name="T_COMMENT">/* @phpstan-ignore-line */</token>
   </line>
-  <line no="489">
+  <line no="506">
     <token name="T_WHITESPACE">            </token>
     <token name="T_THROW">throw</token>
     <token name="T_WHITESPACE"> </token>
@@ -2243,51 +2352,51 @@
     <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="490">
+  <line no="507">
     <token name="T_WHITESPACE">        </token>
     <token name="T_PHPDOX_CLOSE_CURLY">}</token>
   </line>
-  <line no="491">
+  <line no="508">
     <token name="T_WHITESPACE">        </token>
     <token name="T_RETURN">return</token>
     <token name="T_WHITESPACE"> </token>
     <token name="T_VARIABLE">$str</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="492">
+  <line no="509">
     <token name="T_WHITESPACE">    </token>
     <token name="T_PHPDOX_CLOSE_CURLY">}</token>
   </line>
-  <line no="493"/>
-  <line no="494">
+  <line no="510"/>
+  <line no="511">
     <token name="T_WHITESPACE">    </token>
     <token name="T_DOC_COMMENT">/**</token>
   </line>
-  <line no="495">
+  <line no="512">
     <token name="T_DOC_COMMENT">     *</token>
   </line>
-  <line no="496">
+  <line no="513">
     <token name="T_DOC_COMMENT">     * Return a new DateTime that is this DateTime plus the DateInterval.</token>
   </line>
-  <line no="497">
+  <line no="514">
     <token name="T_DOC_COMMENT">     * This date value is not changed, the result is a new instance</token>
   </line>
-  <line no="498">
+  <line no="515">
     <token name="T_DOC_COMMENT">     *</token>
   </line>
-  <line no="499">
+  <line no="516">
     <token name="T_DOC_COMMENT">     * @param \Rebelo\Date\DateInterval $interval</token>
   </line>
-  <line no="500">
+  <line no="517">
     <token name="T_DOC_COMMENT">     * @return \Rebelo\Date\Date</token>
   </line>
-  <line no="501">
+  <line no="518">
     <token name="T_DOC_COMMENT">     * @since 1.0.0</token>
   </line>
-  <line no="502">
+  <line no="519">
     <token name="T_DOC_COMMENT">     */</token>
   </line>
-  <line no="503">
+  <line no="520">
     <token name="T_WHITESPACE">    </token>
     <token name="T_PUBLIC">public</token>
     <token name="T_WHITESPACE"> </token>
@@ -2313,11 +2422,11 @@
     <token name="T_NS_SEPARATOR">\</token>
     <token name="T_STRING">Date</token>
   </line>
-  <line no="504">
+  <line no="521">
     <token name="T_WHITESPACE">    </token>
     <token name="T_PHPDOX_OPEN_CURLY">{</token>
   </line>
-  <line no="505">
+  <line no="522">
     <token name="T_WHITESPACE">        </token>
     <token name="T_VARIABLE">$addDate</token>
     <token name="T_WHITESPACE"> </token>
@@ -2330,7 +2439,7 @@
     <token name="T_STRING">date</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="506">
+  <line no="523">
     <token name="T_WHITESPACE">        </token>
     <token name="T_VARIABLE">$res</token>
     <token name="T_WHITESPACE">     </token>
@@ -2344,8 +2453,8 @@
     <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="507"/>
-  <line no="508">
+  <line no="524"/>
+  <line no="525">
     <token name="T_WHITESPACE">        </token>
     <token name="T_IF">if</token>
     <token name="T_WHITESPACE"> </token>
@@ -2361,7 +2470,7 @@
     <token name="T_WHITESPACE"> </token>
     <token name="T_COMMENT">/* @phpstan-ignore-line */</token>
   </line>
-  <line no="509">
+  <line no="526">
     <token name="T_WHITESPACE">            </token>
     <token name="T_THROW">throw</token>
     <token name="T_WHITESPACE"> </token>
@@ -2373,12 +2482,12 @@
     <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="510">
+  <line no="527">
     <token name="T_WHITESPACE">        </token>
     <token name="T_PHPDOX_CLOSE_CURLY">}</token>
   </line>
-  <line no="511"/>
-  <line no="512">
+  <line no="528"/>
+  <line no="529">
     <token name="T_WHITESPACE">        </token>
     <token name="T_RETURN">return</token>
     <token name="T_WHITESPACE"> </token>
@@ -2387,13 +2496,11 @@
     <token name="T_STRING">createFromFormat</token>
     <token name="T_PHPDOX_OPEN_BRACKET">(</token>
   </line>
-  <line no="513">
+  <line no="530">
     <token name="T_WHITESPACE">            </token>
     <token name="T_CONSTANT_ENCAPSED_STRING">"Y-m-d\TH:i:s.u"</token>
     <token name="T_PHPDOX_COMMA">,</token>
-  </line>
-  <line no="514">
-    <token name="T_WHITESPACE">            </token>
+    <token name="T_WHITESPACE"> </token>
     <token name="T_VARIABLE">$res</token>
     <token name="T_OBJECT_OPERATOR">-&gt;</token>
     <token name="T_STRING">format</token>
@@ -2402,7 +2509,7 @@
     <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
     <token name="T_PHPDOX_COMMA">,</token>
   </line>
-  <line no="515">
+  <line no="531">
     <token name="T_WHITESPACE">            </token>
     <token name="T_VARIABLE">$res</token>
     <token name="T_OBJECT_OPERATOR">-&gt;</token>
@@ -2410,42 +2517,42 @@
     <token name="T_PHPDOX_OPEN_BRACKET">(</token>
     <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
   </line>
-  <line no="516">
+  <line no="532">
     <token name="T_WHITESPACE">        </token>
     <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="517">
+  <line no="533">
     <token name="T_WHITESPACE">    </token>
     <token name="T_PHPDOX_CLOSE_CURLY">}</token>
   </line>
-  <line no="518"/>
-  <line no="519">
+  <line no="534"/>
+  <line no="535">
     <token name="T_WHITESPACE">    </token>
     <token name="T_DOC_COMMENT">/**</token>
   </line>
-  <line no="520">
+  <line no="536">
     <token name="T_DOC_COMMENT">     * Retrun a new Date that as the result of subtract to this the interval</token>
   </line>
-  <line no="521">
+  <line no="537">
     <token name="T_DOC_COMMENT">     * This Date value is not chenged, the result is a new instance</token>
   </line>
-  <line no="522">
+  <line no="538">
     <token name="T_DOC_COMMENT">     * @param \Rebelo\Date\DateInterval $interval</token>
   </line>
-  <line no="523">
+  <line no="539">
     <token name="T_DOC_COMMENT">     * @return \Rebelo\Date\Date</token>
   </line>
-  <line no="524">
+  <line no="540">
     <token name="T_DOC_COMMENT">     * @throws DateException</token>
   </line>
-  <line no="525">
+  <line no="541">
     <token name="T_DOC_COMMENT">     * @since 1.0.0</token>
   </line>
-  <line no="526">
+  <line no="542">
     <token name="T_DOC_COMMENT">     */</token>
   </line>
-  <line no="527">
+  <line no="543">
     <token name="T_WHITESPACE">    </token>
     <token name="T_PUBLIC">public</token>
     <token name="T_WHITESPACE"> </token>
@@ -2471,11 +2578,11 @@
     <token name="T_NS_SEPARATOR">\</token>
     <token name="T_STRING">Date</token>
   </line>
-  <line no="528">
+  <line no="544">
     <token name="T_WHITESPACE">    </token>
     <token name="T_PHPDOX_OPEN_CURLY">{</token>
   </line>
-  <line no="529">
+  <line no="545">
     <token name="T_WHITESPACE">        </token>
     <token name="T_VARIABLE">$subDate</token>
     <token name="T_WHITESPACE"> </token>
@@ -2488,7 +2595,7 @@
     <token name="T_STRING">date</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="530">
+  <line no="546">
     <token name="T_WHITESPACE">        </token>
     <token name="T_VARIABLE">$res</token>
     <token name="T_WHITESPACE">     </token>
@@ -2502,7 +2609,7 @@
     <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="531">
+  <line no="547">
     <token name="T_WHITESPACE">        </token>
     <token name="T_IF">if</token>
     <token name="T_WHITESPACE"> </token>
@@ -2518,7 +2625,7 @@
     <token name="T_WHITESPACE"> </token>
     <token name="T_COMMENT">/* @phpstan-ignore-line */</token>
   </line>
-  <line no="532">
+  <line no="548">
     <token name="T_WHITESPACE">            </token>
     <token name="T_THROW">throw</token>
     <token name="T_WHITESPACE"> </token>
@@ -2530,11 +2637,11 @@
     <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="533">
+  <line no="549">
     <token name="T_WHITESPACE">        </token>
     <token name="T_PHPDOX_CLOSE_CURLY">}</token>
   </line>
-  <line no="534">
+  <line no="550">
     <token name="T_WHITESPACE">        </token>
     <token name="T_RETURN">return</token>
     <token name="T_WHITESPACE"> </token>
@@ -2543,13 +2650,11 @@
     <token name="T_STRING">createFromFormat</token>
     <token name="T_PHPDOX_OPEN_BRACKET">(</token>
   </line>
-  <line no="535">
+  <line no="551">
     <token name="T_WHITESPACE">            </token>
     <token name="T_CONSTANT_ENCAPSED_STRING">"Y-m-d\TH:i:s.u"</token>
     <token name="T_PHPDOX_COMMA">,</token>
-  </line>
-  <line no="536">
-    <token name="T_WHITESPACE">            </token>
+    <token name="T_WHITESPACE"> </token>
     <token name="T_VARIABLE">$res</token>
     <token name="T_OBJECT_OPERATOR">-&gt;</token>
     <token name="T_STRING">format</token>
@@ -2558,7 +2663,7 @@
     <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
     <token name="T_PHPDOX_COMMA">,</token>
   </line>
-  <line no="537">
+  <line no="552">
     <token name="T_WHITESPACE">            </token>
     <token name="T_VARIABLE">$res</token>
     <token name="T_OBJECT_OPERATOR">-&gt;</token>
@@ -2566,45 +2671,45 @@
     <token name="T_PHPDOX_OPEN_BRACKET">(</token>
     <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
   </line>
-  <line no="538">
+  <line no="553">
     <token name="T_WHITESPACE">        </token>
     <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="539">
+  <line no="554">
     <token name="T_WHITESPACE">    </token>
     <token name="T_PHPDOX_CLOSE_CURLY">}</token>
   </line>
-  <line no="540"/>
-  <line no="541">
+  <line no="555"/>
+  <line no="556">
     <token name="T_WHITESPACE">    </token>
     <token name="T_DOC_COMMENT">/**</token>
   </line>
-  <line no="542">
+  <line no="557">
     <token name="T_DOC_COMMENT">     *</token>
   </line>
-  <line no="543">
+  <line no="558">
     <token name="T_DOC_COMMENT">     * Returns the difference between two DateTime objects</token>
   </line>
-  <line no="544">
+  <line no="559">
     <token name="T_DOC_COMMENT">     *</token>
   </line>
-  <line no="545">
+  <line no="560">
     <token name="T_DOC_COMMENT">     * @param \Rebelo\Date\Date $datetime2</token>
   </line>
-  <line no="546">
+  <line no="561">
     <token name="T_DOC_COMMENT">     * @param bool $absolute &lt;p&gt;Should the interval be forced to be positive&amp;#63;&lt;/p&gt;</token>
   </line>
-  <line no="547">
+  <line no="562">
     <token name="T_DOC_COMMENT">     * @return \DateInterval</token>
   </line>
-  <line no="548">
+  <line no="563">
     <token name="T_DOC_COMMENT">     * @since 1.0.0</token>
   </line>
-  <line no="549">
+  <line no="564">
     <token name="T_DOC_COMMENT">     */</token>
   </line>
-  <line no="550">
+  <line no="565">
     <token name="T_WHITESPACE">    </token>
     <token name="T_PUBLIC">public</token>
     <token name="T_WHITESPACE"> </token>
@@ -2635,11 +2740,11 @@
     <token name="T_NS_SEPARATOR">\</token>
     <token name="T_STRING">DateInterval</token>
   </line>
-  <line no="551">
+  <line no="566">
     <token name="T_WHITESPACE">    </token>
     <token name="T_PHPDOX_OPEN_CURLY">{</token>
   </line>
-  <line no="552">
+  <line no="567">
     <token name="T_WHITESPACE">        </token>
     <token name="T_RETURN">return</token>
     <token name="T_WHITESPACE"> </token>
@@ -2658,82 +2763,82 @@
     <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="553">
-    <token name="T_WHITESPACE">    </token>
-    <token name="T_PHPDOX_CLOSE_CURLY">}</token>
-  </line>
-  <line no="554"/>
-  <line no="555">
-    <token name="T_WHITESPACE">    </token>
-    <token name="T_DOC_COMMENT">/**</token>
-  </line>
-  <line no="556">
-    <token name="T_DOC_COMMENT">     * Returns the timezone offset</token>
-  </line>
-  <line no="557">
-    <token name="T_DOC_COMMENT">     * @return int</token>
-  </line>
-  <line no="558">
-    <token name="T_DOC_COMMENT">     * @since 1.0.0</token>
-  </line>
-  <line no="559">
-    <token name="T_DOC_COMMENT">     */</token>
-  </line>
-  <line no="560">
-    <token name="T_WHITESPACE">    </token>
-    <token name="T_PUBLIC">public</token>
-    <token name="T_WHITESPACE"> </token>
-    <token name="T_FUNCTION">function</token>
-    <token name="T_WHITESPACE"> </token>
-    <token name="T_STRING">getOffset</token>
-    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
-    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
-    <token name="T_PHPDOX_COLON">:</token>
-    <token name="T_WHITESPACE"> </token>
-    <token name="T_STRING">int</token>
-  </line>
-  <line no="561">
-    <token name="T_WHITESPACE">    </token>
-    <token name="T_PHPDOX_OPEN_CURLY">{</token>
-  </line>
-  <line no="562">
-    <token name="T_WHITESPACE">        </token>
-    <token name="T_RETURN">return</token>
-    <token name="T_WHITESPACE"> </token>
-    <token name="T_VARIABLE">$this</token>
-    <token name="T_OBJECT_OPERATOR">-&gt;</token>
-    <token name="T_STRING">date</token>
-    <token name="T_OBJECT_OPERATOR">-&gt;</token>
-    <token name="T_STRING">getOffset</token>
-    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
-    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
-    <token name="T_PHPDOX_SEMICOLON">;</token>
-  </line>
-  <line no="563">
-    <token name="T_WHITESPACE">    </token>
-    <token name="T_PHPDOX_CLOSE_CURLY">}</token>
-  </line>
-  <line no="564"/>
-  <line no="565">
-    <token name="T_WHITESPACE">    </token>
-    <token name="T_DOC_COMMENT">/**</token>
-  </line>
-  <line no="566">
-    <token name="T_DOC_COMMENT">     * Gets the Unix timestamp</token>
-  </line>
-  <line no="567">
-    <token name="T_DOC_COMMENT">     *</token>
-  </line>
   <line no="568">
-    <token name="T_DOC_COMMENT">     * @return int</token>
+    <token name="T_WHITESPACE">    </token>
+    <token name="T_PHPDOX_CLOSE_CURLY">}</token>
   </line>
-  <line no="569">
-    <token name="T_DOC_COMMENT">     * @since 1.0.0</token>
-  </line>
+  <line no="569"/>
   <line no="570">
-    <token name="T_DOC_COMMENT">     */</token>
+    <token name="T_WHITESPACE">    </token>
+    <token name="T_DOC_COMMENT">/**</token>
   </line>
   <line no="571">
+    <token name="T_DOC_COMMENT">     * Returns the timezone offset</token>
+  </line>
+  <line no="572">
+    <token name="T_DOC_COMMENT">     * @return int</token>
+  </line>
+  <line no="573">
+    <token name="T_DOC_COMMENT">     * @since 1.0.0</token>
+  </line>
+  <line no="574">
+    <token name="T_DOC_COMMENT">     */</token>
+  </line>
+  <line no="575">
+    <token name="T_WHITESPACE">    </token>
+    <token name="T_PUBLIC">public</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_FUNCTION">function</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_STRING">getOffset</token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_PHPDOX_COLON">:</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_STRING">int</token>
+  </line>
+  <line no="576">
+    <token name="T_WHITESPACE">    </token>
+    <token name="T_PHPDOX_OPEN_CURLY">{</token>
+  </line>
+  <line no="577">
+    <token name="T_WHITESPACE">        </token>
+    <token name="T_RETURN">return</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$this</token>
+    <token name="T_OBJECT_OPERATOR">-&gt;</token>
+    <token name="T_STRING">date</token>
+    <token name="T_OBJECT_OPERATOR">-&gt;</token>
+    <token name="T_STRING">getOffset</token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="578">
+    <token name="T_WHITESPACE">    </token>
+    <token name="T_PHPDOX_CLOSE_CURLY">}</token>
+  </line>
+  <line no="579"/>
+  <line no="580">
+    <token name="T_WHITESPACE">    </token>
+    <token name="T_DOC_COMMENT">/**</token>
+  </line>
+  <line no="581">
+    <token name="T_DOC_COMMENT">     * Gets the Unix timestamp</token>
+  </line>
+  <line no="582">
+    <token name="T_DOC_COMMENT">     *</token>
+  </line>
+  <line no="583">
+    <token name="T_DOC_COMMENT">     * @return int</token>
+  </line>
+  <line no="584">
+    <token name="T_DOC_COMMENT">     * @since 1.0.0</token>
+  </line>
+  <line no="585">
+    <token name="T_DOC_COMMENT">     */</token>
+  </line>
+  <line no="586">
     <token name="T_WHITESPACE">    </token>
     <token name="T_PUBLIC">public</token>
     <token name="T_WHITESPACE"> </token>
@@ -2746,11 +2851,11 @@
     <token name="T_WHITESPACE"> </token>
     <token name="T_STRING">int</token>
   </line>
-  <line no="572">
+  <line no="587">
     <token name="T_WHITESPACE">    </token>
     <token name="T_PHPDOX_OPEN_CURLY">{</token>
   </line>
-  <line no="573">
+  <line no="588">
     <token name="T_WHITESPACE">        </token>
     <token name="T_RETURN">return</token>
     <token name="T_WHITESPACE"> </token>
@@ -2763,28 +2868,28 @@
     <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="574">
+  <line no="589">
     <token name="T_WHITESPACE">    </token>
     <token name="T_PHPDOX_CLOSE_CURLY">}</token>
   </line>
-  <line no="575"/>
-  <line no="576">
+  <line no="590"/>
+  <line no="591">
     <token name="T_WHITESPACE">    </token>
     <token name="T_DOC_COMMENT">/**</token>
   </line>
-  <line no="577">
+  <line no="592">
     <token name="T_DOC_COMMENT">     * Return time zone relative</token>
   </line>
-  <line no="578">
+  <line no="593">
     <token name="T_DOC_COMMENT">     * @return \DateTimeZone</token>
   </line>
-  <line no="579">
+  <line no="594">
     <token name="T_DOC_COMMENT">     * @since 1.0.0</token>
   </line>
-  <line no="580">
+  <line no="595">
     <token name="T_DOC_COMMENT">     */</token>
   </line>
-  <line no="581">
+  <line no="596">
     <token name="T_WHITESPACE">    </token>
     <token name="T_PUBLIC">public</token>
     <token name="T_WHITESPACE"> </token>
@@ -2798,11 +2903,11 @@
     <token name="T_NS_SEPARATOR">\</token>
     <token name="T_STRING">DateTimeZone</token>
   </line>
-  <line no="582">
+  <line no="597">
     <token name="T_WHITESPACE">    </token>
     <token name="T_PHPDOX_OPEN_CURLY">{</token>
   </line>
-  <line no="583">
+  <line no="598">
     <token name="T_WHITESPACE">        </token>
     <token name="T_RETURN">return</token>
     <token name="T_WHITESPACE"> </token>
@@ -2815,37 +2920,37 @@
     <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="584">
+  <line no="599">
     <token name="T_WHITESPACE">    </token>
     <token name="T_PHPDOX_CLOSE_CURLY">}</token>
   </line>
-  <line no="585"/>
-  <line no="586">
+  <line no="600"/>
+  <line no="601">
     <token name="T_WHITESPACE">    </token>
     <token name="T_DOC_COMMENT">/**</token>
   </line>
-  <line no="587">
+  <line no="602">
     <token name="T_DOC_COMMENT">     * Alters the timestamp of this Date</token>
   </line>
-  <line no="588">
+  <line no="603">
     <token name="T_DOC_COMMENT">     *</token>
   </line>
-  <line no="589">
+  <line no="604">
     <token name="T_DOC_COMMENT">     * @link  http://php.net/manual/en/datetime.modify.php Accept formats</token>
   </line>
-  <line no="590">
+  <line no="605">
     <token name="T_DOC_COMMENT">     * @param string $modify</token>
   </line>
-  <line no="591">
+  <line no="606">
     <token name="T_DOC_COMMENT">     * @return \Rebelo\Date\Date</token>
   </line>
-  <line no="592">
+  <line no="607">
     <token name="T_DOC_COMMENT">     * @since 1.0.0</token>
   </line>
-  <line no="593">
+  <line no="608">
     <token name="T_DOC_COMMENT">     */</token>
   </line>
-  <line no="594">
+  <line no="609">
     <token name="T_WHITESPACE">    </token>
     <token name="T_PUBLIC">public</token>
     <token name="T_WHITESPACE"> </token>
@@ -2866,12 +2971,12 @@
     <token name="T_NS_SEPARATOR">\</token>
     <token name="T_STRING">Date</token>
   </line>
-  <line no="595">
+  <line no="610">
     <token name="T_WHITESPACE">    </token>
     <token name="T_PHPDOX_OPEN_CURLY">{</token>
   </line>
-  <line no="596"/>
-  <line no="597">
+  <line no="611"/>
+  <line no="612">
     <token name="T_WHITESPACE">        </token>
     <token name="T_IF">if</token>
     <token name="T_WHITESPACE"> </token>
@@ -2894,7 +2999,7 @@
     <token name="T_WHITESPACE"> </token>
     <token name="T_COMMENT">/* @phpstan-ignore-line */</token>
   </line>
-  <line no="598">
+  <line no="613">
     <token name="T_WHITESPACE">            </token>
     <token name="T_THROW">throw</token>
     <token name="T_WHITESPACE"> </token>
@@ -2903,17 +3008,14 @@
     <token name="T_STRING">DateException</token>
     <token name="T_PHPDOX_OPEN_BRACKET">(</token>
   </line>
-  <line no="599">
+  <line no="614">
     <token name="T_WHITESPACE">                </token>
     <token name="T_CONSTANT_ENCAPSED_STRING">"Filed to modify timestamp in "</token>
-    <token name="T_WHITESPACE"> </token>
     <token name="T_PHPDOX_DOT">.</token>
-    <token name="T_WHITESPACE"> </token>
     <token name="T_METHOD_C">__METHOD__</token>
-    <token name="T_WHITESPACE"> </token>
     <token name="T_PHPDOX_DOT">.</token>
   </line>
-  <line no="600">
+  <line no="615">
     <token name="T_WHITESPACE">                </token>
     <token name="T_PHPDOX_DOUBLE_QUOTES">"</token>
     <token name="T_ENCAPSED_AND_WHITESPACE"> for string '</token>
@@ -2921,56 +3023,56 @@
     <token name="T_ENCAPSED_AND_WHITESPACE">'</token>
     <token name="T_PHPDOX_DOUBLE_QUOTES">"</token>
   </line>
-  <line no="601">
+  <line no="616">
     <token name="T_WHITESPACE">            </token>
     <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="602">
+  <line no="617">
     <token name="T_WHITESPACE">        </token>
     <token name="T_PHPDOX_CLOSE_CURLY">}</token>
   </line>
-  <line no="603">
+  <line no="618">
     <token name="T_WHITESPACE">        </token>
     <token name="T_RETURN">return</token>
     <token name="T_WHITESPACE"> </token>
     <token name="T_VARIABLE">$this</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="604">
+  <line no="619">
     <token name="T_WHITESPACE">    </token>
     <token name="T_PHPDOX_CLOSE_CURLY">}</token>
   </line>
-  <line no="605"/>
-  <line no="606">
+  <line no="620"/>
+  <line no="621">
     <token name="T_WHITESPACE">    </token>
     <token name="T_DOC_COMMENT">/**</token>
   </line>
-  <line no="607">
+  <line no="622">
     <token name="T_DOC_COMMENT">     * Sets the date</token>
   </line>
-  <line no="608">
+  <line no="623">
     <token name="T_DOC_COMMENT">     * &lt;p&gt;Resets the current date of the DateTime object to a different date.&lt;/p&gt;</token>
   </line>
-  <line no="609">
+  <line no="624">
     <token name="T_DOC_COMMENT">     * @param int $year</token>
   </line>
-  <line no="610">
+  <line no="625">
     <token name="T_DOC_COMMENT">     * @param int $month</token>
   </line>
-  <line no="611">
+  <line no="626">
     <token name="T_DOC_COMMENT">     * @param int $day</token>
   </line>
-  <line no="612">
+  <line no="627">
     <token name="T_DOC_COMMENT">     * @return \Rebelo\Date\Date</token>
   </line>
-  <line no="613">
+  <line no="628">
     <token name="T_DOC_COMMENT">     * @since 1.0.0</token>
   </line>
-  <line no="614">
+  <line no="629">
     <token name="T_DOC_COMMENT">     */</token>
   </line>
-  <line no="615">
+  <line no="630">
     <token name="T_WHITESPACE">    </token>
     <token name="T_PUBLIC">public</token>
     <token name="T_WHITESPACE"> </token>
@@ -3001,11 +3103,11 @@
     <token name="T_NS_SEPARATOR">\</token>
     <token name="T_STRING">Date</token>
   </line>
-  <line no="616">
+  <line no="631">
     <token name="T_WHITESPACE">    </token>
     <token name="T_PHPDOX_OPEN_CURLY">{</token>
   </line>
-  <line no="617">
+  <line no="632">
     <token name="T_WHITESPACE">        </token>
     <token name="T_VARIABLE">$format</token>
     <token name="T_WHITESPACE"> </token>
@@ -3014,29 +3116,21 @@
     <token name="T_STATIC">static</token>
     <token name="T_DOUBLE_COLON">::</token>
     <token name="T_STRING">YAER</token>
-    <token name="T_WHITESPACE"> </token>
     <token name="T_PHPDOX_DOT">.</token>
-    <token name="T_WHITESPACE"> </token>
     <token name="T_CONSTANT_ENCAPSED_STRING">"-"</token>
-    <token name="T_WHITESPACE"> </token>
     <token name="T_PHPDOX_DOT">.</token>
-    <token name="T_WHITESPACE"> </token>
     <token name="T_STATIC">static</token>
     <token name="T_DOUBLE_COLON">::</token>
     <token name="T_STRING">MONTH_SHORT</token>
-    <token name="T_WHITESPACE"> </token>
     <token name="T_PHPDOX_DOT">.</token>
-    <token name="T_WHITESPACE"> </token>
     <token name="T_CONSTANT_ENCAPSED_STRING">"-"</token>
-    <token name="T_WHITESPACE"> </token>
     <token name="T_PHPDOX_DOT">.</token>
-    <token name="T_WHITESPACE"> </token>
     <token name="T_STATIC">static</token>
     <token name="T_DOUBLE_COLON">::</token>
     <token name="T_STRING">DAY_LESS</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="618">
+  <line no="633">
     <token name="T_WHITESPACE">        </token>
     <token name="T_VARIABLE">$date</token>
     <token name="T_WHITESPACE">   </token>
@@ -3047,25 +3141,17 @@
     <token name="T_WHITESPACE"> </token>
     <token name="T_VARIABLE">$year</token>
     <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
-    <token name="T_WHITESPACE"> </token>
     <token name="T_PHPDOX_DOT">.</token>
-    <token name="T_WHITESPACE"> </token>
     <token name="T_CONSTANT_ENCAPSED_STRING">"-"</token>
-    <token name="T_WHITESPACE"> </token>
     <token name="T_PHPDOX_DOT">.</token>
-    <token name="T_WHITESPACE"> </token>
     <token name="T_PHPDOX_OPEN_BRACKET">(</token>
     <token name="T_STRING_CAST">(string)</token>
     <token name="T_WHITESPACE"> </token>
     <token name="T_VARIABLE">$month</token>
     <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
-    <token name="T_WHITESPACE"> </token>
     <token name="T_PHPDOX_DOT">.</token>
-    <token name="T_WHITESPACE"> </token>
     <token name="T_CONSTANT_ENCAPSED_STRING">"-"</token>
-    <token name="T_WHITESPACE"> </token>
     <token name="T_PHPDOX_DOT">.</token>
-    <token name="T_WHITESPACE"> </token>
     <token name="T_PHPDOX_OPEN_BRACKET">(</token>
     <token name="T_STRING_CAST">(string)</token>
     <token name="T_WHITESPACE"> </token>
@@ -3073,7 +3159,7 @@
     <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="619">
+  <line no="634">
     <token name="T_WHITESPACE">        </token>
     <token name="T_STATIC">static</token>
     <token name="T_DOUBLE_COLON">::</token>
@@ -3088,8 +3174,8 @@
     <token name="T_WHITESPACE"> </token>
     <token name="T_COMMENT">// To test if the date is valide, other wise throws exception</token>
   </line>
-  <line no="620"/>
-  <line no="621">
+  <line no="635"/>
+  <line no="636">
     <token name="T_WHITESPACE">        </token>
     <token name="T_IF">if</token>
     <token name="T_WHITESPACE"> </token>
@@ -3118,7 +3204,7 @@
     <token name="T_WHITESPACE"> </token>
     <token name="T_COMMENT">/* @phpstan-ignore-line */</token>
   </line>
-  <line no="622">
+  <line no="637">
     <token name="T_WHITESPACE">            </token>
     <token name="T_THROW">throw</token>
     <token name="T_WHITESPACE"> </token>
@@ -3130,42 +3216,42 @@
     <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="623">
+  <line no="638">
     <token name="T_WHITESPACE">        </token>
     <token name="T_PHPDOX_CLOSE_CURLY">}</token>
   </line>
-  <line no="624">
+  <line no="639">
     <token name="T_WHITESPACE">        </token>
     <token name="T_RETURN">return</token>
     <token name="T_WHITESPACE"> </token>
     <token name="T_VARIABLE">$this</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="625">
+  <line no="640">
     <token name="T_WHITESPACE">    </token>
     <token name="T_PHPDOX_CLOSE_CURLY">}</token>
   </line>
-  <line no="626"/>
-  <line no="627">
+  <line no="641"/>
+  <line no="642">
     <token name="T_WHITESPACE">    </token>
     <token name="T_DOC_COMMENT">/**</token>
   </line>
-  <line no="628">
+  <line no="643">
     <token name="T_DOC_COMMENT">     * Set the year of this date object</token>
   </line>
-  <line no="629">
+  <line no="644">
     <token name="T_DOC_COMMENT">     * @param int $year</token>
   </line>
-  <line no="630">
+  <line no="645">
     <token name="T_DOC_COMMENT">     * @return \Rebelo\Date\Date $this</token>
   </line>
-  <line no="631">
+  <line no="646">
     <token name="T_DOC_COMMENT">     * @since 1.0.0</token>
   </line>
-  <line no="632">
+  <line no="647">
     <token name="T_DOC_COMMENT">     */</token>
   </line>
-  <line no="633">
+  <line no="648">
     <token name="T_WHITESPACE">    </token>
     <token name="T_PUBLIC">public</token>
     <token name="T_WHITESPACE"> </token>
@@ -3186,11 +3272,11 @@
     <token name="T_NS_SEPARATOR">\</token>
     <token name="T_STRING">Date</token>
   </line>
-  <line no="634">
+  <line no="649">
     <token name="T_WHITESPACE">    </token>
     <token name="T_PHPDOX_OPEN_CURLY">{</token>
   </line>
-  <line no="635">
+  <line no="650">
     <token name="T_WHITESPACE">        </token>
     <token name="T_VARIABLE">$month</token>
     <token name="T_WHITESPACE"> </token>
@@ -3209,7 +3295,7 @@
     <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="636">
+  <line no="651">
     <token name="T_WHITESPACE">        </token>
     <token name="T_VARIABLE">$day</token>
     <token name="T_WHITESPACE">   </token>
@@ -3228,7 +3314,7 @@
     <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="637">
+  <line no="652">
     <token name="T_WHITESPACE">        </token>
     <token name="T_VARIABLE">$this</token>
     <token name="T_OBJECT_OPERATOR">-&gt;</token>
@@ -3244,38 +3330,38 @@
     <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="638">
+  <line no="653">
     <token name="T_WHITESPACE">        </token>
     <token name="T_RETURN">return</token>
     <token name="T_WHITESPACE"> </token>
     <token name="T_VARIABLE">$this</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="639">
+  <line no="654">
     <token name="T_WHITESPACE">    </token>
     <token name="T_PHPDOX_CLOSE_CURLY">}</token>
   </line>
-  <line no="640"/>
-  <line no="641">
+  <line no="655"/>
+  <line no="656">
     <token name="T_WHITESPACE">    </token>
     <token name="T_DOC_COMMENT">/**</token>
   </line>
-  <line no="642">
+  <line no="657">
     <token name="T_DOC_COMMENT">     * Set the month of this date object</token>
   </line>
-  <line no="643">
+  <line no="658">
     <token name="T_DOC_COMMENT">     * @param int $month</token>
   </line>
-  <line no="644">
+  <line no="659">
     <token name="T_DOC_COMMENT">     * @return \Rebelo\Date\Date $this</token>
   </line>
-  <line no="645">
+  <line no="660">
     <token name="T_DOC_COMMENT">     * @since 1.0.0</token>
   </line>
-  <line no="646">
+  <line no="661">
     <token name="T_DOC_COMMENT">     */</token>
   </line>
-  <line no="647">
+  <line no="662">
     <token name="T_WHITESPACE">    </token>
     <token name="T_PUBLIC">public</token>
     <token name="T_WHITESPACE"> </token>
@@ -3296,11 +3382,11 @@
     <token name="T_NS_SEPARATOR">\</token>
     <token name="T_STRING">Date</token>
   </line>
-  <line no="648">
+  <line no="663">
     <token name="T_WHITESPACE">    </token>
     <token name="T_PHPDOX_OPEN_CURLY">{</token>
   </line>
-  <line no="649">
+  <line no="664">
     <token name="T_WHITESPACE">        </token>
     <token name="T_VARIABLE">$year</token>
     <token name="T_WHITESPACE"> </token>
@@ -3319,7 +3405,7 @@
     <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="650">
+  <line no="665">
     <token name="T_WHITESPACE">        </token>
     <token name="T_VARIABLE">$day</token>
     <token name="T_WHITESPACE">  </token>
@@ -3338,7 +3424,7 @@
     <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="651">
+  <line no="666">
     <token name="T_WHITESPACE">        </token>
     <token name="T_VARIABLE">$this</token>
     <token name="T_OBJECT_OPERATOR">-&gt;</token>
@@ -3354,38 +3440,38 @@
     <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="652">
+  <line no="667">
     <token name="T_WHITESPACE">        </token>
     <token name="T_RETURN">return</token>
     <token name="T_WHITESPACE"> </token>
     <token name="T_VARIABLE">$this</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="653">
+  <line no="668">
     <token name="T_WHITESPACE">    </token>
     <token name="T_PHPDOX_CLOSE_CURLY">}</token>
   </line>
-  <line no="654"/>
-  <line no="655">
+  <line no="669"/>
+  <line no="670">
     <token name="T_WHITESPACE">    </token>
     <token name="T_DOC_COMMENT">/**</token>
   </line>
-  <line no="656">
+  <line no="671">
     <token name="T_DOC_COMMENT">     * Set the day of month of this date object</token>
   </line>
-  <line no="657">
+  <line no="672">
     <token name="T_DOC_COMMENT">     * @param int $day</token>
   </line>
-  <line no="658">
+  <line no="673">
     <token name="T_DOC_COMMENT">     * @return \Rebelo\Date\Date $this</token>
   </line>
-  <line no="659">
+  <line no="674">
     <token name="T_DOC_COMMENT">     * @since 1.0.0</token>
   </line>
-  <line no="660">
+  <line no="675">
     <token name="T_DOC_COMMENT">     */</token>
   </line>
-  <line no="661">
+  <line no="676">
     <token name="T_WHITESPACE">    </token>
     <token name="T_PUBLIC">public</token>
     <token name="T_WHITESPACE"> </token>
@@ -3406,11 +3492,11 @@
     <token name="T_NS_SEPARATOR">\</token>
     <token name="T_STRING">Date</token>
   </line>
-  <line no="662">
+  <line no="677">
     <token name="T_WHITESPACE">    </token>
     <token name="T_PHPDOX_OPEN_CURLY">{</token>
   </line>
-  <line no="663">
+  <line no="678">
     <token name="T_WHITESPACE">        </token>
     <token name="T_VARIABLE">$year</token>
     <token name="T_WHITESPACE">  </token>
@@ -3429,7 +3515,7 @@
     <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="664">
+  <line no="679">
     <token name="T_WHITESPACE">        </token>
     <token name="T_VARIABLE">$month</token>
     <token name="T_WHITESPACE"> </token>
@@ -3448,7 +3534,7 @@
     <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="665">
+  <line no="680">
     <token name="T_WHITESPACE">        </token>
     <token name="T_VARIABLE">$this</token>
     <token name="T_OBJECT_OPERATOR">-&gt;</token>
@@ -3464,53 +3550,53 @@
     <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="666">
+  <line no="681">
     <token name="T_WHITESPACE">        </token>
     <token name="T_RETURN">return</token>
     <token name="T_WHITESPACE"> </token>
     <token name="T_VARIABLE">$this</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="667">
+  <line no="682">
     <token name="T_WHITESPACE">    </token>
     <token name="T_PHPDOX_CLOSE_CURLY">}</token>
   </line>
-  <line no="668"/>
-  <line no="669">
+  <line no="683"/>
+  <line no="684">
     <token name="T_WHITESPACE">    </token>
     <token name="T_DOC_COMMENT">/**</token>
   </line>
-  <line no="670">
+  <line no="685">
     <token name="T_DOC_COMMENT">     * Sets the ISO date</token>
   </line>
-  <line no="671">
+  <line no="686">
     <token name="T_DOC_COMMENT">     * &lt;p&gt;Set a date according to the ISO 8601 standard</token>
   </line>
-  <line no="672">
+  <line no="687">
     <token name="T_DOC_COMMENT">     * - using weeks and day offsets rather than specific dates.&lt;/p&gt;</token>
   </line>
-  <line no="673">
+  <line no="688">
     <token name="T_DOC_COMMENT">     *</token>
   </line>
-  <line no="674">
+  <line no="689">
     <token name="T_DOC_COMMENT">     * @param int $year</token>
   </line>
-  <line no="675">
+  <line no="690">
     <token name="T_DOC_COMMENT">     * @param int $week</token>
   </line>
-  <line no="676">
+  <line no="691">
     <token name="T_DOC_COMMENT">     * @param int $day</token>
   </line>
-  <line no="677">
+  <line no="692">
     <token name="T_DOC_COMMENT">     * @return \Rebelo\Date\Date</token>
   </line>
-  <line no="678">
+  <line no="693">
     <token name="T_DOC_COMMENT">     * @since 1.0.0</token>
   </line>
-  <line no="679">
+  <line no="694">
     <token name="T_DOC_COMMENT">     */</token>
   </line>
-  <line no="680">
+  <line no="695">
     <token name="T_WHITESPACE">    </token>
     <token name="T_PUBLIC">public</token>
     <token name="T_WHITESPACE"> </token>
@@ -3545,11 +3631,11 @@
     <token name="T_NS_SEPARATOR">\</token>
     <token name="T_STRING">Date</token>
   </line>
-  <line no="681">
+  <line no="696">
     <token name="T_WHITESPACE">    </token>
     <token name="T_PHPDOX_OPEN_CURLY">{</token>
   </line>
-  <line no="682">
+  <line no="697">
     <token name="T_WHITESPACE">        </token>
     <token name="T_VARIABLE">$this</token>
     <token name="T_OBJECT_OPERATOR">-&gt;</token>
@@ -3567,50 +3653,50 @@
     <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="683">
+  <line no="698">
     <token name="T_WHITESPACE">        </token>
     <token name="T_RETURN">return</token>
     <token name="T_WHITESPACE"> </token>
     <token name="T_VARIABLE">$this</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="684">
+  <line no="699">
     <token name="T_WHITESPACE">    </token>
     <token name="T_PHPDOX_CLOSE_CURLY">}</token>
   </line>
-  <line no="685"/>
-  <line no="686">
+  <line no="700"/>
+  <line no="701">
     <token name="T_WHITESPACE">    </token>
     <token name="T_DOC_COMMENT">/**</token>
   </line>
-  <line no="687">
+  <line no="702">
     <token name="T_DOC_COMMENT">     * Sets the time</token>
   </line>
-  <line no="688">
+  <line no="703">
     <token name="T_DOC_COMMENT">     * &lt;p&gt;Resets the current time of the DateTime object to a different time.&lt;/p&gt;</token>
   </line>
-  <line no="689">
+  <line no="704">
     <token name="T_DOC_COMMENT">     * @param int $hour</token>
   </line>
-  <line no="690">
+  <line no="705">
     <token name="T_DOC_COMMENT">     * @param int $minute</token>
   </line>
-  <line no="691">
+  <line no="706">
     <token name="T_DOC_COMMENT">     * @param int $second</token>
   </line>
-  <line no="692">
+  <line no="707">
     <token name="T_DOC_COMMENT">     * @param int $microseconds</token>
   </line>
-  <line no="693">
+  <line no="708">
     <token name="T_DOC_COMMENT">     * @return \Rebelo\Date\Date</token>
   </line>
-  <line no="694">
+  <line no="709">
     <token name="T_DOC_COMMENT">     * @since 1.0.0</token>
   </line>
-  <line no="695">
+  <line no="710">
     <token name="T_DOC_COMMENT">     */</token>
   </line>
-  <line no="696">
+  <line no="711">
     <token name="T_WHITESPACE">    </token>
     <token name="T_PUBLIC">public</token>
     <token name="T_WHITESPACE"> </token>
@@ -3619,22 +3705,18 @@
     <token name="T_STRING">setTime</token>
     <token name="T_PHPDOX_OPEN_BRACKET">(</token>
   </line>
-  <line no="697">
+  <line no="712">
     <token name="T_WHITESPACE">        </token>
     <token name="T_STRING">int</token>
     <token name="T_WHITESPACE"> </token>
     <token name="T_VARIABLE">$hour</token>
     <token name="T_PHPDOX_COMMA">,</token>
-  </line>
-  <line no="698">
-    <token name="T_WHITESPACE">        </token>
+    <token name="T_WHITESPACE"> </token>
     <token name="T_STRING">int</token>
     <token name="T_WHITESPACE"> </token>
     <token name="T_VARIABLE">$minute</token>
     <token name="T_PHPDOX_COMMA">,</token>
-  </line>
-  <line no="699">
-    <token name="T_WHITESPACE">        </token>
+    <token name="T_WHITESPACE"> </token>
     <token name="T_STRING">int</token>
     <token name="T_WHITESPACE"> </token>
     <token name="T_VARIABLE">$second</token>
@@ -3643,9 +3725,7 @@
     <token name="T_WHITESPACE"> </token>
     <token name="T_LNUMBER">0</token>
     <token name="T_PHPDOX_COMMA">,</token>
-  </line>
-  <line no="700">
-    <token name="T_WHITESPACE">        </token>
+    <token name="T_WHITESPACE"> </token>
     <token name="T_STRING">int</token>
     <token name="T_WHITESPACE"> </token>
     <token name="T_VARIABLE">$microseconds</token>
@@ -3654,7 +3734,7 @@
     <token name="T_WHITESPACE"> </token>
     <token name="T_LNUMBER">0</token>
   </line>
-  <line no="701">
+  <line no="713">
     <token name="T_WHITESPACE">    </token>
     <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
     <token name="T_PHPDOX_COLON">:</token>
@@ -3666,11 +3746,11 @@
     <token name="T_NS_SEPARATOR">\</token>
     <token name="T_STRING">Date</token>
   </line>
-  <line no="702">
+  <line no="714">
     <token name="T_WHITESPACE">    </token>
     <token name="T_PHPDOX_OPEN_CURLY">{</token>
   </line>
-  <line no="703">
+  <line no="715">
     <token name="T_WHITESPACE">        </token>
     <token name="T_IF">if</token>
     <token name="T_WHITESPACE"> </token>
@@ -3692,7 +3772,7 @@
     <token name="T_WHITESPACE"> </token>
     <token name="T_PHPDOX_OPEN_CURLY">{</token>
   </line>
-  <line no="704">
+  <line no="716">
     <token name="T_WHITESPACE">            </token>
     <token name="T_THROW">throw</token>
     <token name="T_WHITESPACE"> </token>
@@ -3708,12 +3788,12 @@
     <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="705">
+  <line no="717">
     <token name="T_WHITESPACE">        </token>
     <token name="T_PHPDOX_CLOSE_CURLY">}</token>
   </line>
-  <line no="706"/>
-  <line no="707">
+  <line no="718"/>
+  <line no="719">
     <token name="T_WHITESPACE">        </token>
     <token name="T_IF">if</token>
     <token name="T_WHITESPACE"> </token>
@@ -3735,7 +3815,7 @@
     <token name="T_WHITESPACE"> </token>
     <token name="T_PHPDOX_OPEN_CURLY">{</token>
   </line>
-  <line no="708">
+  <line no="720">
     <token name="T_WHITESPACE">            </token>
     <token name="T_THROW">throw</token>
     <token name="T_WHITESPACE"> </token>
@@ -3751,12 +3831,12 @@
     <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="709">
+  <line no="721">
     <token name="T_WHITESPACE">        </token>
     <token name="T_PHPDOX_CLOSE_CURLY">}</token>
   </line>
-  <line no="710"/>
-  <line no="711">
+  <line no="722"/>
+  <line no="723">
     <token name="T_WHITESPACE">        </token>
     <token name="T_IF">if</token>
     <token name="T_WHITESPACE"> </token>
@@ -3778,7 +3858,7 @@
     <token name="T_WHITESPACE"> </token>
     <token name="T_PHPDOX_OPEN_CURLY">{</token>
   </line>
-  <line no="712">
+  <line no="724">
     <token name="T_WHITESPACE">            </token>
     <token name="T_THROW">throw</token>
     <token name="T_WHITESPACE"> </token>
@@ -3794,12 +3874,12 @@
     <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="713">
+  <line no="725">
     <token name="T_WHITESPACE">        </token>
     <token name="T_PHPDOX_CLOSE_CURLY">}</token>
   </line>
-  <line no="714"/>
-  <line no="715">
+  <line no="726"/>
+  <line no="727">
     <token name="T_WHITESPACE">        </token>
     <token name="T_IF">if</token>
     <token name="T_WHITESPACE"> </token>
@@ -3821,7 +3901,7 @@
     <token name="T_WHITESPACE"> </token>
     <token name="T_PHPDOX_OPEN_CURLY">{</token>
   </line>
-  <line no="716">
+  <line no="728">
     <token name="T_WHITESPACE">            </token>
     <token name="T_THROW">throw</token>
     <token name="T_WHITESPACE"> </token>
@@ -3837,12 +3917,12 @@
     <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="717">
+  <line no="729">
     <token name="T_WHITESPACE">        </token>
     <token name="T_PHPDOX_CLOSE_CURLY">}</token>
   </line>
-  <line no="718"/>
-  <line no="719">
+  <line no="730"/>
+  <line no="731">
     <token name="T_WHITESPACE">        </token>
     <token name="T_VARIABLE">$this</token>
     <token name="T_OBJECT_OPERATOR">-&gt;</token>
@@ -3863,44 +3943,44 @@
     <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="720">
+  <line no="732">
     <token name="T_WHITESPACE">        </token>
     <token name="T_RETURN">return</token>
     <token name="T_WHITESPACE"> </token>
     <token name="T_VARIABLE">$this</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="721">
+  <line no="733">
     <token name="T_WHITESPACE">    </token>
     <token name="T_PHPDOX_CLOSE_CURLY">}</token>
   </line>
-  <line no="722"/>
-  <line no="723">
+  <line no="734"/>
+  <line no="735">
     <token name="T_WHITESPACE">    </token>
     <token name="T_DOC_COMMENT">/**</token>
   </line>
-  <line no="724">
+  <line no="736">
     <token name="T_DOC_COMMENT">     *</token>
   </line>
-  <line no="725">
+  <line no="737">
     <token name="T_DOC_COMMENT">     * Set the hour of this Date object</token>
   </line>
-  <line no="726">
+  <line no="738">
     <token name="T_DOC_COMMENT">     *</token>
   </line>
-  <line no="727">
+  <line no="739">
     <token name="T_DOC_COMMENT">     * @param int $hour</token>
   </line>
-  <line no="728">
+  <line no="740">
     <token name="T_DOC_COMMENT">     * @return \Rebelo\Date\Date $this</token>
   </line>
-  <line no="729">
+  <line no="741">
     <token name="T_DOC_COMMENT">     * @since 1.0.0</token>
   </line>
-  <line no="730">
+  <line no="742">
     <token name="T_DOC_COMMENT">     */</token>
   </line>
-  <line no="731">
+  <line no="743">
     <token name="T_WHITESPACE">    </token>
     <token name="T_PUBLIC">public</token>
     <token name="T_WHITESPACE"> </token>
@@ -3921,11 +4001,11 @@
     <token name="T_NS_SEPARATOR">\</token>
     <token name="T_STRING">Date</token>
   </line>
-  <line no="732">
+  <line no="744">
     <token name="T_WHITESPACE">    </token>
     <token name="T_PHPDOX_OPEN_CURLY">{</token>
   </line>
-  <line no="733">
+  <line no="745">
     <token name="T_WHITESPACE">        </token>
     <token name="T_VARIABLE">$minute</token>
     <token name="T_WHITESPACE">  </token>
@@ -3944,7 +4024,7 @@
     <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="734">
+  <line no="746">
     <token name="T_WHITESPACE">        </token>
     <token name="T_VARIABLE">$seconds</token>
     <token name="T_WHITESPACE"> </token>
@@ -3963,7 +4043,7 @@
     <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="735">
+  <line no="747">
     <token name="T_WHITESPACE">        </token>
     <token name="T_VARIABLE">$micro</token>
     <token name="T_WHITESPACE">   </token>
@@ -3982,7 +4062,7 @@
     <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="736">
+  <line no="748">
     <token name="T_WHITESPACE">        </token>
     <token name="T_VARIABLE">$this</token>
     <token name="T_OBJECT_OPERATOR">-&gt;</token>
@@ -4001,44 +4081,44 @@
     <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="737">
+  <line no="749">
     <token name="T_WHITESPACE">        </token>
     <token name="T_RETURN">return</token>
     <token name="T_WHITESPACE"> </token>
     <token name="T_VARIABLE">$this</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="738">
+  <line no="750">
     <token name="T_WHITESPACE">    </token>
     <token name="T_PHPDOX_CLOSE_CURLY">}</token>
   </line>
-  <line no="739"/>
-  <line no="740">
+  <line no="751"/>
+  <line no="752">
     <token name="T_WHITESPACE">    </token>
     <token name="T_DOC_COMMENT">/**</token>
   </line>
-  <line no="741">
+  <line no="753">
     <token name="T_DOC_COMMENT">     *</token>
   </line>
-  <line no="742">
+  <line no="754">
     <token name="T_DOC_COMMENT">     * Set the minutes of this Date object</token>
   </line>
-  <line no="743">
+  <line no="755">
     <token name="T_DOC_COMMENT">     *</token>
   </line>
-  <line no="744">
+  <line no="756">
     <token name="T_DOC_COMMENT">     * @param int $minute</token>
   </line>
-  <line no="745">
+  <line no="757">
     <token name="T_DOC_COMMENT">     * @return \Rebelo\Date\Date $this</token>
   </line>
-  <line no="746">
+  <line no="758">
     <token name="T_DOC_COMMENT">     * @since 1.0.0</token>
   </line>
-  <line no="747">
+  <line no="759">
     <token name="T_DOC_COMMENT">     */</token>
   </line>
-  <line no="748">
+  <line no="760">
     <token name="T_WHITESPACE">    </token>
     <token name="T_PUBLIC">public</token>
     <token name="T_WHITESPACE"> </token>
@@ -4059,11 +4139,11 @@
     <token name="T_NS_SEPARATOR">\</token>
     <token name="T_STRING">Date</token>
   </line>
-  <line no="749">
+  <line no="761">
     <token name="T_WHITESPACE">    </token>
     <token name="T_PHPDOX_OPEN_CURLY">{</token>
   </line>
-  <line no="750">
+  <line no="762">
     <token name="T_WHITESPACE">        </token>
     <token name="T_VARIABLE">$hour</token>
     <token name="T_WHITESPACE">    </token>
@@ -4082,7 +4162,7 @@
     <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="751">
+  <line no="763">
     <token name="T_WHITESPACE">        </token>
     <token name="T_VARIABLE">$seconds</token>
     <token name="T_WHITESPACE"> </token>
@@ -4101,7 +4181,7 @@
     <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="752">
+  <line no="764">
     <token name="T_WHITESPACE">        </token>
     <token name="T_VARIABLE">$micro</token>
     <token name="T_WHITESPACE">   </token>
@@ -4120,7 +4200,7 @@
     <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="753">
+  <line no="765">
     <token name="T_WHITESPACE">        </token>
     <token name="T_VARIABLE">$this</token>
     <token name="T_OBJECT_OPERATOR">-&gt;</token>
@@ -4139,44 +4219,44 @@
     <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="754">
+  <line no="766">
     <token name="T_WHITESPACE">        </token>
     <token name="T_RETURN">return</token>
     <token name="T_WHITESPACE"> </token>
     <token name="T_VARIABLE">$this</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="755">
+  <line no="767">
     <token name="T_WHITESPACE">    </token>
     <token name="T_PHPDOX_CLOSE_CURLY">}</token>
   </line>
-  <line no="756"/>
-  <line no="757">
+  <line no="768"/>
+  <line no="769">
     <token name="T_WHITESPACE">    </token>
     <token name="T_DOC_COMMENT">/**</token>
   </line>
-  <line no="758">
+  <line no="770">
     <token name="T_DOC_COMMENT">     *</token>
   </line>
-  <line no="759">
+  <line no="771">
     <token name="T_DOC_COMMENT">     * Set the seconds of this Date object</token>
   </line>
-  <line no="760">
+  <line no="772">
     <token name="T_DOC_COMMENT">     *</token>
   </line>
-  <line no="761">
+  <line no="773">
     <token name="T_DOC_COMMENT">     * @param int $seconds</token>
   </line>
-  <line no="762">
+  <line no="774">
     <token name="T_DOC_COMMENT">     * @return \Rebelo\Date\Date $this</token>
   </line>
-  <line no="763">
+  <line no="775">
     <token name="T_DOC_COMMENT">     * @since 1.0.0</token>
   </line>
-  <line no="764">
+  <line no="776">
     <token name="T_DOC_COMMENT">     */</token>
   </line>
-  <line no="765">
+  <line no="777">
     <token name="T_WHITESPACE">    </token>
     <token name="T_PUBLIC">public</token>
     <token name="T_WHITESPACE"> </token>
@@ -4197,11 +4277,11 @@
     <token name="T_NS_SEPARATOR">\</token>
     <token name="T_STRING">Date</token>
   </line>
-  <line no="766">
+  <line no="778">
     <token name="T_WHITESPACE">    </token>
     <token name="T_PHPDOX_OPEN_CURLY">{</token>
   </line>
-  <line no="767">
+  <line no="779">
     <token name="T_WHITESPACE">        </token>
     <token name="T_VARIABLE">$hour</token>
     <token name="T_WHITESPACE">   </token>
@@ -4220,7 +4300,7 @@
     <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="768">
+  <line no="780">
     <token name="T_WHITESPACE">        </token>
     <token name="T_VARIABLE">$minute</token>
     <token name="T_WHITESPACE"> </token>
@@ -4239,7 +4319,7 @@
     <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="769">
+  <line no="781">
     <token name="T_WHITESPACE">        </token>
     <token name="T_VARIABLE">$micro</token>
     <token name="T_WHITESPACE">  </token>
@@ -4258,7 +4338,7 @@
     <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="770">
+  <line no="782">
     <token name="T_WHITESPACE">        </token>
     <token name="T_VARIABLE">$this</token>
     <token name="T_OBJECT_OPERATOR">-&gt;</token>
@@ -4277,44 +4357,44 @@
     <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="771">
+  <line no="783">
     <token name="T_WHITESPACE">        </token>
     <token name="T_RETURN">return</token>
     <token name="T_WHITESPACE"> </token>
     <token name="T_VARIABLE">$this</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="772">
+  <line no="784">
     <token name="T_WHITESPACE">    </token>
     <token name="T_PHPDOX_CLOSE_CURLY">}</token>
   </line>
-  <line no="773"/>
-  <line no="774">
+  <line no="785"/>
+  <line no="786">
     <token name="T_WHITESPACE">    </token>
     <token name="T_DOC_COMMENT">/**</token>
   </line>
-  <line no="775">
+  <line no="787">
     <token name="T_DOC_COMMENT">     *</token>
   </line>
-  <line no="776">
+  <line no="788">
     <token name="T_DOC_COMMENT">     * Set the microseconds of this Date object</token>
   </line>
-  <line no="777">
+  <line no="789">
     <token name="T_DOC_COMMENT">     *</token>
   </line>
-  <line no="778">
+  <line no="790">
     <token name="T_DOC_COMMENT">     * @param int $microseconds</token>
   </line>
-  <line no="779">
+  <line no="791">
     <token name="T_DOC_COMMENT">     * @return \Rebelo\Date\Date $this</token>
   </line>
-  <line no="780">
+  <line no="792">
     <token name="T_DOC_COMMENT">     * @since 1.0.0</token>
   </line>
-  <line no="781">
+  <line no="793">
     <token name="T_DOC_COMMENT">     */</token>
   </line>
-  <line no="782">
+  <line no="794">
     <token name="T_WHITESPACE">    </token>
     <token name="T_PUBLIC">public</token>
     <token name="T_WHITESPACE"> </token>
@@ -4335,11 +4415,11 @@
     <token name="T_NS_SEPARATOR">\</token>
     <token name="T_STRING">Date</token>
   </line>
-  <line no="783">
+  <line no="795">
     <token name="T_WHITESPACE">    </token>
     <token name="T_PHPDOX_OPEN_CURLY">{</token>
   </line>
-  <line no="784">
+  <line no="796">
     <token name="T_WHITESPACE">        </token>
     <token name="T_VARIABLE">$hour</token>
     <token name="T_WHITESPACE">    </token>
@@ -4358,7 +4438,7 @@
     <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="785">
+  <line no="797">
     <token name="T_WHITESPACE">        </token>
     <token name="T_VARIABLE">$minute</token>
     <token name="T_WHITESPACE">  </token>
@@ -4377,7 +4457,7 @@
     <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="786">
+  <line no="798">
     <token name="T_WHITESPACE">        </token>
     <token name="T_VARIABLE">$seconds</token>
     <token name="T_WHITESPACE"> </token>
@@ -4396,7 +4476,7 @@
     <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="787">
+  <line no="799">
     <token name="T_WHITESPACE">        </token>
     <token name="T_VARIABLE">$this</token>
     <token name="T_OBJECT_OPERATOR">-&gt;</token>
@@ -4412,74 +4492,6 @@
     <token name="T_PHPDOX_COMMA">,</token>
     <token name="T_WHITESPACE"> </token>
     <token name="T_VARIABLE">$microseconds</token>
-    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
-    <token name="T_PHPDOX_SEMICOLON">;</token>
-  </line>
-  <line no="788">
-    <token name="T_WHITESPACE">        </token>
-    <token name="T_RETURN">return</token>
-    <token name="T_WHITESPACE"> </token>
-    <token name="T_VARIABLE">$this</token>
-    <token name="T_PHPDOX_SEMICOLON">;</token>
-  </line>
-  <line no="789">
-    <token name="T_WHITESPACE">    </token>
-    <token name="T_PHPDOX_CLOSE_CURLY">}</token>
-  </line>
-  <line no="790"/>
-  <line no="791">
-    <token name="T_WHITESPACE">    </token>
-    <token name="T_DOC_COMMENT">/**</token>
-  </line>
-  <line no="792">
-    <token name="T_DOC_COMMENT">     * Set the Timestamp of this date</token>
-  </line>
-  <line no="793">
-    <token name="T_DOC_COMMENT">     * @param int $unixtimestamp</token>
-  </line>
-  <line no="794">
-    <token name="T_DOC_COMMENT">     * @return \Rebelo\Date\Date</token>
-  </line>
-  <line no="795">
-    <token name="T_DOC_COMMENT">     * @since 1.0.0</token>
-  </line>
-  <line no="796">
-    <token name="T_DOC_COMMENT">     */</token>
-  </line>
-  <line no="797">
-    <token name="T_WHITESPACE">    </token>
-    <token name="T_PUBLIC">public</token>
-    <token name="T_WHITESPACE"> </token>
-    <token name="T_FUNCTION">function</token>
-    <token name="T_WHITESPACE"> </token>
-    <token name="T_STRING">setTimestamp</token>
-    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
-    <token name="T_STRING">int</token>
-    <token name="T_WHITESPACE"> </token>
-    <token name="T_VARIABLE">$unixtimestamp</token>
-    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
-    <token name="T_PHPDOX_COLON">:</token>
-    <token name="T_WHITESPACE"> </token>
-    <token name="T_NS_SEPARATOR">\</token>
-    <token name="T_STRING">Rebelo</token>
-    <token name="T_NS_SEPARATOR">\</token>
-    <token name="T_STRING">Date</token>
-    <token name="T_NS_SEPARATOR">\</token>
-    <token name="T_STRING">Date</token>
-  </line>
-  <line no="798">
-    <token name="T_WHITESPACE">    </token>
-    <token name="T_PHPDOX_OPEN_CURLY">{</token>
-  </line>
-  <line no="799">
-    <token name="T_WHITESPACE">        </token>
-    <token name="T_VARIABLE">$this</token>
-    <token name="T_OBJECT_OPERATOR">-&gt;</token>
-    <token name="T_STRING">date</token>
-    <token name="T_OBJECT_OPERATOR">-&gt;</token>
-    <token name="T_STRING">setTimestamp</token>
-    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
-    <token name="T_VARIABLE">$unixtimestamp</token>
     <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
@@ -4500,27 +4512,95 @@
     <token name="T_DOC_COMMENT">/**</token>
   </line>
   <line no="804">
-    <token name="T_DOC_COMMENT">     *</token>
+    <token name="T_DOC_COMMENT">     * Set the Timestamp of this date</token>
   </line>
   <line no="805">
-    <token name="T_DOC_COMMENT">     * Set the time zone of this date</token>
+    <token name="T_DOC_COMMENT">     * @param int $unixtimestamp</token>
   </line>
   <line no="806">
-    <token name="T_DOC_COMMENT">     *</token>
-  </line>
-  <line no="807">
-    <token name="T_DOC_COMMENT">     * @param \DateTimeZone $timezone</token>
-  </line>
-  <line no="808">
     <token name="T_DOC_COMMENT">     * @return \Rebelo\Date\Date</token>
   </line>
-  <line no="809">
+  <line no="807">
     <token name="T_DOC_COMMENT">     * @since 1.0.0</token>
   </line>
-  <line no="810">
+  <line no="808">
     <token name="T_DOC_COMMENT">     */</token>
   </line>
+  <line no="809">
+    <token name="T_WHITESPACE">    </token>
+    <token name="T_PUBLIC">public</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_FUNCTION">function</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_STRING">setTimestamp</token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_STRING">int</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$unixtimestamp</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_PHPDOX_COLON">:</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_NS_SEPARATOR">\</token>
+    <token name="T_STRING">Rebelo</token>
+    <token name="T_NS_SEPARATOR">\</token>
+    <token name="T_STRING">Date</token>
+    <token name="T_NS_SEPARATOR">\</token>
+    <token name="T_STRING">Date</token>
+  </line>
+  <line no="810">
+    <token name="T_WHITESPACE">    </token>
+    <token name="T_PHPDOX_OPEN_CURLY">{</token>
+  </line>
   <line no="811">
+    <token name="T_WHITESPACE">        </token>
+    <token name="T_VARIABLE">$this</token>
+    <token name="T_OBJECT_OPERATOR">-&gt;</token>
+    <token name="T_STRING">date</token>
+    <token name="T_OBJECT_OPERATOR">-&gt;</token>
+    <token name="T_STRING">setTimestamp</token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_VARIABLE">$unixtimestamp</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="812">
+    <token name="T_WHITESPACE">        </token>
+    <token name="T_RETURN">return</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$this</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="813">
+    <token name="T_WHITESPACE">    </token>
+    <token name="T_PHPDOX_CLOSE_CURLY">}</token>
+  </line>
+  <line no="814"/>
+  <line no="815">
+    <token name="T_WHITESPACE">    </token>
+    <token name="T_DOC_COMMENT">/**</token>
+  </line>
+  <line no="816">
+    <token name="T_DOC_COMMENT">     *</token>
+  </line>
+  <line no="817">
+    <token name="T_DOC_COMMENT">     * Set the time zone of this date</token>
+  </line>
+  <line no="818">
+    <token name="T_DOC_COMMENT">     *</token>
+  </line>
+  <line no="819">
+    <token name="T_DOC_COMMENT">     * @param \DateTimeZone $timezone</token>
+  </line>
+  <line no="820">
+    <token name="T_DOC_COMMENT">     * @return \Rebelo\Date\Date</token>
+  </line>
+  <line no="821">
+    <token name="T_DOC_COMMENT">     * @since 1.0.0</token>
+  </line>
+  <line no="822">
+    <token name="T_DOC_COMMENT">     */</token>
+  </line>
+  <line no="823">
     <token name="T_WHITESPACE">    </token>
     <token name="T_PUBLIC">public</token>
     <token name="T_WHITESPACE"> </token>
@@ -4542,11 +4622,11 @@
     <token name="T_NS_SEPARATOR">\</token>
     <token name="T_STRING">Date</token>
   </line>
-  <line no="812">
+  <line no="824">
     <token name="T_WHITESPACE">    </token>
     <token name="T_PHPDOX_OPEN_CURLY">{</token>
   </line>
-  <line no="813">
+  <line no="825">
     <token name="T_WHITESPACE">        </token>
     <token name="T_VARIABLE">$this</token>
     <token name="T_OBJECT_OPERATOR">-&gt;</token>
@@ -4558,47 +4638,47 @@
     <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="814">
+  <line no="826">
     <token name="T_WHITESPACE">        </token>
     <token name="T_RETURN">return</token>
     <token name="T_WHITESPACE"> </token>
     <token name="T_VARIABLE">$this</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="815">
+  <line no="827">
     <token name="T_WHITESPACE">    </token>
     <token name="T_PHPDOX_CLOSE_CURLY">}</token>
   </line>
-  <line no="816"/>
-  <line no="817">
+  <line no="828"/>
+  <line no="829">
     <token name="T_WHITESPACE">    </token>
     <token name="T_DOC_COMMENT">/**</token>
   </line>
-  <line no="818">
+  <line no="830">
     <token name="T_DOC_COMMENT">     * Return a new Date object that is this add with the number of years</token>
   </line>
-  <line no="819">
+  <line no="831">
     <token name="T_DOC_COMMENT">     * To subtract the $years must be negative</token>
   </line>
-  <line no="820">
+  <line no="832">
     <token name="T_DOC_COMMENT">     *</token>
   </line>
-  <line no="821">
+  <line no="833">
     <token name="T_DOC_COMMENT">     * @param int $years Number of years to add or negative integer to subtract</token>
   </line>
-  <line no="822">
+  <line no="834">
     <token name="T_DOC_COMMENT">     * @return \Rebelo\Date\Date</token>
   </line>
-  <line no="823">
+  <line no="835">
     <token name="T_DOC_COMMENT">     * @throws DateException</token>
   </line>
-  <line no="824">
+  <line no="836">
     <token name="T_DOC_COMMENT">     * @since 1.0.0</token>
   </line>
-  <line no="825">
+  <line no="837">
     <token name="T_DOC_COMMENT">     */</token>
   </line>
-  <line no="826">
+  <line no="838">
     <token name="T_WHITESPACE">    </token>
     <token name="T_PUBLIC">public</token>
     <token name="T_WHITESPACE"> </token>
@@ -4619,11 +4699,11 @@
     <token name="T_NS_SEPARATOR">\</token>
     <token name="T_STRING">Date</token>
   </line>
-  <line no="827">
+  <line no="839">
     <token name="T_WHITESPACE">    </token>
     <token name="T_PHPDOX_OPEN_CURLY">{</token>
   </line>
-  <line no="828">
+  <line no="840">
     <token name="T_WHITESPACE">        </token>
     <token name="T_IF">if</token>
     <token name="T_WHITESPACE"> </token>
@@ -4637,7 +4717,7 @@
     <token name="T_WHITESPACE"> </token>
     <token name="T_PHPDOX_OPEN_CURLY">{</token>
   </line>
-  <line no="829">
+  <line no="841">
     <token name="T_WHITESPACE">            </token>
     <token name="T_RETURN">return</token>
     <token name="T_WHITESPACE"> </token>
@@ -4646,7 +4726,7 @@
     <token name="T_STRING">sub</token>
     <token name="T_PHPDOX_OPEN_BRACKET">(</token>
   </line>
-  <line no="830">
+  <line no="842">
     <token name="T_WHITESPACE">                </token>
     <token name="T_NEW">new</token>
     <token name="T_WHITESPACE"> </token>
@@ -4658,7 +4738,7 @@
     <token name="T_STRING">DateInterval</token>
     <token name="T_PHPDOX_OPEN_BRACKET">(</token>
   </line>
-  <line no="831">
+  <line no="843">
     <token name="T_WHITESPACE">                    </token>
     <token name="T_CONSTANT_ENCAPSED_STRING">"P"</token>
     <token name="T_PHPDOX_DOT">.</token>
@@ -4674,20 +4754,20 @@
     <token name="T_PHPDOX_DOT">.</token>
     <token name="T_CONSTANT_ENCAPSED_STRING">"Y"</token>
   </line>
-  <line no="832">
+  <line no="844">
     <token name="T_WHITESPACE">                </token>
     <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
   </line>
-  <line no="833">
+  <line no="845">
     <token name="T_WHITESPACE">            </token>
     <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="834">
+  <line no="846">
     <token name="T_WHITESPACE">        </token>
     <token name="T_PHPDOX_CLOSE_CURLY">}</token>
   </line>
-  <line no="835">
+  <line no="847">
     <token name="T_WHITESPACE">        </token>
     <token name="T_RETURN">return</token>
     <token name="T_WHITESPACE"> </token>
@@ -4696,7 +4776,7 @@
     <token name="T_STRING">add</token>
     <token name="T_PHPDOX_OPEN_BRACKET">(</token>
   </line>
-  <line no="836">
+  <line no="848">
     <token name="T_WHITESPACE">            </token>
     <token name="T_NEW">new</token>
     <token name="T_WHITESPACE"> </token>
@@ -4718,42 +4798,42 @@
     <token name="T_CONSTANT_ENCAPSED_STRING">"Y"</token>
     <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
   </line>
-  <line no="837">
+  <line no="849">
     <token name="T_WHITESPACE">        </token>
     <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="838">
+  <line no="850">
     <token name="T_WHITESPACE">    </token>
     <token name="T_PHPDOX_CLOSE_CURLY">}</token>
   </line>
-  <line no="839"/>
-  <line no="840">
+  <line no="851"/>
+  <line no="852">
     <token name="T_WHITESPACE">    </token>
     <token name="T_DOC_COMMENT">/**</token>
   </line>
-  <line no="841">
+  <line no="853">
     <token name="T_DOC_COMMENT">     * Return a new Date object that is this add with the number of months</token>
   </line>
-  <line no="842">
+  <line no="854">
     <token name="T_DOC_COMMENT">     * To subtract the $months must be negative</token>
   </line>
-  <line no="843">
+  <line no="855">
     <token name="T_DOC_COMMENT">     *</token>
   </line>
-  <line no="844">
+  <line no="856">
     <token name="T_DOC_COMMENT">     * @param int $months Number of months to add or negative integer to subtract</token>
   </line>
-  <line no="845">
+  <line no="857">
     <token name="T_DOC_COMMENT">     * @return \Rebelo\Date\Date</token>
   </line>
-  <line no="846">
+  <line no="858">
     <token name="T_DOC_COMMENT">     * @since 1.0.0</token>
   </line>
-  <line no="847">
+  <line no="859">
     <token name="T_DOC_COMMENT">     */</token>
   </line>
-  <line no="848">
+  <line no="860">
     <token name="T_WHITESPACE">    </token>
     <token name="T_PUBLIC">public</token>
     <token name="T_WHITESPACE"> </token>
@@ -4774,11 +4854,11 @@
     <token name="T_NS_SEPARATOR">\</token>
     <token name="T_STRING">Date</token>
   </line>
-  <line no="849">
+  <line no="861">
     <token name="T_WHITESPACE">    </token>
     <token name="T_PHPDOX_OPEN_CURLY">{</token>
   </line>
-  <line no="850">
+  <line no="862">
     <token name="T_WHITESPACE">        </token>
     <token name="T_IF">if</token>
     <token name="T_WHITESPACE"> </token>
@@ -4792,7 +4872,7 @@
     <token name="T_WHITESPACE"> </token>
     <token name="T_PHPDOX_OPEN_CURLY">{</token>
   </line>
-  <line no="851">
+  <line no="863">
     <token name="T_WHITESPACE">            </token>
     <token name="T_RETURN">return</token>
     <token name="T_WHITESPACE"> </token>
@@ -4801,7 +4881,7 @@
     <token name="T_STRING">sub</token>
     <token name="T_PHPDOX_OPEN_BRACKET">(</token>
   </line>
-  <line no="852">
+  <line no="864">
     <token name="T_WHITESPACE">                </token>
     <token name="T_NEW">new</token>
     <token name="T_WHITESPACE"> </token>
@@ -4813,7 +4893,7 @@
     <token name="T_STRING">DateInterval</token>
     <token name="T_PHPDOX_OPEN_BRACKET">(</token>
   </line>
-  <line no="853">
+  <line no="865">
     <token name="T_WHITESPACE">                    </token>
     <token name="T_CONSTANT_ENCAPSED_STRING">"P"</token>
     <token name="T_PHPDOX_DOT">.</token>
@@ -4829,20 +4909,20 @@
     <token name="T_PHPDOX_DOT">.</token>
     <token name="T_CONSTANT_ENCAPSED_STRING">"M"</token>
   </line>
-  <line no="854">
+  <line no="866">
     <token name="T_WHITESPACE">                </token>
     <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
   </line>
-  <line no="855">
+  <line no="867">
     <token name="T_WHITESPACE">            </token>
     <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="856">
+  <line no="868">
     <token name="T_WHITESPACE">        </token>
     <token name="T_PHPDOX_CLOSE_CURLY">}</token>
   </line>
-  <line no="857">
+  <line no="869">
     <token name="T_WHITESPACE">        </token>
     <token name="T_RETURN">return</token>
     <token name="T_WHITESPACE"> </token>
@@ -4851,7 +4931,7 @@
     <token name="T_STRING">add</token>
     <token name="T_PHPDOX_OPEN_BRACKET">(</token>
   </line>
-  <line no="858">
+  <line no="870">
     <token name="T_WHITESPACE">            </token>
     <token name="T_NEW">new</token>
     <token name="T_WHITESPACE"> </token>
@@ -4873,42 +4953,42 @@
     <token name="T_CONSTANT_ENCAPSED_STRING">"M"</token>
     <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
   </line>
-  <line no="859">
+  <line no="871">
     <token name="T_WHITESPACE">        </token>
     <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="860">
+  <line no="872">
     <token name="T_WHITESPACE">    </token>
     <token name="T_PHPDOX_CLOSE_CURLY">}</token>
   </line>
-  <line no="861"/>
-  <line no="862">
+  <line no="873"/>
+  <line no="874">
     <token name="T_WHITESPACE">    </token>
     <token name="T_DOC_COMMENT">/**</token>
   </line>
-  <line no="863">
+  <line no="875">
     <token name="T_DOC_COMMENT">     * Return a new Date object that is this Date add with the number of days</token>
   </line>
-  <line no="864">
+  <line no="876">
     <token name="T_DOC_COMMENT">     * To subtract the $days must be negative integer</token>
   </line>
-  <line no="865">
+  <line no="877">
     <token name="T_DOC_COMMENT">     *</token>
   </line>
-  <line no="866">
+  <line no="878">
     <token name="T_DOC_COMMENT">     * @param int $days Number of days to add or negative integer to subtract</token>
   </line>
-  <line no="867">
+  <line no="879">
     <token name="T_DOC_COMMENT">     * @return \Rebelo\Date\Date</token>
   </line>
-  <line no="868">
+  <line no="880">
     <token name="T_DOC_COMMENT">     * @since 1.0.0</token>
   </line>
-  <line no="869">
+  <line no="881">
     <token name="T_DOC_COMMENT">     */</token>
   </line>
-  <line no="870">
+  <line no="882">
     <token name="T_WHITESPACE">    </token>
     <token name="T_PUBLIC">public</token>
     <token name="T_WHITESPACE"> </token>
@@ -4929,11 +5009,11 @@
     <token name="T_NS_SEPARATOR">\</token>
     <token name="T_STRING">Date</token>
   </line>
-  <line no="871">
+  <line no="883">
     <token name="T_WHITESPACE">    </token>
     <token name="T_PHPDOX_OPEN_CURLY">{</token>
   </line>
-  <line no="872">
+  <line no="884">
     <token name="T_WHITESPACE">        </token>
     <token name="T_IF">if</token>
     <token name="T_WHITESPACE"> </token>
@@ -4947,7 +5027,7 @@
     <token name="T_WHITESPACE"> </token>
     <token name="T_PHPDOX_OPEN_CURLY">{</token>
   </line>
-  <line no="873">
+  <line no="885">
     <token name="T_WHITESPACE">            </token>
     <token name="T_RETURN">return</token>
     <token name="T_WHITESPACE"> </token>
@@ -4956,7 +5036,7 @@
     <token name="T_STRING">sub</token>
     <token name="T_PHPDOX_OPEN_BRACKET">(</token>
   </line>
-  <line no="874">
+  <line no="886">
     <token name="T_WHITESPACE">                </token>
     <token name="T_NEW">new</token>
     <token name="T_WHITESPACE"> </token>
@@ -4968,7 +5048,7 @@
     <token name="T_STRING">DateInterval</token>
     <token name="T_PHPDOX_OPEN_BRACKET">(</token>
   </line>
-  <line no="875">
+  <line no="887">
     <token name="T_WHITESPACE">                    </token>
     <token name="T_CONSTANT_ENCAPSED_STRING">"P"</token>
     <token name="T_PHPDOX_DOT">.</token>
@@ -4984,20 +5064,20 @@
     <token name="T_PHPDOX_DOT">.</token>
     <token name="T_CONSTANT_ENCAPSED_STRING">"D"</token>
   </line>
-  <line no="876">
+  <line no="888">
     <token name="T_WHITESPACE">                </token>
     <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
   </line>
-  <line no="877">
+  <line no="889">
     <token name="T_WHITESPACE">            </token>
     <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="878">
+  <line no="890">
     <token name="T_WHITESPACE">        </token>
     <token name="T_PHPDOX_CLOSE_CURLY">}</token>
   </line>
-  <line no="879">
+  <line no="891">
     <token name="T_WHITESPACE">        </token>
     <token name="T_RETURN">return</token>
     <token name="T_WHITESPACE"> </token>
@@ -5006,7 +5086,7 @@
     <token name="T_STRING">add</token>
     <token name="T_PHPDOX_OPEN_BRACKET">(</token>
   </line>
-  <line no="880">
+  <line no="892">
     <token name="T_WHITESPACE">            </token>
     <token name="T_NEW">new</token>
     <token name="T_WHITESPACE"> </token>
@@ -5028,42 +5108,42 @@
     <token name="T_CONSTANT_ENCAPSED_STRING">"D"</token>
     <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
   </line>
-  <line no="881">
+  <line no="893">
     <token name="T_WHITESPACE">        </token>
     <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="882">
+  <line no="894">
     <token name="T_WHITESPACE">    </token>
     <token name="T_PHPDOX_CLOSE_CURLY">}</token>
   </line>
-  <line no="883"/>
-  <line no="884">
+  <line no="895"/>
+  <line no="896">
     <token name="T_WHITESPACE">    </token>
     <token name="T_DOC_COMMENT">/**</token>
   </line>
-  <line no="885">
+  <line no="897">
     <token name="T_DOC_COMMENT">     * Return a new Date object that is this add with the number of hours</token>
   </line>
-  <line no="886">
+  <line no="898">
     <token name="T_DOC_COMMENT">     * To subtract the $hours must be negative integer</token>
   </line>
-  <line no="887">
+  <line no="899">
     <token name="T_DOC_COMMENT">     *</token>
   </line>
-  <line no="888">
+  <line no="900">
     <token name="T_DOC_COMMENT">     * @param int $hours Number of hours to add or negative integer to subtract</token>
   </line>
-  <line no="889">
+  <line no="901">
     <token name="T_DOC_COMMENT">     * @return \Rebelo\Date\Date</token>
   </line>
-  <line no="890">
+  <line no="902">
     <token name="T_DOC_COMMENT">     * @since 1.0.0</token>
   </line>
-  <line no="891">
+  <line no="903">
     <token name="T_DOC_COMMENT">     */</token>
   </line>
-  <line no="892">
+  <line no="904">
     <token name="T_WHITESPACE">    </token>
     <token name="T_PUBLIC">public</token>
     <token name="T_WHITESPACE"> </token>
@@ -5084,11 +5164,11 @@
     <token name="T_NS_SEPARATOR">\</token>
     <token name="T_STRING">Date</token>
   </line>
-  <line no="893">
+  <line no="905">
     <token name="T_WHITESPACE">    </token>
     <token name="T_PHPDOX_OPEN_CURLY">{</token>
   </line>
-  <line no="894">
+  <line no="906">
     <token name="T_WHITESPACE">        </token>
     <token name="T_IF">if</token>
     <token name="T_WHITESPACE"> </token>
@@ -5102,7 +5182,7 @@
     <token name="T_WHITESPACE"> </token>
     <token name="T_PHPDOX_OPEN_CURLY">{</token>
   </line>
-  <line no="895">
+  <line no="907">
     <token name="T_WHITESPACE">            </token>
     <token name="T_RETURN">return</token>
     <token name="T_WHITESPACE"> </token>
@@ -5111,7 +5191,7 @@
     <token name="T_STRING">sub</token>
     <token name="T_PHPDOX_OPEN_BRACKET">(</token>
   </line>
-  <line no="896">
+  <line no="908">
     <token name="T_WHITESPACE">                </token>
     <token name="T_NEW">new</token>
     <token name="T_WHITESPACE"> </token>
@@ -5123,7 +5203,7 @@
     <token name="T_STRING">DateInterval</token>
     <token name="T_PHPDOX_OPEN_BRACKET">(</token>
   </line>
-  <line no="897">
+  <line no="909">
     <token name="T_WHITESPACE">                    </token>
     <token name="T_CONSTANT_ENCAPSED_STRING">"PT"</token>
     <token name="T_PHPDOX_DOT">.</token>
@@ -5139,20 +5219,20 @@
     <token name="T_PHPDOX_DOT">.</token>
     <token name="T_CONSTANT_ENCAPSED_STRING">"H"</token>
   </line>
-  <line no="898">
+  <line no="910">
     <token name="T_WHITESPACE">                </token>
     <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
   </line>
-  <line no="899">
+  <line no="911">
     <token name="T_WHITESPACE">            </token>
     <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="900">
+  <line no="912">
     <token name="T_WHITESPACE">        </token>
     <token name="T_PHPDOX_CLOSE_CURLY">}</token>
   </line>
-  <line no="901">
+  <line no="913">
     <token name="T_WHITESPACE">        </token>
     <token name="T_RETURN">return</token>
     <token name="T_WHITESPACE"> </token>
@@ -5161,7 +5241,7 @@
     <token name="T_STRING">add</token>
     <token name="T_PHPDOX_OPEN_BRACKET">(</token>
   </line>
-  <line no="902">
+  <line no="914">
     <token name="T_WHITESPACE">            </token>
     <token name="T_NEW">new</token>
     <token name="T_WHITESPACE"> </token>
@@ -5183,42 +5263,42 @@
     <token name="T_CONSTANT_ENCAPSED_STRING">"H"</token>
     <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
   </line>
-  <line no="903">
+  <line no="915">
     <token name="T_WHITESPACE">        </token>
     <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="904">
+  <line no="916">
     <token name="T_WHITESPACE">    </token>
     <token name="T_PHPDOX_CLOSE_CURLY">}</token>
   </line>
-  <line no="905"/>
-  <line no="906">
+  <line no="917"/>
+  <line no="918">
     <token name="T_WHITESPACE">    </token>
     <token name="T_DOC_COMMENT">/**</token>
   </line>
-  <line no="907">
+  <line no="919">
     <token name="T_DOC_COMMENT">     * Return a new Date object that is this add with the number of minutes</token>
   </line>
-  <line no="908">
+  <line no="920">
     <token name="T_DOC_COMMENT">     * To subtract the $minutes must be negative integer</token>
   </line>
-  <line no="909">
+  <line no="921">
     <token name="T_DOC_COMMENT">     *</token>
   </line>
-  <line no="910">
+  <line no="922">
     <token name="T_DOC_COMMENT">     * @param int $minutes Number of minutes to add or negative integer to subtract</token>
   </line>
-  <line no="911">
+  <line no="923">
     <token name="T_DOC_COMMENT">     * @return \Rebelo\Date\Date</token>
   </line>
-  <line no="912">
+  <line no="924">
     <token name="T_DOC_COMMENT">     * @since 1.0.0</token>
   </line>
-  <line no="913">
+  <line no="925">
     <token name="T_DOC_COMMENT">     */</token>
   </line>
-  <line no="914">
+  <line no="926">
     <token name="T_WHITESPACE">    </token>
     <token name="T_PUBLIC">public</token>
     <token name="T_WHITESPACE"> </token>
@@ -5239,11 +5319,11 @@
     <token name="T_NS_SEPARATOR">\</token>
     <token name="T_STRING">Date</token>
   </line>
-  <line no="915">
+  <line no="927">
     <token name="T_WHITESPACE">    </token>
     <token name="T_PHPDOX_OPEN_CURLY">{</token>
   </line>
-  <line no="916">
+  <line no="928">
     <token name="T_WHITESPACE">        </token>
     <token name="T_IF">if</token>
     <token name="T_WHITESPACE"> </token>
@@ -5257,7 +5337,7 @@
     <token name="T_WHITESPACE"> </token>
     <token name="T_PHPDOX_OPEN_CURLY">{</token>
   </line>
-  <line no="917">
+  <line no="929">
     <token name="T_WHITESPACE">            </token>
     <token name="T_RETURN">return</token>
     <token name="T_WHITESPACE"> </token>
@@ -5266,7 +5346,7 @@
     <token name="T_STRING">sub</token>
     <token name="T_PHPDOX_OPEN_BRACKET">(</token>
   </line>
-  <line no="918">
+  <line no="930">
     <token name="T_WHITESPACE">                </token>
     <token name="T_NEW">new</token>
     <token name="T_WHITESPACE"> </token>
@@ -5278,7 +5358,7 @@
     <token name="T_STRING">DateInterval</token>
     <token name="T_PHPDOX_OPEN_BRACKET">(</token>
   </line>
-  <line no="919">
+  <line no="931">
     <token name="T_WHITESPACE">                    </token>
     <token name="T_CONSTANT_ENCAPSED_STRING">"PT"</token>
     <token name="T_PHPDOX_DOT">.</token>
@@ -5294,20 +5374,20 @@
     <token name="T_PHPDOX_DOT">.</token>
     <token name="T_CONSTANT_ENCAPSED_STRING">"M"</token>
   </line>
-  <line no="920">
+  <line no="932">
     <token name="T_WHITESPACE">                </token>
     <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
   </line>
-  <line no="921">
+  <line no="933">
     <token name="T_WHITESPACE">            </token>
     <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="922">
+  <line no="934">
     <token name="T_WHITESPACE">        </token>
     <token name="T_PHPDOX_CLOSE_CURLY">}</token>
   </line>
-  <line no="923">
+  <line no="935">
     <token name="T_WHITESPACE">        </token>
     <token name="T_RETURN">return</token>
     <token name="T_WHITESPACE"> </token>
@@ -5316,7 +5396,7 @@
     <token name="T_STRING">add</token>
     <token name="T_PHPDOX_OPEN_BRACKET">(</token>
   </line>
-  <line no="924">
+  <line no="936">
     <token name="T_WHITESPACE">            </token>
     <token name="T_NEW">new</token>
     <token name="T_WHITESPACE"> </token>
@@ -5338,42 +5418,42 @@
     <token name="T_CONSTANT_ENCAPSED_STRING">"M"</token>
     <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
   </line>
-  <line no="925">
+  <line no="937">
     <token name="T_WHITESPACE">        </token>
     <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="926">
+  <line no="938">
     <token name="T_WHITESPACE">    </token>
     <token name="T_PHPDOX_CLOSE_CURLY">}</token>
   </line>
-  <line no="927"/>
-  <line no="928">
+  <line no="939"/>
+  <line no="940">
     <token name="T_WHITESPACE">    </token>
     <token name="T_DOC_COMMENT">/**</token>
   </line>
-  <line no="929">
+  <line no="941">
     <token name="T_DOC_COMMENT">     * Return a new Date object that is this add with the number of seconds</token>
   </line>
-  <line no="930">
+  <line no="942">
     <token name="T_DOC_COMMENT">     * To subtract the $seconds must be negative integer</token>
   </line>
-  <line no="931">
+  <line no="943">
     <token name="T_DOC_COMMENT">     *</token>
   </line>
-  <line no="932">
+  <line no="944">
     <token name="T_DOC_COMMENT">     * @param int $seconds</token>
   </line>
-  <line no="933">
+  <line no="945">
     <token name="T_DOC_COMMENT">     * @return \Rebelo\Date\Date</token>
   </line>
-  <line no="934">
+  <line no="946">
     <token name="T_DOC_COMMENT">     * @since 1.0.0</token>
   </line>
-  <line no="935">
+  <line no="947">
     <token name="T_DOC_COMMENT">     */</token>
   </line>
-  <line no="936">
+  <line no="948">
     <token name="T_WHITESPACE">    </token>
     <token name="T_PUBLIC">public</token>
     <token name="T_WHITESPACE"> </token>
@@ -5394,11 +5474,11 @@
     <token name="T_NS_SEPARATOR">\</token>
     <token name="T_STRING">Date</token>
   </line>
-  <line no="937">
+  <line no="949">
     <token name="T_WHITESPACE">    </token>
     <token name="T_PHPDOX_OPEN_CURLY">{</token>
   </line>
-  <line no="938">
+  <line no="950">
     <token name="T_WHITESPACE">        </token>
     <token name="T_IF">if</token>
     <token name="T_WHITESPACE"> </token>
@@ -5412,7 +5492,7 @@
     <token name="T_WHITESPACE"> </token>
     <token name="T_PHPDOX_OPEN_CURLY">{</token>
   </line>
-  <line no="939">
+  <line no="951">
     <token name="T_WHITESPACE">            </token>
     <token name="T_RETURN">return</token>
     <token name="T_WHITESPACE"> </token>
@@ -5421,7 +5501,7 @@
     <token name="T_STRING">sub</token>
     <token name="T_PHPDOX_OPEN_BRACKET">(</token>
   </line>
-  <line no="940">
+  <line no="952">
     <token name="T_WHITESPACE">                </token>
     <token name="T_NEW">new</token>
     <token name="T_WHITESPACE"> </token>
@@ -5433,7 +5513,7 @@
     <token name="T_STRING">DateInterval</token>
     <token name="T_PHPDOX_OPEN_BRACKET">(</token>
   </line>
-  <line no="941">
+  <line no="953">
     <token name="T_WHITESPACE">                    </token>
     <token name="T_CONSTANT_ENCAPSED_STRING">"PT"</token>
     <token name="T_PHPDOX_DOT">.</token>
@@ -5449,20 +5529,20 @@
     <token name="T_PHPDOX_DOT">.</token>
     <token name="T_CONSTANT_ENCAPSED_STRING">"S"</token>
   </line>
-  <line no="942">
+  <line no="954">
     <token name="T_WHITESPACE">                </token>
     <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
   </line>
-  <line no="943">
+  <line no="955">
     <token name="T_WHITESPACE">            </token>
     <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="944">
+  <line no="956">
     <token name="T_WHITESPACE">        </token>
     <token name="T_PHPDOX_CLOSE_CURLY">}</token>
   </line>
-  <line no="945">
+  <line no="957">
     <token name="T_WHITESPACE">        </token>
     <token name="T_RETURN">return</token>
     <token name="T_WHITESPACE"> </token>
@@ -5471,7 +5551,7 @@
     <token name="T_STRING">add</token>
     <token name="T_PHPDOX_OPEN_BRACKET">(</token>
   </line>
-  <line no="946">
+  <line no="958">
     <token name="T_WHITESPACE">            </token>
     <token name="T_NEW">new</token>
     <token name="T_WHITESPACE"> </token>
@@ -5493,63 +5573,9 @@
     <token name="T_CONSTANT_ENCAPSED_STRING">"S"</token>
     <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
   </line>
-  <line no="947">
-    <token name="T_WHITESPACE">        </token>
-    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
-    <token name="T_PHPDOX_SEMICOLON">;</token>
-  </line>
-  <line no="948">
-    <token name="T_WHITESPACE">    </token>
-    <token name="T_PHPDOX_CLOSE_CURLY">}</token>
-  </line>
-  <line no="949"/>
-  <line no="950">
-    <token name="T_WHITESPACE">    </token>
-    <token name="T_DOC_COMMENT">/**</token>
-  </line>
-  <line no="951">
-    <token name="T_DOC_COMMENT">     *</token>
-  </line>
-  <line no="952">
-    <token name="T_DOC_COMMENT">     * Returne the native PHP DateTime class</token>
-  </line>
-  <line no="953">
-    <token name="T_DOC_COMMENT">     *</token>
-  </line>
-  <line no="954">
-    <token name="T_DOC_COMMENT">     * @return \DateTime</token>
-  </line>
-  <line no="955">
-    <token name="T_DOC_COMMENT">     * @since 1.0.0</token>
-  </line>
-  <line no="956">
-    <token name="T_DOC_COMMENT">     */</token>
-  </line>
-  <line no="957">
-    <token name="T_WHITESPACE">    </token>
-    <token name="T_PUBLIC">public</token>
-    <token name="T_WHITESPACE"> </token>
-    <token name="T_FUNCTION">function</token>
-    <token name="T_WHITESPACE"> </token>
-    <token name="T_STRING">toDateTime</token>
-    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
-    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
-    <token name="T_PHPDOX_COLON">:</token>
-    <token name="T_WHITESPACE"> </token>
-    <token name="T_NS_SEPARATOR">\</token>
-    <token name="T_STRING">DateTime</token>
-  </line>
-  <line no="958">
-    <token name="T_WHITESPACE">    </token>
-    <token name="T_PHPDOX_OPEN_CURLY">{</token>
-  </line>
   <line no="959">
     <token name="T_WHITESPACE">        </token>
-    <token name="T_RETURN">return</token>
-    <token name="T_WHITESPACE"> </token>
-    <token name="T_VARIABLE">$this</token>
-    <token name="T_OBJECT_OPERATOR">-&gt;</token>
-    <token name="T_STRING">date</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
   <line no="960">
@@ -5565,12 +5591,66 @@
     <token name="T_DOC_COMMENT">     *</token>
   </line>
   <line no="964">
-    <token name="T_DOC_COMMENT">     * @since 2.0.0</token>
+    <token name="T_DOC_COMMENT">     * Returne the native PHP DateTime class</token>
   </line>
   <line no="965">
-    <token name="T_DOC_COMMENT">     */</token>
+    <token name="T_DOC_COMMENT">     *</token>
   </line>
   <line no="966">
+    <token name="T_DOC_COMMENT">     * @return \DateTime</token>
+  </line>
+  <line no="967">
+    <token name="T_DOC_COMMENT">     * @since 1.0.0</token>
+  </line>
+  <line no="968">
+    <token name="T_DOC_COMMENT">     */</token>
+  </line>
+  <line no="969">
+    <token name="T_WHITESPACE">    </token>
+    <token name="T_PUBLIC">public</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_FUNCTION">function</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_STRING">toDateTime</token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_PHPDOX_COLON">:</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_NS_SEPARATOR">\</token>
+    <token name="T_STRING">DateTime</token>
+  </line>
+  <line no="970">
+    <token name="T_WHITESPACE">    </token>
+    <token name="T_PHPDOX_OPEN_CURLY">{</token>
+  </line>
+  <line no="971">
+    <token name="T_WHITESPACE">        </token>
+    <token name="T_RETURN">return</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$this</token>
+    <token name="T_OBJECT_OPERATOR">-&gt;</token>
+    <token name="T_STRING">date</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="972">
+    <token name="T_WHITESPACE">    </token>
+    <token name="T_PHPDOX_CLOSE_CURLY">}</token>
+  </line>
+  <line no="973"/>
+  <line no="974">
+    <token name="T_WHITESPACE">    </token>
+    <token name="T_DOC_COMMENT">/**</token>
+  </line>
+  <line no="975">
+    <token name="T_DOC_COMMENT">     *</token>
+  </line>
+  <line no="976">
+    <token name="T_DOC_COMMENT">     * @since 2.0.0</token>
+  </line>
+  <line no="977">
+    <token name="T_DOC_COMMENT">     */</token>
+  </line>
+  <line no="978">
     <token name="T_WHITESPACE">    </token>
     <token name="T_PUBLIC">public</token>
     <token name="T_WHITESPACE"> </token>
@@ -5580,11 +5660,11 @@
     <token name="T_PHPDOX_OPEN_BRACKET">(</token>
     <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
   </line>
-  <line no="967">
+  <line no="979">
     <token name="T_WHITESPACE">    </token>
     <token name="T_PHPDOX_OPEN_CURLY">{</token>
   </line>
-  <line no="968">
+  <line no="980">
     <token name="T_WHITESPACE">        </token>
     <token name="T_VARIABLE">$this</token>
     <token name="T_OBJECT_OPERATOR">-&gt;</token>
@@ -5599,31 +5679,31 @@
     <token name="T_STRING">date</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="969">
+  <line no="981">
     <token name="T_WHITESPACE">    </token>
     <token name="T_PHPDOX_CLOSE_CURLY">}</token>
   </line>
-  <line no="970"/>
-  <line no="971">
+  <line no="982"/>
+  <line no="983">
     <token name="T_WHITESPACE">    </token>
     <token name="T_DOC_COMMENT">/**</token>
   </line>
-  <line no="972">
+  <line no="984">
     <token name="T_DOC_COMMENT">     * Test if this date is earlier than</token>
   </line>
-  <line no="973">
+  <line no="985">
     <token name="T_DOC_COMMENT">     * @param \Rebelo\Date\Date $date</token>
   </line>
-  <line no="974">
+  <line no="986">
     <token name="T_DOC_COMMENT">     * @return bool</token>
   </line>
-  <line no="975">
+  <line no="987">
     <token name="T_DOC_COMMENT">     * @since 2.2.0</token>
   </line>
-  <line no="976">
+  <line no="988">
     <token name="T_DOC_COMMENT">     */</token>
   </line>
-  <line no="977">
+  <line no="989">
     <token name="T_WHITESPACE">    </token>
     <token name="T_PUBLIC">public</token>
     <token name="T_WHITESPACE"> </token>
@@ -5644,11 +5724,11 @@
     <token name="T_WHITESPACE"> </token>
     <token name="T_STRING">bool</token>
   </line>
-  <line no="978">
+  <line no="990">
     <token name="T_WHITESPACE">    </token>
     <token name="T_PHPDOX_OPEN_CURLY">{</token>
   </line>
-  <line no="979">
+  <line no="991">
     <token name="T_WHITESPACE">        </token>
     <token name="T_RETURN">return</token>
     <token name="T_WHITESPACE"> </token>
@@ -5665,31 +5745,31 @@
     <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="980">
+  <line no="992">
     <token name="T_WHITESPACE">    </token>
     <token name="T_PHPDOX_CLOSE_CURLY">}</token>
   </line>
-  <line no="981"/>
-  <line no="982">
+  <line no="993"/>
+  <line no="994">
     <token name="T_WHITESPACE">    </token>
     <token name="T_DOC_COMMENT">/**</token>
   </line>
-  <line no="983">
+  <line no="995">
     <token name="T_DOC_COMMENT">     * Test if this date is later than</token>
   </line>
-  <line no="984">
+  <line no="996">
     <token name="T_DOC_COMMENT">     * @param \Rebelo\Date\Date $date</token>
   </line>
-  <line no="985">
+  <line no="997">
     <token name="T_DOC_COMMENT">     * @return bool</token>
   </line>
-  <line no="986">
+  <line no="998">
     <token name="T_DOC_COMMENT">     * @since 2.2.0</token>
   </line>
-  <line no="987">
+  <line no="999">
     <token name="T_DOC_COMMENT">     */</token>
   </line>
-  <line no="988">
+  <line no="1000">
     <token name="T_WHITESPACE">    </token>
     <token name="T_PUBLIC">public</token>
     <token name="T_WHITESPACE"> </token>
@@ -5710,11 +5790,11 @@
     <token name="T_WHITESPACE"> </token>
     <token name="T_STRING">bool</token>
   </line>
-  <line no="989">
+  <line no="1001">
     <token name="T_WHITESPACE">    </token>
     <token name="T_PHPDOX_OPEN_CURLY">{</token>
   </line>
-  <line no="990">
+  <line no="1002">
     <token name="T_WHITESPACE">        </token>
     <token name="T_RETURN">return</token>
     <token name="T_WHITESPACE"> </token>
@@ -5731,31 +5811,31 @@
     <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="991">
+  <line no="1003">
     <token name="T_WHITESPACE">    </token>
     <token name="T_PHPDOX_CLOSE_CURLY">}</token>
   </line>
-  <line no="992"/>
-  <line no="993">
+  <line no="1004"/>
+  <line no="1005">
     <token name="T_WHITESPACE">    </token>
     <token name="T_DOC_COMMENT">/**</token>
   </line>
-  <line no="994">
+  <line no="1006">
     <token name="T_DOC_COMMENT">     * Test if this date is equal than</token>
   </line>
-  <line no="995">
+  <line no="1007">
     <token name="T_DOC_COMMENT">     * @param \Rebelo\Date\Date $date</token>
   </line>
-  <line no="996">
+  <line no="1008">
     <token name="T_DOC_COMMENT">     * @return bool</token>
   </line>
-  <line no="997">
+  <line no="1009">
     <token name="T_DOC_COMMENT">     * @since 2.2.0</token>
   </line>
-  <line no="998">
+  <line no="1010">
     <token name="T_DOC_COMMENT">     */</token>
   </line>
-  <line no="999">
+  <line no="1011">
     <token name="T_WHITESPACE">    </token>
     <token name="T_PUBLIC">public</token>
     <token name="T_WHITESPACE"> </token>
@@ -5776,11 +5856,11 @@
     <token name="T_WHITESPACE"> </token>
     <token name="T_STRING">bool</token>
   </line>
-  <line no="1000">
+  <line no="1012">
     <token name="T_WHITESPACE">    </token>
     <token name="T_PHPDOX_OPEN_CURLY">{</token>
   </line>
-  <line no="1001">
+  <line no="1013">
     <token name="T_WHITESPACE">        </token>
     <token name="T_RETURN">return</token>
     <token name="T_WHITESPACE"> </token>
@@ -5797,31 +5877,31 @@
     <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="1002">
+  <line no="1014">
     <token name="T_WHITESPACE">    </token>
     <token name="T_PHPDOX_CLOSE_CURLY">}</token>
   </line>
-  <line no="1003"/>
-  <line no="1004">
+  <line no="1015"/>
+  <line no="1016">
     <token name="T_WHITESPACE">    </token>
     <token name="T_DOC_COMMENT">/**</token>
   </line>
-  <line no="1005">
+  <line no="1017">
     <token name="T_DOC_COMMENT">     * Test if this date is earlier or equal than</token>
   </line>
-  <line no="1006">
+  <line no="1018">
     <token name="T_DOC_COMMENT">     * @param \Rebelo\Date\Date $date</token>
   </line>
-  <line no="1007">
+  <line no="1019">
     <token name="T_DOC_COMMENT">     * @return bool</token>
   </line>
-  <line no="1008">
+  <line no="1020">
     <token name="T_DOC_COMMENT">     * @since 2.2.0</token>
   </line>
-  <line no="1009">
+  <line no="1021">
     <token name="T_DOC_COMMENT">     */</token>
   </line>
-  <line no="1010">
+  <line no="1022">
     <token name="T_WHITESPACE">    </token>
     <token name="T_PUBLIC">public</token>
     <token name="T_WHITESPACE"> </token>
@@ -5842,11 +5922,11 @@
     <token name="T_WHITESPACE"> </token>
     <token name="T_STRING">bool</token>
   </line>
-  <line no="1011">
+  <line no="1023">
     <token name="T_WHITESPACE">    </token>
     <token name="T_PHPDOX_OPEN_CURLY">{</token>
   </line>
-  <line no="1012">
+  <line no="1024">
     <token name="T_WHITESPACE">        </token>
     <token name="T_RETURN">return</token>
     <token name="T_WHITESPACE"> </token>
@@ -5863,31 +5943,31 @@
     <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="1013">
+  <line no="1025">
     <token name="T_WHITESPACE">    </token>
     <token name="T_PHPDOX_CLOSE_CURLY">}</token>
   </line>
-  <line no="1014"/>
-  <line no="1015">
+  <line no="1026"/>
+  <line no="1027">
     <token name="T_WHITESPACE">    </token>
     <token name="T_DOC_COMMENT">/**</token>
   </line>
-  <line no="1016">
+  <line no="1028">
     <token name="T_DOC_COMMENT">     * Test if this date is later or equal than</token>
   </line>
-  <line no="1017">
+  <line no="1029">
     <token name="T_DOC_COMMENT">     * @param \Rebelo\Date\Date $date</token>
   </line>
-  <line no="1018">
+  <line no="1030">
     <token name="T_DOC_COMMENT">     * @return bool</token>
   </line>
-  <line no="1019">
+  <line no="1031">
     <token name="T_DOC_COMMENT">     * @since 2.2.0</token>
   </line>
-  <line no="1020">
+  <line no="1032">
     <token name="T_DOC_COMMENT">     */</token>
   </line>
-  <line no="1021">
+  <line no="1033">
     <token name="T_WHITESPACE">    </token>
     <token name="T_PUBLIC">public</token>
     <token name="T_WHITESPACE"> </token>
@@ -5908,11 +5988,11 @@
     <token name="T_WHITESPACE"> </token>
     <token name="T_STRING">bool</token>
   </line>
-  <line no="1022">
+  <line no="1034">
     <token name="T_WHITESPACE">    </token>
     <token name="T_PHPDOX_OPEN_CURLY">{</token>
   </line>
-  <line no="1023">
+  <line no="1035">
     <token name="T_WHITESPACE">        </token>
     <token name="T_RETURN">return</token>
     <token name="T_WHITESPACE"> </token>
@@ -5929,12 +6009,252 @@
     <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="1024">
+  <line no="1036">
     <token name="T_WHITESPACE">    </token>
     <token name="T_PHPDOX_CLOSE_CURLY">}</token>
   </line>
-  <line no="1025">
+  <line no="1037"/>
+  <line no="1038">
+    <token name="T_WHITESPACE">    </token>
+    <token name="T_DOC_COMMENT">/**</token>
+  </line>
+  <line no="1039">
+    <token name="T_DOC_COMMENT">     * </token>
+  </line>
+  <line no="1040">
+    <token name="T_DOC_COMMENT">     * Get Date from NTP server</token>
+  </line>
+  <line no="1041">
+    <token name="T_DOC_COMMENT">     * </token>
+  </line>
+  <line no="1042">
+    <token name="T_DOC_COMMENT">     * @param string|null $server</token>
+  </line>
+  <line no="1043">
+    <token name="T_DOC_COMMENT">     * @param \DateTimeZone|null $timezone</token>
+  </line>
+  <line no="1044">
+    <token name="T_DOC_COMMENT">     * @return \Rebelo\Date\Date</token>
+  </line>
+  <line no="1045">
+    <token name="T_DOC_COMMENT">     * @throws \Rebelo\Date\DateNtpException</token>
+  </line>
+  <line no="1046">
+    <token name="T_DOC_COMMENT">     * @since 2.2.1</token>
+  </line>
+  <line no="1047">
+    <token name="T_DOC_COMMENT">     */</token>
+  </line>
+  <line no="1048">
+    <token name="T_WHITESPACE">    </token>
+    <token name="T_PUBLIC">public</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_STATIC">static</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_FUNCTION">function</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_STRING">ntp</token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_PHPDOX_QUESTION_MARK">?</token>
+    <token name="T_STRING">string</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$server</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_EQUAL">=</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_STRING">null</token>
+    <token name="T_PHPDOX_COMMA">,</token>
+  </line>
+  <line no="1049">
+    <token name="T_WHITESPACE">                               </token>
+    <token name="T_PHPDOX_QUESTION_MARK">?</token>
+    <token name="T_NS_SEPARATOR">\</token>
+    <token name="T_STRING">DateTimeZone</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$timezone</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_EQUAL">=</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_STRING">null</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_PHPDOX_COLON">:</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_NS_SEPARATOR">\</token>
+    <token name="T_STRING">Rebelo</token>
+    <token name="T_NS_SEPARATOR">\</token>
+    <token name="T_STRING">Date</token>
+    <token name="T_NS_SEPARATOR">\</token>
+    <token name="T_STRING">Date</token>
+  </line>
+  <line no="1050">
+    <token name="T_WHITESPACE">    </token>
+    <token name="T_PHPDOX_OPEN_CURLY">{</token>
+  </line>
+  <line no="1051"/>
+  <line no="1052">
+    <token name="T_WHITESPACE">        </token>
+    <token name="T_IF">if</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_VARIABLE">$server</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_IS_IDENTICAL">===</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_STRING">null</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_OPEN_CURLY">{</token>
+  </line>
+  <line no="1053">
+    <token name="T_WHITESPACE">            </token>
+    <token name="T_VARIABLE">$pool</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_EQUAL">=</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_STATIC">static</token>
+    <token name="T_DOUBLE_COLON">::</token>
+    <token name="T_VARIABLE">$ntpPoll</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="1054">
+    <token name="T_WHITESPACE">        </token>
+    <token name="T_PHPDOX_CLOSE_CURLY">}</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_ELSE">else</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_OPEN_CURLY">{</token>
+  </line>
+  <line no="1055">
+    <token name="T_WHITESPACE">            </token>
+    <token name="T_VARIABLE">$pool</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_EQUAL">=</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_OPEN_SQUARE">[</token>
+    <token name="T_VARIABLE">$server</token>
+    <token name="T_PHPDOX_CLOSE_SQUARE">]</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="1056">
+    <token name="T_WHITESPACE">        </token>
     <token name="T_PHPDOX_CLOSE_CURLY">}</token>
   </line>
-  <line no="1026"/>
+  <line no="1057"/>
+  <line no="1058">
+    <token name="T_WHITESPACE">        </token>
+    <token name="T_FOREACH">foreach</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_VARIABLE">$pool</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_AS">as</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$ntp</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_OPEN_CURLY">{</token>
+  </line>
+  <line no="1059">
+    <token name="T_WHITESPACE">            </token>
+    <token name="T_TRY">try</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_OPEN_CURLY">{</token>
+  </line>
+  <line no="1060">
+    <token name="T_WHITESPACE">                </token>
+    <token name="T_VARIABLE">$socket</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_EQUAL">=</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_NEW">new</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_STRING">Socket</token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_VARIABLE">$ntp</token>
+    <token name="T_PHPDOX_COMMA">,</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_LNUMBER">123</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="1061">
+    <token name="T_WHITESPACE">                </token>
+    <token name="T_VARIABLE">$ntp</token>
+    <token name="T_WHITESPACE">    </token>
+    <token name="T_PHPDOX_EQUAL">=</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_NEW">new</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_STRING">Client</token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_VARIABLE">$socket</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="1062">
+    <token name="T_WHITESPACE">                </token>
+    <token name="T_RETURN">return</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$ntp</token>
+    <token name="T_OBJECT_OPERATOR">-&gt;</token>
+    <token name="T_STRING">getTime</token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_VARIABLE">$timezone</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="1063">
+    <token name="T_WHITESPACE">            </token>
+    <token name="T_PHPDOX_CLOSE_CURLY">}</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_CATCH">catch</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_NS_SEPARATOR">\</token>
+    <token name="T_STRING">Rebelo</token>
+    <token name="T_NS_SEPARATOR">\</token>
+    <token name="T_STRING">Date</token>
+    <token name="T_NS_SEPARATOR">\</token>
+    <token name="T_STRING">DateNtpException</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$e</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_OPEN_CURLY">{</token>
+  </line>
+  <line no="1064">
+    <token name="T_WHITESPACE">                </token>
+  </line>
+  <line no="1065">
+    <token name="T_WHITESPACE">            </token>
+    <token name="T_PHPDOX_CLOSE_CURLY">}</token>
+  </line>
+  <line no="1066">
+    <token name="T_WHITESPACE">        </token>
+    <token name="T_PHPDOX_CLOSE_CURLY">}</token>
+  </line>
+  <line no="1067">
+    <token name="T_WHITESPACE">        </token>
+    <token name="T_THROW">throw</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_NEW">new</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_NS_SEPARATOR">\</token>
+    <token name="T_STRING">Rebelo</token>
+    <token name="T_NS_SEPARATOR">\</token>
+    <token name="T_STRING">Date</token>
+    <token name="T_NS_SEPARATOR">\</token>
+    <token name="T_STRING">DateNtpException</token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"Failling get data from ntp pool"</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="1068">
+    <token name="T_WHITESPACE">    </token>
+    <token name="T_PHPDOX_CLOSE_CURLY">}</token>
+  </line>
+  <line no="1069">
+    <token name="T_PHPDOX_CLOSE_CURLY">}</token>
+  </line>
 </source>

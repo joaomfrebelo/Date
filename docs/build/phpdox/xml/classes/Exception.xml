@@ -91,4 +91,4 @@
       <return type="void"/>
     </docblock>
   </method>
-<extenders><extender full="Rebelo\Date\DateException" namespace="Rebelo\Date" name="DateException"/><extender full="Rebelo\Date\DateFormatException" namespace="Rebelo\Date" name="DateFormatException"/><extender full="Rebelo\Date\DateIntervalException" namespace="Rebelo\Date" name="DateIntervalException"/><extender full="Rebelo\Date\DateParseException" namespace="Rebelo\Date" name="DateParseException"/></extenders></class>
+<extenders><extender full="Rebelo\Date\DateException" namespace="Rebelo\Date" name="DateException"/><extender full="Rebelo\Date\DateFormatException" namespace="Rebelo\Date" name="DateFormatException"/><extender full="Rebelo\Date\DateIntervalException" namespace="Rebelo\Date" name="DateIntervalException"/><extender full="Rebelo\Date\DateNtpException" namespace="Rebelo\Date" name="DateNtpException"/><extender full="Rebelo\Date\DateParseException" namespace="Rebelo\Date" name="DateParseException"/></extenders></class>

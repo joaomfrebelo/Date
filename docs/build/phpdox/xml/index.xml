@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <index xmlns="http://xml.phpdox.net/src" basedir="D:/NetBeansProjects/PHP/Date/src">
   <namespace name="Rebelo\Date">
+    <class name="Client" src="Rebelo/Date/Client.php" description="NTP client" xml="classes/Rebelo_Date_Client.xml"/>
     <class name="Date" src="Rebelo/Date/Date.php" description="Date class This class relays on the DateTime class of php but change the return type for some methods and have more methods." xml="classes/Rebelo_Date_Date.xml"/>
     <class name="DateException" src="Rebelo/Date/DateException.php" description="DateParseException" xml="classes/Rebelo_Date_DateException.xml"/>
     <class name="DateFormatException" src="Rebelo/Date/DateFormatException.php" description="DateFormatException" xml="classes/Rebelo_Date_DateFormatException.xml"/>
     <class name="DateInterval" src="Rebelo/Date/DateInterval.php" description="The class is the same the the PHP native DateInterval but the contructor  in case of excetpion will throws the \Rebelo\Date\DateIntervalException" xml="classes/Rebelo_Date_DateInterval.xml"/>
     <class name="DateIntervalException" src="Rebelo/Date/DateIntervalException.php" description="DateInterval" xml="classes/Rebelo_Date_DateIntervalException.xml"/>
+    <class name="DateNtpException" src="Rebelo/Date/DateNtpException.php" description="DateNtpException" xml="classes/Rebelo_Date_DateNtpException.xml"/>
     <class name="DateParseException" src="Rebelo/Date/DateParseException.php" description="DateParseException" xml="classes/Rebelo_Date_DateParseException.xml"/>
+    <class name="Socket" src="Rebelo/Date/Socket.php" description="UDP socket wrapper" xml="classes/Rebelo_Date_Socket.xml"/>
   </namespace>
   <namespace name="">
     <class name="Exception" xml="classes/Exception.xml"/>

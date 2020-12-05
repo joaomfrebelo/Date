@@ -59,7 +59,7 @@
             <a href="#methods">Methods</a>
           </li>
           <li>
-            <a href="../source/Rebelo/Date/Date.php.xhtml#line23">Source</a>
+            <a href="../source/Rebelo/Date/Date.php.xhtml#line21">Source</a>
           </li>
         </ul>
       </nav>
@@ -72,7 +72,11 @@
         </ul>
         <h2 id="synopsis">Synopsis</h2>
         <div class="synopsis">class Date
-            {<br/><ul class="none"><li>// constants</li><li>const ATOM = "Y-m-d\TH:i:sP";</li><li>const COOKIE = "l, d-M-Y H:i:s T";</li><li>const ISO8601 = "Y-m-d\TH:i:sO";</li><li>const RFC822 = "D, d M y H:i:s O";</li><li>const RFC850 = "l, d-M-y H:i:s T";</li><li>const RFC1036 = "D, d M y H:i:s O";</li><li>const RFC1123 = "D, d M Y H:i:s O";</li><li>const RFC2822 = "D, d M Y H:i:s O";</li><li>const RFC3339 = "Y-m-d\TH:i:sP";</li><li>const RFC3339_EXTENDED = "Y-m-d\TH:i:s.vP";</li><li>const RSS = "D, d M Y H:i:s O";</li><li>const W3C = "Y-m-d\TH:i:sP";</li><li>const SQL_DATE = "Y-m-d";</li><li>const DATE_T_TIME = "Y-m-d\TH:i:s";</li><li>const DATE_TIME = "Y-m-d H:i:s";</li><li>const SQL_DATETIME = "Y-m-d H:i:s";</li><li>const DAY = "d";</li><li>const DAY_LESS = "d";</li><li>const DAY_TEXT_SHORT = "D";</li><li>const DAY_TEXT = "l";</li><li>const ENGLISH_SUFIX = "S";</li><li>const DAY_OF_YAER = "z";</li><li>const MONTH_TEXT = "F";</li><li>const MONTH_TEXT_SHORT = "M";</li><li>const MONTH = "m";</li><li>const MONTH_SHORT = "n";</li><li>const YAER = "Y";</li><li>const YEAR_SHORT = "y";</li><li>const ANTE_MERIDIEM = "a";</li><li>const POST_MERIDIEM = "A";</li><li>const HOUR_12 = "h";</li><li>const HOUR_12_SHORT = "g";</li><li>const HOUR_24 = "H";</li><li>const HOUR_24_SHORT = "G";</li><li>const MINUTES = "i";</li><li>const SECONDS = "s";</li><li>const MICRO_SECONDS = "u";</li><li>const MICRO_SEC_SHORT = "v";</li><li>const UNIX_TIMESTAMP = "U";</li><li>const TIME = "H:i:s";</li><li>const TIME_MICRO_SECONDS = "H:i:s.v";</li><li>const TIME_MICRO_L_SECONDS = "H:i:s.u";</li></ul><ul class="none"><li>// members</li><li>protected <span title="\DateTime">DateTime</span> <a href="#members">$date</a>;
+            {<br/><ul class="none"><li>// constants</li><li>const ATOM = "Y-m-d\TH:i:sP";</li><li>const COOKIE = "l, d-M-Y H:i:s T";</li><li>const ISO8601 = "Y-m-d\TH:i:sO";</li><li>const RFC822 = "D, d M y H:i:s O";</li><li>const RFC850 = "l, d-M-y H:i:s T";</li><li>const RFC1036 = "D, d M y H:i:s O";</li><li>const RFC1123 = "D, d M Y H:i:s O";</li><li>const RFC2822 = "D, d M Y H:i:s O";</li><li>const RFC3339 = "Y-m-d\TH:i:sP";</li><li>const RFC3339_EXTENDED = "Y-m-d\TH:i:s.vP";</li><li>const RSS = "D, d M Y H:i:s O";</li><li>const W3C = "Y-m-d\TH:i:sP";</li><li>const SQL_DATE = "Y-m-d";</li><li>const DATE_T_TIME = "Y-m-d\TH:i:s";</li><li>const DATE_TIME = "Y-m-d H:i:s";</li><li>const SQL_DATETIME = "Y-m-d H:i:s";</li><li>const DAY = "d";</li><li>const DAY_LESS = "d";</li><li>const DAY_TEXT_SHORT = "D";</li><li>const DAY_TEXT = "l";</li><li>const ENGLISH_SUFIX = "S";</li><li>const DAY_OF_YAER = "z";</li><li>const MONTH_TEXT = "F";</li><li>const MONTH_TEXT_SHORT = "M";</li><li>const MONTH = "m";</li><li>const MONTH_SHORT = "n";</li><li>const YAER = "Y";</li><li>const YEAR_SHORT = "y";</li><li>const ANTE_MERIDIEM = "a";</li><li>const POST_MERIDIEM = "A";</li><li>const HOUR_12 = "h";</li><li>const HOUR_12_SHORT = "g";</li><li>const HOUR_24 = "H";</li><li>const HOUR_24_SHORT = "G";</li><li>const MINUTES = "i";</li><li>const SECONDS = "s";</li><li>const MICRO_SECONDS = "u";</li><li>const MICRO_SEC_SHORT = "v";</li><li>const UNIX_TIMESTAMP = "U";</li><li>const TIME = "H:i:s";</li><li>const TIME_MICRO_SECONDS = "H:i:s.v";</li><li>const TIME_MICRO_L_SECONDS = "H:i:s.u";</li></ul><ul class="none"><li>// members</li><li>public static <span title="\DateTimeZone|null">DateTimeZone|null</span> <a href="#members">$defaultTimeZone</a> =
+                        NULL;
+                    </li><li>public static array <a href="#members">$ntpPoll</a> =
+                        ;
+                    </li><li>protected <span title="\DateTime">DateTime</span> <a href="#members">$date</a>;
                     </li></ul><ul class="none"><li>// methods</li><li>public void <a title="Rebelo\Date\Date" href="../classes/Rebelo_Date_Date/__construct.xhtml">__construct</a>()
                     </li><li>public static <span title="Date">Date</span> <a title="Rebelo\Date\Date" href="../classes/Rebelo_Date_Date/parse.xhtml">parse</a>()
                     </li><li>public static <span title="Date">Date</span> <a title="Rebelo\Date\Date" href="../classes/Rebelo_Date_Date/createFromFormat.xhtml">createFromFormat</a>()
@@ -109,6 +113,7 @@
                     </li><li>public bool <a title="Rebelo\Date\Date" href="../classes/Rebelo_Date_Date/isEqual.xhtml">isEqual</a>()
                     </li><li>public bool <a title="Rebelo\Date\Date" href="../classes/Rebelo_Date_Date/isEarlierOrEqual.xhtml">isEarlierOrEqual</a>()
                     </li><li>public bool <a title="Rebelo\Date\Date" href="../classes/Rebelo_Date_Date/isLaterOrEqual.xhtml">isLaterOrEqual</a>()
+                    </li><li>public static <span title="Date">Date</span> <a title="Rebelo\Date\Date" href="../classes/Rebelo_Date_Date/ntp.xhtml">ntp</a>()
                     </li></ul>
 
             }<br/></div>
@@ -299,6 +304,15 @@
                 —
                 <a title="\DateTime" href="../classes/_DateTime.xhtml">\DateTime</a><br/><span class="indent">The base object</span></li>
           </ul>
+          <h4>public</h4>
+          <ul class="members">
+            <li id="defaultTimeZone"><strong>$defaultTimeZone</strong>
+                —
+                <a title="\DateTimeZone|null" href="../classes/_DateTimeZone|null.xhtml">\DateTimeZone|null</a><br/><span class="indent">The Default \DateTimeZone</span></li>
+            <li id="ntpPoll"><strong>$ntpPoll</strong>
+                —
+                array<br/><span class="indent">Default pool of ntp servers</span></li>
+          </ul>
         </div>
         <h2 id="methods">Methods</h2>
         <div class="styled">
@@ -347,6 +361,8 @@
                 — Test if this date is later or equal than</li>
             <li id="modify"><a title="Rebelo\Date\Date" href="../classes/Rebelo_Date_Date/modify.xhtml">modify()</a>
                 — Alters the timestamp of this Date</li>
+            <li id="ntp"><a title="Rebelo\Date\Date" href="../classes/Rebelo_Date_Date/ntp.xhtml">ntp()</a>
+                — Get Date from NTP server</li>
             <li id="parse"><a title="Rebelo\Date\Date" href="../classes/Rebelo_Date_Date/parse.xhtml">parse()</a>
                 — Create a Date object from a string</li>
             <li id="setDate"><a title="Rebelo\Date\Date" href="../classes/Rebelo_Date_Date/setDate.xhtml">setDate()</a>

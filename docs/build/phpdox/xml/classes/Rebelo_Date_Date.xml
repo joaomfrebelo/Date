@@ -1,12 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<class xmlns="http://xml.phpdox.net/src" full="Rebelo\Date\Date" namespace="Rebelo\Date" name="Date" abstract="false" final="false" start="23" end="1025">
-  <file path="D:/NetBeansProjects/PHP/Date/src/Rebelo/Date" file="Date.php" realpath="D:/NetBeansProjects/PHP/Date/src/Rebelo/Date/Date.php" size="27113" time="2020-09-05T11:01:12+01:00" unixtime="1599300072" sha1="c3c71b49dabda7452c20ec158c12f47e812437be" relative="Rebelo/Date/Date.php"/>
+<class xmlns="http://xml.phpdox.net/src" full="Rebelo\Date\Date" namespace="Rebelo\Date" name="Date" abstract="false" final="false" start="21" end="1069">
+  <file path="D:/NetBeansProjects/PHP/Date/src/Rebelo/Date" file="Date.php" realpath="D:/NetBeansProjects/PHP/Date/src/Rebelo/Date/Date.php" size="28372" time="2020-12-05T18:41:22+00:00" unixtime="1607193682" sha1="3ad89c1944a9b0bd5280b28a86318f7e4fc2ad3e" relative="Rebelo/Date/Date.php"/>
   <docblock>
     <description compact="Date class This class relays on the DateTime class of php but change the return type for some methods and have more methods.">Methods like add and sub return a new Object instead of change
 the instance it self</description>
     <author value="João Rebelo"/>
     <since value="1.0.0"/>
   </docblock>
+  <member name="defaultTimeZone" default="NULL" visibility="public" static="true" line="27">
+    <docblock>
+      <description compact="The Default \DateTimeZone"/>
+      <var type="object">
+        <type full="\DateTimeZone|null" namespace="" name="DateTimeZone|null"/>
+      </var>
+    </docblock>
+  </member>
+  <member name="ntpPoll" default="" type="array" visibility="public" static="true" line="33">
+    <docblock>
+      <description compact="Default pool of ntp servers"/>
+      <var type="array" of="object">
+        <type full="Rebelo\Date\string" namespace="Rebelo\Date" name="string"/>
+      </var>
+    </docblock>
+  </member>
   <constant type="string" name="ATOM" value="&quot;Y-m-d\TH:i:sP&quot;">
     <docblock>
       <description/>
@@ -318,7 +334,7 @@ Example: st, nd, rd or th.</description>
       <since value="1.0.0"/>
     </docblock>
   </constant>
-  <member name="date" visibility="protected" static="false" line="374">
+  <member name="date" visibility="protected" static="false" line="386">
     <docblock>
       <description compact="The base object"/>
       <var description="The PHP native \DateTime" type="object">
@@ -327,18 +343,20 @@ Example: st, nd, rd or th.</description>
       <since value="1.0.0"/>
     </docblock>
   </member>
-  <constructor name="__construct" start="382" end="388" abstract="false" final="false" static="false" visibility="public">
+  <constructor name="__construct" start="394" end="401" abstract="false" final="false" static="false" visibility="public">
     <docblock>
       <description compact="DateTime"/>
-      <param description="&lt;p&gt;A date/time string. Valid formats are same as fo rnative PHP \DateTime.&lt;/p&gt; &lt;p&gt;Enter &lt;i&gt;&quot;now&quot;&lt;/i&gt; here to obtain the current time when using the &lt;code&gt;$timezone&lt;/code&gt; parameter.&lt;/p&gt;" type="string" variable="$time"/>
+      <param description="&lt;p&gt;A date/time string. Valid formats are same as fo rnative PHP \DateTime.&lt;/p&gt; &lt;p&gt;Enter &lt;i&gt;&quot;now&quot;&lt;/i&gt; here to obtain the current time when using the &lt;code&gt;$timezone&lt;/code&gt; parameter.&lt;/p&gt;" type="object" variable="$time">
+        <type full="Rebelo\Date\string|null" namespace="Rebelo\Date" name="string|null"/>
+      </param>
       <param description="$timezone &lt;p&gt;A DateTimeZone object representing the timezone of &lt;code&gt;$time&lt;/code&gt;.&lt;/p&gt;&lt;p&gt;If &lt;code&gt;$timezone&lt;/code&gt; is omitted, the current timezone will be used.&lt;/p&gt; &lt;p&gt;&lt;b&gt;Note&lt;/b&gt;:&lt;/p&gt;&lt;p&gt;The &lt;code&gt;$timezone&lt;/code&gt; parameter and the current timezone are ignored when the &lt;code&gt;$time&lt;/code&gt; parameter either is a UNIX timestamp (e.g. &lt;i&gt;@946684800&lt;/i&gt;) or specifies a timezone" type="object" variable="$timezone">(e.g. &lt;i&gt;2010-01-28T15:00:00+02:00&lt;/i&gt;).&lt;/p&gt;<type full="\DateTimeZone" namespace="" name="DateTimeZone"/></param>
     </docblock>
-    <parameter name="time" byreference="false" type="string" default="&quot;now&quot;"/>
+    <parameter name="time" byreference="false" nullable="true" type="string" default="&quot;now&quot;"/>
     <parameter name="timezone" byreference="false" type="object" default="NULL">
       <type full="DateTimeZone" namespace="" name="DateTimeZone"/>
     </parameter>
   </constructor>
-  <method name="parse" start="404" end="456" abstract="false" final="false" static="true" visibility="public">
+  <method name="parse" start="417" end="475" abstract="false" final="false" static="true" visibility="public">
     <docblock>
       <description compact="Create a Date object from a string">The format is one of the use in PHP \DateTime
 If the Date is not valide it will throws \Rebelo\Date\DateParseException</description>
@@ -364,12 +382,12 @@ If the Date is not valide it will throws \Rebelo\Date\DateParseException</descri
       <type full="DateTimeZone" namespace="" name="DateTimeZone"/>
     </parameter>
     <inline>
-      <comment value="Set Hour to zero 00:00:00.000 whne no time is defined," line="430"/>
-      <comment value="to be possible compare two instance that only have date" line="431"/>
-      <comment value="and was instantiated in different instants" line="432"/>
+      <comment value="Set Hour to zero 00:00:00.000 whne no time is defined," line="449"/>
+      <comment value="to be possible compare two instance that only have date" line="450"/>
+      <comment value="and was instantiated in different instants" line="451"/>
     </inline>
   </method>
-  <method name="createFromFormat" start="467" end="474" abstract="false" final="false" static="true" visibility="public">
+  <method name="createFromFormat" start="486" end="491" abstract="false" final="false" static="true" visibility="public">
     <docblock>
       <description compact="Alias of Date::parse"/>
       <param type="string" variable="$format"/>
@@ -391,7 +409,7 @@ If the Date is not valide it will throws \Rebelo\Date\DateParseException</descri
       <type full="DateTimeZone" namespace="" name="DateTimeZone"/>
     </parameter>
   </method>
-  <method name="format" start="485" end="492" abstract="false" final="false" static="false" visibility="public">
+  <method name="format" start="502" end="509" abstract="false" final="false" static="false" visibility="public">
     <docblock>
       <description compact="Returns date formatted according to given format &lt;p&gt;Returns date formatted according to given format.&lt;/p&gt;"/>
       <param description="&lt;p&gt;Format accepted by &lt;code&gt;date()&lt;/code&gt;.&lt;/p&gt;" type="string" variable="$format"/>
@@ -404,7 +422,7 @@ If the Date is not valide it will throws \Rebelo\Date\DateParseException</descri
     <return type="string" nullable="false"/>
     <parameter name="format" byreference="false" type="string"/>
   </method>
-  <method name="add" start="503" end="517" abstract="false" final="false" static="false" visibility="public">
+  <method name="add" start="520" end="533" abstract="false" final="false" static="false" visibility="public">
     <docblock>
       <description compact="Return a new DateTime that is this DateTime plus the DateInterval.">This date value is not changed, the result is a new instance</description>
       <param type="object" variable="$interval">
@@ -422,7 +440,7 @@ If the Date is not valide it will throws \Rebelo\Date\DateParseException</descri
       <type full="Rebelo\Date\DateInterval" namespace="Rebelo\Date" name="DateInterval"/>
     </parameter>
   </method>
-  <method name="sub" start="527" end="539" abstract="false" final="false" static="false" visibility="public">
+  <method name="sub" start="543" end="554" abstract="false" final="false" static="false" visibility="public">
     <docblock>
       <description compact="Retrun a new Date that as the result of subtract to this the interval This Date value is not chenged, the result is a new instance"/>
       <param type="object" variable="$interval">
@@ -443,7 +461,7 @@ If the Date is not valide it will throws \Rebelo\Date\DateParseException</descri
       <type full="Rebelo\Date\DateInterval" namespace="Rebelo\Date" name="DateInterval"/>
     </parameter>
   </method>
-  <method name="diff" start="550" end="553" abstract="false" final="false" static="false" visibility="public">
+  <method name="diff" start="565" end="568" abstract="false" final="false" static="false" visibility="public">
     <docblock>
       <description compact="Returns the difference between two DateTime objects"/>
       <param type="object" variable="$datetime2">
@@ -465,7 +483,7 @@ If the Date is not valide it will throws \Rebelo\Date\DateParseException</descri
     </parameter>
     <parameter name="absolute" byreference="false" type="boolean" default="false"/>
   </method>
-  <method name="getOffset" start="560" end="563" abstract="false" final="false" static="false" visibility="public">
+  <method name="getOffset" start="575" end="578" abstract="false" final="false" static="false" visibility="public">
     <docblock>
       <description compact="Returns the timezone offset"/>
       <return type="int"/>
@@ -473,7 +491,7 @@ If the Date is not valide it will throws \Rebelo\Date\DateParseException</descri
     </docblock>
     <return type="int" nullable="false"/>
   </method>
-  <method name="getTimestamp" start="571" end="574" abstract="false" final="false" static="false" visibility="public">
+  <method name="getTimestamp" start="586" end="589" abstract="false" final="false" static="false" visibility="public">
     <docblock>
       <description compact="Gets the Unix timestamp"/>
       <return type="int"/>
@@ -481,7 +499,7 @@ If the Date is not valide it will throws \Rebelo\Date\DateParseException</descri
     </docblock>
     <return type="int" nullable="false"/>
   </method>
-  <method name="getTimezone" start="581" end="584" abstract="false" final="false" static="false" visibility="public">
+  <method name="getTimezone" start="596" end="599" abstract="false" final="false" static="false" visibility="public">
     <docblock>
       <description compact="Return time zone relative"/>
       <return type="object">
@@ -493,7 +511,7 @@ If the Date is not valide it will throws \Rebelo\Date\DateParseException</descri
       <type full="DateTimeZone" namespace="" name="DateTimeZone"/>
     </return>
   </method>
-  <method name="modify" start="594" end="604" abstract="false" final="false" static="false" visibility="public">
+  <method name="modify" start="609" end="619" abstract="false" final="false" static="false" visibility="public">
     <docblock>
       <description compact="Alters the timestamp of this Date"/>
       <link value="http://php.net/manual/en/datetime.modify.php Accept formats"/>
@@ -508,7 +526,7 @@ If the Date is not valide it will throws \Rebelo\Date\DateParseException</descri
     </return>
     <parameter name="modify" byreference="false" type="string"/>
   </method>
-  <method name="setDate" start="615" end="625" abstract="false" final="false" static="false" visibility="public">
+  <method name="setDate" start="630" end="640" abstract="false" final="false" static="false" visibility="public">
     <docblock>
       <description compact="Sets the date &lt;p&gt;Resets the current date of the DateTime object to a different date.&lt;/p&gt;"/>
       <param type="int" variable="$year"/>
@@ -526,10 +544,10 @@ If the Date is not valide it will throws \Rebelo\Date\DateParseException</descri
     <parameter name="month" byreference="false" type="int"/>
     <parameter name="day" byreference="false" type="int"/>
     <inline>
-      <comment value="To test if the date is valide, other wise throws exception" line="619"/>
+      <comment value="To test if the date is valide, other wise throws exception" line="634"/>
     </inline>
   </method>
-  <method name="setYaer" start="633" end="639" abstract="false" final="false" static="false" visibility="public">
+  <method name="setYaer" start="648" end="654" abstract="false" final="false" static="false" visibility="public">
     <docblock>
       <description compact="Set the year of this date object"/>
       <param type="int" variable="$year"/>
@@ -543,7 +561,7 @@ If the Date is not valide it will throws \Rebelo\Date\DateParseException</descri
     </return>
     <parameter name="year" byreference="false" type="int"/>
   </method>
-  <method name="setMonth" start="647" end="653" abstract="false" final="false" static="false" visibility="public">
+  <method name="setMonth" start="662" end="668" abstract="false" final="false" static="false" visibility="public">
     <docblock>
       <description compact="Set the month of this date object"/>
       <param type="int" variable="$month"/>
@@ -557,7 +575,7 @@ If the Date is not valide it will throws \Rebelo\Date\DateParseException</descri
     </return>
     <parameter name="month" byreference="false" type="int"/>
   </method>
-  <method name="setDay" start="661" end="667" abstract="false" final="false" static="false" visibility="public">
+  <method name="setDay" start="676" end="682" abstract="false" final="false" static="false" visibility="public">
     <docblock>
       <description compact="Set the day of month of this date object"/>
       <param type="int" variable="$day"/>
@@ -571,7 +589,7 @@ If the Date is not valide it will throws \Rebelo\Date\DateParseException</descri
     </return>
     <parameter name="day" byreference="false" type="int"/>
   </method>
-  <method name="setISODate" start="680" end="684" abstract="false" final="false" static="false" visibility="public">
+  <method name="setISODate" start="695" end="699" abstract="false" final="false" static="false" visibility="public">
     <docblock>
       <description compact="Sets the ISO date &lt;p&gt;Set a date according to the ISO 8601 standard - using weeks and day offsets rather than specific dates.&lt;/p&gt;"/>
       <param type="int" variable="$year"/>
@@ -589,7 +607,7 @@ If the Date is not valide it will throws \Rebelo\Date\DateParseException</descri
     <parameter name="week" byreference="false" type="int"/>
     <parameter name="day" byreference="false" type="integer" default="1"/>
   </method>
-  <method name="setTime" start="696" end="721" abstract="false" final="false" static="false" visibility="public">
+  <method name="setTime" start="711" end="733" abstract="false" final="false" static="false" visibility="public">
     <docblock>
       <description compact="Sets the time &lt;p&gt;Resets the current time of the DateTime object to a different time.&lt;/p&gt;"/>
       <param type="int" variable="$hour"/>
@@ -609,7 +627,7 @@ If the Date is not valide it will throws \Rebelo\Date\DateParseException</descri
     <parameter name="second" byreference="false" type="integer" default="0"/>
     <parameter name="microseconds" byreference="false" type="integer" default="0"/>
   </method>
-  <method name="setHour" start="731" end="738" abstract="false" final="false" static="false" visibility="public">
+  <method name="setHour" start="743" end="750" abstract="false" final="false" static="false" visibility="public">
     <docblock>
       <description compact="Set the hour of this Date object"/>
       <param type="int" variable="$hour"/>
@@ -623,7 +641,7 @@ If the Date is not valide it will throws \Rebelo\Date\DateParseException</descri
     </return>
     <parameter name="hour" byreference="false" type="int"/>
   </method>
-  <method name="setMinutes" start="748" end="755" abstract="false" final="false" static="false" visibility="public">
+  <method name="setMinutes" start="760" end="767" abstract="false" final="false" static="false" visibility="public">
     <docblock>
       <description compact="Set the minutes of this Date object"/>
       <param type="int" variable="$minute"/>
@@ -637,7 +655,7 @@ If the Date is not valide it will throws \Rebelo\Date\DateParseException</descri
     </return>
     <parameter name="minute" byreference="false" type="int"/>
   </method>
-  <method name="setSeconds" start="765" end="772" abstract="false" final="false" static="false" visibility="public">
+  <method name="setSeconds" start="777" end="784" abstract="false" final="false" static="false" visibility="public">
     <docblock>
       <description compact="Set the seconds of this Date object"/>
       <param type="int" variable="$seconds"/>
@@ -651,7 +669,7 @@ If the Date is not valide it will throws \Rebelo\Date\DateParseException</descri
     </return>
     <parameter name="seconds" byreference="false" type="int"/>
   </method>
-  <method name="setMicroseconds" start="782" end="789" abstract="false" final="false" static="false" visibility="public">
+  <method name="setMicroseconds" start="794" end="801" abstract="false" final="false" static="false" visibility="public">
     <docblock>
       <description compact="Set the microseconds of this Date object"/>
       <param type="int" variable="$microseconds"/>
@@ -665,7 +683,7 @@ If the Date is not valide it will throws \Rebelo\Date\DateParseException</descri
     </return>
     <parameter name="microseconds" byreference="false" type="int"/>
   </method>
-  <method name="setTimestamp" start="797" end="801" abstract="false" final="false" static="false" visibility="public">
+  <method name="setTimestamp" start="809" end="813" abstract="false" final="false" static="false" visibility="public">
     <docblock>
       <description compact="Set the Timestamp of this date"/>
       <param type="int" variable="$unixtimestamp"/>
@@ -679,7 +697,7 @@ If the Date is not valide it will throws \Rebelo\Date\DateParseException</descri
     </return>
     <parameter name="unixtimestamp" byreference="false" type="int"/>
   </method>
-  <method name="setTimezone" start="811" end="815" abstract="false" final="false" static="false" visibility="public">
+  <method name="setTimezone" start="823" end="827" abstract="false" final="false" static="false" visibility="public">
     <docblock>
       <description compact="Set the time zone of this date"/>
       <param type="object" variable="$timezone">
@@ -697,7 +715,7 @@ If the Date is not valide it will throws \Rebelo\Date\DateParseException</descri
       <type full="DateTimeZone" namespace="" name="DateTimeZone"/>
     </parameter>
   </method>
-  <method name="addYears" start="826" end="838" abstract="false" final="false" static="false" visibility="public">
+  <method name="addYears" start="838" end="850" abstract="false" final="false" static="false" visibility="public">
     <docblock>
       <description compact="Return a new Date object that is this add with the number of years To subtract the $years must be negative"/>
       <param description="Number of years to add or negative integer to subtract" type="int" variable="$years"/>
@@ -714,7 +732,7 @@ If the Date is not valide it will throws \Rebelo\Date\DateParseException</descri
     </return>
     <parameter name="years" byreference="false" type="int"/>
   </method>
-  <method name="addMonths" start="848" end="860" abstract="false" final="false" static="false" visibility="public">
+  <method name="addMonths" start="860" end="872" abstract="false" final="false" static="false" visibility="public">
     <docblock>
       <description compact="Return a new Date object that is this add with the number of months To subtract the $months must be negative"/>
       <param description="Number of months to add or negative integer to subtract" type="int" variable="$months"/>
@@ -728,7 +746,7 @@ If the Date is not valide it will throws \Rebelo\Date\DateParseException</descri
     </return>
     <parameter name="months" byreference="false" type="int"/>
   </method>
-  <method name="addDays" start="870" end="882" abstract="false" final="false" static="false" visibility="public">
+  <method name="addDays" start="882" end="894" abstract="false" final="false" static="false" visibility="public">
     <docblock>
       <description compact="Return a new Date object that is this Date add with the number of days To subtract the $days must be negative integer"/>
       <param description="Number of days to add or negative integer to subtract" type="int" variable="$days"/>
@@ -742,7 +760,7 @@ If the Date is not valide it will throws \Rebelo\Date\DateParseException</descri
     </return>
     <parameter name="days" byreference="false" type="int"/>
   </method>
-  <method name="addHours" start="892" end="904" abstract="false" final="false" static="false" visibility="public">
+  <method name="addHours" start="904" end="916" abstract="false" final="false" static="false" visibility="public">
     <docblock>
       <description compact="Return a new Date object that is this add with the number of hours To subtract the $hours must be negative integer"/>
       <param description="Number of hours to add or negative integer to subtract" type="int" variable="$hours"/>
@@ -756,7 +774,7 @@ If the Date is not valide it will throws \Rebelo\Date\DateParseException</descri
     </return>
     <parameter name="hours" byreference="false" type="int"/>
   </method>
-  <method name="addMinutes" start="914" end="926" abstract="false" final="false" static="false" visibility="public">
+  <method name="addMinutes" start="926" end="938" abstract="false" final="false" static="false" visibility="public">
     <docblock>
       <description compact="Return a new Date object that is this add with the number of minutes To subtract the $minutes must be negative integer"/>
       <param description="Number of minutes to add or negative integer to subtract" type="int" variable="$minutes"/>
@@ -770,7 +788,7 @@ If the Date is not valide it will throws \Rebelo\Date\DateParseException</descri
     </return>
     <parameter name="minutes" byreference="false" type="int"/>
   </method>
-  <method name="addSeconds" start="936" end="948" abstract="false" final="false" static="false" visibility="public">
+  <method name="addSeconds" start="948" end="960" abstract="false" final="false" static="false" visibility="public">
     <docblock>
       <description compact="Return a new Date object that is this add with the number of seconds To subtract the $seconds must be negative integer"/>
       <param type="int" variable="$seconds"/>
@@ -784,7 +802,7 @@ If the Date is not valide it will throws \Rebelo\Date\DateParseException</descri
     </return>
     <parameter name="seconds" byreference="false" type="int"/>
   </method>
-  <method name="toDateTime" start="957" end="960" abstract="false" final="false" static="false" visibility="public">
+  <method name="toDateTime" start="969" end="972" abstract="false" final="false" static="false" visibility="public">
     <docblock>
       <description compact="Returne the native PHP DateTime class"/>
       <return type="object">
@@ -796,13 +814,13 @@ If the Date is not valide it will throws \Rebelo\Date\DateParseException</descri
       <type full="DateTime" namespace="" name="DateTime"/>
     </return>
   </method>
-  <method name="__clone" start="966" end="969" abstract="false" final="false" static="false" visibility="public">
+  <method name="__clone" start="978" end="981" abstract="false" final="false" static="false" visibility="public">
     <docblock>
       <description/>
       <since value="2.0.0"/>
     </docblock>
   </method>
-  <method name="isEarlier" start="977" end="980" abstract="false" final="false" static="false" visibility="public">
+  <method name="isEarlier" start="989" end="992" abstract="false" final="false" static="false" visibility="public">
     <docblock>
       <description compact="Test if this date is earlier than"/>
       <param type="object" variable="$date">
@@ -818,7 +836,7 @@ If the Date is not valide it will throws \Rebelo\Date\DateParseException</descri
       <type full="Rebelo\Date\Date" namespace="Rebelo\Date" name="Date"/>
     </parameter>
   </method>
-  <method name="isLater" start="988" end="991" abstract="false" final="false" static="false" visibility="public">
+  <method name="isLater" start="1000" end="1003" abstract="false" final="false" static="false" visibility="public">
     <docblock>
       <description compact="Test if this date is later than"/>
       <param type="object" variable="$date">
@@ -834,7 +852,7 @@ If the Date is not valide it will throws \Rebelo\Date\DateParseException</descri
       <type full="Rebelo\Date\Date" namespace="Rebelo\Date" name="Date"/>
     </parameter>
   </method>
-  <method name="isEqual" start="999" end="1002" abstract="false" final="false" static="false" visibility="public">
+  <method name="isEqual" start="1011" end="1014" abstract="false" final="false" static="false" visibility="public">
     <docblock>
       <description compact="Test if this date is equal than"/>
       <param type="object" variable="$date">
@@ -850,7 +868,7 @@ If the Date is not valide it will throws \Rebelo\Date\DateParseException</descri
       <type full="Rebelo\Date\Date" namespace="Rebelo\Date" name="Date"/>
     </parameter>
   </method>
-  <method name="isEarlierOrEqual" start="1010" end="1013" abstract="false" final="false" static="false" visibility="public">
+  <method name="isEarlierOrEqual" start="1022" end="1025" abstract="false" final="false" static="false" visibility="public">
     <docblock>
       <description compact="Test if this date is earlier or equal than"/>
       <param type="object" variable="$date">
@@ -866,7 +884,7 @@ If the Date is not valide it will throws \Rebelo\Date\DateParseException</descri
       <type full="Rebelo\Date\Date" namespace="Rebelo\Date" name="Date"/>
     </parameter>
   </method>
-  <method name="isLaterOrEqual" start="1021" end="1024" abstract="false" final="false" static="false" visibility="public">
+  <method name="isLaterOrEqual" start="1033" end="1036" abstract="false" final="false" static="false" visibility="public">
     <docblock>
       <description compact="Test if this date is later or equal than"/>
       <param type="object" variable="$date">
@@ -880,6 +898,31 @@ If the Date is not valide it will throws \Rebelo\Date\DateParseException</descri
     <return type="bool" nullable="false"/>
     <parameter name="date" byreference="false" type="object">
       <type full="Rebelo\Date\Date" namespace="Rebelo\Date" name="Date"/>
+    </parameter>
+  </method>
+  <method name="ntp" start="1048" end="1068" abstract="false" final="false" static="true" visibility="public">
+    <docblock>
+      <description compact="Get Date from NTP server"/>
+      <param type="object" variable="$server">
+        <type full="Rebelo\Date\string|null" namespace="Rebelo\Date" name="string|null"/>
+      </param>
+      <param type="object" variable="$timezone">
+        <type full="\DateTimeZone|null" namespace="" name="DateTimeZone|null"/>
+      </param>
+      <return type="object">
+        <type full="\Rebelo\Date\Date" namespace="\Rebelo\Date" name="Date"/>
+      </return>
+      <throws type="object">
+        <type full="\Rebelo\Date\DateNtpException" namespace="\Rebelo\Date" name="DateNtpException"/>
+      </throws>
+      <since value="2.2.1"/>
+    </docblock>
+    <return type="object" nullable="false">
+      <type full="Rebelo\Date\Date" namespace="Rebelo\Date" name="Date"/>
+    </return>
+    <parameter name="server" byreference="false" nullable="true" type="string" default="NULL"/>
+    <parameter name="timezone" byreference="false" nullable="true" type="object" default="NULL">
+      <type full="DateTimeZone" namespace="" name="DateTimeZone"/>
     </parameter>
   </method>
 </class>

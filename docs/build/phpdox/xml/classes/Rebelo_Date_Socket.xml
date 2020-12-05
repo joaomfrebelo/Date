@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="Rebelo\Date\Socket" namespace="Rebelo\Date" name="Socket" abstract="false" final="false" start="20" end="188">
+  <file path="D:/NetBeansProjects/PHP/Date/src/Rebelo/Date" file="Socket.php" realpath="D:/NetBeansProjects/PHP/Date/src/Rebelo/Date/Socket.php" size="4021" time="2020-12-05T18:54:47+00:00" unixtime="1607194487" sha1="82ef5fa79a1dc673cd7b2468f3182feb5ec77864" relative="Rebelo/Date/Socket.php"/>
+  <docblock>
+    <description compact="UDP socket wrapper">Opens up a udp socket. Reads and
+writes data to the open socket.</description>
+    <link value="https://github.com/bdluk/ntp forked"/>
+    <see value="http://php.net/manual/en/function.fsockopen.php"/>
+    <since value="2.2.1"/>
+  </docblock>
+  <member name="resource" visibility="protected" static="false" line="25">
+    <docblock>
+      <description/>
+      <var type="resource"/>
+    </docblock>
+  </member>
+  <member name="host" visibility="protected" static="false" line="30">
+    <docblock>
+      <description/>
+      <var type="string"/>
+    </docblock>
+  </member>
+  <member name="port" visibility="protected" static="false" line="35">
+    <docblock>
+      <description/>
+      <var type="int"/>
+    </docblock>
+  </member>
+  <member name="timeout" default="2" type="integer" visibility="public" static="true" line="41">
+    <docblock>
+      <description compact="The socket timeout"/>
+      <var type="int"/>
+    </docblock>
+  </member>
+  <constructor name="__construct" start="50" end="56" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Build a new instance of a socket"/>
+      <param description="The ntp server url" type="string" variable="$host"/>
+      <param description="The port the ntp server is listening on" type="int" variable="$port"/>
+      <since value="2.2.1"/>
+    </docblock>
+    <parameter name="host" byreference="false" type="string"/>
+    <parameter name="port" byreference="false" type="integer" default="123"/>
+  </constructor>
+  <method name="write" start="66" end="69" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Write data to the socket"/>
+      <param description="The data to write" type="string" variable="$data"/>
+      <return type="object">
+        <type full="Rebelo\Date\void" namespace="Rebelo\Date" name="void"/>
+      </return>
+      <since value="2.2.1"/>
+    </docblock>
+    <return type="void" nullable="false"/>
+    <parameter name="data" byreference="false" type="string"/>
+  </method>
+  <method name="read" start="78" end="100" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Read data from the socket"/>
+      <throws description="When the connection timed out" type="object">
+        <type full="\Rebelo\Date\DateNtpException" namespace="\Rebelo\Date" name="DateNtpException"/>
+      </throws>
+      <return type="string"/>
+      <since value="2.2.1"/>
+    </docblock>
+    <return type="string" nullable="false"/>
+  </method>
+  <method name="close" start="108" end="112" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Closes the socket connection"/>
+      <return type="object">
+        <type full="Rebelo\Date\void" namespace="Rebelo\Date" name="void"/>
+      </return>
+      <since value="2.2.1"/>
+    </docblock>
+    <return type="void" nullable="false"/>
+  </method>
+  <method name="isConnected" start="120" end="123" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Check if the connection is open"/>
+      <return type="object">
+        <type full="Rebelo\Date\bool" namespace="Rebelo\Date" name="bool"/>
+      </return>
+      <since value="2.2.1"/>
+    </docblock>
+    <return type="bool" nullable="false"/>
+  </method>
+  <method name="getAddress" start="131" end="137" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Gets the full address from the socket"/>
+      <return description="The address if there is a socket" type="object">
+        <type full="Rebelo\Date\string|null" namespace="Rebelo\Date" name="string|null"/>
+      </return>
+      <since value="2.2.1"/>
+    </docblock>
+    <return type="string" nullable="true"/>
+  </method>
+  <method name="resolveAddress" start="147" end="155" abstract="false" final="false" static="false" visibility="protected">
+    <docblock>
+      <description compact="Gets the ip address from the domain name"/>
+      <param description="The domain name to resolve" type="string" variable="$host"/>
+      <return type="string"/>
+      <since value="2.2.1"/>
+    </docblock>
+    <return type="string" nullable="false"/>
+    <parameter name="host" byreference="false" type="string"/>
+  </method>
+  <method name="getMetadata" start="163" end="166" abstract="false" final="false" static="false" visibility="protected">
+    <docblock>
+      <description compact="Returns a stream's meta data"/>
+      <return type="array"/>
+      <since value="2.2.1"/>
+    </docblock>
+    <return type="array" nullable="false"/>
+  </method>
+  <method name="connect" start="174" end="187" abstract="false" final="false" static="false" visibility="private">
+    <docblock>
+      <description compact="Connect to server"/>
+      <throws type="object">
+        <type full="\Rebelo\Date\DateNtpException" namespace="\Rebelo\Date" name="DateNtpException"/>
+      </throws>
+      <return type="object">
+        <type full="Rebelo\Date\void" namespace="Rebelo\Date" name="void"/>
+      </return>
+      <since value="2.2.1"/>
+    </docblock>
+    <return type="void" nullable="false"/>
+  </method>
+</class>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="Rebelo\Date\Client" namespace="Rebelo\Date" name="Client" abstract="false" final="false" start="18" end="125">
+  <file path="D:/NetBeansProjects/PHP/Date/src/Rebelo/Date" file="Client.php" realpath="D:/NetBeansProjects/PHP/Date/src/Rebelo/Date/Client.php" size="2974" time="2020-12-05T18:30:40+00:00" unixtime="1607193040" sha1="8bb001ee9b4ce16de93165878f089e170d228b16" relative="Rebelo/Date/Client.php"/>
+  <docblock>
+    <description compact="NTP client">This is the main interface for getting
+the current time from an ntp server.</description>
+    <link value="https://github.com/bdluk/ntp forked"/>
+    <since value="2.2.1"/>
+  </docblock>
+  <member name="socket" visibility="protected" static="false" line="23">
+    <docblock>
+      <description/>
+      <var description="Socket" type="object">
+        <type full="\Rebelo\Date\Socket" namespace="\Rebelo\Date" name="Socket"/>
+      </var>
+    </docblock>
+  </member>
+  <constructor name="__construct" start="31" end="34" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Build a new instance of the ntp client"/>
+      <param description="The socket used for the connection" type="object" variable="$socket">
+        <type full="\Rebelo\Date\Socket" namespace="\Rebelo\Date" name="Socket"/>
+      </param>
+      <since value="2.2.1"/>
+    </docblock>
+    <parameter name="socket" byreference="false" type="object">
+      <type full="Rebelo\Date\Socket" namespace="Rebelo\Date" name="Socket"/>
+    </parameter>
+  </constructor>
+  <method name="getTime" start="45" end="68" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Sends a request to the remote ntp server for the current time.">if $timezone and \Rebelo\Date\Date::$defaultTimeZone the timezone os set ro UTC</description>
+      <param type="object" variable="$timezone">
+        <type full="\DateTimeZone|null" namespace="" name="DateTimeZone|null"/>
+      </param>
+      <return type="object">
+        <type full="\Rebelo\Date\Date" namespace="\Rebelo\Date" name="Date"/>
+      </return>
+      <throws type="object">
+        <type full="Rebelo\Date\DateNtpException" namespace="Rebelo\Date" name="DateNtpException"/>
+      </throws>
+      <since value="2.2.1"/>
+    </docblock>
+    <return type="object" nullable="false">
+      <type full="Rebelo\Date\Date" namespace="Rebelo\Date" name="Date"/>
+    </return>
+    <parameter name="timezone" byreference="false" nullable="true" type="object" default="NULL">
+      <type full="DateTimeZone" namespace="" name="DateTimeZone"/>
+    </parameter>
+  </method>
+  <method name="write" start="78" end="81" abstract="false" final="false" static="false" visibility="protected">
+    <docblock>
+      <description compact="Write a request packet to the remote ntp server"/>
+      <param description="The packet to send" type="string" variable="$packet"/>
+      <return type="object">
+        <type full="Rebelo\Date\void" namespace="Rebelo\Date" name="void"/>
+      </return>
+      <since value="2.2.1"/>
+    </docblock>
+    <return type="void" nullable="false"/>
+    <parameter name="packet" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="read" start="89" end="92" abstract="false" final="false" static="false" visibility="protected">
+    <docblock>
+      <description compact="Reads data returned from the ntp server"/>
+      <return type="string"/>
+      <since value="2.2.1"/>
+    </docblock>
+    <return type="string" nullable="false"/>
+  </method>
+  <method name="buildPacket" start="100" end="106" abstract="false" final="false" static="false" visibility="protected">
+    <docblock>
+      <description compact="Builds the request packet for the current time"/>
+      <return type="string"/>
+      <since value="2.2.1"/>
+    </docblock>
+    <return type="string" nullable="false"/>
+  </method>
+  <method name="unpack" start="117" end="124" abstract="false" final="false" static="false" visibility="protected">
+    <docblock>
+      <description compact="Unpacks the binary data that was returned from the remote ntp server"/>
+      <param description="The binary from the response" type="string" variable="$binary"/>
+      <return type="string"/>
+      <since value="2.2.1"/>
+    </docblock>
+    <return type="string" nullable="false"/>
+    <parameter name="binary" byreference="false" type="{unknown}"/>
+  </method>
+</class>
