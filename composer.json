@@ -19,7 +19,7 @@
     "license": "MIT",
     "prefer-stable": true,
     "require": {
-        "php": "^7.4"
+        "php": "^7.4 || ^8.0"
     },
     "require-dev": {
         "phpstan/phpstan": "^0.12",
@@ -27,6 +27,6 @@
         "phpunit/phpunit": "^9.3"
     },
     "homepage": "https://github.com/joaomfrebelo/Date",
-    "version": "2.2.1",
+    "version": "2.2.2",
     "type": "library"
 }

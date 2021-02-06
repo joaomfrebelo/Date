@@ -133,7 +133,10 @@ class Socket
         if (isset($this->resource) === false) {
             return null;
         }
-        return \stream_socket_get_name($this->resource, false);
+        if(false === $socket = \stream_socket_get_name($this->resource, false)){
+            return null;
+        }
+        return $socket;
     }
 
     /**

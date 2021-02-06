@@ -116,7 +116,9 @@ class Client
      */
     protected function unpack($binary): string
     {
-        $data = \unpack('N12', $binary);
+        if(false === $data = \unpack('N12', $binary)){
+            throw new DateNtpException("No binary data returned from server");
+        }
         if (\array_key_exists(9, $data) === false || $data[9] === 0 || $data[9] === null) {
             throw new DateNtpException("wrong binary data returned from server");
         }

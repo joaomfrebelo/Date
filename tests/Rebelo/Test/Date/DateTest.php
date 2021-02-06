@@ -773,6 +773,7 @@ class DateTest extends \PHPUnit\Framework\TestCase
 
 
         foreach (\Rebelo\Date\Date::$ntpPoll as $server) {
+            \sleep(5);// because NTP server does not respond to many requests
             $dateServer = \Rebelo\Date\Date::ntp($server);
             $this->assertInstanceOf(\Rebelo\Date\Date::class, $dateServer);
 
